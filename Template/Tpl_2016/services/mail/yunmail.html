@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>企业邮箱企业邮局企业信箱集团邮局-{companyname}！</title>
+<meta name="description" content="{companyname}企业邮局－智能过滤垃圾邮件系统，超强邮件病毒清除引擎 资深、专业的邮件工程师全天侯服务，西部最大域名注册商，全面提供企业邮局、企业邮箱、域名注册、虚拟主机、建站推广等网络应用一站式服">
+<meta name="keywords" content="企业邮局,集团邮局,企业邮箱,虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/mail.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/newmail.css">
+	<link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/wjf-1.0.0.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/mail2016.js"></script>	
+    <script language="javascript" src="/noedit/check/Validform.js"></script>
+	<script language="javascript" src="/jscripts/template.js"></script>
+<style>
+	.postnum{
+		display: inline-block;
+		width: 100px;
+		height: 36px;
+		line-height: 36px;
+		border: 1px solid #e6e6e6;
+		box-sizing: border-box;
+		padding: 0 10px;
+		font-size: 14px;
+	}
+	.domain-input{
+		display: inline-block;
+		width: 350px;
+		height: 36px;
+		line-height: 36px;
+		border: 1px solid #e6e6e6;
+		box-sizing: border-box;
+		padding: 0 10px;
+		font-size: 14px;
+	}
+	.sel a { 
+		margin-right: 10px;
+		padding: 4px 15px; 
+	}
+	.config-list{
+	padding-top: 10px;
+	}
+	.config-list li {
+		line-height: 28px;
+		font-size: 12px;
+		color: #535353;
+	}
+	.config-list li label{
+		padding-right: 10px;
+		display: inline-block;
+		width: 74px;
+		text-align: right;
+	}
+</style>
+</head>
+<body class="min990">
+{#top.html}
+<script>
+	var paytime=[{n:"6个月",m:6},{n:"1年",m:12},{n:"2年",m:24},{n:"3年",m:36},{n:"5年",m:60}];
+	var cfg={cfg};
+    $(function(){
+		var obj_=$(".sel")
+		$.each(paytime,function(i,n){
+			if(i==0){
+				obj_.append('<a href="javascript:void(0)" class="sel_on" data-m="'+n.m+'">'+n.n+'</a>')
+				$("input[name='alreadypay']:hidden").val(n.m);
+			}else{
+				obj_.append('<a href="javascript:void(0)"  data-m="'+n.m+'">'+n.n+'</a>')
+			}		
+		})
+		$("input[name='postnum']").on("blur",function(){
+			var postnum=$(this).val();
+			if(/\d/.test(postnum)){
+				if(postnum>=5){
+					getprice();
+				}
+			}
+		})
+		obj_.find("a").on("click",function(){
+				obj_.find("a").removeClass("sel_on");
+				$(this).addClass("sel_on");
+				$("input[name='alreadypay']:hidden").val($(this).attr("data-m"));
+				getprice();
+		})
+		getprice()
+		$("#buyyunmail").Validform({tiptype:2,
+		btnSubmit:".btn-mail",
+		showAllError:true, 
+		btnSubmit:".btn-mail",
+		datatype:{
+			"postnum":function(gets,obj,curform,regxp){
+					var reg=/^^([56789]|([\d]{2,4}))$$/;
+					postnum=obj[0].value; 
+					if(reg.test(postnum))
+					{			 
+					return true;}
+					else{ 
+					return false;	
+						}
+			},
+			"agree":function(gets,obj,curform,regxp)
+				{
+					num=curform.find("input[name='agreement']:checked").length;
+					if (num>0){
+					return true;}else{
+						$.dialog.alert("请先阅读相关协议后点击勾选！")
+					return false;}
+				}
+		},
+		beforeSubmit:function(curform){
+			 addshopcart()
+			return false
+		}
+		})
+	})
+
+	function addshopcart(){ 
+		 $.dialog.confirm("您请认要将此邮局添加到购物车?",function(){
+                var objf=$("#buyyunmail");
+                $.ajax({
+                    type: "POST",
+                    url: objf.attr("action"),
+                    data: objf.serialize(),
+                    dataType: "JSON",
+                    success: function (response) {
+                        if(response.result=="200"){
+                            location.href='/bagshow/'
+                        }else{
+                            $.dialog.alert(response.msg)
+                        }
+                    },
+                    error:function(a,b,c){
+                        $.dialog.alert("出错了"+a+b+c);
+                    }
+                }); 
+            })
+ 
+	return false
+	}
+	function showcfginfo(){
+		var info={}
+		info.cfg=cfg
+		info.buy={}
+		info.buy.postnum=$("input[name='postnum']").val();
+		info.buy.alreadypay=$("input[name='alreadypay']").val();
+		console.log(info)
+		$(".config-list").html(template("tpl_configinfo",info));		
+	}
+	function getprice()
+	{
+		var forobj={}
+		forobj.act="getprice";
+		forobj.postnum=$("input[name='postnum']").val();
+		forobj.alreadypay=$("input[name='alreadypay']").val();
+
+
+
+
+		//var loading=loadbox()
+	    showcfginfo()
+		$.post("load.asp",forobj,function(data){ 
+			if(data.result=="200"){
+				$(".fyjs").html(data.pricemsg);
+				$(".price").html("&yen; "+data.price)
+			}else{
+				$.dialog.alert(data.msg)
+			}
+		},"json")
+	}
+
+
+</script>
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+    <div class="slide-pagination">
+        <ul>
+        </ul>
+    </div>
+    <div class="slide-wrapper">
+        <ul>
+			 <li> <a href="/services/mail/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/images/mail/mail6.jpg');" >免备案香港云虚拟主机 全新升级</a> </li>
+            <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/template/Tpl_2016/images/banner/banner-2016sj.jpg');" >免备案香港云虚拟主机 全新升级</a> </li>
+            <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" _bgimg="/template/Tpl_2016/images/banner/banner-2016sj.jpg" >免备案香港云虚拟主机 全新升级</a> </li>
+        </ul>
+    </div>
+</div>
+<!-- banner 结束 -->
+<div id="content">
+    <!-- 选项卡server-tab 开始 -->
+    <div class="tab-bg">
+        <div class="wide1190">
+            <ul class="wjf-ui-tab-style3 cl" id="J_mailTabDom">
+                <li><a class="item guide-active active" href="javascript:void(0);" data-target="J_mail_1">企业云邮局<i class="triangle-top"></i></a></li> 
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 选项卡server-tab 结束 -->
+    <!-- 邮局内容 开始 -->
+    <div class="mail-content">
+        <div class="wide1190">
+            <div class="mail-section cl">
+                <!-- 右侧邮局常见问题 开始 -->
+                <div class="mail-faq" id="J_mailFaq">
+                    <p>当前配置</p>
+                    <ul class="config-list cl"> 
+                        
+                    </ul>
+                </div>
+                <!-- 右侧邮局常见问题 结束 -->
+                <div class="mail-left" id="J_mailLeft">
+                    <!-- 自定义邮局 开始 -->
+                    <form class="custom-mail wjf-ui-tab-content  guide-active active" id="buyyunmail" name="buyyunmail" action="load.asp" method="post" onsubmit="return addshopcart()" > 
+                        <div class="mail-title">
+                            <h3>自由定制 灵活购买</h3> 邮箱空间自由分配、自由增减邮件账号、数百中继解决发信困难(买二年送一年,买三年送两年,买五年送三年)
+                        </div>
+						<div class="config-box">
+                            <label>帐号数量：</label>
+                            <span >
+								<input type="text" name="postnum" class="postnum" value="5" datatype="postnum" errormsg="请录入正确帐号数量!" nullmsg="帐号数量为空!"> 个
+							</span>
+							<span><span class="Validform_checktip"></span></span>
+                        </div>
+						<div class="config-box">
+                            <label>邮箱域名：</label>
+                            <span>
+								<input  type="text" value="" class="domain-input" name="domain" ajaxurl="/services/mail/load.asp" placeholder="请输入您的邮箱域名"  datatype="dm" errormsg="域名格式有误" nullmsg="请输入您的邮箱域名!" autocomplete="off"> 
+							</span>
+							<span><span class="Validform_checktip"></span></span>
+                        </div>
+						<div class="config-box">
+                            <label>管理密码：</label>
+                            <span>
+								<input type="text" value="" class="domain-input" name="passwd" placeholder="输入密码"  datatype="pwd" ajaxurl="/services/mail/load.asp" errormsg="密码格式有误" nullmsg="输入密码为空!" autocomplete="off"> 
+							</span>
+							<span><span class="Validform_checktip"></span></span>
+                        </div>
+                        <div class="config-box">
+                            <label>购买时长：<input type="hidden" name="alreadypay" value="" /></label>
+                            <span class="sel"> 
+							</span>
+							<span><span class="Validform_checktip"></span></span>
+                        </div>
+
+                        <div class="config-box">
+                            <label>费用计算：</label>
+                            <span class="fyjs">。。。。。</span>
+                        </div>
+                        <div class="config-box" >
+                            <label>价格：</label>
+                            <span class="p_mail price">加载中</span>
+                        </div>
+						<div class="config-box" >
+                            <label> </label>
+                            <span for="J_agreement" class="dis-ib agreement-input-label checked" id="J_agreement_label">
+							<input type="checkbox" name="agreement" id="agreement" value="1" id="ch_agent"   datatype="agree"  errormsg="请先阅读相关协议后点击勾选！"  nullmsg="请先阅读协议">
+							我同意不用此邮局发垃圾邮件或群发广告邮件，若有违约接受封停帐号等处罚。
+							</span>
+							<span><span class="Validform_checktip"></span></span>
+                        </div>
+                        <input class="btn-mail" value="立即购买" type="button">
+						<input type="hidden" name="act" value="addshopcart">
+                    </form>
+                    
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 邮局内容 结束 -->
+	 <div class="wide1190">
+   <div class="mail-advantage">
+                <div class="advantage-title">
+                    <strong>企业邮箱</strong>优势
+                    <p>15年行业经验，打造全新云邮，分布式架构、全球智能中继，多项独家功能，企业高效办公新选择</p>
+                </div>
+                <ul class="advantage-list cl horizontal-center">
+                    <li class="item-one">
+                        <div class="al-img"></div>
+                        <div class="al-title">分布式集群架构</div>
+                        <div class="al-txt">
+                            所有邮件数据实时存储4份<br>
+                            确保邮件万无一失，海外智能中继，全球畅邮
+                        </div>
+                    </li>
+                    <li class="item-two">
+                        <div class="al-img"></div>
+                        <div class="al-title">无限企业邮箱空间</div>
+                        <div class="al-txt">
+                            收费邮局不限企业邮箱大小<br>
+                            海量邮件轻松存储，支持强大归档功能
+                        </div>
+                    </li>
+                    <li class="item-three">
+                        <div class="al-img"></div>
+                        <div class="al-title">无限组织架构</div>
+                        <div class="al-txt">
+                            支持组织架构、层级无限、支持群邮件<br>
+                            独家支持邮件座席
+                        </div>
+                    </li>
+                    <li class="item-four">
+                        <div class="al-img"></div>
+                        <div class="al-title">强力反垃圾邮件</div>
+                        <div class="al-txt">
+                            多种反垃圾邮件算法，99.9%精准度<br>
+                            智能过滤，减少垃圾邮件干扰
+                        </div>
+                    </li>
+                    <li class="item-five">
+                        <div class="al-img"></div>
+                        <div class="al-title">超强企业网盘</div>
+                        <div class="al-txt">
+                            支持共享网盘权限管理、支持文件分享<br>
+                            支持网盘本地挂载
+                        </div>
+                    </li>
+                    <li class="item-six">
+                        <div class="al-img"></div>
+                        <div class="al-title">强大丰富功能</div>
+                        <div class="al-txt">
+                            支持层级子文件夹、邮件撤回，日程微信通知<br>
+                            多彩便签等几十项特色功能
+                        </div>
+                    </li>
+                </ul>
+            </div>
+		</div>
+    <!-- 邮局优势 结束 -->
+
+	<!---->
+	<div class="mail-state">
+            <div class="wide1190">
+                <!--使用功能-->
+                <div class="state-column horizontal-center">
+                    <div class="column-title">
+                        <strong>企业邮箱</strong>使用功能
+                        <p>功能全面、强大、独具特色、实用而细腻，您将感受到不一样的企业邮箱使用体验</p>
+                    </div>
+                    <ul class="column-list cl">
+                        <li>
+                            <div class="cl-img cl-img1"></div>
+                            <div class="cl-title">群发邮件</div>
+                            <div class="cl-txt">支持向部门、组群发邮件<br>支持群内跟贴讨论</div>
+                            <dl>
+                                <dt>支持宽窄屏</dt>
+                                <dd>同时支持宽屏与窄屏两种邮件阅读模式，并可一键切换<br>&nbsp;</dd>
+                                <dt>邮件规则</dt>
+                                <dd>支持强大的邮件规则，自动分类处理邮件，并支持API调用<br>&nbsp;</dd>
+                                <dt>键盘操作</dt>
+                                <dd>支持快捷键操作邮件，←→切换邮件、r回复邮件，ctrl+Enter发送邮件、shift+w关闭标签页</dd>
+                                <dt>全文搜索</dt>
+                                <dd>邮件搜索支持搜索主题、邮件内容以及文本附件<br>&nbsp;</dd>
+                                <dt>保存已发送文件</dt>
+                                <dd>支持同步保存已发邮件，不管是通过WEB还是客户端<br>&nbsp;</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="cl-img cl-img2"></div>
+                            <div class="cl-title">企业网盘</div>
+                            <div class="cl-txt">打包下载、断点续传、文件分享、回收站<br>权限管理、本地挂载</div>
+                            <dl>
+                                <dt>邮件标记</dt>
+                                <dd>支持邮件标签、邮件备份以及邮件星标，轻松标记邮件<br>&nbsp;</dd>
+                                <dt>大附件支持</dt>
+                                <dd>支持超大附件，支持拖拽上传，支持屏幕截图<br>&nbsp;</dd>
+                                <dt>邮件归档</dt>
+                                <dd>支持根据复杂条件对邮件进行一键归档，支持一键打包下载邮件</dd>
+                                <dt>支持微信</dt>
+                                <dd>支持日程、新邮件、异地登录微信通知、支持微信扫码登录</dd>
+                                <dt>层级子文件夹</dt>
+                                <dd>支持添加自定义邮箱，自定义邮箱支持添加三级子文件夹<br>&nbsp;</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="cl-img cl-img3"></div>
+                            <div class="cl-title">日程计划</div>
+                            <div class="cl-txt">支持事件分享、事件分类<br>重复事件、事件微信通知</div>
+                            <dl>
+                                <dt>邮件撤回</dt>
+                                <dd>发送同系统的邮件支持无条件邮件撤回，不管用户是否阅读</dd>
+                                <dt>邮件状态</dt>
+                                <dd>支持查询发信状态，同系统邮件，可查询邮件是否阅读<br>&nbsp;</dd>
+                                <dt>定时邮件</dt>
+                                <dd>支持发送定时邮件，定时邮件时间可精确到秒<br>&nbsp;</dd>
+                                <dt>通讯录管理</dt>
+                                <dd>支持公共联系人、联系人分组、导入导出联系人、扫码添加联系人至手机通讯录</dd>
+                                <dt>多彩便签</dt>
+                                <dd>支持多彩便签,一键添加便签、便签可选择风格、可设置异步提醒</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="state-line"></div>
+                <!--管理功能-->
+                <div class="state-column horizontal-center">
+                    <div class="column-title">
+                        <strong>企业邮箱</strong>管理功能
+                        <p>管理界面美观大方、集成登录、权限委派、分级管理、让企业邮箱管理变得轻松惬意</p>
+                    </div>
+                    <ul class="column-list cl">
+                        <li>
+                            <div class="cl-img cl-img4"></div>
+                            <div class="cl-title">部门管理</div>
+                            <div class="cl-txt">可添加无限层级子部门、<br>同一用户可同属不同部门，可建群</div>
+                            <dl>
+                                <dt>帐号管理</dt>
+                                <dd>可批量导入、导出帐号，启用、禁用帐号<br>&nbsp;</dd>
+                                <dt>别名管理</dt>
+                                <dd>可添加邮局别名，也可添加用户别名<br>&nbsp;</dd>
+                                <dt>群组管理</dt>
+                                <dd>可为部门（群）分配别名帐号，可设置别名是否接收外部发送群邮件</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="cl-img cl-img5"></div>
+                            <div class="cl-title">邮件监管</div>
+                            <div class="cl-txt">可设定监控帐号与被监控帐号，<br>进一步提升对企业邮箱的管理</div>
+                            <dl>
+                                <dt>分级管理</dt>
+                                <dd>可指定分级管理员，委派帐号管理权限<br>&nbsp;</dd>
+                                <dt>座席管理</dt>
+                                <dd>可启用独家座席功能，所有发往座席的Email将自动被分派给不同员工，用户零感知，可统计工作量</dd>
+                                <dt>个性设置</dt>
+                                <dd>可更改企业LOGO，设置企业名称<br>&nbsp;</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="cl-img cl-img6"></div>
+                            <div class="cl-title">邮件审核</div>
+                            <div class="cl-txt">可设定不同审核规则，每条规则<br>可单独指定审核、超时时间，默认审核动作</div>
+                            <dl>
+                                <dt>企业公告</dt>
+                                <dd>可发布企业公告，也可发布置顶公告<br>&nbsp;</dd>
+                                <dt>日志查询</dt>
+                                <dd>可查询用户发信日志、登录日志、以及管理员操作维护日志</dd>
+                                <dt>域通讯录</dt>
+                                <dd>可加入域通讯录，所有邮箱共享通讯录信息<br>&nbsp;</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	<!--end -->
+	 
+
+</div>
+
+<script id="tpl_configinfo" type="text/html">
+	    <li><label>个人中转站：</label>{{cfg.seting.tempdisk}}G</li>
+        <li><label>个人网盘：</label>{{cfg.seting.disksize}}G</li>
+        <li><label>企业网盘：</label>{{cfg.seting.sharedisk*buy.postnum}}G</li>
+        <li><label>用户数：</label>{{buy.postnum}}个</li>
+        <li><label>购买时长：</label>{{buy.alreadypay}}月</li>
+        <li><label>邮箱容量：</label>{{if cfg.seting.postsize=="0"}}无限{{else}}{{cfg.seting.postsize}}G{{/if}}</li>
+</script>
+
+{#bottom.html}
+ 
+</body>
+</html>

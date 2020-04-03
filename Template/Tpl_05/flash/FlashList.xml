@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<system>
+	<File type="img" path="/Template/Tpl_05/flash/1001_667X214.jpg" time="21.3" 
+link="/news/list.asp?newsid=35"/>
+	<File type="img" path="/Template/Tpl_05/flash/cdn_baner_667X214.jpg" time="20" link="/services/cdn/" />
+	<File type="img" path="/Template/Tpl_05/flash/iceprice_667x214.jpg" time="13" link="/Active/20091101/" />
+	<File type="img" path="/Template/Tpl_05/flash/new_tw_667X214.jpg" time="13" link="/services/webhosting/twhost.asp" />
+	<File type="img" path="/Template/Tpl_05/flash/VPS_667x214.jpg" time="13" link="/services/vpsserver/" />
+	<File type="img" path="/Template/Tpl_05/flash/agent_b_667x214.jpg" time="13" link="/agent/2009.asp" />
+</system>

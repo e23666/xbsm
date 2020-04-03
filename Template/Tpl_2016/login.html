@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="hd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>用户登录-{companyname}-专业虚拟主机域名注册服务商!稳定、安全、高速的虚拟主机！域名注册虚拟主机租用</title>
+    <meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+    <meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,网站建设,双线虚拟主机,asp空间">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/login.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+</head>
+<body class="min990">
+
+{#top.html}
+
+<script language=javascript>
+function CheckLogin()
+{	
+     if (document.formlogin.u_name.value.length==0) 
+	 {
+		alert("【{companyname}提醒您】\n\n登录名不能为空！");
+		document.formlogin.u_name.focus();
+     	return false;
+     }	
+     ii=0;
+     bString="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-";
+		 if(!/^[0-9a-zA-Z\u4e00-\u9fa5_-]{2-16}$/.test(document.formlogin.u_name.value))
+		 {
+		 alert("【{companyname}提醒您】\n\n登录名必须是 a-z A-Z 0-9 之间的字母和数字组合，长度不能超过16位。");
+				document.formlogin.u_name.focus();
+				return false;
+		 }
+ 
+     }
+	 
+	var u_passwordobj=document.forms["formlogin"].u_password;
+	var reg=/^.{4,16}$/;
+	if(!reg.test(u_passwordobj.value)){
+		alert("抱歉,密码格式不正确.长度应为4～16位之间");
+		u_passwordobj.focus();
+		return false;
+	}
+	
+     return true;
+}
+</script>
+
+<div class="content" id="content">
+    <div class="wide1190" style="position: relative;">
+        <!--登录表单容器 开始-->
+        <div class="login-box">
+            <form name=formlogin onSubmit="return CheckLogin()" action="/chklogin.asp" method=post autocomplete="off">
+                <INPUT type=hidden value=enterzone name=module>
+                <div class="text-center hide m-login-logo"> 
+                </div>
+                <div class="login-title">
+                    用户登录
+                </div>
+
+
+                <div class="login-from">
+                    <div>
+                        <label for="u_name" class="label-username label-icon"></label>
+                        <input id="u_name" class="fix-autofill-bg form-input" name="u_name" type="text" value="" placeholder="请输入您的用户名" autocomplete="off">
+                    </div>
+                    <div class="pt-10">
+                        <label class="label-password label-icon" for="u_password"></label>
+                        <input id="u_password" class="fix-autofill-bg form-input" name="u_password" type="password" value="" class="fix-autofill-bg form-input" placeholder="请输入您的用户密码" autocomplete="off">
+                    </div>
+
+                    <div class="cl">
+                        <label class="remember" for="chkAutoLogin">
+                            <input name="chkAutoLogin" type="checkbox" id="chkAutoLogin" value="OKAY">
+                            在此计算机上记住密码
+                            <div class="Input_button hide"><input type="hidden" name="adds323sdsdsad" value="3546234134sadsa233" ></div>
+                        </label>
+                        <a href="/reg/forget.asp" class="forget-pwd">忘记密码？</a>
+                    </div>
+                    <div class="cl">
+                        <button class="g-common-btn common-btn" type="submit">登录</button>  
+                    </div>
+                    <div class="pt-10">
+                        还没有账号？
+                        <a class="link" href="/reg/">免费注册</a>
+                    </div>
+                    <div class="login-form-links">
+                       
+                    </div>
+                </div>
+                <INPUT type=hidden value=enterzone name=module>
+                <input type="hidden" name="back_path2" value="{HTTP_REFERER}">
+            </form>
+        </div>
+        <!--登录表单容器 结束-->
+    </div>
+</div>
+
+{#bottom.html}
+</body>
+</html>

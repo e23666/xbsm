@@ -1,0 +1,302 @@
+<html>
+<head> 
+<title>有问必答-{companyname}在线客服系统</title>
+<meta name="description" content="有问必答-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="有问必答-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css"></head>
+<SCRIPT language=javascript>
+
+function checkstr()
+{
+	if(document.form1.subject.value==""){
+		alert("提示：\n\n请输入问题题目！");
+		document.form1.subject.focus();
+		return false;
+	}
+	if(document.form1.content.value==""){
+		alert("提示：\n\n请输入问题内容！");
+		document.form1.content.focus();
+		return false;
+	}
+	
+}
+
+
+</SCRIPT><body leftmargin="0" topmargin="0">
+{#top.html}
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr> 
+    <td><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#707070">
+  <tr> 
+    <td><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#707070">
+  <tr> 
+    <td><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr> 
+    <td><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="2"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr> 
+    <td width="230" valign="top" bgcolor="f9f9f9"> 
+      {#CustomerCenterLeft.html}
+    </td>
+    <td valign="top" width="2"><img src="/Template/Tpl_05/images/spacer.gif" width="2" height="2"></td>
+    <td valign="top"> 
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td bgcolor="#000000"><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="2"></td>
+        </tr>
+      </table>
+      <table width="100%" height="33" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="32" background="/Template/Tpl_05/images/Other_03.gif">
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <td width="6%" align="right" class="DropShadow2"><img src="/Template/Tpl_05/images/%2B.gif" width="9" height="9"></td>
+                <td width="94%" class="DropShadow2"><strong><font color="#FFFFFF">有问必答</font></strong></td>
+              </tr>
+            </table>
+          </td>
+          <td width="60" align="right" background="/Template/Tpl_05/images/Other_03.gif"><img src="/Template/Tpl_05/images/Other_05.gif" width="60" height="33"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td align="right"><img src="/Template/Tpl_05/images/Other_07.gif" width="60" height="16"></td>
+        </tr>
+        <tr> 
+          <td align="right"> 
+            <form name="form1" method="post" action="/faq/search.asp">
+              <div align="left"><img src="/Template/Tpl_05/images/chakan.gif"> 
+                <input id="Keyword" maxlength="50" size="20" value="关键字" name="keyword"  onClick="this.focus();if(this.value=='关键字'){this.value=''}"  onBlur="if(this.value==''){this.value='关键字'}">
+                <input type=radio name=where value=title checked>
+                标题 
+                <input type=radio name=where value=content>
+                内容 
+                <input type="submit" name="Submit2" value="搜索常见问题">
+                <img src="/Template/Tpl_05/images/photo/events_061120_11.gif" width="20" height="20"><a href="/customercenter/allquestion.asp?module=search&qtype=myall"><font color="#993333">查看回复</font></a><br>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <form action="subok.asp"  onSubmit="return checkstr();" method="post" name="form1">
+          <tr> 
+            <td> 
+			问题跟踪:
+              <table width="100%" border="1" bgcolor="#FFFFEE" bordercolor="#666666" cellspacing="0" bordercolordark="#FFFFFF">
+                <tr>
+                  <td>{content}</td>
+                </tr>
+              </table>
+
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>问题题目：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <input name=subject class="inputbox" value="{subject}"  size=50>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>问题类别：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <select name=type class="selectbox">
+                            <option value="0101">售前咨询</option>
+                            <option value="0102" selected>虚拟主机问题</option>
+                            <option value="0103">域名问题</option>
+                            <option value="0104">企业邮箱问题</option>
+                            <option value="0201">数据库问题</option>
+                            <option value="0202">主机租用/托管问题</option>
+                            <option value="0203">VPS相关问题</option>
+                            <option value="0204">财务相关问题</option>
+                            <option value="0301">续费问题</option>
+                            <option value="0302">网站备案问题</option>
+                            <option value="0302">网站推广问题</option>
+                            <option value="0304">渠道代理相关问题</option>
+                            <option value="0304">代理平台相关问题</option>
+                            <option value="0701">投诉建议</option>
+                            <option value="0801">其他</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>相关域名：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <input  name=domain class="inputbox" value="{domain}" size="40">
+                          如果有的话</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>相关IP地址：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <input  name=ip class="inputbox" value="{ip}" size="40">
+                          (如果有的话)</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>问题关键字：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <input  name=keyword class="inputbox" value="{keyword}">
+                          (如果有的话) 
+                          <input type=hidden value=postquestion name=module>
+                          <input type="hidden" name="q_fid" value="{q_fid}">
+                          <input type="hidden" name="uploadFileName" id="uploadFileName2">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>附图(小于200K)：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td id="uploadLabel" width="79%"><IFRAME FRAMEBORDER=0 SCROLLING="no" WIDTH=100% height=24 SRC="/customercenter/post_upload.asp"></IFRAME></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="25%" bgcolor="efefef"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td align="right" nowrap><strong>问题描述：</strong></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="75%"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <tr> 
+                        <td> 
+                          <textarea  name=content cols=55 rows=15 wrap="VIRTUAL" class="inputbox_2"></textarea>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" background="/Template/Tpl_05/images/line_23.gif"><img src="/Template/Tpl_05/images/line_23.gif" width="4" height="1"></td>
+                </tr>
+                <tr align="right"> 
+                  <td colspan="2"><img src="/Template/Tpl_05/images/spacer.gif" width="3" height="4"></td>
+                </tr>
+                <tr align="right"> 
+                  <td height="60" colspan="2" bgcolor="efefef"> 
+                    <table width="40%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td> 
+                          <input name=Submit type=image value=立即提交问题 src="/Template/Tpl_05/images/button_03.gif" width="150" height="35">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr align="right"> 
+                  <td height="60" colspan="2" bgcolor="efefef"> 
+                    <div align="left">我们向您提供产品的同时，也为您提供了完善的售后服务。在产品使用过程中您可能遇到一些问题，请您先参看<a href="/faq"><font color="#0000FF">常见问题</font></a>栏目，也许其中就有您遇到问题的解决方法。在<a href="/faq"><font color="#0000FF">常见问题</font></a>中找不到相关答案的，再提交问题。</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </form>
+      </table>
+    </td>
+  </tr>
+</table>
+{#bottom.html}
+</body>
+</html>

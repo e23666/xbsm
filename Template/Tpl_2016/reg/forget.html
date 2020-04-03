@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="hd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>取回密码-{companyname}-专业虚拟主机域名注册服务商!稳定、安全、高速的虚拟主机！域名注册虚拟主机租用</title>
+    <meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+    <meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,网站建设,双线虚拟主机,asp空间">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/reg.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <link href="/Template/Tpl_05/css/reg1.css" rel="stylesheet" type="text/css">
+
+    <script language="javascript">
+        function dosetimg(v){
+            document.getElementById(v).src+=parseInt(Math.random()*10);
+        }
+        function checksub(v){
+            var u_name=v.u_name;
+            var u_email=v.u_email;
+            var msn_msg=v.msn_msg;
+            var code=v.code;
+            var cur=0
+            var regex=/^[\w]{2,6}$/;
+            if (!regex.test(code.value)){
+                alert('验证码格式错误');
+                code.focus();
+                return false;
+
+            }
+            if(u_name.value!=''){
+                if (u_name.value.length<4){
+                    alert('账号ID格式错误');
+                    u_name.focus();
+                    return false;
+                }
+                cur++;
+            }
+            if(u_email.value!=''){
+                if(!isEmail(u_email.value)){
+                    alert('邮箱格式错误');
+                    u_email.focus();
+                    return false;
+                }
+                cur++;
+            }
+            if (msn_msg.value!=''){
+                if(!isMobile(msn_msg.value)){
+                    alert('手机号码格式错误');
+                    msn_msg.focus();
+                    return false;
+                }
+                cur++;
+            }
+            if (cur<2){
+                alert('请输入两个或两个以上的项');
+                return false;
+            }
+            return true;
+        }
+
+
+		$(function(){
+		
+			$("input[name='setSend']").change(function(){
+				if($(this).val()=="mail")
+				{
+					$("#mailbox").show();
+					$("#smsbox").hide();
+				}else 
+				{
+					$("#mailbox").hide();
+					$("#smsbox").show();
+				}
+				 
+			})
+		})
+		var js=0
+		var t;
+		function snedsafecode(t,obj)
+		{
+			var url="/reg/forget.asp"
+		    var sendtype=$("input[name='setSend']:checked").val()
+			var val=$("input[name='u_email']").val();
+			var u_name=$("#f_u_name").val();
+			if(u_name==""){
+				$.dialog.alert("请录入您要找回的帐号名称!");
+				return false;
+			}
+			if(sendtype!="mail")
+			{val=$("input[name='msn_msg']").val();}
+
+			if(val==""){
+				$.dialog.alert("注册时填写的邮箱或手机号")
+			}
+
+			var postdata="act=sendcode&u_name="+escape(u_name)+"&sendtype="+escape(sendtype)+"&val="+escape(val)
+			$.post(url,postdata,function(data){ 
+			 
+					$.dialog.alert(data.msg)
+					if(data.code==200)
+					{
+						$(obj).val("已发送");
+						obj.disabled=true;
+					}
+				 
+			},"json")
+		}
+    </script>
+</head>
+<body class="min990">
+ {#top.html}
+ <div class="content" id="content">
+     <div class="wide1190">
+         <div class="reg-content">
+             <div class="reg-title cl">
+                 <h3>密码找回</h3>
+             </div>
+            <div class="reg-box">
+                <div class="pt-70">
+             <div class="rb_title_forget redColor">
+                 <ul>
+                     <li>以下带*号的填项为必须填写，请填写您的真实资料，您所填写的资料将受{companyname}保密。</li>
+                 </ul>
+             </div>
+
+             <form name="formusername" class="reg-section" action="/reg/forgetsub.asp" method="post" >
+                 <dl style="margin-top:40px;">
+                     <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 您的账号</label>
+                                     </td>
+                                 <td>
+                                     <input name="u_name" id="f_u_name" type="text" class="common-input" >
+                                     </td>
+                                 <td width="47%">&nbsp;&nbsp;&nbsp;&nbsp;您注册时的账号ID<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+					
+					 <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 密码发送方式</label>
+                                     </td>
+                                 <td><input name="setSend" type="radio" value="mail" checked>邮箱&nbsp;&nbsp;&nbsp;<input name="setSend" type="radio" value="sms" {sms_disabled}>手机</td>
+                                 <td width="47%">&nbsp;&nbsp;&nbsp;&nbsp;新密码将发送到您指定的方式(邮箱/手机)上<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+
+
+                     <dd class="clearfix" id="mailbox">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 您的邮箱</label>
+                                    </td>
+                                 <td>
+                                     <input name="u_email" type="text" class="common-input" >
+                                     </td>
+                                 <td width="47%"><input type="button" value="发邮件" onclick="snedsafecode('mail',this)" class="common-btn">&nbsp;&nbsp;&nbsp;&nbsp;您用户资料里的邮箱<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+
+                     <dd class="clearfix" id="smsbox" style="display:none">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 您的手机</label>
+                                    </td>
+                                 <td>
+                                     <input name="msn_msg" type="text" class="common-input" >
+                                     </td>
+                                 <td width="47%"><input type="button" value="发手机" onclick="snedsafecode('mail',this)"  class="common-btn">&nbsp;&nbsp;&nbsp;&nbsp;您用户资料里的手机<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+					
+					 <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 收到的验证码</label>
+                                    </td>
+                                 <td>
+                                     <input name="safecode" type="text" class="common-input" >
+                                     </td>
+                                 <td width="47%">&nbsp;&nbsp;&nbsp;&nbsp;<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+
+                    
+                     <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 验证码</label>
+                                     </td>
+                                 <td>
+                                     <input name="code" type="text" class="common-input"  size="10" maxlength="4" autocomplete="off">
+                                     <input type="hidden" name="codeKey" value="{codeKey}">
+</td>
+                                 <td width="47%" >&nbsp;&nbsp;&nbsp;&nbsp;<img id="img1" src="/config/DvCode.asp?k={codeKey}&" onClick="this.src+=parseInt(Math.random()*10)" alt="点击可刷新"><a href=#### onClick="dosetimg('img1')">点击可刷新</a><span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+                     <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"></td>
+                                 <td>
+                                     <input type="hidden" name="module" value="forgetpwd" />
+                                     <input class="reg-btn" name="Submit1" value="确 定" type="submit" onClick="return checksub(this.form)"/>
+
+</td>
+                                 <td width="47%"></td>
+                             </tr>
+                         </table>
+                     </dd>
+                 </dl>
+
+             </form>
+                </div></div>
+         </div>
+     </div>
+ </div>
+
+
+
+{#bottom.html}
+</body>
+</html>

@@ -1,0 +1,126 @@
+BODY {
+	FONT-SIZE: 75%; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体", "Arial"
+}
+INPUT {
+	FONT-SIZE: 9pt
+}
+A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4e7faf; TEXT-DECORATION: none
+}
+.text {
+	FONT-SIZE: 12px; FONT-FAMILY: sinsum
+}
+A.text:link {
+	COLOR: #5684b2; TEXT-DECORATION: none
+}
+A.text:visited {
+	COLOR: #5684b2; TEXT-DECORATION: none
+}
+A.text:active {
+	COLOR: #043b73; TEXT-DECORATION: none
+}
+A.text:hover {
+	COLOR: #043b73; TEXT-DECORATION: underline
+}
+.font {
+	FONT-SIZE: 9pt
+}
+P {
+	FONT-SIZE: 9pt
+}
+LI {
+	FONT-SIZE: 9pt
+}
+BigFont {
+	FONT-SIZE: 11pt
+}
+TEXTAREA.smallarea {
+	FONT-SIZE: 9pt; COLOR: rgb(0,0,128); BACKGROUND-COLOR: white
+}
+SELECT.smallSel {
+	FONT-SIZE: 9pt; COLOR: rgb(0,0,128); BACKGROUND-COLOR: white
+}
+INPUT.buttonface {
+	FONT-SIZE: 9pt; COLOR: #ffffff; BACKGROUND-COLOR: #ffcc99
+}
+INPUT.font {
+	FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #7a98d0
+}
+.bj {
+	BACKGROUND-IMAGE: url(/images/hosp_bj.gif)
+}
+.p8 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 14pt; FONT-FAMILY: "宋体"
+}
+A:hover {
+	COLOR: red
+}
+INPUT {
+	FONT-SIZE: 9pt
+}
+SELECT {
+	FONT-SIZE: 9pt
+}
+.p2 {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 14pt
+}
+.bj1 {
+	BACKGROUND-IMAGE: url(/images/home_bg.gif)
+}
+.form {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND: #cccccc; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.xb {
+	BACKGROUND-IMAGE: url(images/bj.gif)
+}
+.bg_yellow {
+	BACKGROUND-IMAGE: url(images/bg_yellow.gif)
+}
+.font9 {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 13pt
+}
+.efont {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 13pt
+}
+.p4 {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 14pt; FONT-FAMILY: "宋体"
+}
+A.p4:link {
+	COLOR: #99aec3; TEXT-DECORATION: none
+}
+A.p4:visited {
+	COLOR: #99aec3; TEXT-DECORATION: none
+}
+A.p4:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.p4:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.form1 {
+	BORDER-RIGHT: #ffaa53 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #ffaa53 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.noline {
+	FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.dorp {
+	FONT-SIZE: 9pt; FILTER: dropshadow(color=#000000,offx=1,offy=1,positive=1)
+}
+.ddd {
+	FONT-SIZE: 9pt; FILTER: glow(color=black,strength=1); COLOR: #ffffff; LINE-HEIGHT: 13pt; POSITION: relative
+}
+.form2 {
+	BORDER-RIGHT: #ffaa53 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #ffaa53 1px solid; BACKGROUND-COLOR: #ffffff
+}

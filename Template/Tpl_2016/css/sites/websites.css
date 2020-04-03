@@ -1,0 +1,239 @@
+/*
+    本页样式为----成品网站超市--全网营销型网站
+*/
+
+/*banner*/
+.banner {
+    height: 380px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/******************优势介绍 开始******************/
+.websites-advantage {
+    padding: 30px 0 40px;
+    background: #fff;
+}
+
+/*内容文字*/
+.websites-advantage .wa-box {
+    margin-top: 80px;
+    /*height: 378px;*/
+    /*background: url("../img/websites/websites-img.png") no-repeat top center;*/
+}
+
+/********左侧选项卡 开始********/
+.websites-advantage .wa-box .wa-box-list {
+    float: left;
+    border: 0;
+    overflow: initial;
+    position: relative;
+    background: url(../img/websites/websites-btns.png) no-repeat left top;
+}
+
+.websites-advantage .wa-box .wa-box-list li {
+    float: none;
+    margin-bottom: 12px;
+    width: 340px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    text-align: center;
+    border: 0;
+    position: relative;
+    z-index: 2;
+    background: none;
+}
+
+.websites-advantage .wa-box .wa-box-list li a {
+    display: block;
+    color: #545454;
+    position: relative;
+}
+
+/*激活*/
+.websites-advantage .wa-box .wa-box-list li:hover a {
+    transition:  color 0.3s ease-in-out;
+    /*background: #2086ee;*/
+    color: #fff;
+}
+
+.websites-advantage .wa-box .wa-box-list li.active {
+    margin-left: 0;
+}
+
+.websites-advantage .wa-box .wa-box-list li.active a {
+    background: #2086ee;
+    color: #fff;
+}
+
+.websites-advantage .wa-box .wa-box-list li.active::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 14px solid #2086ee;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    margin-top: -12px;
+}
+
+.wa-box-list .mask {
+    margin-bottom: 12px;
+    width: 340px;
+    height: 80px;
+    line-height: 80px;
+    background: #2086ee;
+    position: absolute;
+    top: 0px;
+}
+
+.wa-box-list .mask::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 14px solid #2086ee;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    margin-top: -12px;
+}
+
+/********左侧选项卡 结束********/
+/********右侧内容 开始********/
+.websites-advantage .wa-box{
+    position: relative;
+}
+.site-tab-container{
+    position: absolute;
+    left: 400px;
+    width: 800px;
+}
+.websites-advantage .wa-box .wa-box-right {
+    text-align: center;
+    overflow: hidden;
+}
+
+.websites-advantage .wa-box .wa-box-right h5 {
+    font-size: 24px;
+    color: #0067c8;
+    letter-spacing: 2px;
+}
+
+.websites-advantage .wa-box .wa-box-right p {
+    padding-top: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #2d2d2d;
+}
+
+/********右侧内容 结束********/
+
+/******************优势介绍 结束******************/
+
+/******************精美模板推荐 开始******************/
+.websites-tpl {
+    padding: 30px 0;
+}
+
+.websites-tpl .wt-title {
+
+}
+
+.websites-tpl .wt-title h3 {
+    font-size: 24px;
+    color: #282828;
+}
+
+.websites-tpl .wt-title h3 span {
+    padding-left: 10px;
+    font-size: 16px;
+    color: #6f6f6f;
+}
+
+/*更多模板*/
+.websites-tpl .wt-title .wt-title-btn {
+    float: right;
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    background: #2086ee;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*容器*/
+.websites-tpl .wt-box {
+    /*padding-top: 30px;*/
+}
+/*样式重置*/
+.websites-tpl .wt-box .tpl-list-container li{
+    margin-right: 36px;
+}
+.websites-tpl .wt-box .tpl-list-container li.row-last{
+    margin-right: 0;
+}
+/*查看更多*/
+.websites-tpl .wt-btn {
+    margin-top: 30px;
+    display: inline-block;
+    width: 278px;
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 26px;
+    font-size: 16px;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.websites-tpl .wt-btn:hover {
+    border-color: #2086ee;
+    color: #2086ee;
+}
+
+/******************精美模板推荐 结束******************/
+
+/******************全网营销版建站 开始******************/
+.websites-taocan {
+    padding: 40px 0 50px;
+}
+
+.st-list {
+    padding-top: 86px;
+}
+
+.st-list .item .wt-icon1 {
+    background-position: 0 -140px;
+}
+
+.st-list .item .wt-icon2 {
+    background-position: 0 -233px;
+}
+
+.st-list .item .wt-icon3 {
+    background-position: 0 -326px;
+}
+
+/******************全网营销版建站 结束******************/
+
+
+
+
+
+
+
+
+
+
+
+

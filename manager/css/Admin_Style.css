@@ -1,0 +1,52 @@
+A { TEXT-DECORATION: none }
+A:link { COLOR: #000000; TEXT-DECORATION: none }
+A:visited { COLOR: #000000; TEXT-DECORATION: none }
+A:hover { COLOR: #ff6600; TEXT-DECORATION: none }
+A:active { COLOR: #000000; TEXT-DECORATION: none }
+A.Class:link { COLOR: #ffffff }
+A.Class:visited { COLOR: #ffffff }
+A.Class:hover { COLOR: #ffff00 }
+A.Class:active { COLOR: #ffffff }
+A.title:link { COLOR: #ffffff }
+A.title:visited { COLOR: #ffffff }
+A.title:hover { COLOR: #449ae8 }
+A.title:active { COLOR: #ffffff }
+A.lefts:link { COLOR: #ffffff }
+A.lefts:visited { COLOR: #ffffff }
+A.lefts:hover { COLOR: #449ae8 }
+A.lefts:active { COLOR: #ffffff }
+A.Date:link { COLOR: #000000 }
+A.Date:visited { COLOR: #000000 }
+A.Date:hover { COLOR: #ff6600 }
+A.Date:active { COLOR: #000000 }
+BODY { PADDING-RIGHT: 0px; PADDING-LEFT: 0px; SCROLLBAR-FACE-COLOR: #2b73f1; FONT-SIZE: 9pt; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #0650d2; SCROLLBAR-SHADOW-COLOR: #449ae8; SCROLLBAR-3DLIGHT-COLOR: #449ae8; LINE-HEIGHT: 150%; SCROLLBAR-ARROW-COLOR: #02338a; PADDING-TOP: 0px; SCROLLBAR-TRACK-COLOR: #0650d2; FONT-FAMILY: "宋体"; SCROLLBAR-DARKSHADOW-COLOR: #0650d2; TEXT-DECORATION: none }
+TD { FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: 宋体 }
+INPUT { FONT-SIZE: 12px; }
+BUTTON { FONT-SIZE: 9pt; HEIGHT: 20px }
+SELECT { FONT-SIZE: 9pt; HEIGHT: 20px }
+.Title { FONT-WEIGHT: normal; BACKGROUND: #449ae8; COLOR: #ffffff }
+.border { BORDER-RIGHT: #449ae8 1px solid; BORDER-TOP: #449ae8 1px solid; BORDER-LEFT: #449ae8 1px solid; BORDER-BOTTOM: #449ae8 1px solid }
+.Date_border { BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid }
+.Date_title { FONT-WEIGHT: normal; BACKGROUND: #449ae8; COLOR: #ffffff }
+.Date_tdbg { FONT-WEIGHT: normal; BACKGROUND: #449ae8; COLOR: #ffffff }
+.style2 { FONT-SIZE: 10px }
+.style3 { FONT-SIZE: 12px }
+.tdtop { BORDER-RIGHT: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid }
+.tdinter { BORDER-RIGHT: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 1px solid; TEXT-ALIGN: center }
+.tdbg1 { BACKGROUND: #f0f8f0; LINE-HEIGHT: 120% }
+.title0 { FONT-WEIGHT: normal; BACKGROUND: #ebeadb; COLOR: #000000 }
+.tdbg { BACKGROUND: #f0f0f0; LINE-HEIGHT: 120% }
+.tdbgmouseover { BACKGROUND: #bfdfff; LINE-HEIGHT: 120% }
+.tdbgmouseout1 { BACKGROUND: #ffffff; LINE-HEIGHT: 120% }
+.tdbgmouseout2 { BACKGROUND: #f3f3f3; LINE-HEIGHT: 120% }
+.tdbg2 { BACKGROUND: #e0eef5; LINE-HEIGHT: 120% }
+.tdbg5 { BACKGROUND: #e0eef5; LINE-HEIGHT: 120% }
+.title3 { BACKGROUND: url(images/titlebg4.gif); WIDTH: 80px; CURSOR: hand; LINE-HEIGHT: 120%; PADDING-TOP: 2px }
+.title4 { FONT-WEIGHT: normal; BACKGROUND: url(images/titlebg3.gif); WIDTH: 80px; CURSOR: hand; COLOR: #ffffff; PADDING-TOP: 2px }
+.title5 { BACKGROUND: url(../images/titlebg2.gif); WIDTH: 80px; CURSOR: hand; LINE-HEIGHT: 120%; PADDING-TOP: 2px }
+.title6 { FONT-WEIGHT: normal; BACKGROUND: url(../images/titlebg1.gif); WIDTH: 80px; CURSOR: hand; COLOR: #ffffff; PADDING-TOP: 2px }
+.Glow { FILTER: Glow(Color=#0F42A6, Strength=1); WIDTH: 100%; COLOR: #ffffff; LINE-HEIGHT: 20px; Dropshadow: #0F42A6, OffX=1, OffY=1, ) }
+.topbg { display:none; BACKGROUND: #0650d2; COLOR: #ffffff }
+.redAlert_Box { background-color: #FFFDE4; border: 1px solid #FF9900; padding:10px; margin:0px 1px 0px 2px; font-size:14px; color:#F30; font-weight:bold; line-height:22px; }
+.redAlert_Box .alert_pic { float:left; margin:5px; }
+.GreenColor{ color:#060; font-weight:bold;}

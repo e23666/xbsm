@@ -1,0 +1,338 @@
+@charset "gb2312";
+dl.linebox1{
+	width:740px; 
+}
+dl.linebox1 dd{
+	border:none;
+	margin:0px 0px 20px 0px;
+	
+}
+dl.linebox1 dd label{
+	height:40px; line-height:40px;
+	color:#000;
+}
+dl.linebox1 dd.mindd{
+	
+	margin-bottom:10px;
+}
+dl.linebox1 dd.mindd1{
+	margin:0 20px 0 20px;
+	border-bottom:1px dotted #ccc;
+}
+dl.linebox1 dd.mindd label{
+	height:30px; line-height:30px;
+	width:75px;
+
+}
+dl.linebox1 dd.mindd1 label{
+	height:20px; line-height:20px;
+	width:65px;
+}
+dl.linebox1 dd.mindd1 label.msg{
+	color:#333;
+	font-size:14px;
+}
+/* slider root element */
+.slider {
+	height:16px;    
+/*	background:#fff url(/images/tjt/zzzz.jpg) repeat-x top;*/
+background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -436px;
+    position:relative;
+    cursor:pointer;
+  /*  border:4px solid #Efefef;*/
+    width:360px;
+    float:left;
+    clear:right;	
+    margin-top:8px;
+ /*   -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-box-shadow:inset 0 0 8px #000;*/
+	
+}
+
+/* progress bar (enabled with progress: true) */
+.progress {
+    height:16px;    
+/*	background:#fff url(/images/tjt/zzzz.jpg) repeat-x top;*/
+background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -403px;
+    display:block;
+   /* opacity:0.6;*/
+}
+
+/* drag handle */
+.handle {
+    background: url(/images/CloudHost/h30.png) no-repeat;
+    height:18px;
+    width:33px;
+    top:-3px;
+    position:absolute;
+    display:block;
+    margin-top:1px;
+	z-index:21;
+    cursor:pointer;
+  
+}
+a.slider-leftbutton{
+	display:block;
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -732px -135px;
+	margin:3px 4px 0 0;
+	width:28px;
+	height:27px;
+	float:left;
+	cursor:pointer;
+}
+a.slider-leftbutton:hover{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -732px -164px;
+}
+a.slider-rightbutton{
+	display:block;
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -765px -135px;
+	margin:3px 0 0 4px;
+	width:28px;
+	height:27px;
+	float:left;
+	cursor:pointer;
+}
+a.slider-rightbutton:hover{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -765px -164px;
+}
+/* the input field */
+.range {
+    background:url(/images/CloudHost/cloudall.jpg) no-repeat -404px 0;
+    float:left;
+    font-size:14px;
+	line-height:21px;
+	font-weight:bold; 
+	color:#006699;
+    margin:7px 5px 0 5px;
+    text-align:center;
+    width:44px;
+	height:21px;
+	border:none;
+	
+}/* CSS Document */
+#cpumsg .range,#rammsg .range{
+	display:none;
+}
+#cpumsg .slider,#rammsg .slider{
+	width:470px;
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -372px;
+	margin-bottom:5px;
+}
+dd select{
+	margin-top:5px; width:530px
+}
+#bldaymsg select{
+	width:200px;
+}
+#cpumsg label.cpu_label{
+	text-align:right;
+	width:75px;
+
+	/*background:url(/images/ico/50.png) no-repeat 60px -45px;*/
+}
+#rammsg label.ram_label{
+	text-align: right;
+width: 75px;
+}
+#datamsg label.data_label{
+text-align:right;
+	width:75px;
+}
+#fluxmsg label.flux_label{
+text-align:right;
+	width:75px;
+}
+.btn_page,.btn_page1{
+	background:url(/images/ico/button_list.png) no-repeat -2px -175px;
+	width:112px;
+	height:33px;
+	line-height:33px;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+}
+.btn_page:hover{
+	background:#fff url(/images/ico/button_list.png) no-repeat -2px -209px;
+	color:#036
+}
+.btn_page1{
+	background:#fff url(/images/ico/button_list.png) no-repeat -2px -209px;
+	color:#036;
+}
+.btn_page_,.btn_page_1{
+	/*background:#fff url(/images/ico/button_list.png) no-repeat;*/
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -655px -102px;
+	width:72px;
+	height:31px;
+	line-height:31px;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	font-size:12px;
+	color:#333;
+	font-weight:normal;
+	margin-left:15px;
+}
+.btn_page_:hover{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -102px;
+	color:#fff;
+	font-weight:bold;
+}
+.btn_page_1{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -102px;
+	color:#fff;
+	font-weight:bold;
+}
+.btn_page2{
+	background:#fff url(/images/ico/button_list.png) no-repeat 0 -88px;
+	width:122px;
+	height:42px;
+	line-height:42px;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+}
+.jifang{ display:inline-block; background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -135px; width:140px; height:27px;}
+.cpu_icon{/*background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -278px; width:74px; height:33px;*/ width: 50px; height:40px;
+background: url(/images/CloudHost/ebscloud/50.jpg) no-repeat 0px -45px;float:left; display:inline-block; margin:0 10px;}
+.ram_icon{/*background:url(/images/CloudHost/cloudall.jpg) no-repeat -91px -278px; width:83px; height:33px;*/width: 50px; height:40px;
+background: url(/images/CloudHost/ebscloud/50.jpg) no-repeat 0px -85px; float:left; display:inline-block; margin:0 10px;}
+.data_icon{/*background:url(/images/CloudHost/cloudall.jpg) no-repeat -191px -278px; width:77px; height:43px;*/ width: 50px; height:40px;
+background: url(/images/CloudHost/ebscloud/50.jpg) no-repeat 0px -1px; float:left; display:inline-block; margin:0 5px 0 10px;}
+.flux_icon{/*background:url(/images/CloudHost/cloudall.jpg) no-repeat -283px -276px; width:74px; height:42px; */ width: 50px;
+background: url(/images/CloudHost/ebscloud/50.jpg) no-repeat 0px -124px; height:40px;float:left; display:inline-block;  margin:0 5px 0 10px;}
+.cpu_slider_bg{background: url(/images/tjt/sliderbg.jpg) repeat-x bottom; height:21px;width: 470px; position:relative;}
+.left_border{background: url(/images/tjt/leftborder.jpg) no-repeat;position: absolute; width:9px; height:16px; left:0; top:0px; z-index:20; }
+.right_border{background: url(/images/tjt/rightborder.jpg) no-repeat;position: absolute; width:9px; height:16px; right:0; top:0px; z-index:20; }
+
+.msg{width: auto;
+text-align: left;
+color: #333;
+font-size: 12px;
+margin-left: 8px;
+font-weight: normal;
+float:left; display:inline;
+}
+
+
+.z_bubblebox li.bottom { height:5px; background:url(/images/CloudHost/ebscloud/bottombg.jpg) repeat-x; font-size:0px;}
+.z_bubblebox .top { height:5px; background:url(/images/CloudHost/ebscloud/topbg.jpg) repeat-x;  }
+.z_bubblebox .mid { border:1px solid #dadada; border-bottom:none; border-top:none;  background:none;}
+.z_bubblebox .m_content { background:none; margin:0 19px 0 0; padding:5px 0 5px 19px; }
+.notop{margin-top:0; padding:0;}
+.width540{ width:540px;}
+.z_buymsg{ background:none;}
+.z_btn-submit-diy {display:inline; background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px 0px; width:178px; height:38px; cursor:pointer; margin:0 auto; padding:0; margin-top:5px; border:none; font-weight:bold; font-size:14px; color:#fff; font-size:0}
+.z_btn-submit-buytest-diy { display:inline; background:url(/images/CloudHost/cloudall.jpg) no-repeat -441px -453px; width:178px; height:38px; cursor:pointer; margin:0 auto; padding:0; margin-top:5px; border:none; font-weight:bold; font-size:14px; color:#fff; font-size:0}
+input.z_btn-submit-diy:hover {  background:url(/images/CloudHost/cloudall.jpg) no-repeat -179px 0px;}
+input.z_btn-submit-buytest-diy:hover {  background:url(/images/CloudHost/cloudall.jpg) no-repeat -620px -453px;}
+.z_btn-submit-sj { display:block; background:url(/images/CloudHost/cloudall.jpg) no-repeat -441px -283px; width:178px; height:38px; cursor:pointer; margin:0 auto; padding:0; margin-top:5px; border:none; font-weight:bold; font-size:14px; 
+color:#fff; text-indent:-9999px; }
+input.z_btn-submit-sj:hover {  background:url(/images/CloudHost/cloudall.jpg) no-repeat -620px -283px;}
+
+dl.linebox1  dd.ddline{border-bottom:none; text-align:center; border-top:1px solid #dddddd; margin-bottom:15px;}
+.datapan{ margin-left:45px;}
+
+/* 弹出提示框的样式 */
+
+
+div.margin5{ margin-bottom:8px;}
+.biaozhun{background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -182px; display:inline-block; width:106px; height:18px; text-indent:-9999px;}
+a.biaozhun:hover{background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -202px;}
+
+.linebox dd{width:650px; margin-left:20px; display:inline; padding:5px 0;}
+.qrmain{ background:url(/images/CloudHost/ebscloud/qrbg.gif) left top repeat-y; overflow:hidden; zoom:1;}
+.qrlayout{ display:none;}
+.selectformqr{ padding-left: 15px;
+position: relative;
+width: 750px;}
+
+input.resubmit { display:block; background:url(/images/CloudHost/cloudall.jpg) no-repeat -549px -336px; width:124px; height:38px; cursor:pointer; padding:0; margin-top:5px; border:none; font-weight:bold; font-size:14px; 
+color:#fff; text-indent:-9999px; float:left; margin-right:20px;  }
+input.resubmit:hover {  background:url(/images/CloudHost/cloudall.jpg) no-repeat -674px -336px;}
+
+input.backsubmit { display:block; background:url(/images/CloudHost/cloudall.jpg) no-repeat -549px -386px; width:124px; height:38px; cursor:pointer; padding:0; margin-top:5px; border:none; font-weight:bold; font-size:14px; 
+color:#fff; text-indent:-9999px;float:left;}
+input.backsubmit:hover {  background:url(/images/CloudHost/cloudall.jpg) no-repeat -674px -386px;}
+
+/* 弹出提示框的样式 */
+#titlemsg, #regdomain #titlemsg div { display:block; margin:0; padding:0; }
+#titlemsg {
+	position: absolute;
+	display: none;
+	z-index: 9999999;
+	width: 230px;
+	height: 102px;
+	top: 10px;
+	left: 10px;
+}
+#titlemsg div#top_left { background:url(/images/Cloudhost/top-left-t.gif) left top no-repeat; width:220px; height:32px; float:left; clear:left; }
+#titlemsg div#top_right { background:url(/images/Cloudhost/top-right-t.gif) right top no-repeat; width:10px; height:32px; float:right; clear:right; }
+#titlemsg div#bottom_left { background:url(/images/Cloudhost/bottom-left-t.gif) left bottom no-repeat; width:220px; height:70px; float:left; clear:left; }
+#titlemsg div#bottom_right { background:url(/images/Cloudhost/bottom-right-t.gif) right bottom no-repeat; width:10px; height:70px; float:right; clear:right; }
+#titlemsg div#titletext { position:absolute; z-index:20; left:20px; top:10px; color:#333; height:80px; border-bottom:2px #0066cc solid; background:url(/images/Cloudhost/call_dot.gif) left top no-repeat; text-indent:20px; }
+
+
+
+
+.nav_unitive { height: 30px; background: url(/images/Cloudhost/navbg00.gif) 0px 0px repeat-x; }
+.nav_unitive ul { list-style-type: none; }
+.nav_unitive ul li { list-style-type: none; height: 24px; float: left; padding: 6px 0 0 0; text-align: center; width: 120px; margin-right: 2px; display:inline; }
+.normal { background: url(/images/Cloudhost/navbg00.gif) no-repeat 0px -80px; color: #666; font-size: 14px; font-weight: bold; color: #333; padding: 8px 10px 0 10px; cursor:pointer; }
+.active { background: url(/images/Cloudhost/navbg00.gif) no-repeat 0 -110px!important; color:#069; font-size: 14px; font-weight: bold; }
+.vps_lable_css_a { overflow:hidden; height:auto;padding:0px 1px 3px 1px; border:solid 1px #ddd; border-top:none; margin:0 8px; }
+.waitingDiv{  margin: 20px auto; text-align:center;}
+.cloud_border{
+overflow: hidden;
+zoom:1;
+height: auto;
+
+border: solid 1px #ddd;
+border-top: none;
+padding:32px 0 10px 0;
+}
+
+h1{ margin:0; padding:0; color:#333;  padding-bottom:10px;}
+h1.ry_title{color:#006699; border-bottom:1px solid #ebebeb; padding-bottom:10px;}
+H1 { MARGIN-BOTTOM: 12px; FONT-SIZE: 14px; FONT-WEIGHT: bold }
+H2 { MARGIN-BOTTOM: 10px; FONT-SIZE: 26px }
+
+
+
+
+
+
+
+
+
+.ddos_bt,.ddos_btactivate{
+	/*background:#fff url(/images/ico/button_list.png) no-repeat;*/
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -655px -102px;
+	width:72px;
+	height:31px;
+	line-height:31px;
+	border:none;
+	cursor:pointer;
+	text-align:center;
+	font-size:12px;
+	color:#333;
+	font-weight:normal;
+	margin-left:8px;
+}
+.ddos_bt:hover{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -102px;
+	color:#fff;
+	font-weight:bold;
+}
+.ddos_btactivate{
+	background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -102px;
+	color:#fff;
+	font-weight:bold;
+}

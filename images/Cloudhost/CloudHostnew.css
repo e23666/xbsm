@@ -1,0 +1,310 @@
+#MainRight #Server_Top_Info { height:222px; margin-top:10px; }
+#Server_Top_Info .ImgDiv_to_Left { background:url(/images/CloudHost/CloudHost_pic.jpg) no-repeat 0px 10px; height:220px; width:320px; }
+.ImgDiv_to_Left #speed_test { height:27px; width:114px; margin-left:160px; margin-top:150px; }
+#Server_Top_Info #cloud_title_pic { background:url(/images/CloudHost/Cloud_host_Title.jpg) no-repeat; width:267px; height:59px; float:left; }
+#Server_Top_Info #link_list { float:left; width:345px; padding-left:25px }
+#link_list ul { list-style-type:decimal-leading-zero; }
+#link_list ul li { margin-top:6px; }
+#MainRight #Cloud_List_Box { margin:20px 10px; height:auto; overflow:hidden; }
+#Cloud_List_Box ul li { width:348px; height:auto; overflow:hidden; background:url(/images/CloudHost/Cloud_host_list_bg.jpg) no-repeat; float:left; margin-left:5px; margin-bottom:20px; display:block; border:solid 1px #d1d1d1; padding-bottom:13px; }
+li .Li_Title { margin:10px 0 0 15px; color:#1E476A; font-size:16px; font-weight:bold; }
+li .Li_PIC_d { height:101px; }
+li .Li_PIC_e { background:url(/images/CloudHost/cloud_list_pic_.gif) no-repeat; height:86px; width:195px; margin:15px 0 0 10px; float:left; }
+li .Li_Content { margin:15px 0 0 15px; height:auto; overflow:hidden; }
+li .Li_Content .aal { float:left; font-weight:bold; color:#069; width:70px; margin-bottom:5px; text-align:right; }
+li .Li_Content .ccl { float:left; width:246px; margin-bottom:5px; margin-left:10px; }
+li .Li_PIC_d .button_a { height:24px; width:84px; float:left; margin:30px 0 0 30px; }
+li .Li_PIC_d .button_b { height:24px; width:84px; float:left; margin:10px 0 0 30px; }
+li .Li_Content .ppl { float:left; width:318px; margin-top:15px; margin-left:10px; }
+#MainRight #Cloud_Content_Box { width:733px; margin:auto; margin-top:15px; background:url(/images/CloudHost/Cloud_host_info_bg.jpg) no-repeat; padding:16px 0 0 17px; }
+#Server_Top_Info .ImgDiv_to_Left #Link_msg { margin-top:20px; width:275px; text-align:right; }
+.Listbutton_new { margin-top:15px; margin-left:200px; }
+.cloudleftpic_title { margin-left:15px; width:152px; }
+.cloudleftpic_list { width:171px; margin-left:15px; margin:13px 0 13px 15px; overflow:hidden; }
+.cloudleftpic_list_Pic { margin-bottom:5px; width:152px; }
+.cloudleftpic_list_ul { display:block; overflow:hidden; }
+.cloudleftpic_list_ul li { display:block; overflow:hidden; background:url(/images/CloudHost/redpoint.jpg) no-repeat 4px; padding-left:12px; margin:2px 0; }
+.CloudRightMain { display:block;  background:url(/images/CloudHost/box_bg.jpg); margin-top:8px; width:750px; }
+.CloudRightMainSelectMenu ul { display:block; width:750px; overflow:hidden; height:66px; }
+.CloudRightMainSelectMenu ul li { display:block;  float:left; }
+.CloudRighticos { width:750px; overflow:hidden; height:auto; margin-top:15px; }
+.CloudRighticos ul { display:block; overflow:hidden; height:auto; padding-left:5px; }
+.CloudRighticos ul li { float:left; height:77px;  display:block;}
+.CloudRighticos ul li.pa { margin-left:42px; display:inline;}
+.CloudRighticos ul span { display:block; padding-left:9px; }
+.line_a { width:171px; margin-left:15px; background:url(/images/webhosting/chosi_re_bg.gif); display:block; height:1px; }
+.CloudRightMainbuttom { }
+.CloudinfoBox { width:740px; margin:10px 5px; }
+.widthnormal{ width:720px;}
+.CloudinfoBox p { display:block; margin:5px 10px 0 23px; letter-spacing:2px; padding-left:30px; }
+.noA { background:url(/images/CloudHost/cloudhost_no_01.jpg) no-repeat 0 4px; }
+.iconbg{background:url(/images/CloudHost/cloudall.jpg) no-repeat -771px -196px;}
+.noB { background:url(/images/CloudHost/cloudhost_no_02.jpg) no-repeat 0 4px; }
+.line_b_b { width:651px; margin-left:53px; display:block; height:1px; background:#dbdbdb; margin-top:10px; margin-bottom:10px; }
+.whyuseus { width:705px; text-align:right; margin-top:3px; }
+/*.CloudProBox { background:url(/images/CloudHost/list_bg.jpg) no-repeat; height:470px; width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox3 { background:url(/images/CloudHost/list_bg_3.jpg) no-repeat; height:470px; width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox4 { background:url(/images/CloudHost/list_bg_2.jpg) no-repeat; height:470px; width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox_title { margin-left:134px; font-size:18px; margin-top:14px; color:#264f6f; font-weight:bold; font-family:"Î¢ÈíÑÅºÚ"; }
+.CloudProBox_title_sub { margin-left:134px; margin-top:11px; font-family:"Î¢ÈíÑÅºÚ"; padding-right:10px; color:#264f6f; font-weight:bold; }
+.ProListinfoList { margin:6px 0 0 15px; height:auto; overflow:hidden; }
+.ProListinfoList .aal { float:left; font-weight:bold; color:#069; width:70px; margin-bottom:0px; text-align:right; }
+.ProListinfoList .ccl { float:left; width:246px; margin-bottom:0px; margin-left:10px; }
+.ProListinfoList .ppl { float:left; width:315px; margin-top:10px; margin-left:10px; text-align:right; }
+*/
+.CloudProBox { width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox3 {  width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox4 { width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox_title { /*margin-left:134px;*/ font-size:18px; padding-top:14px; color:#264f6f; font-weight:bold; font-family:"Î¢ÈíÑÅºÚ";background:url(/images/CloudHost/cloud_list_top.jpg) no-repeat; height:45px; text-align:center; text-indent:20px;  }
+.CloudProBox_title_sub { margin-left:114px; margin-top:11px; font-family:"Î¢ÈíÑÅºÚ"; padding-right:10px; color:#264f6f; font-weight:bold; }
+.ProListinfoList {background:url(/images/CloudHost/cloud_list_bg.jpg) repeat-y;width:346px;   padding:12px 0 0 10px; height:auto; overflow:hidden; }
+.ProListinfoList .aal { float:left; font-weight:bold; color:#000; width:70px; margin-bottom:0px; text-align:right; }
+.ProListinfoList .ccl { float:left; width:246px; margin-bottom:0px; margin-left:10px; }
+.ProListinfoList .ppl { float:left; width:325px; margin-top:10px; margin-left:5px; text-align:right; }
+ .ppl2{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/images/CloudHost/cloud_list_bottom.jpg) no-repeat; height:89px;}
+  .ppl3{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/images/CloudHost/cloud_list_bottom3.jpg) no-repeat; height:89px;}
+    .ppl4{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/images/CloudHost/cloud_list_bottom2.jpg) no-repeat; height:89px;}
+.CloudRightMainMid { width:730px; margin:auto;  padding:10px 0  0 2px; }
+.CloudRightMain { display:block;  background:url(/images/CloudHost/box_bg.jpg); margin-top:8px; width:750px; }
+#WebHost .webhostTitle { margin:13px 0px 0px 10px; height:39px; }
+#chy_box li { float:left; width:92px; cursor:pointer; padding-top:10px; margin-bottom:10px; }
+.zhizhiul { display:block; overflow:hidden; zoom:1; }
+.zhizhiul li { float:left; display:block;_display:inline; padding:1px; margin:15px 12px 35px 14px; border:solid 1px #666666; }
+.Tab_tx_a { background:url(/images/CloudHost/tx_tab_a.jpg) no-repeat; width:375px; height:66px; }
+.Tab_tx_b { background:url(/images/CloudHost/tx_tab_b.jpg) no-repeat; width:375px; height:66px; }
+.Tab_tc_a { background:url(/images/CloudHost/tc_tab_a.jpg) no-repeat; width:375px; height:66px; }
+.Tab_tc_b { background:url(/images/CloudHost/tc_tab_b.jpg) no-repeat; width:375px; height:66px; }
+.Tab_xing_yun { background:url(/images/CloudHost/cloudhost_31_5.jpg) no-repeat; width:750px; height:72px; }
+.cloud_text_info { display:block; margin:5px 10px 0 23px; letter-spacing:2px; padding-left:30px; overflow:hidden; height:auto; }
+.lefPic_a { float:left; margin-right:30px; }
+.bottomInfoText { display:block; overflow:hidden; }
+.bottomInfoTextli { float:left; display:block; padding:1px; margin:0 12px 0 0px; }
+.cloudleftpic_list_b { width:200px; margin:0 0 13px 0; overflow:hidden; }
+.cuscase { border-bottom:1px dashed #c8c8c8; overflow:hidden; zoom:1; padding:20px 0px; margin-left:14px; margin-right:14px;  }
+.left_img, .right_word { float:left; color:#000; }
+.left_img { border:1px solid #e5e5e5; }
+.right_word { width:560px; padding-left:10px; }
+.user_js { color:#828181; }
+.right_word strong { color:#000; }
+.partnerlist { padding:10px 0; }
+.partnerlist a { display:inline-block; margin-right:10px; }
+h1.vsfont { color:#00659e; font-size:20px;line-height:22px; border-bottom:1px solid #ddd; margin:15px 0; overflow:hidden; zoom:1; clear:both;  }
+.vstable { padding:0 20px 0 20px; }
+.vstable table { width:100%; margin:auto; border-collapse:collapse; background:#FFF; }
+.vstable table tr th { border:1px #d5d5d5 solid; color:#3d3d3d; font-size:16px; text-align:center; }
+.vstable table tr td { vertical-align:top; padding:10px; border:1px #d5d5d5 solid; color:#666; }
+.vstitle { background:url(/images/CloudHost/table-title2.jpg) repeat-x; height:39px; line-height:39px; }
+.vstable table tr th.vscloud { background:url(/images/CloudHost/table-title.jpg) repeat-x; height:39px; border:none; color:#fff; width: 230px; }
+.vscen { text-align:center; font-weight:bold; width:60px; }
+.vscen2 {  width:150px; }
+.vstable table tr td.vsyun { color:#00659e; width:200px; background:#f4f4f4; }
+.vsbtn { margin: 10px 10px 10px 280px; display:inline-block; float:left; }
+.vs{font-size: 80px;line-height:80px;
+color: #ff6000;}
+.vs_center{ padding-top:140px;}
+.vslist{ padding:20px 0; overflow:hidden; zoom:1;}
+.vslist p{ text-align:center; font-size:14px;}
+.marginbottom{ margin-bottom:40px;}
+
+
+
+#Link_msg a { color: #069; text-decoration: underline; }
+#Link_msg a:hover { text-decoration: none; }
+.whybanner { width: 977px; padding: 0px; margin: auto; height:236px; overflow: hidden; }
+.whytd, .whycus, .chanpin { padding:0 20px 15px 20px; overflow:hidden; zoom:1; }
+.whytd p { padding:40px 0px 0 25px; _padding-top:53px; *padding-top:53px;
+display:block; width:240px; color:#3a3a3a; }
+.whyone { float:left; display:inline-block; margin:0 5px 5px 0; background:url(/images/CloudHost/whyicon.jpg) no-repeat left top; width:451px; height:142px; }
+.whytwo { float:left; display:inline-block; margin:0 0px 5px 5px; background:url(/images/CloudHost/whyicon.jpg) no-repeat -451px top; width:451px; height:142px; }
+.whythree { float:left; display:inline-block; margin:5px 5px 5px 0; background:url(/images/CloudHost/whyicon.jpg) no-repeat left -142px; width:451px; height:142px; }
+.whyfour { float:left; display:inline-block; margin:5px 0px 5px 5px; background:url(/images/CloudHost/whyicon.jpg) no-repeat -451px -142px; width:451px; height:142px; }
+.whycusl { float:left; padding-right:30px; }
+.whycusr { float:left; width:485px; }
+.custitle { background:url(/images/CloudHost/titlebg.jpg) repeat-x left bottom; height:25px; }
+.custitle h1 { font-size:16px; color:#1e7bb4; margin-bottom:0; height:25px; padding-bottom:0px; width:100px; /*border-bottom:2px solid #ffa800; _margin-top:2px; _height:26px;*/ background:url(/images/CloudHost/titlebg1.jpg) repeat-x left bottom; }
+.cusyoushi { padding-top:10px; overflow:hidden; zoom:1; }
+.ysl { float:left; padding-right:20px; width:226px; }
+.ysr,.leftimg,.float { float:left; }
+.imgl { background:url(/images/CloudHost/whyicon.jpg) no-repeat -80px -284px; width:52px; height:53px; float:left; }
+.imgl2 { background:url(/images/CloudHost/whyicon.jpg) no-repeat -132px -284px; width:52px; height:53px; float:left; }
+.imgl3 { background:url(/images/CloudHost/whyicon.jpg) no-repeat -184px -284px; width:52px; height:53px; float:left; }
+.imgl4 { background:url(/images/CloudHost/whyicon.jpg) no-repeat -236px -284px; width:52px; height:53px; float:left; }
+.imgl5 { background:url(/images/CloudHost/whyicon.jpg) no-repeat -288px -284px; width:52px; height:53px; float:left; }
+.imgl6 { background:url(/images/CloudHost/whyicon.jpg) no-repeat -340px -284px; width:52px; height:53px; float:left; }
+.ysfont { color:#0087d0; font-weight:bold; padding-bottom:5px; padding-top:5px; }
+.wzr { float:left; padding-left:10px; }
+.cptitle { background:url(/images/CloudHost/titlebg.jpg) repeat-x; background-position:bottom; width:913px; height:34px; _height:32px; }
+.xhosting { background:url(/images/CloudHost/whyicon.jpg) no-repeat -87px -342px; width:87px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#666; font-weight:bold; font-family:"ËÎÌå"; display:inline-block; margin-right:5px; cursor:pointer; }
+.thosting { background:url(/images/CloudHost/whyicon.jpg) no-repeat -87px -342px; width:87px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#666; font-weight:bold; font-family:"ËÎÌå"; display:inline-block; margin-right:5px; cursor:pointer; }
+.cloudbg { background:url(/images/CloudHost/whyicon.jpg) no-repeat left -342px; color:#1e7bb4; }
+.more { text-align:right; margin-left:500px; }
+.more a { color:#1e7bb4; }
+.cplist { padding:15px 10px 0 0; float:left; overflow:hidden; zoom:1; }
+.cplist p { line-height:0.7em; }
+.cplist .cptop { background:url(/images/CloudHost/whyicon.jpg) no-repeat -174px -363px; height:6px; width:295px; overflow:hidden; zoom:1; }
+.cplist .cpbom { background:url(/images/CloudHost/whyicon.jpg) no-repeat -174px -369px; height:7px; width:295px; }
+.cplist .cpmain { background:url(/images/CloudHost/mainbg.jpg) repeat-y; width:280px; overflow:hidden; padding-left:15px; padding-top:5px; }
+.cplist .cpmain h1 { padding:0; margin:0; color:#1e7bb4; font-size:14px; }
+.wbtn { display:inline-block; background:url(/images/CloudHost/whyicon.jpg) no-repeat left -284px; width:80px; height:27px; margin:0px 0 0 50px; }
+.redColor2 { color:red; font-size:24px; font-weight:bold; }
+.wdisplay, .wdisplay2 { display:none; }
+.dis { display:block; }
+.wlist { clear:both; overflow:hidden; zoom:1; }
+.vstableA { margin:10px 0; }
+.vs_infoBox { padding:20px 80px; line-height:26px; }
+.BigFont { font-size: 18px; font-weight: bold; width: auto; }
+
+
+.waitingDiv{  margin: 20px auto; text-align:center;}
+.zongping_div { padding:10px; border:solid 1px #ddd; background:#f7f7f7; margin:0 15px 15px 15px; margin-bottom:30px;}
+.div_line_3{ height:1px; margin:25px 8px; background:#ddd;}
+
+#CloudList002{
+display: none;
+}
+
+
+.selectform{ padding-left:15px; padding-top:20px; position:relative;  width:750px;  }
+
+.nav_unitive { height: 30px; background: url(/images/VPSserver/navbg00.gif) 0px 0px repeat-x; }
+.nav_unitive ul { list-style-type: none; }
+.nav_unitive ul li { list-style-type: none; height: 24px; float: left; padding: 6px 0 0 0; text-align: center; width: 120px; margin-right: 2px; display:inline; }
+.normal { background: url(/images/VPSserver/navbg00.gif) no-repeat 0px -80px; color: #666; font-size: 14px; font-weight: bold; color: #333; padding: 8px 10px 0 10px; cursor:pointer; }
+.active { background: url(/images/VPSserver/navbg00.gif) no-repeat 0 -110px!important; color:#069; font-size: 14px; font-weight: bold; }
+.vps_lable_css_a { overflow:hidden; height:auto;padding:0px 1px 3px 1px; border:solid 1px #ddd; border-top:none; margin:0 8px; }
+.waitingDiv{  margin: 20px auto; text-align:center;}
+.cloud_border{
+overflow: hidden;
+zoom:1;
+height: auto;
+
+border: solid 1px #ddd;
+border-top: none;
+padding:32px 0 10px 0;
+}
+
+.sel_youshi li{	
+overflow:hidden;
+zoom:1;
+padding: 0px 10px 40px 20px;
+	}
+	.sel_youshi img {
+float: left;
+padding-right: 25px;
+}
+
+.jieshao img {
+float: left;
+padding-left: 25px;}
+
+
+.pa12{ padding:12px 0 10px 0;}
+.pa15{ padding:0 15px;}
+.margin15{ margin:0 15px;}
+h1{ margin:0; padding:0; color:#333;  padding-bottom:10px;}
+h1.ry_title{color:#006699; border-bottom:1px solid #ebebeb; padding-bottom:10px;}
+.rightword{ float:left; width:590px;}
+.ys_icon1{background:url(/images/CloudHost/cloudall.jpg) no-repeat -458px 0px; width:44px; height:40px; margin-right:25px; display:inline-block;}
+.ys_icon2{background:url(/images/CloudHost/cloudall.jpg) no-repeat -504px 0px; width:47px; height:32px; margin-right:25px; display:inline-block; margin-top:5px;  }
+.ys_icon3{background:url(/images/CloudHost/cloudall.jpg) no-repeat -552px 0px; width:50px; height:35px; margin-right:25px; display:inline-block;  }
+.ys_icon4{background:url(/images/CloudHost/cloudall.jpg) no-repeat -604px 0px; width:46px; height:45px; margin-right:25px; display:inline-block; }
+.ys_icon5{background:url(/images/CloudHost/cloudall.jpg) no-repeat -652px 0px; width:44px; height:45px; margin-right:25px; display:inline-block; }
+.ys_icon6{background:url(/images/CloudHost/cloudall.jpg) no-repeat -696px 0px; width:48px; height:33px; margin-right:25px; display:inline-block; }
+
+a.cloudicon1{background:url(/images/CloudHost/cloudall.jpg) no-repeat -204px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon1:hover,.cloudiconh0{background:url(/images/CloudHost/cloudall.jpg) no-repeat -204px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+a.cloudicon2{background:url(/images/CloudHost/cloudall.jpg) no-repeat -272px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon2:hover,.cloudiconh1{background:url(/images/CloudHost/cloudall.jpg) no-repeat -272px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+a.cloudicon3{background:url(/images/CloudHost/cloudall.jpg) no-repeat -136px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon3:hover,.cloudiconh2{background:url(/images/CloudHost/cloudall.jpg) no-repeat -136px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+
+a.cloudicon4{background:url(/images/CloudHost/cloudall.jpg) no-repeat -68px -182px;width:54px; display:block; padding-top:58px; font-weight:bold;}
+a.cloudicon4:hover,.cloudiconh3{background:url(/images/CloudHost/cloudall.jpg) no-repeat -68px -102px;color:#006699; width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+a.cloudicon5{background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon5:hover,.cloudiconh4{background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -102px; color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold; }
+
+
+a.cloudicon6{background:url(/images/CloudHost/cloudall.jpg) no-repeat -476px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon6:hover,.cloudiconh5{background:url(/images/CloudHost/cloudall.jpg) no-repeat -476px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+
+a.cloudicon7{background:url(/images/CloudHost/cloudall.jpg) no-repeat -340px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon7:hover,.cloudiconh6{background:url(/images/CloudHost/cloudall.jpg) no-repeat -340px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+a.cloudicon8{background:url(/images/CloudHost/cloudall.jpg) no-repeat -408px -182px;width:54px; display:block; padding-top:58px; font-weight:bold; }
+a.cloudicon8:hover,.cloudiconh7{background:url(/images/CloudHost/cloudall.jpg) no-repeat -408px -102px;color:#006699;width:54px; display:block; padding-top:58px; font-weight:bold;}
+
+
+.cloud_description{background:url(/images/CloudHost/cloudall.jpg) no-repeat 0px -46px; width:734px; margin-left:5px; margin-bottom:10px; height:47px; position: relative;}
+.cloud_description .des0,.cloud_description .des1,.cloud_description .des2,.cloud_description .des3,.cloud_description .des4,.cloud_description .des5,.cloud_description .des6,.cloud_description .des7{  height:47px; line-height:57px; color:#006699;}
+
+.cloud_description span {padding-left:10px;}
+.cloud_description .des1 span{ padding-left:46px;}
+.cloud_description .des2 span{ padding-left:103px;}
+.cloud_description .des3 span{ padding-left:150px;}
+.cloud_description .des4 span{ padding-left:100px;}
+.cloud_description .des5 span{ padding-left:150px;}
+.cloud_description .des6 span{ padding-left:470px;}
+.cloud_description .des7 span{ padding-left:478px;}
+.description_arrow{ background:url(/images/CloudHost/cloudall.jpg) no-repeat -372px 0px; width:14px; height:13px;position: absolute; top:0; margin-left:20px;}
+.description_arrow1{ margin-left:116px;}
+.description_arrow2{ margin-left:215px;}
+.description_arrow3{ margin-left:310px;}
+.description_arrow4{ margin-left:404px;}
+.description_arrow5{ margin-left:500px;}
+.description_arrow6{ margin-left:596px;}
+.description_arrow7{ margin-left:693px;}
+.descriptionall,.fitall{ display:none;}
+.show{ display: block;}
+
+.cloudFAQ{ height:auto; overflow:hidden;}
+.cloudFAQ dl{ height:auto; overflow:hidden; display:block; padding:0px 15px 15px 15px; margin: 0 10px 15px 10px;border-bottom:solid 1px #f4f4f4;}
+.cloudFAQ dt{ color:#006699; font-weight:bold; background:url(/images/VPSserver/ico_54_b.gif) no-repeat 0 2px; padding-left:18px; display:block}
+.cloudFAQ dd{ margin:8px 0 0 0; padding:0; display:block; letter-spacing:1px;background:url(/images/VPSserver/ico_54_a.gif) no-repeat 0 2px; padding-left:18px;}
+
+
+.cloudContrast{ margin-top:15px;}
+
+
+.cloudContrast  table { width:100%; margin:auto; border-collapse:collapse; }
+.cloudContrast table tr th { border:1px #d5d5d5 solid; color:#3d3d3d; font-size:16px; text-align:center; background:#f8f8f8; }
+.vstable table tr td { vertical-align:top; padding:10px; border:1px #d5d5d5 solid; color:#666; }
+.cloudContrast .vstitle { background:none;}
+.cloudContrast table tr th.vscloud { background:#f8f8f8; border:1px #d5d5d5 solid; color: #3d3d3d; width:220px; }
+.cloudContrast table tr td.vsyun {background:none; color:#666; }
+.fit .description_arrow{ margin-top:-12px;}
+.fit0{ border:1px solid #dddddd; width:170px; height:20px; line-height:20px; text-indent:15px; position:absolute; left:120px;*left:110px; top:70px; background:#fff; z-index:90; clear:both; color:#333; } 
+.fit1{ border:1px solid #dddddd;width:200px; height:20px; line-height:20px;text-indent:15px; position:absolute; left:220px;*left:210px; top:70px; background:#fff; z-index:90; clear:both;color:#333; } 
+.fit2{ border:1px solid #dddddd;width:170px; height:20px; line-height:20px;text-indent:15px; position:absolute; left:310px;*left:300px; top:70px; background:#fff; z-index:90; clear:both;color:#333; } 
+.fit3{  border:1px solid #dddddd;width:200px; height:20px; line-height:20px;text-indent:15px; position:absolute; left:410px;*left:400px; top:70px; background:#fff; z-index:90; clear:both;color:#333; } 
+.fit4{  border:1px solid #dddddd;width:240px; height:20px; line-height:20px;text-indent:15px; position:absolute; left:425px;*left:415px; top:70px; background:#fff; z-index:90; clear:both;color:#333; } 
+.fit4 .description_arrow{ margin-left: 100px;}
+.fit5{  border:1px solid #dddddd;width:220px; height:20px; line-height:20px;text-indent:15px; position:absolute; left:470px;*left:460px; top:70px; background:#fff; z-index:90; clear:both;color:#333; } 
+.fit5 .description_arrow{ margin-left: 150px;}
+a.amore{ font-size:14px;  margin-bottom:20px; text-decoration:none;  margin-left:270px;display:inline-block; background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -135px; width:140px; height:27px; }
+a.amore:hover{  background:url(/images/CloudHost/cloudall.jpg) no-repeat -581px -227px; width:140px; height:27px;}
+
+
+
+/*cloud advantages*/
+#Cloud_Content_Box .vstable { padding:20px 0px 0 0px; }
+#Cloud_Content_Box .vstable table { width:100%; margin:auto; border-collapse:collapse; background:#FFF; }
+#Cloud_Content_Box .vstable table tr th { border:1px #ddd solid; color:#3d3d3d; font-size:16px; text-align:center; }
+#Cloud_Content_Box .vstable table tr td { vertical-align:top; padding:10px; border:1px #ddd solid; color:#666;text-align:center; }
+#Cloud_Content_Box .vstitle { background:url(/images/CloudHost/table-title2.jpg) repeat-x; height:39px; line-height:39px; }
+#Cloud_Content_Box .vscen2 {  width:60px; }
+#Cloud_Content_Box .vstable table tr td.vsyun { color:#00659e; width:280px; background:#f8f8f8; }
+
+#Cloud_Content_Box H4 {
+MARGIN-BOTTOM: 5px;
+margin-top: 30px;
+FONT-SIZE: 14px;
+background:none;
+padding-left:0px;
+color: #264F6F;
+}
+#Cloud_Content_Box p{ line-height:25px; border-bottom:1px dashed #ddd; padding-bottom:15px; padding-left:20px;}

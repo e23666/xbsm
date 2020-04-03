@@ -1,0 +1,9 @@
+用户{username}已于{PayDate}提交汇款确认.请在 管理后台>财务管理>付款确认 里处理
+
+--账号ID:{username}
+--真实姓名:{name}
+--汇款方式:{hktype}
+--汇款金额:{Moneys}
+--汇款时间:{PayDate}
+--联系电话:{phone}
+--备注:{Mem}

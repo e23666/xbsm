@@ -1,0 +1,485 @@
+/*
+    本页样式为----云建站--后台管理页面
+*/
+#MainContentDIV .ManagerRightShow {
+    padding: 0;
+}
+
+/********************网站名称 开始*******************/
+.managesites-nav {
+    height: 78px;
+    border: 1px solid #dedede;
+}
+
+/************左侧************/
+.managesites-nav .mn-left {
+    float: left;
+    padding-left: 20px;
+    line-height: 78px;
+    font-size: 24px;
+    color: #4b4b4b;
+}
+
+.managesites-nav .site-name-disable {
+    border: none;
+    background: #fff;
+    font-size: 20px;
+    color: #333;
+}
+
+/*图标*/
+.managesites-nav .mn-left i {
+    margin-right: 10px;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background: url("../img/manage/manage-icon.png") no-repeat 0 -36px;
+    vertical-align: middle;
+}
+
+/*重命名*/
+.managesites-nav .mn-left .rename {
+    margin-left: 10px;
+    display: inline-block;
+    width: 52px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #7fcdff;
+    font-size: 12px;
+    color: #4faff2;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/************右侧************/
+.managesites-nav .mn-right {
+    text-align: right;
+    overflow: hidden;
+}
+
+/*分割线*/
+.managesites-nav .mn-right i {
+    margin-right: 50px;
+    display: inline-block;
+    width: 1px;
+    height: 60px;
+    border-left: 1px dashed #d2d2d2;
+    border-radius: 6px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.managesites-nav .mn-right i::before {
+    content: " ";
+    width: 12px;
+    height: 12px;
+    background: #eceff4;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    position: absolute;
+    top: -19px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.managesites-nav .mn-right i::after {
+    content: " ";
+    width: 12px;
+    height: 12px;
+    background: #eceff4;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -8px;
+
+}
+
+.managesites-nav .mn-right .item {
+    margin-right: 30px;
+    line-height: 78px;
+    font-size: 14px;
+    color: #2f2f2f;
+}
+
+/*激活*/
+.managesites-nav .mn-right .item:hover {
+    color: #2086ee;
+}
+
+/*图标*/
+.managesites-nav .mn-right .item .item-icon {
+    margin-right: 10px;
+    display: inline-block;
+    background: url("../img/manage/manage-icon.png") no-repeat;
+    vertical-align: middle;
+}
+
+/*网站浏览*/
+.managesites-nav .mn-right .item .item-icon.look {
+    width: 24px;
+    height: 22px;
+    background-position: -37px 0;
+}
+
+/*续费*/
+.managesites-nav .mn-right .item .item-icon.renew {
+    width: 21px;
+    height: 21px;
+    background-position: -71px 0;
+}
+
+/*升级*/
+.managesites-nav .mn-right .item .item-icon.up {
+    width: 22px;
+    height: 20px;
+    background-position: -102px 0;
+}
+
+/********************网站名称 结束*******************/
+
+/********************tab 开始*******************/
+.managesites-tab {
+    padding: 40px 0;
+}
+
+.sites-previvew-container {
+    width: 360px;
+    height: 300px;
+    position: absolute;
+    /*border: 1px dashed red;*/
+    margin-left: 68px;
+}
+
+/*PC 预览*/
+.sites-previvew-container .sites-previvew .pc-previvew {
+    background: url(../img/manage/sites.png) no-repeat 0 0;
+    height: 300px;
+    width: 324px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.sites-previvew-container .sites-previvew .pc-previvew i {
+    position: absolute;
+    width: 290px;
+    height: 175px;
+    background: no-repeat 0 0;
+    left: 33px;
+    top: 14px;
+}
+
+.sites-previvew-container .sites-previvew .pc-previvew .txt {
+    position: relative;
+    top: 88px;
+}
+
+/*手机预览*/
+.sites-previvew-container .sites-previvew .mobile-previvew {
+    background: url(../img/manage/sites.png) no-repeat -352px -4px;
+    height: 156px;
+    width: 72px;
+    position: absolute;
+    right: -14px;
+    top: 115px;
+    text-align: center;
+}
+
+.sites-previvew-container .sites-previvew .mobile-previvew i {
+    position: absolute;
+    width: 61px;
+    height: 108px;
+    background: no-repeat 0 0;
+    left: 5px;
+    top: 23px;
+    background-size: contain;
+}
+
+.sites-previvew-container .sites-previvew .mobile-previvew .txt {
+    padding: 0px 2px;
+    margin-top: 68px;
+    font-size: 12px;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 3px;
+    font-family: 宋体;
+}
+
+/*微小店*/
+.sites-previvew-container .sites-previvew .weishop-preview {
+    width: 180px;
+    height: 312px;
+    background: url(../img/manage/phone.png) no-repeat 0 0;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    text-align: center;
+    top: -20px;
+}
+
+.sites-previvew-container .sites-previvew .weishop-preview i {
+    position: absolute;
+    background: red;
+    width: 120px;
+    height: 211px;
+    left: 28px;
+    top: 44px;
+}
+
+.sites-previvew-container .sites-previvew .weishop-preview a .txt {
+    top: 130px;
+    position: relative;
+}
+
+/*控制蒙层显示*/
+.sites-previvew-container .sites-previvew a .txt {
+    opacity: 0;
+}
+
+.sites-previvew-container .sites-previvew a:hover .txt {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.sites-previvew-container .sites-previvew a:hover i::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mt-box {
+    margin-left: 560px;
+}
+
+.mt-info {
+    margin: -1px 0 0 -2px;
+    padding: 10px 20px;
+    width: 498px;
+    height: auto;
+    background: #fbfdfe;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.mt-info dl {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #3f3f3f;
+    border-bottom: 1px dashed #dcdddd;
+    clear: both;
+    position: relative;
+}
+
+.mt-info dl dt.info-left {
+    float: left;
+    padding-right: 10px;
+    width: 100px;
+    text-align: right;
+}
+
+.mt-info dl dd {
+    /*padding-left: 10px;
+    overflow: hidden;*/
+}
+
+.mt-info .g-common-btn.g-blue-btn {
+    margin-left: 110px;
+    margin-top: 10px;
+    width: 120px;
+}
+
+/*绑定域名列表 开始*/
+.domain-item-wrapper {
+    margin-top: 7px;
+}
+
+.domain-item-wrapper:first-of-type {
+    margin-top: 0;
+}
+
+.domain-item-wrapper.hide {
+    display: none;
+}
+
+.domain-item {
+    padding-left: 4px;
+    border: 1px solid #a0cdfd;
+    background: #f1fbff;
+    color: #2c7ee9;
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 17px;
+}
+
+.domain-item .name {
+    padding-right: 8px;
+}
+
+.domain-item .desc {
+    color: #fff;
+    background: #81bffd;
+    padding: 0 6px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.domain-item em {
+    position: absolute;
+    background: #2c7ee9;
+    border: 3px solid #81bffd;
+    right: -1px;
+    top: -1px;
+    height: 16px;
+    width: 14px;
+}
+
+.domain-item i {
+    position: absolute;
+    background: url(../img/icon.png) no-repeat -101px -228px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    right: 2px;
+    top: 3px;
+}
+
+#J_bindedDomains {
+    overflow: hidden;
+    padding: 10px 10px 0px;
+    border: 1px solid #fbfdfe;
+    z-index: 999;
+    min-width: 258px;
+    position: relative;
+    top: -10px;
+    margin-bottom: -10px;
+}
+
+#J_bindedDomains.expanded {
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    background: #fff;
+    border: 1px solid #dadada;
+    padding-bottom: 10px;
+}
+
+#J_bindedDomainsEmpty.expanded {
+    height: 110px;
+}
+
+.more-bind-domains {
+    color: #686868;
+    margin-top: 6px;
+    display: inline-block;
+    padding-right: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.more-bind-domains i {
+    position: absolute;
+    background: url(../img/icon.png) no-repeat -120px -222px #fff;
+    width: 10px;
+    height: 16px;
+    right: 0px;
+    top: 0
+}
+
+.more-bind-domains.expanded i {
+    background: url(../img/icon.png) no-repeat -120px -246px #fff;
+    top: 2px;
+}
+
+/*删除绑定域名 结束*/
+/********************tab 结束*******************/
+
+/********************站点详细信息 开始*******************/
+.zd-detail dl {
+    font-size: 12px;
+    width: 50%;
+    float: left;
+    line-height: 30px;
+}
+
+.zd-detail dl dt {
+    color: #697f95;
+    width: 120px;
+    float: left;
+    text-align: right;
+}
+
+.zd-detail dl dd {
+    color: #555555;
+}
+
+/*运行状态*/
+.site-status {
+    margin-left: 10px;
+}
+
+.site-status i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 3px;
+}
+
+.site-status-running {
+    color: #17d036;
+}
+
+.site-status-running i {
+    background-color: #17d036;
+}
+
+.site-status-not-running {
+    color: red;
+}
+
+.site-status-not-running i {
+    background-color: red;
+}
+
+/*高亮超链接*/
+.detail-link {
+    color: #1564e7;
+    margin-right: 10px;
+}
+
+/********************站点详细信息 结束*******************/
+.bindTips-container {
+    padding: 20px;
+}
+
+.bindTips-container .tip-title {
+    text-align: center;
+    font-size: 20px;
+    color: #18980e;
+}
+.bindTips-container .domain-name{
+    color:red;
+}
+
+.success-icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url(/images2016/reg-icon.png) no-repeat 0 -782px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.bindTips-container .product-detail-desc .pdd-list li{
+    white-space: normal;
+    word-break: break-all;
+}

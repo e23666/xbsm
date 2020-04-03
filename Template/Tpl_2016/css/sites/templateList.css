@@ -1,0 +1,266 @@
+/***********************模板列表 开始**************************/
+.tpl-container {
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+}
+
+.tpl-list-container li {
+    width: 270px;
+    margin-right: 23px;
+    margin-top: 33px;
+    float: left;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.tpl-list-container li.row-last {
+    margin-right: 0;
+}
+
+.tpl-list-container .no-tpl {
+    height: 238px;
+    line-height: 238px;
+    text-align: center;
+}
+
+.tpl-list-container .no-tpl span {
+    vertical-align: middle;
+}
+
+.tpl-list-container .no-tpl i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(/template/Tpl_2016/images/sites/icon.png) no-repeat -99px -269px;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.tpl-container .tpl-header {
+    height: 20px;
+    line-height: 20px;
+    background: #e2e2e2;
+    padding-left: 10px;
+    font-size: 0;
+}
+
+.tpl-container .tpl-header .point {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.red-point {
+    background: #ea5c6a;
+}
+
+.yellow-point {
+    background: #ecc468;
+}
+
+.green-point {
+    background: #2bc950;
+}
+
+/*内容区*/
+.tpl-container .tpl-body {
+    height: 201px;
+    border-bottom: 1px solid #dcdcdc;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    position: relative;
+    overflow: hidden;
+}
+
+.tpl-container .tpl-body img {
+    width: 100%;
+}
+
+/*PC+手机  手机正常情况下的 预览图*/
+.tpl-container .tpl-body .mobile-thumb {
+    width: 96px;
+    height: 150px;
+    background: url(/template/Tpl_2016/images/sites/icon.png) no-repeat -196px 0px;
+    position: absolute;
+    z-index: 1;
+    right: -4px;
+    bottom: 0px;
+    overflow: hidden;
+    padding-bottom: 22px;
+}
+
+.tpl-container .tpl-body .mobile-thumb img {
+    width: 66px;
+    margin: 26px auto 0 auto;
+    display: block;
+    max-height: 150px;
+}
+
+.tpl-container .tpl-mask {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.tpl-container:hover {
+    box-shadow: 0px 7px 15px 5px rgba(0, 0, 0, 0.1)
+}
+
+.tpl-container:hover .tpl-mask {
+    opacity: 1;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*PC 预览*/
+.tpl-container .tpl-mask .preview-pc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.tpl-container .tpl-mask .preview-pc::after {
+    width: 52px;
+    height: 80px;
+    background: url(/template/Tpl_2016/images/sites/icon.png) no-repeat 0 -29px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -26px;
+    margin-top: -40px;
+    content: '';
+}
+
+/*PC+手机版本 ----  手机预览容器*/
+.tpl-container .tpl-mask .preview-mobile-thumb {
+    width: 66px;
+    height: 118px;
+    position: absolute;
+    right: 12px;
+    top: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 66px auto;
+}
+
+.tpl-container .tpl-mask .preview-mobile-thumb::after {
+    content: '';
+    position: absolute;
+    width: 66px;
+    height: 118px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/*PC+手机版本 ----- 手机视窗*/
+.tpl-container .tpl-mask .preview-mobile {
+    width: 86px;
+    height: 169px;
+    background: url(/template/Tpl_2016/images/sites/icon.png) no-repeat -202px 0px;
+    position: absolute;
+    bottom: 3px;
+    z-index: 1;
+    right: 0;
+}
+
+/*底部栏位*/
+.tpl-container .tpl-footer {
+    font-size: 14px;
+    color: #565656;
+    position: relative;
+    padding: 6px 8px;
+}
+
+.tpl-container .tpl-footer div {
+    height: 24px;
+    line-height: 24px;
+}
+
+.tpl-container .tpl-footer .buy {
+    position: absolute;
+    right: 14px;
+    top: 13px;
+}
+
+/*******纯手机版 布局（基于PC版） 开始*****/
+.mobile-tpl-list-container {
+
+}
+
+/*纯手机版 不加阴影*/
+.mobile-tpl-list-container .tpl-container:hover {
+    box-shadow: none;
+}
+
+.mobile-tpl-list-container li {
+    width: 232px;
+    margin-right: 74px;
+}
+
+.mobile-tpl-list-container .tpl-container {
+    height: 482px;
+    border: none;
+    background: none;
+    background-image: url("/template/Tpl_2016/images/sites/template/iPhone.png");
+}
+
+.mobile-tpl-list-container .tpl-body {
+    height: 356px;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 62px;
+    border: 1px solid #f2f2f2;
+    /*background-position: center top;*/
+}
+
+.mobile-tpl-list-container .mobile-tpl-mask {
+    padding-top: 16px;
+    height: 340px;
+}
+
+.mobile-tpl-list-container .mobile-tpl-mask p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.mobile-tpl-list-container .mobile-tpl-mask .mobile-desc {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.mobile-tpl-list-container .mobile-tpl-mask .qrcode-img {
+    margin: 8px auto 14px auto;
+    width: 148px;
+    height: 148px;
+    display: block;
+}
+
+/*底部按钮*/
+.mobile-tpl-list-container .mobile-tpl-mask .common-btn {
+    width: 130px;
+    margin-bottom: 13px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+}
+
+.mobile-tpl-list-container .mobile-tpl-mask .preview {
+    background-color: #d7d7d7;
+}
+
+/*******纯手机版 布局 结束*****/

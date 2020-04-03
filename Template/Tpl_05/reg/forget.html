@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>取回密码</title>
+<meta name="description" content="取回密码-{companyname}是西南地区最大的虚拟主机、域名注册、服务器租用服务商！20项虚拟主机领先优势，30000用户的共同选择!领先的虚拟主机技术,配合NAS存储设备、ddos防火墙，为您打造性价比最高的虚拟主机!全国领先的双线路虚拟主机，南北畅通无阻！Cn域名58元起！">
+<meta name="keywords" content="取回密码-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/reg1.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/Template/Tpl_05/jscripts/check.js"></script>
+<script language="javascript" src="/jscripts/jq.js"></script>
+<script language="javascript">
+function dosetimg(v){
+	document.getElementById(v).src+=parseInt(Math.random()*10);
+}
+function checksub(v){
+	var u_name=v.u_name;
+	var u_email=v.u_email;
+	var msn_msg=v.msn_msg;
+	var code=v.code;
+	var cur=0
+	var regex=/^[\w]{2,6}$/;
+	if (!regex.test(code.value)){
+		alert('验证码格式错误');
+		code.focus();
+		return false;
+		
+	}
+	if(u_name.value!=''){
+			if (u_name.value.length<4){
+			alert('账号ID格式错误');
+			u_name.focus();
+			return false;
+		}
+		cur++;
+	}
+	if(u_email.value!=''){
+		if(!isEmail(u_email.value)){
+			alert('邮箱格式错误');
+			u_email.focus();
+			return false;
+		}
+		cur++;
+	}
+	if (msn_msg.value!=''){
+		if(!isMobile(msn_msg.value)){
+			alert('手机号码格式错误');
+			msn_msg.focus();
+			return false;
+		}
+		cur++;
+	}
+	if (cur<2){
+		alert('请输入两个或两个以上的项');
+		return false;
+	}
+	return true;
+}
+
+	$(function(){
+		
+			$("input[name='setSend']").change(function(){
+				if($(this).val()=="mail")
+				{
+					$("#mailbox").show();
+					$("#smsbox").hide();
+				}else 
+				{
+					$("#mailbox").hide();
+					$("#smsbox").show();
+				}
+				 
+			})
+		})
+		var js=0
+		var t;
+		function snedsafecode(t,obj)
+		{
+			var url="/reg/forget.asp"
+		    var sendtype=$("input[name='setSend']:checked").val()
+			var val=$("input[name='u_email']").val();
+			var u_name=$("#f_u_name").val();
+			if(u_name==""){
+				 alert("请录入您要找回的帐号名称!");
+				return false;
+			}
+			if(sendtype!="mail")
+			{val=$("input[name='msn_msg']").val();}
+
+			if(val==""){
+				 alert("请填写注册时填写的邮箱或手机号");
+				 return false;
+			}
+
+			var postdata="act=sendcode&u_name="+escape(u_name)+"&sendtype="+escape(sendtype)+"&val="+escape(val)
+			$.post(url,postdata,function(data){ 
+			 
+				     alert(data.msg)
+					if(data.code==200)
+					{
+						$(obj).val("已发送");
+						obj.disabled=true;
+					}
+				 
+			},"json")
+		}
+</script>
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<body id="thrColEls">
+<div class="Style2009"> {#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/reg/forget.asp">找回密码</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+    <div id="Reg_Box" style="height:500px;">
+      <div class="rb_title_forget">
+        <ul>
+          <li>以下带*号的填项为必须填写，请填写您的真实资料，您所填写的资料将受{companyname}保密。</li>
+        </ul>
+      </div>
+      <form name="formusername" action="/reg/forgetsub.asp" method="post" >
+        <dl style="margin-top:40px;">
+          <dd class="clearfix">
+            <table>
+              <tr>
+                <td><label>您的账号:</label>
+                  <h1>&nbsp;
+                    <input name="u_name" id="f_u_name" type="text" class="inputbox">
+                    *</h1></td>
+                <td >您注册时的账号ID<span id="u_company_span" style="display:none"></span></td>
+              </tr>
+            </table>
+          </dd>
+	   <dd class="clearfix">
+            <table>
+              <tr>
+                <td><label>密码发送方式:</label>
+                  <h1>&nbsp;<input name="setSend" type="radio" value="mail" checked>邮箱<input name="setSend" type="radio" value="sms" {sms_disabled}>手机 
+                    *</h1></td>
+                <td >新密码将发送到你指定的方式(邮箱/手机)上<span id="u_company_span" style="display:none"></span></td>
+              </tr>
+            </table>
+          </dd>
+          <dd class="clearfix" id="mailbox">
+            <table>
+              <tr>
+                <td><label>您的邮箱:</label>
+                  <h1>&nbsp;
+                    <input name="u_email" type="text" class="inputbox">
+                    *</h1></td>
+                <td><input type="button" value="发邮件" onclick="snedsafecode('mail',this)" class="common-btn">您用户资料里的邮箱<span id="u_company_span" style="display:none"></span></td>
+              </tr>
+            </table>
+          </dd>
+          <dd class="clearfix" id="smsbox" style="display:none">
+            <table>
+              <tr>
+                <td><label>您的手机:</label>
+                  <h1>&nbsp;
+                    <input name="msn_msg" type="text" class="inputbox">
+                    *</h1></td>
+                <td ><input type="button" value="发手机" onclick="snedsafecode('mail',this)"  class="common-btn">您用户资料里的手机<span id="u_company_span" style="display:none"></span></td>
+              </tr>
+            </table>
+          </dd>
+         <dd class="clearfix">
+                         <table>
+                             <tr>
+                                 <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span> 收到的验证码:</label>
+                                    </td>
+                                 <td>&nbsp;<input name="safecode" type="text" class="inputbox" >
+                                     </td>
+                                 <td width="47%">&nbsp;&nbsp;&nbsp;&nbsp;<span id="u_company_span" style="display:none"></span></td>
+                             </tr>
+                         </table>
+                     </dd>
+          <dd class="clearfix">
+            <table>
+              <tr>
+                <td><label>验证码:</label>
+                  <h1>&nbsp;
+                    <input name="code" type="text" class="inputbox" size="10" maxlength="4" autocomplete="off">
+              <input type="hidden" name="codeKey" value="{codeKey}">
+              
+                    *</h1></td>
+                <td ><img id="img1" src="/config/DvCode.asp?k={codeKey}&" onClick="this.src+=parseInt(Math.random()*10)" alt="点击可刷新"><a href=#### onClick="dosetimg('img1')">点击可刷新</a><span id="u_company_span" style="display:none"></span></td>
+              </tr>
+            </table>
+          </dd>
+          <dd class="clearfix">
+            <table>
+              <tr>
+                <td><label></label>
+                  <h1>&nbsp;
+          <input type="hidden" name="module" value="forgetpwd" />
+              <input type="submit" class="ButtonBox" name="Submit1" value="" onClick="return checksub(this.form)" style="background:url(/Template/Tpl_05/newimages/Reg/LongButton_submit.gif); width:84px; height:24px; border:none; cursor:pointer">
+              
+                    *</h1></td>
+                <td ></td>
+              </tr>
+            </table>
+            </dd>
+        </dl>
+        <br />
+        <br />
+        <br />
+        <br />
+      </form>
+    </div>
+  </div>
+</div>
+{#bottom.html}
+</body>
+</html>

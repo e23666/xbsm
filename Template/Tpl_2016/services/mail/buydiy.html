@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}企业邮局在线购买</title>
+<meta name="description" content="{companyname}企业邮局简介-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网.">
+<meta name="keywords" content="{companyname}企业邮局简介-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/productDetailInfo.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/commonForm.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+	<style>
+	.mailsizeclass div{display:inline-block; margin-right:20px;}
+	#checkdiv div{display:initial;}
+	dd select{       padding-left: 10px;
+	width: 223px;
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #e6e6e6;}
+	</style>
+
+</head>
+<script language="javascript" src="/config/ajax.js"></script>
+<script language=javascript>
+var mailconfig="{mailconfig}",
+    myzk={myzk}
+
+$(function(){
+  $("input[name='MailSize']").click(function(){
+      showjg()     
+  })
+  $("input[name='userNum']").keyup(function(){
+					unobj=$(this)
+							if(isNaN(unobj.val()))
+								unobj.val(5);
+							if(unobj.val()<1)
+								unobj.val(1);
+							if(unobj.val()>10000)
+								unobj.val(10000);
+								showjg();
+  })
+})
+
+function showjg()
+{
+var t=$("input[name='MailSize']:checked").val(),
+    userNum=$("input[name='userNum']").val();
+ 
+ _t=mailconfig.split(",");
+	for(var i=0;i<_t.length;i++){
+	
+     __t=_t[i].split(":");
+ 
+	 if(__t[0]>=1024){
+ 
+	  if(__t[0]==t)
+	  {
+	  var jg=(__t[1]*userNum*myzk)
+	  obj=$("select[name='years']");
+	  obj.empty()
+		// alert(__t[1]*userNum*myzk))
+//$(".p_mail").html((__t[1]*userNum*myzk)+"元/"+userNum+"用户")
+        //  $("input[name='MailSize']").val(__t[0]);
+
+		$("#p_size").html(__t[0]+"M");
+		$("#p_price").html(__t[1]+"元");
+		for(y=1;y<=10;y++)
+		{
+		str=""
+		if(y==3){str="【买三年送一年】"}
+		if(y==5){str="【买五年送三年】"}
+		if(y==10){str="【买十年送五年】"}
+		obj.append("<option value=\""+y+"\">"+(jg*y)+"元/"+y+"年"+str+"</option>")
+		}
+ 
+	    }
+       }
+   }
+}
+
+function chechftpname(mailname){
+		var url='buy.asp?module=checkmailname';
+		var sinfo='mailname='+mailname;
+		var divID='checkdiv';
+		$.post(url,sinfo,function(data){
+			$("#checkdiv").show();
+			$("#checkdiv").html(data)
+		})
+//		document.getElementById('checkdiv').style.display='';
+//		makeRequestPost1(url,sinfo,divID);
+	}
+function shopcheck(){
+		var isftppd=$("#isftppd") 
+		if (typeof(isftppd.val())=='undefined' || isftppd.val()=="")
+		{
+			$.dialog.alert("输入格式有错误,请修正后重试");
+			return false;
+		}
+
+		if (isftppd.val()=='0'){
+				if (typeof($("#okvalue").val())!='undefined'   && $("#okvalue").val()!=null  )
+				{
+					var vv=$("#okvalue").innerHTML;
+				}else{
+					var vv="输入格式有错误,请修正后重试";
+				}
+				$.dialog.alert(vv);
+				$("input[name='m_bindname']").focus();
+				return false;
+		}
+		
+		var pwd=$("input[name='m_password']")
+		var pwd2=$("input[name='m_password2']")
+		if(pwd.val().length>15 || pwd.val().length<5)
+		{
+			$.dialog.alert('域名密码长度应在5-15之间');
+			pwd.focus();
+			return false;
+		}else{
+		var regxv=/^[\w\-\.]{5,15}$/;
+		var regreturn = regxv.test(pwd.val());
+		if (!regreturn){
+				$.dialog.alert('邮局密码格式错误,不能含有特殊字符');
+				pwd.focus();
+				return false;
+			}
+		}
+		if (pwd.val()!=pwd2.val())
+		{
+			$.dialog.alert('两次密码不一致,请重新录入');
+			pwd2.focus();
+			 return false;
+		}
+
+		if(!$("input[name='agreement']").is(":checked"))
+		{
+			$.dialog.alert('你还没有同意不发垃圾邮件或群发广告邮件'); 
+			 return false;
+		}
+  
+}
+</script>
+<body class="min990">
+{#top.html}
+<div class="content" id="content">
+    <div class="wide1190 pt-40">
+        <div class="page-content">
+
+            <div class="page-info">
+                <form class="common-form" id="J_serverOrderForm" method="post" action="buydiy.asp" onsubmit="return shopcheck()">
+			 
+                    <dl>
+                        <dt>服务器配置</dt>
+                        <dd>
+                            <label class="common-label">
+                                <span class="required">*</span>选择机房：</label>
+                            {setroomlist}
+
+                        </dd>
+                        <dd>
+                            <label class="common-label"><span class="required">*</span>邮局域名：</label>
+                            <input name="m_bindname" type="text"  onFocus="javascript:document.getElementById('checkdiv').style.display='none';" onBlur="chechftpname(this.value)"  class="common-input std-width common-validate" >
+							  <label name="checkdiv" id="checkdiv"></label>
+                        </dd>
+                        <dd>
+                            <label class="common-label">
+                                <span class="required">*</span>
+                                密码：
+                            </label>
+                            <input name="m_password" type="text"   value="{rndpass}" class="common-input std-width common-validate" name="m_password"  size="30" >
+
+                        </dd>
+                        <dd>
+                            <label class="common-label">
+                                <span class="required">*</span>
+                                确认密码：
+                            </label>
+                            <input name="m_password2" type="text"  value="{rndpass}"  class="common-input std-width common-validate"  size="30" >
+
+                        </dd>
+				
+                        <dd>
+                            <label class="common-label">
+                                <span class="required">*</span>
+                                每个邮箱大小：
+                            </label>
+                            <span class="mailsizeclass">{MailSize}</span>
+                        </dd>
+                        <dd>
+                            <label class="common-label">
+                                <span class="required">*</span>
+                                邮箱数：
+							</label>
+							<label>需要开通&nbsp;&nbsp;<input name="userNum" type="text" class="common-input" class="userNum" size="4" value="{userNum}"  />                个用户 </label>
+                        </dd>
+                        
+
+                        <dd class="buy-years" id="J_buyYears">
+                            <label class="common-label">
+                                购买年限：
+                            </label>
+                            {buyHostpriceList}
+                        </dd>
+
+                        <dd style="padding-left: 290px;">
+                            <div class="pt-10">
+                                <input value="1" name="agreement" id="J_agreement" type="checkbox">
+                                <label style="display:inline; width:auto; float:none;" for="J_agreement">
+                                    我同意不用此邮局发垃圾邮件或群发广告邮件
+                                </label>
+                            </div>
+                            <div class="pt-20">
+								<input type="submit" name="Submit1" value="继续下一步" class="submit-btn" > 
+								<input type="hidden" name="productid" value="{productid}">
+								<input type="hidden" name="module" value="addshopcart">
+								<input type="hidden" name="act" />
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <!-- 隐藏域 开始 -->
+                    <input name="act" type="hidden">
+                    <!-- 隐藏域 结束 -->
+                </form>
+            </div>
+
+            <div class="product-detail-desc">
+                <div class="title">
+                    <span>温馨提示</span>
+                </div>
+                <p class="pt-5">
+                    [1] 购买零风险,30天内无条件退余款!;
+                </p>
+                <p>[2] 本企业邮局适合企业正常收发业务邮件使用，不适合群发会员通知、EDM、广告邮件、促销邮件、发送病毒、垃圾邮件、钓鱼邮件、欺诈等行为。;</p>
+                <p>[3] 系统有智能监控功能，一旦发现上述群发行为，会自动停止发件权限或永久关闭相关服务;</p>
+            </div>
+        </div>
+    </div>
+</div>
+{#bottom.html}
+</body>
+</html>

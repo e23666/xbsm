@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！至强5420四核/4G内存/146Gsas硬盘仅需999元.">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/template/Tpl_05/css/CloudHost.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function DoRoomPriceSelect(vps_type,k)
+
+{
+
+	objTab=document.getElementById("vps_Big_Room_"+vps_type);
+
+	div_list=objTab.getElementsByTagName("div");
+
+	
+
+	for(i=1;i<=div_list.length;i++)
+
+	{
+
+		divObj=document.getElementById("vpsromprice_"+vps_type+"_"+i);
+
+		radioOBJ=document.getElementById("radio_"+vps_type+"_"+i);
+
+		if(i!=k)
+
+		{
+
+			divObj.style.display="none";
+
+			radioOBJ.checked=false;
+
+		}
+
+		else
+
+		{
+
+			radioOBJ.checked=true;
+
+			divObj.style.display="";
+
+		}
+
+		
+
+		objTab_tar_1=document.getElementById(vps_type+"_cpu");
+
+		objTab_tar_2=document.getElementById(vps_type+"_flux");
+
+		
+
+		if(k==2 || k==4)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 2.0G(四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		if(k==5)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+	}
+
+}
+
+</script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/CloudHost/">云主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+        {#cloudhostleft.html}
+
+    <div id="MainRight">
+      <div id="DomainFlash">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+          <param name="movie" value="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <embed src="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+        </object>
+      </div>
+<div id="Cloud_Content_Box"><div id="Title_info"><img src="/newimages/CloudHost/adof.jpg" width="290" height="61"></div>
+        <strong> <a href="/">{companyname}弹性云</a>磁盘测试 </strong>
+        <p align="center"><img src="../../newimages/cloudhost/ebs-io2.jpg" width="679" height="564"><br>
+          <img src="../../newimages/cloudhost/ebs-io1.jpg" alt="ebs"></p>
+     <strong>  传统独立主机sata硬盘测试速度 </strong>
+        <p align="center"><img src="/newimages/CloudHost/io1.jpg" alt="sta" width="553" height="380"><br>
+            <br>
+          <img src="/newimages/CloudHost/sataio.jpg" alt="sata"></p>
+        <p align="left" class="STYLE1"><strong>SSD固态硬盘速度测试</strong></p>
+        <p align="center"><img src="../../newimages/CloudHost/ssdio.jpg" alt="ssd" width="685" height="672"></p>
+        
+        <p align="left"><strong>衡量存储性能一般看吞吐量（传输速度）和IOPS两个指标。</strong><br>
+          <br> 
+          吞吐量主要指大文件的连续读写速度，在大文件的复制、备份等场景适用，用“HD Tune专业版”中的“基准”测试功能即可测试出磁盘的吞吐量，一般传统机械sata硬盘的顺序读写速度为
+          ：80~150M/s, SAS硬盘为150~200M/s，SSD固态硬盘为400~600M/s。<br>
+          {companyname}弹性云主机使用“分布式存储”模式时， 在正常负载情况下的顺序读取速度为180~300M/s，集群空载情况下测试速度为400~700M/s。顺序写速度约为30~70M/s。
+          <br>
+          {companyname}弹性云主机使用“SSD固态硬盘”模式时，在正常负载情况下的顺序读取速度为600~800M/s，顺序写速度约为300~450M/s。
+          
+          <br>
+          <br>
+          随机读写性能也是衡量硬盘表现的重要指标，它基本上代表了硬盘在读写散布在各个位置的小文件时的性能表现，一般以4KB文件大小为标准,IOPS(I/Os per second)即每秒输入输出次数。
+          在网站WEB应用及数据库应用中，通常是若干随机小文件的读写，故存储的IOPS若太低则在高访问量的情况下可能会成为性能瓶颈。 用“HD Tune专业版5.50”中的“文件基准”功能可以测试
+          IOPS性能，一般以4K大小对应的iops指标做为参考：
+          
+          <br>5.50
+          常见硬盘IOPS参考值：   <br>
+          7200转SATA硬盘：随机读写约90 IOPS<br>
+          15000转SAS硬盘：随机读写约180 IOPS
+          <br>
+          2013年主流的SSD固态硬盘：随机读写约5000~60000 (不同品牌的产品各有不同)<br>
+          {companyname}弹性云主机使用“分布式存储”模式时， 单一随机读IOPS约为3000~6000。单一随机写IOPS约为800~1000。
+          <br>
+          {companyname}弹性云主机使用“SSD固态硬盘”模式时，单一随机读IOPS约为5000~40000。单一随机写IOPS约为4000~30000。<br>
+          <br>
+          综上所述：
+          
+          {companyname}云主机同时兼顾数据安全与IO速度问题，个别服务商保存3份数据以牺牲IO速度为代价，只有极低的IO速度，其他国内云厂商一般采用本机阵列存储，可靠性不高，本
+          机硬件或存储损坏的情况下，业务中断时间较长。{companyname}创造性地解决了这个问题，通过高速的万M网络和极优的算法，既保证了数据安全也提供相当不错的磁盘IO性能，其“分布式存储
+          ”模式，数据同步写4份，在保证数据安全的同时，仍拥有相当高的读取速度，写入速度也能满足98%以上的网站应用场景。  对于个别对IO随机读写要求极高的应用，可以选择SSD固态硬盘
+          存储方式，SSD相对传统机械硬盘有着上百倍的IOPS提升，但价格也相当贵。“SSD硬盘存储”方式虽然有RAID5方式保证数据的安全性，但在宿主服务器异常死机或损坏的情况下，不支持“
+      热迁移”至其他节点，中断时间相对较长，故需要根据业务对可靠性的要求选择负载均衡或双机热备等方式来进行容灾备份。</p>
+        <p align="left">相关链接：<br>
+          常见硬盘IOPS参考值 <a href="http://elf8848.iteye.com/blog/1731301" target="_blank">http://elf8848.iteye.com/blog/1731301</a><br>
+          RAID0新玩法 三星840系SSD狂飙千兆/秒 <a href="http://ssd.zol.com.cn/325/3258025.html" target="_blank">http://ssd.zol.com.cn/325/3258025.html</a><br>
+        I/0接口吐吞量测试对比 <a href="http://ssd.zol.com.cn/365/3651843.html" target="_blank">http://ssd.zol.com.cn/365/3651843.html</a></p>
+</div>
+  </div>
+</div>
+{#bottom.html} 
+</body>
+</html>

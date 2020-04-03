@@ -1,0 +1,93 @@
+@import url("weiyanlover.css");
+dl,dd,dt,h1,h2,h3,dd p,dd label{
+	display:block;
+	margin:0;padding:0;
+	font-size:12px;
+	font-weight:normal;
+}
+dd ul{
+	display:block;
+	margin:0;padding:0;
+	list-style-type:none;
+}
+dd li{
+	display:block;
+	margin:0;padding:0;
+	background:url(/Template/Tpl_05/newimages/Domains/domainquery_bg01.gif) center repeat-x;
+}
+dl{
+	width:750px;
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_bg.jpg) repeat-y;	
+}
+dt{
+	background:url(/Template/Tpl_05/newimages/Domains/Domain_Search_pic.jpg) no-repeat;
+	height:177px;
+	width:218px;
+	margin-left:10px;
+	float:left;
+	clear:left;
+}
+dd{
+	width:490px;
+	float:right;
+	clear:right;
+	margin-right:20px;
+}
+.whois_top{
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_top.jpg) bottom no-repeat;
+	height:7px;
+	width:750px;
+	clear:both;
+}
+.whois_bottom{
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_bottom.jpg) no-repeat;
+	height:7px;
+	width:750px;
+	clear:both;
+}
+dd.nocheck_content{
+	height:auto;
+	overflow:hidden;
+	line-height:177px;
+	text-align:center;
+}
+/* -----ÄÚÈÝ------ */
+.allowreg label {
+	background:url(/Template/Tpl_05/newimages/webhosting/ico_16x16_round.gif) left no-repeat;
+	color:green;
+	padding-left:24px;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+}
+.denialreg label {
+	background:url(/Template/Tpl_05/newimages/webhosting/ico_16x16_round_orange.gif) left no-repeat;
+	color:#F30;
+	padding-left:24px;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+}
+.errreg label {
+	background:url(/Template/Tpl_05/newimages/webhosting/ico_16x16_round_dust.gif) left no-repeat;
+	color:#999;
+	padding-left:24px;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+}
+h1{
+	background-color:#fff;
+	float:left;clear:left;
+	height:18px;
+	line-height:18px;
+	padding-bottom:2px;
+}
+h2{
+	background-color:#FFF;
+	float:right;
+	clear:right;
+	height:18px;
+	line-height:18px;
+	color:#666;	
+}

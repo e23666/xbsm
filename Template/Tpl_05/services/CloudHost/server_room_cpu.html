@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！至强5420四核/4G内存/146Gsas硬盘仅需999元.">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/template/Tpl_05/css/CloudHost.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function DoRoomPriceSelect(vps_type,k)
+
+{
+
+	objTab=document.getElementById("vps_Big_Room_"+vps_type);
+
+	div_list=objTab.getElementsByTagName("div");
+
+	
+
+	for(i=1;i<=div_list.length;i++)
+
+	{
+
+		divObj=document.getElementById("vpsromprice_"+vps_type+"_"+i);
+
+		radioOBJ=document.getElementById("radio_"+vps_type+"_"+i);
+
+		if(i!=k)
+
+		{
+
+			divObj.style.display="none";
+
+			radioOBJ.checked=false;
+
+		}
+
+		else
+
+		{
+
+			radioOBJ.checked=true;
+
+			divObj.style.display="";
+
+		}
+
+		
+
+		objTab_tar_1=document.getElementById(vps_type+"_cpu");
+
+		objTab_tar_2=document.getElementById(vps_type+"_flux");
+
+		
+
+		if(k==2 || k==4)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 2.0G(四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		if(k==5)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+	}
+
+}
+
+</script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/CloudHost/">云主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+        {#cloudhostleft.html}
+
+    <div id="MainRight">
+      <div id="DomainFlash">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+          <param name="movie" value="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <embed src="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+        </object>
+      </div>
+       <style>
+#Cloud_Content_Box{padding:20px; margin-bottom:30px;}
+#Cloud_Content_Box H4 {
+MARGIN-BOTTOM: 5px;
+margin-top: 30px;
+FONT-SIZE: 14px;
+background: none;
+padding-left: 0px;
+color: #264F6F;
+}
+#Cloud_Content_Box P {
+LINE-HEIGHT:200%;
+COLOR: #666;
+FONT-SIZE: 12px;
+}
+#Cloud_Content_Box a{ color:#00F;}
+ li{ list-style:none; }
+#Cloud_Content_Box ul li{ float:left; margin-right:10px;}
+.clear{ clear:both;}
+#Cloud_Content_Box ul{clear:both;}
+ </style>
+ <div id="Cloud_Content_Box">
+		
+        
+        <div style="width:700px; margin:0 auto; text-align:left; ">
+          <h4>CPU密集型云主机/挂机专用云主机</h4>
+            <p>　　　拥有复杂计算工作负荷（例如挖矿、科学计算、金融建模等需要长时间100%CPU占用的运算）的客户适用。其特点是：<br>
+          </p>
+          <p> 1.强劲的CPU运算能力，采用英特尔至强处理器。适合于挂机、挂QQ、网格计算、挖矿、视频转码、分布式运算、渲染等其他需要超强的CPU运算的场景（注意非GPU运算）。<br>
+            <br>
+            2.性价比高，此类应用对带宽、内存、硬盘等需求较低，故一般推荐以下配置：8核/3G内存/50G硬盘/1M带宽,或16核/4G内存/50G硬盘/2M带宽。<br>
+            <br>
+            3. 允许CPU长时间100%占用，其他非挂机专用主机不允许。<br>
+            <br>
+          </p>
+          <p>特别说明：挂机专用主机不能放网站，不提供备份、备案、白名单。请根据您的业务需求选择合适的产品。</p>
+
+         
+        </div>
+
+
+
+
+
+ 			
+ </div>
+  </div>
+</div>
+{#bottom.html} 
+</body>
+</html>

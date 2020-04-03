@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购物车,{companyname}｜虚拟主机｜域名注册</title>
+<meta name="description" content="{companyname}-大型虚拟主机服务商,专业提供虚拟主机,域名注册,主机租用等服务.200M虚拟主机200元,国际域名80元.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Default.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/bagshow.css" rel="stylesheet" type="text/css">
+<script src="/jscripts/jq.js" type="text/javascript"></script>
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+ 
+</head>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+
+<div id="MainContentDIV">
+ <div id="zxwInfo">
+      <div id="showpath" class="clearfix"><img src="/Template/Tpl_05/newimages/bagshow/cartnav-cart.gif" class="span_auto"  /><img src="/Template/Tpl_05/newimages/bagshow/order_step1.gif" class="span_auto floatright" /></div>
+      <div id="shopecart" class="clearfix">
+          <dl>
+            <dt class="clearfix">
+              <p class="item6"></p>
+              <p class="item1">&nbsp;&nbsp;产品型号</p>
+              <p class="item2">&nbsp;&nbsp;产品关键</p>
+              <p class="item3">&nbsp;&nbsp;产品价格</p>
+			  <p class="item5"></p>
+			  <p class="item5"></p>
+              <p class="item5">删除</p>
+            </dt>
+			<table>
+         <!-- BEGIN orderlist -->
+		
+                    	<tr {displaylist}> 
+						
+                            <td bgcolor="#ffffff" >
+              <p class="item6"></p>
+              <p class="item1">{product_id_name}</p>
+              <p class="item2">{keyword}</p>
+              <p class="item3"><span class="span_auto floatcenter span_pricenum call_border" id="countPrice">￥{productprice}</span></p>
+              <p class="item5"></p>
+			  <p class="item5"></p>
+			  <p class="item5"><a href="{delhref}"><img src="/Template/Tpl_05/newimages/bagshow/btn_prdDel.gif"  border="0"></a></p>
+            </td>
+
+                      </tr>
+			      <!-- END orderlist -->
+               
+                          
+		                 <tr {display}> 
+                            <td bgcolor="#ffffff" align="right" colspan="4"> 
+                              <center>
+                                <font color="red"><b>您的购物车为空，欢迎您继续购物，谢谢!</b></font> 
+                              </center>
+                            </td>
+                         </tr>   
+              </table>
+               <dd class="cartbottom clearfix">
+          <div class="span_auto">
+                <input type="button" value="继续购物" class="btn-return  actbtn" style="width:90px" onClick="location.href='/'" />
+              </div>
+  <div class="span_auto">
+                <input type="button" value="清空购物车" class="btn-clearcat actbtn" style="width:90px" onclick="if(confirm('您确定要清空购物车')){location.href='?act=clearallcart'}">
+              </div>
+              <div class="floatright">
+                <input type="button" value="去结账" class="btn-next actbtn" onClick="this.disabled=true;location.href='{serviceorder}'" />
+              </div>
+            </dd>
+            <dd class="cartbottom clearfix">
+            	<img src="/Template/Tpl_05/newimages/Reg/20080524145511373.gif" />&nbsp;&nbsp;如果您在系统帐上的款项不足，可通过我司提供的<a href="/manager/default.asp?page_main=%2Fmanager%2Fonlinepay%2FonlinePay%2Easp" target=_blank style="color:#0066cc">在线支付</a>功能 ，进行在线充值，充值成功按“去结帐”进入下一步。 
+            </dd>
+          </dl>
+        
+      </div>
+    </div>
+	
+	
+	
+
+
+  </div>
+  </div>
+<script src="/jscripts/alertMoney.js" ></script>
+  <script>
+   var u_m={u_usemoney};
+  if(u_m>0){
+    showalertMoney(u_m);
+  }
+  </script>
+{#bottom.html}
+</body>
+</html>

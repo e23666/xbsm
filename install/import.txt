@@ -1,0 +1,657 @@
+<!--#include virtual="/config/config.asp" -->
+<%
+
+check_is_master(1)
+
+Server.ScriptTimeOut=99999
+
+sub SconnOpen(ByRef Args)
+	err.clear
+	on error resume next
+	if Args.Exists("constr") then
+		Sconn.open ARgs("constr")
+		if err then
+			Response.write "<BR>连接原数据库失败,连接字符串:" & ARgs("constr")
+			Response.end
+		end if
+	else
+		Response.write "ERROR,读取配置文件失败"
+		Resposne.end
+	end if
+end sub
+
+Sub CleanT()
+'	conn.Execute("delete from userdetail")
+'	conn.Execute("delete from countlist")
+'	conn.Execute("delete from domainlist")
+'	conn.Execute("delete from vhhostlist")
+'	conn.Execute("delete from mailsitelist")
+'	conn.Execute("delete from databaselist")
+	conn.Execute("delete from pricelist")
+	conn.Execute("delete from productlist")
+end Sub
+
+function NotExists(Byval xType,xIdent)
+	select case xType
+		case "user"
+			xsql="select u_id from userdetail where u_name='" & xIdent & "'"
+		case "domain"
+			xsql="select d_id from domainlist where strdomain='" & xIdent & "'"
+		case "data"
+			xsql="select dbsysid from databaselist where dbname='" & xIdent & "'"
+		case "mail"
+			xsql="select m_sysid from mailsitelist where m_bindname='" & xIdent & "'"
+		case "vhost"
+			xsql="select s_sysid from vhhostlist where s_comment='" & xIdent & "'"
+		case else
+			NotExists=false
+			exit function
+	end select
+	
+	set lrs=conn.Execute(xsql)
+  	NotExists=lrs.eof
+	lrs.close:set lrs=nothing
+end function
+
+Function GetTxtFile(ByVal Fname)
+	const ForReading=1
+	Set fsobj=CreateObject("Scripting.FileSystemObject")
+	Set fileHander=fsobj.openTextFile(Fname,ForReading,false)
+	GetTxtFile=fileHander.ReadAll()
+	fileHander.close
+	Set fileHander=nothing
+	Set fsobj=nothing
+end Function
+
+sub PutTxtFile(ByVal Fname,ByVal content)
+	Set fsobj=CreateObject("Scripting.FileSystemObject")
+	Set fileHander=fsobj.openTextFile(Fname,2,false)
+	fileHander.write(content)
+	fileHander.close
+	Set fileHander=nothing
+	Set fsobj=nothing
+end sub
+
+
+function File_Exists(ByVal txtFile)
+	Set objFile=CreateObject("Scripting.FileSystemObject")
+	File_Exists=objfile.FileExists(txtFile)
+	Set objFile=nothing
+end function
+
+function loadOldSet(ByVal txtConfig,ByRef Args)
+	varList=split("telphone,faxphone,companyname,companynameurl,nightphone,agentmail,salesmail,jobmail,companyaddress,postcode,oicq,msn,mailfrom,supportmail,mailpassword,mailserverip,constr",",")
+	Set objR=New RegExp
+	objR.IgnoreCase=true
+
+	loadOldSet=false
+	if not File_Exists(txtConfig) then
+		loadOldSet=false
+	end if
+	txtStream=GetTxtFile(txtConfig)
+	
+	for each varKey in varList
+		objR.Pattern=varKey & "\s*=\s*""([^""\n\r]+)"""
+		if objR.test(txtStream) then
+			Set oMatch=objR.Execute(txtStream)
+			Set oFirstMatch=oMatch(0)
+			Args.Add varKey,oFirstMatch.subMatches(0)
+		end if
+	next
+
+	if Args.Exists("mailfrom") then
+		Args.Add "mailserveruser",Args("mailfrom")
+	end if
+
+	if Args.Exists("mailpassword") then
+		Args.Add "mailserverpassword",Args("mailpassword")
+	end if
+
+	loadOldSet=true
+	Set objR=nothing
+end function
+
+function setConfig(ByRef Args)
+	Set objR=New RegExp
+	objR.IgnoreCase=true
+	txtFile="/config/const.asp"
+	setConfig=false
+	txtFile=Server.MapPath(txtFile)
+
+	if not File_Exists(txtFile) then
+		exit function
+	end if
+
+	txtFileContent=GetTxtFile(txtFile)
+	for each varKey in Args.Keys
+		objR.Pattern=varKey & "\s*=\s*""([^""\n\r]*)"""
+		txtFileContent=objR.Replace(txtFileContent,varKey & "=""" & Args(varKey) & """")
+	next
+	Set objR=nothing
+	Call PutTxtFile(txtFile,txtFileContent)
+	setConfig=true
+end function
+
+Function CpUser(Uname)
+	on error Resume Next
+	QState="select * from userdetail where u_name='" & Uname & "'"
+
+	SRs.open QState,Sconn,1,1
+	if SRs.eof then
+		Response.write "ERR:" & Uname & ",Not Exists,Assert Fail!"
+		CpUser=-1
+		SRs.close
+		Exit Function
+	end if
+
+	if not NotExists("user",Uname) then
+		CpUser=-1
+		SRs.close
+		exit function
+	end if
+	
+	TRs.open "userdetail",conn,3,3
+	TRs.AddNew
+
+'---------------Begin Trans,转用户信息
+	TRs("u_name")=Uname
+	TRs("u_level")=SRs("u_level")
+	TRs("u_type")=SRs("u_type")
+	TRs("u_right")=SRs("u_right")
+	TRs("u_father")=1
+	TRs("u_company")=SRs("u_company")
+	TRs("u_telphone")=SRs("u_telphone")
+	TRs("u_email")=SRs("u_email")
+	TRs("u_desable")=SRs("u_desable")
+	TRs("u_regdate")=SRs("u_regdate")
+	TRs("u_password")=SRs("u_password")
+	TRs("u_contract")=SRs("u_contract")
+	TRs("u_contry")=SRs("u_contry")
+	TRs("u_province")=SRs("u_province")
+	TRs("u_city")=SRs("u_city")
+	TRs("u_address")=SRs("u_address")
+	TRs("u_zipcode")=SRs("u_zipcode")
+	TRs("u_fax")=SRs("u_fax")
+	TRs("u_trade")=SRs("u_trade")
+	TRs("u_know_from")=SRs("u_know_from")
+	TRs("u_website")=SRs("u_website")
+	TRs("u_borrormax")=SRs("u_borrormax")
+	TRs("u_checkmoney")=SRs("u_checkmoney")
+	TRs("u_remcount")=SRs("u_remcount")
+	TRs("u_usemoney")=SRs("u_usemoney")
+	TRs("u_premoney")=0 
+	TRs("u_accumulate")=SRs("u_accumulate")
+	TRs("u_resumesum")=SRs("u_resumesum")
+	TRs("U_levelName")=SRs("U_levelName")
+	TRs("u_bizbid")=1
+	TRs("u_namecn")=SRs("u_namecn")
+	TRs("u_nameEn")=SRs("u_nameEn")
+	TRs("u_mode")=SRs("u_mode")
+	TRs("qq_msg")=SRs("qq_msg")
+	TRs("msn_msg")=SRs("msn_msg")
+	TRs("f_id")=0
+	TRs("u_invoice")=SRs("u_resumesum")
+	TRs("u_meetonce")=false
+
+'---------------Bend Trans
+	TRs.Update
+
+	TRs.close
+	SRs.close
+	QState="Select @@identity from userdetail"
+	TRs.open QState,conn,1,1
+	
+	CpUser=TRs(0)
+	TRs.close
+	if Err then
+		Response.write "CPUser处理" & Uname & "发生错误,DES=" & Err.Description
+	end if
+end Function
+
+Sub CpFanance(OLD_UID,NEW_UID)
+	on error Resume Next
+
+	QState="Select * from countlist where u_id=" & OLD_UID
+	SRs.open QState,Sconn,1,1
+	
+	Do While not SRs.eof
+		TRs.open "countlist",conn,3,3
+		TRs.AddNew
+	
+		'-----------------转财务记录
+			TRs("u_id")=NEW_UID
+			TRs("u_moneysum")=SRs("u_moneysum")
+			TRs("u_in")=SRs("u_in")
+			TRs("u_out")=SRs("u_out")
+			TRs("u_countId")=SRs("u_countId")
+			TRs("c_memo")=SRs("c_memo")
+			TRs("c_check")=SRs("c_check")
+			TRs("c_date")=SRs("c_date")
+			TRs("c_dateinput")=SRs("c_dateinput")
+			TRs("c_datecheck")=SRs("c_datecheck")
+			TRs("c_type")=SRs("c_type")
+			TRs("o_id")=0
+			TRs("c_note")=0
+		'-----------------转财务记录
+		TRs.Update
+		TRs.close
+	SRs.moveNext
+	Loop
+	SRs.close
+
+	if Err then
+		Response.write "CPFanance处理OLD_UID=" & OLD_UID & "发生错误,DES=" & Err.Description
+	end if
+end Sub
+
+Sub CpHost(OLD_UID,NEW_UID)
+	'转虚拟主机记录
+	on error Resume Next
+
+	QState="select * from vhhostlist where S_ownerid=" & OLD_UID
+	SRs.open QState,Sconn,1,1
+
+		do while not SRs.eof
+		  if NotExists("vhost",SRs("s_comment")) then	
+			TRs.open "vhhostlist",conn,3,3
+			TRs.AddNew
+
+				TRs("s_comment")=SRs("s_comment")
+				TRs("s_bindings")=SRs("s_bindings")
+				TRs("s_Defaultdoc")=SRs("s_Defaultdoc")
+				TRs("s_defaultbindings")=SRs("s_defaultbindings")
+				TRs("s_ftppassword")=SRs("s_ftppassword")
+				TRs("s_serverIP")=SRs("s_serverIP")
+				TRs("s_ProductId")=SRs("s_ProductId")
+				TRs("s_year")=SRs("s_year")
+				TRs("s_father")=NEW_UID
+				TRs("s_buydate")=SRs("s_buydate")
+				TRs("s_expiredate")=SRs("s_expiredate")
+				TRs("s_updatedate")=SRs("s_updatedate")
+				TRs("s_SiteState")=SRs("s_SiteState")
+				TRs("s_buytest")=SRs("s_buytest")
+				TRs("S_ownerid")=NEW_UID
+				TRs("s_appid")=SRs("s_appid")
+				TRs("bizbid")=1
+				TRs("s_serverName")=SRs("s_serverName")
+				TRs("s_size")=SRs("s_size")
+				TRs("s_maxconnect")=SRs("s_maxconnect")
+
+			TRs.update
+			TRs.close
+		  end if
+		SRs.moveNext
+		Loop
+		SRs.close
+
+	if Err then
+		Response.write  "CPHost处理OLD_UID=" & OLD_UID & "发生错误,DES=" & Err.Description
+	end if
+
+end Sub
+
+
+Sub CpMail(OLD_UID,NEW_UID)
+
+	on error Resume Next
+
+	Set CheckRs=CreateObject("Adodb.RecordSet")
+	Set VHOSTMailRs=CreateObject("Adodb.RecordSet")
+
+	QState="Select * from mailsitelist where m_ownerid=" & OLD_UID
+	SRs.open QState,Sconn,1,1
+
+		do while not SRs.eof
+			if NotExists("mail",SRs("m_bindname")) then
+				OLD_MID=SRs("m_sysid")
+				TRs.Open "mailsitelist",conn,3,3
+				TRs.AddNew
+				'--------添加邮局
+					TRs("m_ownerid")=NEW_UID
+					TRs("m_bindname")=SRs("m_bindname")
+					TRs("m_productId")=SRs("m_productId")
+					TRs("m_buydate")=SRs("m_buydate")
+					TRs("m_expiredate")=SRs("m_expiredate")
+					TRs("m_serverip")=SRs("m_serverip")
+					TRs("m_mastername")=SRs("m_mastername")
+					TRs("m_password")=SRs("m_password")
+					TRs("m_size")=SRs("m_size")
+					TRs("m_mxuser")=SRs("m_mxuser")
+					TRs("m_years")=SRs("m_years")
+					TRs("m_status")=SRs("m_status")
+					TRs("m_father")=NEW_UID
+					TRs("m_buytest")=false
+					TRs("m_free")=true
+				'--------
+
+				TRs.update
+				TRs.close
+
+				QState="Select @@identity from mailsitelist"
+				TRs.open QState,conn,1,1
+				NEW_MID=TRs(0)
+				TRs.close
+				
+				if NEW_MID>0 then
+					QState="select s_comment from vhhostlist where s_mid=" & SRs("m_sysid")
+					VHOSTMailRs.open QState,Sconn,1,1
+					if not VHOSTMailRs.eof then
+						ref_ftp=VHOSTMailRs("s_comment")
+					else	
+						ref_ftp=""
+					end if
+					VHOSTMailRs.close
+
+
+					if ref_ftp<>"" then
+						QState="update vhhostlist set s_mid=" & NEW_MID & " where s_comment='" & ref_ftp & "'"
+						conn.Execute(QState)
+					end if
+				end if
+			end if	
+		SRs.moveNext
+		Loop
+		SRs.close
+
+	Set VHOSTMailRs=nothing
+	Set CheckRs=nothing
+
+	if Err then
+		Response.write  "CPMail处理OLD_UID=" & OLD_UID & "发生错误,DES=" & Err.Description
+	end if
+
+end Sub
+
+
+Sub CpDomain(OLD_UID,NEW_UID)
+
+	on error Resume Next
+
+	QState="Select * from domainlist where userid=" & OLD_UID 
+	SRs.open QState,Sconn,1,1
+	
+
+	do while not SRs.eof
+	  if NotExists("domain",SRs("strDomain")) then
+
+			TRs.open "domainlist",conn,3,3
+			TRs.AddNew
+			TRs("regok")=false
+			TRs("proid")=SRs("proid")
+			TRs("userid")=NEW_UID
+			TRs("fatherid")=NEW_UID
+			TRs("rsbdate")=SRs("rsbdate")
+			TRs("regdate")=SRs("regdate")
+			TRs("rexpiredate")=SRs("rexpiredate")
+			TRs("strDomain")=SRs("strDomain")
+			TRs("strDomainpwd")=SRs("strDomainpwd")
+'			TRs("strbizpwd")=SRs("strbizpwd")
+			TRs("dns_host1")=SRs("dns_host1")
+			TRs("dns_host2")=SRs("dns_host2")
+			TRs("dns_ip1")=SRs("dns_ip1")
+			TRs("dns_ip2")=SRs("dns_ip2")
+			TRs("years")=SRs("years")
+			TRs("isreglocal")=false
+			TRs("mxdnsrec")=SRs("mxdnsrec")
+			TRs("admi_pc")=SRs("admi_pc")
+			TRs("admi_fax")=SRs("admi_fax")
+			TRs("admi_co")=SRs("admi_co")
+			TRs("admi_ct")=SRs("admi_ct")
+			TRs("admi_em")=SRs("admi_em")
+			TRs("admi_st")=SRs("admi_st")
+			TRs("admi_fn")=SRs("admi_fn")
+			TRs("admi_ph")=SRs("admi_ph")
+			TRs("admi_ln")=SRs("admi_ln")
+			TRs("admi_adr1")=SRs("admi_adr1")
+			TRs("dom_ln")=SRs("dom_ln")
+			TRs("dom_fn")=SRs("dom_fn")
+			TRs("dom_fax")=SRs("dom_fax")
+			TRs("dom_co")=SRs("dom_co")
+			TRs("dom_ph")=SRs("dom_ph")
+			TRs("dom_org")=SRs("dom_org")
+			TRs("dom_st")=SRs("dom_st")
+			TRs("dom_pc")=SRs("dom_pc")
+			TRs("dom_ct")=SRs("dom_ct")
+			TRs("dom_adr1")=SRs("dom_adr1")
+			TRs("dom_em")=SRs("dom_em")
+			TRs("bill_ct")=SRs("bill_ct")
+			TRs("bill_em")=SRs("bill_em")
+			TRs("bill_ln")=SRs("bill_ln")
+			TRs("bill_fax")=SRs("bill_fax")
+			TRs("bill_st")=SRs("bill_st")
+			TRs("bill_ph")=SRs("bill_ph")
+			TRs("bill_fn")=SRs("bill_fn")
+			TRs("bill_adr1")=SRs("bill_adr1")
+			TRs("bill_co")=SRs("bill_co")
+			TRs("bill_pc")=SRs("bill_pc")
+			TRs("tech_fn")=SRs("tech_fn")
+			TRs("tech_ph")=SRs("tech_ph")
+			TRs("tech_st")=SRs("tech_st")
+			TRs("tech_fax")=SRs("tech_fax")
+			TRs("tech_pc")=SRs("tech_pc")
+			TRs("tech_co")=SRs("tech_co")
+			TRs("tech_ct")=SRs("tech_ct")
+			TRs("tech_em")=SRs("tech_em")
+			TRs("tech_ln")=SRs("tech_ln")
+			TRs("tech_adr1")=SRs("tech_adr1")
+			TRs("bizcnorder")="default"
+			TRs("dom_org_m")=SRs("dom_org_m")
+			TRs("dom_fn_m")=SRs("dom_fn_m")
+			TRs("dom_ln_m")=SRs("dom_ln_m")
+			TRs("dom_adr_m")=SRs("dom_adr_m")
+			TRs("dom_ct_m")=SRs("dom_ct_m")
+			TRs("dom_st_m")=SRs("dom_st_m")
+			TRs("admi_org_m")=SRs("admi_org_m")
+			TRs("admi_fn_m")=SRs("admi_fn_m")
+			TRs("admi_ln_m")=SRs("admi_ln_m")
+			TRs("admi_adr_m")=SRs("admi_adr_m")
+
+			TRs.update
+			TRs.close
+	  end if
+	SRs.moveNext
+	Loop
+	SRs.close
+
+	if Err then
+		Response.write  "CPDomain处理OLD_UID=" & OLD_UID & "发生错误,DES=" & Err.Description
+	end if
+End Sub
+
+Sub CpDB(OLD_UID,NEW_UID)
+	'转移数据库mysql/mssql
+	on error Resume Next
+
+	QState="Select * from databaselist where dbu_id=" & OLD_UID
+	SRs.open QState,Sconn,1,1
+
+	do while not SRs.eof
+		if NotExists("data",SRs("dbname")) then
+				TRs.open "databaselist",conn,3,3
+				TRs.AddNew
+				TRs("dbname")=SRs("dbname")
+				TRs("dbloguser")=SRs("dbloguser")
+				TRs("dbsize")=SRs("dbsize")
+				TRs("dbpasswd")=SRs("dbpasswd")
+				TRs("dbbuydate")=SRs("dbbuydate")
+				TRs("dbexpdate")=SRs("dbexpdate")
+				TRs("dbproid")=SRs("dbproid")
+				TRs("dbyear")=SRs("dbyear")
+				TRs("dbstatus")=SRs("dbstatus")
+				TRs("dbf_id")=NEW_UID
+				TRs("dbu_id")=NEW_UID
+				TRs("dbserverip")=SRs("dbserverip")
+				TRs.update
+				TRs.close
+		end if
+	SRs.MoveNext
+	Loop
+	SRs.close
+
+	if Err then
+		Response.write  "CPDB处理OLD_UID=" & OLD_UID & "发生错误,DES=" & Err.Description
+	end if
+end Sub
+
+Sub CpProductPrice()
+	'导入价格及产品列表
+
+	QState="select * from pricelist"
+	SRs.open QState,Sconn,1,1
+	do while not SRs.eof 
+		TRs.open "pricelist",conn,3,3
+		TRs.AddNew
+
+		TRs("p_u_level")=SRs("p_u_level")
+		TRs("u_id")=SRs("u_id")
+		TRs("p_father")=SRs("p_father")
+		TRs("p_proid")=SRs("p_proid")
+		TRs("p_price")=SRs("p_price")
+	
+		TRs.update
+		TRs.close
+		
+	SRs.moveNext
+	Loop
+	SRs.close
+
+	QState="select * from productlist"
+	SRs.open QState,Sconn,1,1
+	do while not SRs.eof
+		
+		TRs.open "productlist",conn,3,3
+		TRs.AddNew
+
+		TRs("p_fatherId")=SRS("p_fatherId")
+		TRs("p_info")=SRS("p_info")
+		TRs("p_picture")=SRS("p_picture")
+		TRs("p_size")=SRS("p_size")
+		TRs("p_type")=SRS("p_type")
+		TRs("p_price")=SRS("p_price")
+		TRs("p_proid")=SRS("p_proid")
+		TRs("p_memo")=SRS("p_memo")
+		TRs("p_years")=SRS("p_years")
+		TRs("p_maxmen")=SRS("p_maxmen")
+		TRs("p_company")=SRS("p_company")
+		TRs("p_name")=SRS("p_name")
+		TRs("p_server")=SRS("p_server")
+		TRs("p_appid")=SRS("p_appid")
+		TRs("p_test")=SRS("p_test")
+
+		TRs.update
+		TRs.close
+
+	SRs.moveNext
+	Loop
+	SRs.close
+end Sub
+
+startImport=Request.Form("startImport")
+txtConfig=Request.Form("txtConfig")
+
+if txtConfig<>"" then
+	Set Sconn=CreateObject("Adodb.Connection")
+	Set Odict=CreateObject("Scripting.Dictionary"):Odict.CompareMode=1
+	Set SRs=CreateObject("Adodb.RecordSet")
+	Set TRs=CreateObject("Adodb.RecordSet")
+	Set mainRs=CreateObject("Adodb.RecordSet")
+	conn.open constr
+
+
+	Response.buffer=false
+	Response.write "<HTML><TITLE>开始转换</TITLE><BODY>"
+	
+	OldConfig=Server.MapPath(txtConfig)
+
+	if not File_Exists(OldConfig) then
+		Response.write "<script language=javascript>alert('错误，您指定的原来代理平台的config.asp文件不存在,请将其上传到install目录');history.back();</script>"
+		Response.end
+	end if
+
+	if not loadOldSet(OldConfig,oDict) then
+		Response.write "<script language=javascript>alert('错误，读取原来的配置文件config.asp出错');history.back();</script>"
+		Response.end		
+	end if
+
+	SconnOpen oDict
+	
+	Response.write "<BR>设置新配置文件.." 
+	if setConfig(oDict) then
+		Response.write "成功"
+	else
+		Response.write "失败"
+	end if
+	
+	Response.write "<BR>清理现有代理平台数据..."
+	Call CleanT()
+
+	Response.write "<BR>开始导入产品及价格数据..."
+	Call cpProductPrice()
+
+	Response.write "<BR>开始导入业务数据"
+	
+	mainRs.open "select u_name,u_id from userdetail",Sconn,1,1
+	do while not mainRs.eof
+		ori_uid=mainRs("u_id")
+		ori_uname=mainRs("u_name")
+		Response.write "<BR>&nbsp;处理用户:<b>" & ori_uname	 & "</b>"
+		NewUID=CpUser(ori_uname)
+
+		Call CpFanance(ori_uid,NewUID)
+			Response.write "复制财务记录完成,"
+		Call CpHost(ori_uid,NewUID)
+			Response.write "复制主机记录完成,"
+		Call CPMail(ori_uid,NewUID)
+			Response.write "复制邮局记录完成,"
+		Call CpDomain(ori_uid,NewUID)
+			Response.write "复制域名记录完成,"
+		Call CpDB(ori_uid,NewUID)	
+			Response.write "复制数据库记录完成。"
+
+		mainRs.moveNext
+	Loop	
+	mainRs.close
+
+	Set SRs=nothing
+	Set TRs=nothing
+	Set mainRs=nothing
+
+	Response.write "<HR>恭喜，全部数据导入成功,请删除import.asp文件<HR>"
+	Response.write "</BODY></HTML>"
+	Response.end
+end if
+
+%>
+
+<HTML>
+<HEAD>
+<TITLE>代理数据迁移程序</TITLE>
+</HEAD>
+<BODY BGCOLOR="ffffff" >
+<fieldset>
+<legend>代理数据迁移程序</legend>
+<form name="form1" method="post" action="<%=Request.ServerVariables("Script_name")%>" onSubmit="return confirm('确定导入数据?程序将清空新代理平台的数据')">
+  <table width="90%" border="0" align="center" style="font-size:9pt">
+    <tr>
+      <td><p >说明：本程序将自动导入原代理平台所有业务数据。但同时会清空新代理平台的价格、产品列表,请谨慎使用!
+	  			<HR>
+	  <br>
+        <br>
+		  <br>
+
+		  <br>
+		  		  <br>
+	  请指定原代理平台中config.asp文件的位置(默认wwwroot/install目录)：
+      <input name="txtConfig" type="text" id="txtConfig" value="/install/config.asp" size=30>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td align="center"><input type="submit" name="startImport" value="开始导入"></td>
+    </tr>
+  </table>
+</form>
+<p>&nbsp;</p>
+</fieldset>
+</BODY>

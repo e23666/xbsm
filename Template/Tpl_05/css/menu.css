@@ -1,0 +1,13 @@
+#menu_top_list .act_menu { background:url(/Template/Tpl_05/newimages/default/Menu_line_On.gif) repeat-x 0px 11px; }
+#menu_top_list li .pcolor { color:#c00; }
+#menu { width:977px; padding:0px; margin:auto; height:79px; }
+#menu_top {
+padding:0px margin:0px; height:58px; background:url(/Template/Tpl_05/newimages/default/Menubg.gif) repeat-x 0 5px; overflow:hidden; }
+#menu_top_list { list-style-type:none; }
+#menu_top_list li { margin:0px; float:left; background:url(/Template/Tpl_05/newimages/default/Menu_line.gif) no-repeat 0 5px; text-align:left; height:58px; }
+#menu_top_list li a { color:#fff; text-decoration:none; font-size:14px; font-weight:bold; line-height:14px; padding:15px 14px 0px 10px; display:block; overflow:hidden; }
+#menu_top_list li p { color:#eee; line-height:10px; font-family: Arial; margin:0px; font-size:10px; }
+#menu_bottom { margin:0px; height:23; /*background:url(/Template/Tpl_05/newimages/default/Sub_Menu_bg.gif) repeat-x;*/ background:#e6e6e6; position:relative; }
+#menu_bottom_list { list-style-type:none; padding:0px; margin:0px; padding-bottom:10px; }
+#menu_bottom_list li { color:#454545; font-size:12px; display:inline; position:relative; vertical-align:text-bottom; line-height:120%; display:none; }
+#menu_bottom_list li a { color:#454545; font-size:12px; text-decoration:none; background:url(/Template/Tpl_05/newimages/default/submenu_pipe.gif) no-repeat right center; padding:0px 7px 0px 3px; }

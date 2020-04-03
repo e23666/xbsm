@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>Insert Table</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<SCRIPT LANGUAGE=JavaScript FOR=Ok EVENT=onclick>
+  window.returnValue = selrow.value+"*"+selcol.value+"*"+tbwidth.value+"*"+tbborder.value+"*"+ celpadding.value + "*" + bdcolor.value + "*" + bgcolor.value + "*" + tbalign.value;
+  window.close();
+</SCRIPT>
+<script>
+function IsDigit()
+{
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+function WBTB_selColor(obj)
+{
+	var arr = showModalDialog("selcolor.html", "", "dialogWidth:18.5em; dialogHeight:17.5em; status:0; help:0");
+	if (arr != null && arr != "") obj.value=arr;
+}
+
+</script>
+</HEAD>
+
+<BODY bgcolor="menu">
+
+<table border="0" height="90%" cellspacing="2" cellpadding="0" align=center style="padding-left:10px">
+<tr>
+	<td colspan=2 align=center>
+	<font class=title>Insert Table</font>
+	<hr width=100% >
+	</td>
+</tr>
+<tr>
+	<td align=center>
+	Rows: <INPUT TYPE=TEXT SIZE=4 ID=selrow ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+	</td>
+	<td align=center>
+	&nbsp; Cols: &nbsp; <input type=text id=selcol size=4 ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+	</td>
+</tr>
+<tr>
+	<td>
+	Width: <INPUT TYPE=TEXT SIZE=4 ID=tbwidth ONKEYPRESS="event.returnValue=IsDigit();" value=500>
+	</td>
+	<td>
+	Border: <INPUT TYPE=TEXT SIZE=4 ID=tbborder ONKEYPRESS="event.returnValue=IsDigit();" value=1>
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+	<hr width=100% >
+	Cellpadding: <INPUT TYPE=TEXT SIZE=7 ID=celpadding ONKEYPRESS="event.returnValue=IsDigit();" value="2">
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+	<a href="#" onclick="WBTB_selColor(bdcolor);">BorderColor</a>: <INPUT TYPE=TEXT SIZE=7 ID=bdcolor value="#CCCCCC">
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+	<a href="#" onclick="WBTB_selColor(bgcolor);">BackColor</a>: &nbsp; &nbsp;<INPUT TYPE=TEXT SIZE=7 ID=bgcolor value="#FFFFFF">
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+	Align: &nbsp; 
+	<select id=tbalign >
+	<option value=center>Center</option>
+	<option value=left>Left</option>
+	<option value=right>Right</option>
+	</select>
+	</td>
+</tr>
+<tr>
+	<td colspan=2 align=center>
+	<hr width=100% >
+	<BUTTON ID=Ok TYPE=SUBMIT>OK</BUTTON>&nbsp; &nbsp; <BUTTON ONCLICK="window.close();">Cancel</BUTTON>
+	</td>
+</tr>
+</table>
+
+</BODY>   
+</HTML>

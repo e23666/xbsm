@@ -1,0 +1,82 @@
+iframe.WBTB_Composition
+{
+	border: 1px inset;
+}
+table.WBTB_Body
+{
+	background-color:gainsboro;
+	border:1px solid #CCCCCC;
+}
+.yToolbar
+{
+
+}
+
+.WBTB_Btn
+{
+	BACKGROUND-COLOR: gainsboro;
+	Text-align: center;
+	HEIGHT: 28px;
+	WIDTH: 28px;
+}
+.WBTB_Ico
+{
+	cursor:hand;
+}
+
+.WBTB_TBGen
+{
+	FONT: 8pt verdana,arial,sans-serif;
+}
+
+.WBTB_BtnMouseOverUp
+{
+	BACKGROUND-COLOR: #CCCCCC;
+	Text-align: center;
+	cursor:hand;
+	HEIGHT: 28px;
+	WIDTH: 28px;
+}
+
+.WBTB_BtnMouseOverDown
+{
+	BACKGROUND-COLOR: #EEEEEE;
+	BORDER: #999999 1px solid;
+	Text-align: center;
+	cursor:hand;
+	HEIGHT: 28px;
+	WIDTH: 26px;
+}
+
+.BtnDown
+{
+	BACKGROUND-COLOR:  #8592B5;
+	cursor:hand;
+	Text-align: center;
+}
+
+.WBTB_IcoDown
+{
+	cursor:hand;
+}
+
+.WBTB_IcoDownPressed
+{
+	cursor:hand;
+}
+
+
+td.WBTB_TabOn {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px inset;
+	background-color: #EEEEEE;
+}
+
+td.WBTB_TabOff {
+	font: 8pt MS Sans Serif;
+	padding:1px 5px;
+	border:1px outset;
+	cursor:hand;
+}
+

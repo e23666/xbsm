@@ -1,0 +1,417 @@
+.content {
+	padding:20px 0;
+	background:#F8F8F8
+}
+.mode-content {
+	padding:0 30px 30px;
+	background:#fff
+}
+.agent-mode {
+	padding-top:16px
+}
+.agent-mode .am-column {
+	padding:30px 0;
+	border-bottom:1px solid #e5e5e5
+}
+.am-column .am-left {
+	float:left;
+	padding-right:20px;
+	width:750px;
+	border-right:1px solid #e5e5e5
+}
+.am-column .am-left .am-icon {
+	float:left;
+	width:142px;
+	height:142px;
+	background:url(/template/Tpl_2016/images/agentmoshi-icon.jpg) no-repeat
+}
+.am-column .am-left .b {
+	background-position:0 -111px
+}
+.am-column .am-left .d {
+	background-position:-222px -111px
+}
+.am-column .am-left .api {
+	background-position:-444px -111px
+}
+.am-column .am-left .am-txt {
+	padding-left:28px;
+	overflow:hidden
+}
+.am-column .am-left .am-txt dl {
+	padding-top:14px
+}
+.am-column .am-left .am-txt dl dt {
+	float:left;
+	width:100px;
+	font-size:14px;
+	color:#1c1c1c;
+	text-align:left
+}
+.am-column .am-left .am-txt dl dd {
+	line-height:22px;
+	font-size:12px;
+	color:#818181;
+	overflow:hidden
+}
+.am-column .am-left .am-txt .link {
+	font-weight:700;
+	color:#F60
+}
+.am-column .am-left .am-txt .link:hover {
+	color:#06C
+}
+.am-column .am-left .am-txt dl span {
+	font-weight:700;
+	color:#ff7200
+}
+.am-column .am-left .am-txt dl .price {
+	font-size:14px;
+	font-weight:700;
+	color:#08b324
+}
+.am-column .am-left .am-txt .am-txt-icon {
+	margin-right:16px;
+	padding-top:34px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	background:url(/template/Tpl_2016/images/agentmoshi-icon.jpg) no-repeat;
+	font-style:normal;
+	font-size:12px;
+	color:#3db514
+}
+.am-column .am-left .am-txt .am-txt-icon1 {
+	background-position:10px 0
+}
+.am-column .am-left .am-txt .am-txt-icon2 {
+	background-position:-92px 0
+}
+.am-column .am-left .am-txt .am-txt-icon3 {
+	background-position:-199px 0
+}
+.am-column .am-left .am-txt .am-txt-icon4 {
+	background-position:-307px 1px
+}
+.am-column .am-left .am-txt .am-txt-icon5 {
+	background-position:-410px 0
+}
+.am-column .am-left .am-txt .am-txt-icon6 {
+	background-position:-516px 0
+}
+.am-column .am-right {
+	padding-top:60px;
+	padding-left:20px;
+	overflow:hidden;
+	padding-bottom: 15px;
+}
+.am-column .am-right .sm-btn {
+	margin-top:14px;
+	margin-right:10px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	border-radius:3px;
+	font-size:14px;
+	text-align:center
+}
+.am-column .am-right .sm-btn1 {
+	width:120px;
+	height:38px;
+	line-height:38px;
+	background:#3db514;
+	color:#fff
+}
+.am-column .am-right .sm-btn2 {
+	width:118px;
+	height:36px;
+	line-height:36px;
+	background:#fff;
+	border:1px solid #3db514;
+	color:#3db514
+}
+.agent-level {
+	padding:6px 20px 0
+}
+.agent-level .al-title {
+	margin-top:30px;
+	padding-left:10px;
+	border-left:4px solid #3db514;
+	font-size:18px;
+	color:#3db514
+}
+.agent-level .al-title span {
+	font-size:12px;
+	color:#929292
+}
+.agent-level p {
+	line-height:30px;
+	font-size:14px;
+	color:#4a4a4a
+}
+.agent-level .al-list {
+	padding-top:30px
+}
+.agent-level .al-list li {
+	float:left;
+	padding-right:30px
+}
+.agent-level .al-list li .column {
+	padding:16px 0 30px;
+	width:246px;
+	border:1px solid #e7e7e7;
+	text-align:center
+}
+.al-list .column .al-icon {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:110px;
+	height:88px;
+	background:url(/template/Tpl_2016/images/agentmoshi-icon.jpg) no-repeat
+}
+.al-list .column .al-icon1 {
+	background-position:0 -332px
+}
+.al-list .column .al-icon2 {
+	background-position:-188px -332px
+}
+.al-list .column .al-icon3 {
+	background-position:-344px -332px
+}
+.al-list .column .al-icon4 {
+	background-position:-532px -332px
+}
+.al-list .column p {
+	padding-top:10px;
+	line-height:24px;
+	font-size:12px;
+	color:#4a4a4a
+}
+.al-list .column p span {
+	font-weight:700;
+	color:#ff8400
+}
+.al-list .column .al-btn {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:136px;
+	height:38px;
+	line-height:38px;
+	background:#fff;
+	border:1px solid #8bbcff;
+	font-size:12px;
+	color:#2e83db;
+	text-align:center;
+	margin-top:22px
+}
+.agent-level .al-explain {
+	padding-top:40px;
+	font-size:12px;
+	color:#8a8a8a
+}
+.agent-level .al-explain a {
+	padding-left:10px;
+	font-weight:700;
+	color:#0e70ff
+}
+.agent-level .al-explain a:hover {
+	color:#F60
+}
+.agent-join {
+	padding:20px 20px 90px
+}
+.agent-join .aj-top {
+	padding-top:30px
+}
+.agent-join .aj-top .aj-left {
+	float:left
+}
+.agent-join .aj-top .aj-icon {
+	float:left;
+	margin-right:20px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:80px;
+	height:80px;
+	background:url(/template/Tpl_2016/images/agentmoshi-icon.jpg) no-repeat
+}
+.agent-join .aj-top .aj-icon1 {
+	background-position:0 -500px
+}
+.agent-join .aj-top .aj-icon2 {
+	background-position:-114px -500px
+}
+.agent-join .aj-top .aj-icon3 {
+	background-position:-229px -500px
+}
+.agent-join .aj-top .aj-icon4 {
+	background-position:-343px -500px
+}
+.agent-join .aj-top .aj-icon5 {
+	background-position:-458px -500px
+}
+.agent-join .aj-top .aj-icon6 {
+	background-position:-572px -500px
+}
+.agent-join .aj-top .aj-txt {
+	overflow:hidden
+}
+.agent-join .aj-top h5 {
+	padding-top:10px;
+	font-size:18px;
+	color:#1e1e1e
+}
+.agent-join .aj-top p {
+	padding-top:6px;
+	width:400px;
+	line-height:22px;
+	font-size:12px;
+	color:#7e7e7e
+}
+.agent-join .aj-top p a {
+}.agent-join .aj-top .aj-right {
+	 float:right;
+	 overflow:hidden
+ }
+.aj-bottom {
+	padding-top:50px
+}
+.aj-bottom .aj-title {
+	margin-bottom:24px;
+	padding-bottom:10px;
+	border-bottom:1px solid #d9e6f6
+}
+.aj-bottom .aj-title h4 {
+	padding:2px 0 2px 10px;
+	border-left:4px solid #3db514;
+	font-size:18px;
+	color:#3db514
+}
+.aj-bottom-content {
+	padding-top:24px
+}
+.aj-bottom-content h3 {
+	margin-right:14px;
+	padding-top:9px;
+	padding-left:13px;
+	float:left;
+	width:30px;
+	height:37px;
+	background:url(/template/Tpl_2016/images/agentmoshi-icon.jpg) no-repeat 0 -658px;
+	font-size:16px;
+	color:#2087ed
+}
+.aj-bottom-content p {
+	padding-top:4px;
+	line-height:22px;
+	color:#646464;
+	overflow:hidden
+}
+.aj-bottom-content p span {
+	padding-left:24px
+}
+.agent-apply {
+	padding:50px 112px 40px
+}
+.aa-top {
+	padding-bottom:40px;
+	background:url(/template/Tpl_2016/images/agent-apply-bj.jpg) no-repeat;
+	width:963px
+}
+.aa-top .aa-top-txt {
+	padding:20px 0;
+	font-size:16px;
+	color:#303030
+}
+.aa-top .aa-top-txt .aa-top-left {
+	margin-right:230px;
+	float:left;
+	width:370px;
+	text-align:right
+}
+.aa-top .aa-top-p {
+	margin-top:126px;
+	text-align:center
+}
+.aa-top .aa-top-txt a {
+	font-size:14px;
+	color:#0079f5;
+	text-decoration:underline
+}
+.aa-top .aa-top-txt a:hover {
+	color:red
+}
+.aa-bottom {
+	padding-top:40px
+}
+.aa-bottom-title {
+	padding-bottom:5px;
+	border-bottom:1px solid #ebebeb
+}
+.aa-bottom-title span {
+	padding:0 10px 6px;
+	border-bottom:2px solid #00a0e9;
+	font-size:14px;
+	font-weight:700;
+	color:#4d4d4d
+}
+.aa-bottom p {
+	padding-top:16px;
+	color:#6b6b6b
+}
+.aa-bottom .aa-list {
+	padding-top:30px
+}
+.aa-bottom .aa-list li {
+	float:left;
+	margin-right:30px
+}
+@media screen and (max-width:1206px) {
+	.am-column .am-right {
+		padding-top:36px
+	}
+	.agent-level {
+		padding:6px 0 0
+	}
+	.agent-level .al-list li {
+		padding-right:10px
+	}
+	.agent-level .al-list li .column {
+		width:222px
+	}
+	.agent-join {
+		padding:20px 20px 90px 0
+	}
+	.agent-join .aj-top p {
+		width:360px
+	}
+	.agent-apply {
+		padding:50px 0 40px
+	}
+}.desktop .am-column .am-right {
+	 padding-top:36px
+ }
+.desktop .agent-level {
+	padding:6px 0 0
+}
+.desktop .agent-level .al-list li {
+	padding-right:12px
+}
+.desktop .agent-level .al-list li .column {
+	width:222px
+}
+.desktop .agent-join {
+	padding:20px 20px 90px 0
+}
+.desktop .agent-join .aj-top p {
+	width:360px
+}
+.desktop .agent-apply {
+	padding:50px 0 40px
+}
+.wjf-ui-tab-style3 {
+	padding: 0px;
+}

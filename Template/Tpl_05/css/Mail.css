@@ -1,0 +1,325 @@
+#Mail_List_Box {
+	background:url(/Template/Tpl_05/newimages/Mail/mail_list_bg.gif) repeat-x;
+	width:750px;
+	overflow:hidden;
+	height:auto;
+	margin:auto;
+	padding-bottom:25px;
+}
+#Mail_List_Box #Mail_List_Title {
+	background:url(/Template/Tpl_05/newimages/Mail/mail_list_Title_bg.gif) no-repeat;
+	height:32px;
+	padding:7px 0px 0px 9px;
+}
+#Mail_List_Box #Mail_List_Title ul li {
+	float:left;
+	width:123px;
+	height:25px;
+	text-align:center;
+	font-weight:bold;
+	padding-top:4px;
+	cursor:pointer;
+}
+.mail_tab_center_on {
+	background:url(/Template/Tpl_05/newimages/Mail/mail_list_box_tile_li_on.gif) no-repeat;
+	color:#FFF;
+}
+.mail_tab_center_off {
+	color:#060;
+}
+.Li_for_title {
+	color:#FFF;
+	background:url(/Template/Tpl_05/newimages/Mail/mail_list_box_tile_li_on.gif) no-repeat;
+	cursor:default;
+}
+#Mail_List_Box #Mail_Box_list_green ul li {
+	color: #FFF;
+	background:url(/Template/Tpl_05/newimages/Mail/mail_white_arrow.gif) no-repeat 0px 6px;
+	padding-left:13px;
+	margin-top:2px;
+}
+.Mail_Box_list_white .logo {
+	margin:0px 0px 0px 10px;
+}
+#Mail_List_Box #Mail_Box_list_green {
+	background:url(/Template/Tpl_05/newimages/Mail/mail_list_box_green_bg.jpg) no-repeat 0px -3px;
+	width:703px;
+	height:54px;
+	margin:0px 0px 0px 9px;
+	padding:3px 0px 0px 30px;
+}
+#Mail_List_Box .Mail_Box_list_white {
+	background:url(/Template/Tpl_05/newimages/Mail/mail_box_white_bg.gif) repeat-x;
+	width:733px;
+	height:auto;
+	overflow:hidden;
+	margin:0px 0px 0px 9px;
+}
+.Mail_Box_list_white .list {
+	width:720px;
+	margin:16px auto auto auto;
+	height:auto;
+	overflow:hidden;
+}
+.Mail_Box_list_white .list ul {
+	width:720px;
+	float:left;
+}
+.Mail_Box_list_white .list ul li {
+	height:29px;
+	background:url(/Template/Tpl_05/newimages/mail/mail_list_line.gif) repeat-x 0px 28px;
+}
+
+.list_title {
+	WIDTH: 120px; FLOAT: left; COLOR: #336600; MARGIN-RIGHT: 15px
+}
+.list_name {
+	WIDTH: 100px; FLOAT: left
+}
+.list_type {
+	WIDTH: 80px; FLOAT: left
+}
+.list_size {
+	WIDTH: 80px; FLOAT: left
+}
+.list_free {
+	WIDTH: 100px; FLOAT: left
+}
+.list_price {
+	WIDTH: 100px; FLOAT: left
+}
+.list_user {
+	WIDTH:80px; FLOAT: left
+}
+.list_button {
+	WIDTH: 78px; FLOAT: right;
+}
+
+
+.list_text {
+	height:29px;
+	padding-top:6px;
+	padding-left:10px;
+	background:url(/Template/Tpl_05/newimages/mail/mail_list_head_ico.gif) no-repeat 0px 5px;
+}
+.mail_logo {
+	width:311px;
+	float:left;
+}
+.mail_mid {
+	height:25px;
+}
+.mail_more {
+	float:right;
+	padding-left:10px;
+	padding-right:20px;
+	padding-top:5px;
+	background:url(/Template/Tpl_05/newimages/default/MoreDomain_arrow.gif) no-repeat 0px 6px;
+}
+#mail_better_box {
+	margin:auto;
+}
+#mail_better_box #Title_Pic {
+	background:url(/Template/Tpl_05/newimages/mail/mail_better_title_pic.gif) no-repeat;
+	width:321px;
+	height:71px;
+	float:left;
+}
+#mail_better_box #Main_better_box_green {
+	background:url(/Template/Tpl_05/newimages/mail/mail_better_bg.jpg) no-repeat;
+	height:345px;
+}
+#mail_better_box #Main_better_box_green ul li {
+	background:url(/Template/Tpl_05/newimages/mail/mail_better_bg_bo.gif) no-repeat -3px -3px;
+	width:330px;
+	height:100px;
+	float:left;
+	margin:15px 15px 0px 20px;
+}
+.better_pic {
+	width:92px;
+	height:85px;
+	float:left;
+}
+.better_Title {
+	width:150px;
+	float:right;
+	color:#1E476A;
+	font:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:20px;
+}
+.better_Content {
+	width:225px;
+	float:right;
+	font:Verdana, Geneva, sans-serif;
+	padding-top:12px;
+}
+#mail_more_better {
+	width:287px;
+	height:43px;
+	float:right;
+	margin:15px 10px 0px 0px;
+}
+#Server_logo_list #PIC_li .Mail_info_title {
+	background:url(/Template/Tpl_05/newimages/Server/Service_info_bg.jpg) no-repeat;
+	width:173px;
+	height:45px;
+	margin:auto;
+	margin-top:8px;
+	padding:10px 0px 0px 0px;
+}
+#Server_logo_list #PIC_li .Mail_info_title h6 {
+	padding:0px 0px 0px 23px;
+}
+#PIC_li .Mail_info_title .mail_info_cont {
+	width:140px;
+	float:left;
+	margin-left:8px;
+}
+#PIC_li .Mail_info_title .mail_info_ico {
+	width:16px;
+	float:left;
+	margin-left:8px;
+}
+.WhiteColor {
+	color:#FFF;
+}
+.Manager_Search_info_right {
+	margin:15px 0 15px 20px;
+	width:700px;
+	overflow:hidden;
+	height:auto;
+	padding-top:20px;
+}
+.Search_Info_Content ul li {
+	margin:2px 10px 0 0;
+	height:35px;
+}
+.ttl {
+	width:80px;
+	float:left;
+	font-weight:bold;
+	color:#069;
+	text-align:right;
+	height:21px;
+}
+.mml {
+	float:left;
+	overflow:hidden;
+	margin-left:15px;
+	white-space:nowrap;
+	height:21px;
+	width:210px;
+}
+.ccl {
+	float:left;
+	font-weight:bold;
+	color:#f30;
+	overflow:hidden;
+	margin-left:15px;
+	height:21px;
+}
+.ggl {
+	width:300px;
+	float:left;
+	margin-left:5px;
+	white-space:nowrap;
+	height:21px;
+	overflow:hidden;
+}
+.big_Submit_Button {
+	margin:20px 0px 0px 85px;
+}
+.MailListTable {
+	width:95%;
+	margin:auto;
+	margin-top:15px;
+	background:url(/Template/Tpl_05/newimages/mail/mail_Info_table_bg.gif) repeat-x 0px 1px;
+	border-top:solid 1px #efefef;
+}
+.MailListTable tr {
+	height:29px;
+	background:url(/Template/Tpl_05/newimages/mail/mail_list_line.gif) repeat-x 0px 28px;
+}
+.MailListTable tr td {
+	padding:5px 5px 3px 9px;
+}
+.RoomNameBoxMail {
+	font-weight:bold;
+	height:26px;
+	color:#3E5F13;
+	white-space:nowrap;
+}
+.RemarkTable {
+	width:97%;
+	margin:20px auto auto auto;
+}
+.vhost_admin_Remark {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	width:94%;
+	margin:auto;
+	padding:20px;
+}
+.clipDiv {
+	height:34px;
+	width:24px;
+	position:absolute;
+	margin:-5px 0 0 -35px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/clipDiv.gif) no-repeat;
+}
+.vhost_admin_Remark p {
+	line-height:26px;
+}
+.MailListTable_a {
+	width:95%;
+	margin:auto;
+	margin-top:15px;
+	background:url(/Template/Tpl_05/newimages/mail/mail_Info_table_bg.gif) repeat-x 0px 1px;
+}
+.MailListTable_a tr {
+	height:29px;
+}
+.MailListTable_a tr td {
+	padding:5px 5px 3px 9px;
+	border:solid 1px #efefef;
+}
+.noneIMG {
+	background:none;
+}
+.mail_list_info_title
+{
+width:225px;
+height:37px;
+background:url(/Template/Tpl_05/newimages/mail/maillist_info.gif) no-repeat;
+margin-bottom:15px;
+}
+.Mail_Box_list_white ul li
+{
+margin-bottom:5px;
+padding-left:29px;
+display:block;
+padding-top:4px;
+padding-bottom:4px;
+}
+.num1
+{
+background:url(/Template/Tpl_05/newimages/mail/num_1.gif) no-repeat;
+}
+.num2
+{
+background:url(/Template/Tpl_05/newimages/mail/num_2.gif) no-repeat;
+}
+.num3
+{
+background:url(/Template/Tpl_05/newimages/mail/num_3.gif) no-repeat;
+}
+.num4
+{
+background:url(/Template/Tpl_05/newimages/mail/num_4.gif) no-repeat;
+}
+.num5
+{
+background:url(/Template/Tpl_05/newimages/mail/num_5.gif) no-repeat;
+}

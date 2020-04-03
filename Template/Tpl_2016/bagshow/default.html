@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购物车,{companyname}｜虚拟主机｜域名注册</title>
+<meta name="description" content="{companyname}-大型虚拟主机服务商,专业提供虚拟主机,域名注册,主机租用等服务.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/bagshow.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/step1.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+ 
+</head>
+<body class="min990">
+{#top.html}
+
+<div id="container">
+    <div class="bs-content">
+        <div class="wide1190 pt-40">
+            <div id="zxwInfo">
+
+                <div class="bagshow-title"><h2><img src="/template/Tpl_2016/images/title-logo.png" alt="我的购物车" class="va-s mr-10">我的购物车</h2><div class="bagshow-title-right">结算数量：<span class="number procountnum">{Productcount}个</span><label class="pl-30 pr-5">商品总额：<span class="price countPrice">&yen; {ProductPriceSum}</span></label><a class="bagshow-title-btn" onclick="javascript:dopay('')">去结算</a></div></div>
+
+                <div id="shopecart" class="bagshow-goods">
+                    <form name="form1" action="/bagshow/Default.asp" method="post">
+                        <table class="bagshow-table">
+                            <thead>
+                            <tr>
+                                <th width="80">
+                                  
+                                </th>
+                                <th>产品类型</th>
+                                <th>产品关键字</th>
+                                <th>产品价格</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <!-- BEGIN orderlist -->
+
+                            <tr {displaylist}>
+                                <td></td>
+                                <td align="left">{product_id_name}</td>
+                                <td  align="left">{keyword}</td>
+                                <td><span class="redColor">&yen; {productprice}</span></td>
+ 
+                                <td><a href="{delhref}" class="bagshow-table-btn" onclick="javascript:dopay('13733204')">单个删除</a></td>
+                            </tr>
+                            <!-- END orderlist -->
+
+                            <tr {display}>
+                                <td  align="center" colspan="5">
+                                    <center>
+                                        <font color="red"><b>您的购物车为空，欢迎您继续购物，谢谢!</b></font>
+                                    </center>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <input name="nextsearchpage" value="1" type="hidden">
+                        <!--结算 start-->
+                        <div class="bagshow-count cl">
+
+                            <div class="pl-20 f-l">
+                          
+                                <a class="pl-20 manager-btn s-btn" href="javascript:void(0);" onclick="javascript:location.href='/';">继续购物</a>
+                                <a class="pl-20 manager-btn red-btn s-btn" href="javascript:void(0);" onclick="clearall()">清空购物车</a> 
+                            </div>
+                            <div class="bagshow-count-right">
+                                结算数量：
+                                <span class="number procountnum">{Productcount}个</span>
+                                <label class="pl-30 pr-5">商品总额：<span class="price countPrice">&yen; {ProductPriceSum}</span>
+                                </label>
+
+                                <input id="bagshowbuygo" value="去结算" class="bagshow-title-btn" name="allpaybutton" onClick="this.disabled=true;location.href='{serviceorder}'" type="button">
+                            </div>
+                        </div>
+                        <!--结算 end-->
+                        <div class="text-left pt-20">如果您在系统账上的款项不足，可通过我司提供的<a class="pay-btn" href="/manager/onlinePay/onlinePay.asp" target="_blank">在线支付</a>功能，进行在线充值，充值成功按“去结算”进入下一步。</div>
+                        
+                        <input name="act" type="hidden">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/jscripts/alertMoney.js" ></script>
+  <script>
+  function clearall()
+  {
+	  $.dialog.confirm("您确定要清空购物车",function(){
+		location.href='?act=clearallcart'
+	  })
+  }
+   var u_m={u_usemoney};
+  if(u_m>0){
+    showalertMoney(u_m);
+  }
+  </script>
+{#bottom.html}
+</body>
+</html>

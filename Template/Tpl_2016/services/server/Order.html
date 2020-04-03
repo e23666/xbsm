@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>服务器租用|托管－提交订单</title>
+<meta name="description" content="服务器租用-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.数万家成功企业案例.免费支持wap手机上网，赠送企业邮局.">
+<meta name="keywords" content="服务器租用-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/productDetailInfo.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/commonForm.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/buy.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+  <link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+  
+	
+
+ <script src="/Template/Tpl_2016/jscripts/buyserver.js" type="text/javascript"></script> 
+
+
+ <script language="javascript" src="/noedit/check/Validform.js"></script>
+
+<style>
+#renewtime_msg select{
+     width: 300px;
+	 padding-left: 10px;
+	 margin-right: 4px;
+     box-sizing: border-box;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #e6e6e6;
+	}
+#needprice{ color:red; }
+</style>
+
+
+
+<script language="javascript">
+ $(function(){
+	$("#buyserverform").Validform({
+	     showAllError:true,
+		 tiptype:2,
+		  btnSubmit:".submit-btn",
+		  datatype:{
+			"agree":function(gets,obj,curform,regxp)
+				{
+					num=curform.find("input[name='agreement']:checked").length;
+					if (num>0){
+						return true;
+					}else{
+						$.dialog.alert("请先阅读相关协议后点击勾选！")
+						return false;}
+				}
+		  }
+	})
+ 
+ })
+
+</script> 
+
+
+</head>
+<body class="min990">
+{#top.html}
+
+<div class="content" id="content">
+  <div class="wide1190 pt-40">
+    <div class="page-content">
+      <div class="page-info">
+        <form method="post" name="buyserverform" id="buyserverform" class="common-form" action="SaveHost.asp">
+          <dl>
+            <dt>请您填写账号资料</dt>
+            <dd class="pt-20">
+              <label class="common-label">
+                公司名称：
+              </label>
+              <label><input  class="common-input std-width " name="Company"  value="{u_company}" type="text"  datatype="*2-18" errormsg="请输入正确中文联系人"  nullmsg="请输入正确中文联系人"></label>
+			  <label><label  class="Validform_checktip"></label></label>
+
+            </dd>
+            <dd>
+              <label class="common-label">联系人：</label>
+               <label><input class="common-input std-width" name="Name" value="{u_contract}" type="text" datatype="cn2-18" errormsg="请输入正确联系人"  nullmsg="请输入正确联系人" ></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">证件号：</label>
+              <label><input class="common-input std-width common-validate" name="u_trade" value="" type="text" datatype="*"   nullmsg="证件号为空" ></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">联系电话：</label>
+               <label><input class="common-input std-width common-validate" name="Telephone" value="{u_telphone}" type="text" datatype="tel" errormsg="请输入您的正确电话号码！" nullmsg="请输入您的正确电话号码！"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">
+                Email：
+              </label>
+              <label><input class="common-input std-width common-validate" name="Email" value="{u_email}" type="text"   datatype="e" nullmsg="电子邮箱为空！" errormsg="电子邮箱格式错误！"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">QQ：</label>
+              <label><input class="common-input std-width common-validate" name="QQ" value="{qq_msg}" type="text"   maxlength="30" datatype="qq" errormsg="请输入正确的QQ号码！！"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">手机：</label>
+               <label><input class="common-input std-width common-validate" name="Fax" value="{msn_msg}" type="text" datatype="tel" errormsg="请输入您的正确电话号码！" nullmsg="请输入您的正确电话号码！"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">邮编：</label>
+               <label><input class="common-input std-width common-validate" name="Zip" value="{u_zipcode}" type="text"   datatype="zip" errormsg="邮政编号格式错误！" maxlength="20"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">地址：</label>
+              <input class="common-input std-width common-validate" name="Address" value="{u_address}" type="text">
+            </dd>
+            <dt class="mt-30">服务器配置</dt>
+            <dd class="pt-20">
+              <label class="common-label">主机类型：</label>
+              <input class="common-input std-width common-validate" name="HostID" value="{hostid}" readonly="readonly" type="text">
+            </dd>
+            <dd>
+              <label class="common-label va-t">操作系统：</label>
+              <div class="dis-ib common-choice-list">
+                {CHOICE_OS}
+              </div>
+            </dd>
+            <dd>
+              <label class="common-label">CPU：</label>
+              <label><input class="common-input std-width common-validate" name="CPU" type="text"  value="{cpu}" datatype="*"  nullmsg="CPU为空"></label>
+			   <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">硬盘：</label>
+              <label> <input class="common-input std-width common-validate" name="HardDisk" type="text"  value="{harddisk}"  datatype="*"   nullmsg="硬盘为空"></label>
+			  <label><label  class="Validform_checktip"></label></label>
+            </dd>
+            <dd>
+              <label class="common-label">内存：</label>
+                <label><input class="common-input std-width common-validate" name="Memory" type="text"  value="{memory}"   datatype="*"   nullmsg="内存为空"></label>
+			  <label><label  class="Validform_checktip"></label></label>
+            </dd>
+
+            <dt class="mt-30">其他信息</dt>
+            <div class="mt-30">&nbsp;</div>
+            <!-- IP 提示 -->
+            <div class="other-tip">
+              <span class="icon-ip"></span>
+              <p>
+                <span>提示：</span>您的IP(118.114.245.37)来自 四川省成都市电信
+              </p>
+              <i></i>
+            </div>
+            <dd>
+              <label class="common-label">选择机房：</label>
+              {setroomlist}
+            </dd>
+            <dd>
+              <label class="common-label">
+                CDN出口：
+              </label>
+              <select name="cdntype" class="common-select common-validate std-width">
+                <option value="0" selected="selected">不使用CDN</option>
+                <option value="1">国内双线CDN:&nbsp;&nbsp;+50元/月</option>
+              </select>
+            </dd>
+            <dd>
+              <label class="common-label va-t">
+                增值服务：<div style="text-align:right"><a href="/services/server/vip.asp" target="_blank" class="link">(查看服务标准)</a></div>
+              </label>
+              <div class="dis-ib common-choice-list">
+                {servicetype}
+              </div>
+              <script>
+                $(function () {
+                  $(".common-choice-list font").removeAttr("color");
+                })
+              </script>
+            </dd>
+            <dd>
+              <label class="common-label">付费方式：</label>
+              <label><input type="radio" name="PayMethod" value="0" />按月付</label>&nbsp;&nbsp;<label><input type="radio" name="PayMethod" value="2">按季付</label>&nbsp;&nbsp;<label><input type="radio" name="PayMethod" value="3">按半年付</label>&nbsp;&nbsp;<label><input type="radio" name="PayMethod" value="1" checked="checked">按年付</label>&nbsp;&nbsp;
+            </dd>
+            <dd>
+              <label class="common-label">购买期限：</label>
+              <label id="renewtime_msg"></label>
+            </dd>
+           
+            <dd>
+              <label class="common-label">价格：</label>
+              <span id="needprice"></span>
+            </dd>
+            <dd>
+              <label class="common-label">备注：</label>
+              <textarea name="Memo" cols="70" rows="4" wrap="VIRTUAL" class="common-textarea">请简要说明主机用途，域名数量等：{vr_room}</textarea>
+            </dd>
+			<dd>
+				 <label class="common-label"> </label>
+			              <label style="float:none; display:inline" for="payone">
+                <input name="VPSOpen" id="payone" type="radio" value="open" checked="">
+                立即开通 </label>&nbsp;&nbsp;&nbsp;
+              <label style="float:none; display:inline" for="paytwo">
+                <input type="radio" name="VPSOpen" id="paytwo" value="order">
+                只下订单</label>
+            </dd>
+
+
+			</dd>
+            <dd style="padding-left: 290px;">
+          
+                    <input name="agreement" id="agreement" type="checkbox" value="1" datatype="agree">
+                    我已阅读并同意</label>
+                    <a href="/customercenter/yunxiyi.asp" target="_blank" style="color:#06c">网站名称云主机租用协议</a>
+
+              <div class="pt-20">
+                <input type="submit" class="submit-btn" name="Submit" value="继续下一步">
+                <input type="hidden" name="vps" value="{vps}">
+                <input type="hidden" name="p_proid" value="{p_proid}" />
+                <input type="hidden" name="act" value="buysub" />
+
+              </div>
+            </dd>
+
+          </dl>
+
+          <!-- 隐藏域 开始 数据由后端提供 该部分数据是通用部分 -->
+          <!-- 1 -->
+          <input name="Apply" value="企业经营网站" type="hidden">
+          <input class="common-validate" name="CPU" value="E5-2620×4" type="hidden">
+          <input class="common-validate" name="HardDisk" value="80GB*2" type="hidden">
+          <input class="common-validate" name="Memory" value="3GB" type="hidden">
+          <select name="Years" class="selectbox"  style="display:none">
+                  <option value="1" selected>1年</option>
+                  <option value="2">2年</option>
+                  <option value="3">3年</option>
+                  <option value="4">4年</option>
+                </select>
+         
+        </form>
+      </div>
+      <div class="product-explain">
+        <i></i>
+        <span class="title">说明：</span>我司所有国内主机客户都采用白名单措施，每个国内服务器默认支持60个域名（增加20元/个），主机开通后需要在管理中心提交白名单，务必保证已经通过备案的域名才可以访问。<span class="warn-info">严禁 一切私服、外挂、传播病毒、电影、BT、成人用品、伟哥类、假冒医疗类、语音聊天、美女图片、丰胸减肥、小说站、性用品、刷钻刷信誉、同性恋、窃听、赌博用品、露点图片、侦探公司、钓鱼网站、仿品网站、受攻击影响机房稳定的，无新闻许可证从事新闻网站的，无许可证从事在线视听的非法网站。我司有严格的监控措施，一经发现，立即永久关闭，不退余款。</span>
+      </div>
+      <div class="product-detail-desc">
+        <div class="title">
+          <span>特别提示</span>
+        </div>
+        <p class="pt-5">
+
+          我司VPS禁止做低俗内容、私服、外挂、色情等内容，我司有完善的监控手段，一经发现，立即关闭并不退款。
+        </p>
+        <p>我司云主机采用模板技术自动开设，操作系统支持Win2003、Linux(centOs5.4) ，其中win2003分纯净版、sql2000、sql2005三个版本，推荐使用经过我司特殊安全配置的系统，这样可以大大减少被黑客入侵的风险。</p>
+        <p>linux预装wdcp服务器管理系统。</p>
+        <p>每个主机免费提供10个网站备案，Linux系统盘占用10G，Win系统盘占用20G，余下的大小分到数据盘。</p>
+        <p>若有特殊需求需要定制安装系统的，需要收取安装费用200元/次。</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+{#bottom.html}
+</body>
+</html>

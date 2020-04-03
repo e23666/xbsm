@@ -1,0 +1,255 @@
+#AgentList {
+	padding:20px 0 0 0;
+	overflow:hidden;
+	height:auto;
+}
+.Agent_Title_1 {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_Title_pic_1.jpg) no-repeat;
+	height:64px;
+	width:730px;
+	margin:0px 0 0 20px;
+}
+.Agent_Title_2 {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_Title_pic_2.jpg) no-repeat;
+	height:64px;
+	width:730px;
+	margin:0px 0 0 20px;
+}
+.Agent_Title_3 {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_Title_pic_3.jpg) no-repeat;
+	height:64px;
+	width:730px;
+	margin:0px 0 0 20px;
+}
+.Agent_Title_4 {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_Title_pic_4.jpg) no-repeat;
+	height:64px;
+	width:730px;
+	margin:0px 0 0 20px;
+}
+.Agent_Title_5 {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_Title_pic_5.jpg) no-repeat;
+	height:64px;
+	width:730px;
+	margin:0px 0 0 20px;
+}
+.Agent_Content {
+	margin:0 0 0 40px;
+	width:640px;
+	padding:15px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	overflow:hidden;
+	height:auto;
+}
+.dm_hd {
+	width:97px;
+	font-size:12px;
+	font-weight:bold;
+	color:#069;
+	text-align:right;
+}
+.dm_co {
+	width:500px;
+	margin-left:30px;
+}
+.Agent_Content ul li {
+	float:left;
+	margin-bottom:20px;
+}
+.dm_co ul li {
+	float:left;
+	margin-bottom:10px;
+	width:83px;
+	text-align:center;
+	font-weight:bold;
+	color:#116F83;
+}
+.dm_co ul li img {
+	margin-bottom:10px;
+}
+.Model_div {
+	width:124px;
+	height:101px;
+	float:left;
+	margin-left:20px;
+	margin-top:40px;
+}
+.Model_a_class {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_PIC_1.jpg) no-repeat;
+}
+.Model_b_class {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_PIC_2.jpg) no-repeat;
+}
+.Model_c_class {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_PIC_3.jpg) no-repeat;
+}
+.Model_d_class {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_PIC_4.jpg) no-repeat;
+}
+.Model_api_class {
+	background:url(/Template/Tpl_05/newimages/Agent/Agent_PIC_5.jpg) no-repeat;
+}
+#AgentList #Model_info {
+	width:550px;
+	margin-left:30px;
+	float:left;
+}
+#Model_info h4 {
+	color:#09C;
+}
+#Model_info .Model_info_content {
+	width:90%;
+	margin:15px auto;
+	text-indent: 2em;
+	line-height:30px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+#Model_info .Model_info_content p {
+	line-height:30px;
+}
+#Model_info .Model_info_content ul {
+	list-style-type:disc;
+}
+#Model_info .Model_info_content li {
+	line-height:30px;
+	border-bottom:1px dashed #efefef;
+	width:95%;
+	margin:10px auto;
+}
+.Agent_bigbutton {
+	margin:40px auto;
+	width:90%;
+}
+.MailListTable_a {
+	width:95%;
+	margin:auto;
+	margin-top:15px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+.MailListTable_a tr td {
+	padding:5px 5px 3px 9px;
+	border:solid 1px #efefef;
+	text-indent:0px;
+}
+.pding_left {
+	padding-left:40px;
+}
+.pding_left h4 {
+	color:#09C;
+}
+.Agetn_Level {
+	height:auto;
+	overflow:hidden;
+	margin-top:20px;
+}
+.Agetn_Level_pic {
+	width:198px;
+	height:131px;
+	float:left;
+}
+.pding_left ul {
+	list-style-type:disc;
+	margin-left:26px;
+}
+.pding_left ul li {
+	margin:6px auto;
+}
+.agl_form {
+	width:425px;
+	height:101px;
+	float:left;
+	margin-left:25px;
+	border:1px solid #efefef;
+	background:#f9f9f9;
+	padding:15px 0px 15px 20px;
+}
+.Manager_Search_info_right {
+	margin:15px 0 15px 20px;
+	width:700px;
+	overflow:hidden;
+	height:auto;
+	padding-top:20px;
+}
+.Search_Info_Content ul li {
+	margin:2px 10px 0 0;
+	height:35px;
+}
+.ttl {
+	width:80px;
+	float:left;
+	font-weight:bold;
+	color:#069;
+	text-align:right;
+	height:21px;
+}
+.mml {
+	float:left;
+	overflow:hidden;
+	margin-left:0px;
+	white-space:nowrap;
+	height:21px;
+	width:210px;
+}
+.ccl {
+	float:left;
+	font-weight:bold;
+	color:#f30;
+	overflow:hidden;
+	margin-left:15px;
+	height:21px;
+	width:275px;
+}
+.ggl {
+	width:300px;
+	float:left;
+	margin-left:5px;
+	white-space:nowrap;
+	height:21px;
+	overflow:hidden;
+}
+.apply_style {
+	padding-left:40px;
+}
+.big_Submit_Button {
+	margin:20px 0px 0px 85px;
+}
+.agent_pic_box {
+	width:112px;
+	height:81px;
+	float:left;
+}
+.agent_pic_1 {
+	background:url(/Template/Tpl_05/newimages/Agent/agent_level_1.gif);
+}
+.agent_pic_2 {
+	background:url(/Template/Tpl_05/newimages/Agent/agent_level_2.gif);
+}
+.agent_pic_3 {
+	background:url(/Template/Tpl_05/newimages/Agent/agent_level_3.gif);
+}
+.agent_pic_4 {
+	background:url(/Template/Tpl_05/newimages/Agent/agent_level_4.gif);
+}
+.agent_ttl {
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#F30;
+	width:470px;
+	margin-left:20px;
+	margin-top:10px;
+}
+.agent_ccl {
+	float:left;
+	width:470px;
+	margin-left:20px;
+	margin-top:10px;
+}
+.agent_level_list
+{
+	list-style-type:none;}
+.agent_level_list li {
+	height:120px;
+	margin-bottom:20px;
+	width:610px;
+}

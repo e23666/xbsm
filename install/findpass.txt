@@ -1,0 +1,43 @@
+<!--#include virtual="/config/config.asp" -->
+
+<%
+'本程序用来重设管理员密码，使用的时候将文件名改名为findpass.asp 然后访问http://yourdomain.com/install/findpass.asp即可。
+
+if request("Submit")<>"" then
+	username=request("username")
+	conn.open constr
+	Xfile="findpass.asp"
+	if username<>"" then
+		sql2="select * from userdetail where u_name='"&username&"'"
+		set rstemp=conn.execute(sql2)
+		if rstemp.eof then
+			response.write "没有找到该管理员,请<a href=setpass.asp>返回</a>重试！"
+			response.end
+
+		end if
+		sql="update userdetail set u_password='49ba59abbe56e057' where u_name='"&username&"'"
+		mystr="管理员:"&username&"的密码已经修改为123456,本程序已经被自动删除了！"
+	else
+		sql="update userdetail set u_password='49ba59abbe56e057' where u_type<>'0'"
+		mystr="所有管理员的密码已经全部修改为123456,本程序已经被自动删除了！"
+	end if
+		conn.execute(sql)
+		conn.close
+		Set fso=server.createobject(objName_FSO)
+		fso.deletefile(Server.MapPath(Xfile))
+		Set fso=nothing	
+		response.write mystr
+		response.end
+	
+end if
+%>
+<hr>
+<p align="center">找回管理员密码</p>
+<hr>
+<form name="form1" method="post" action="">
+  请输入管理员的用户名： 
+  <input type="text" name="username">
+  <input type="submit" name="Submit" value="提交">
+</form>
+<p>&nbsp;</p>
+<p>提示：输入管理员的用户名，点提交后，管理员的密码会被初始化为：123456，请登录后即时修改密码，并修改管理员的邮箱和手机号，方便下次可以直接在您的网站上点“忘记密码”功能来找回。　如果不填用户名直接提交，则系统会将所有管理员的密码都初始化为：123456</p>

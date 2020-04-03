@@ -1,0 +1,3 @@
+<%
+GRANTCODE_XINET=false
+%>

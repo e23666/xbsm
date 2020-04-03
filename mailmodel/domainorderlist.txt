@@ -1,0 +1,25 @@
+尊敬的客户{user_name} ：您好！
+	感谢您购买{companyname}的产品，您的订单已成功递交。请及时为此产品付款.
+    我们收到你的款项后会在一个工作日内为您注册国际域名，第二天即可生效！{companynameurl}/customercenter/howpay.asp查看付款方式
+	您可随时登录{companyname}管理中心：{companynameurl}			
+	查看定单明细及处理情况。正在处理的定单，在处理完毕后（一个工作日内）将发信至您的联系信箱，告之详细信息。
+	订单号：{OrderID} 　　　　　　　　　　　　　　　购买日期：{now}
+	－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+         --产品型号:{productid}  
+	--产品名:{productName}  
+	--年限:{vyears}
+	--密码:{domainpassword}
+	状态: 完成
+ 
+	－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+如果您有任何问题，请访问我们的客户中心：{companynameurl}查看＞常见问题＞或在＞有问必答＞栏目中提交问题。同时，您也可拨打客户服务热线电话：{telphone}-客户服务部 "
+			顺祝
+						商祺！
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+

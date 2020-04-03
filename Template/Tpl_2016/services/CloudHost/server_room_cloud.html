@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！至强5420四核/4G内存/146Gsas硬盘仅需999元.">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+<script language="javascript">
+
+function DoRoomPriceSelect(vps_type,k)
+
+{
+
+	objTab=document.getElementById("vps_Big_Room_"+vps_type);
+
+	div_list=objTab.getElementsByTagName("div");
+
+	
+
+	for(i=1;i<=div_list.length;i++)
+
+	{
+
+		divObj=document.getElementById("vpsromprice_"+vps_type+"_"+i);
+
+		radioOBJ=document.getElementById("radio_"+vps_type+"_"+i);
+
+		if(i!=k)
+
+		{
+
+			divObj.style.display="none";
+
+			radioOBJ.checked=false;
+
+		}
+
+		else
+
+		{
+
+			radioOBJ.checked=true;
+
+			divObj.style.display="";
+
+		}
+
+		
+
+		objTab_tar_1=document.getElementById(vps_type+"_cpu");
+
+		objTab_tar_2=document.getElementById(vps_type+"_flux");
+
+		
+
+		if(k==2 || k==4)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 2.0G(四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		if(k==5)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+	}
+
+}
+
+</script>
+</head>
+<body class="min990">
+{#top.html}
+<div class="news-container" id="content">
+    <div class="wide1190 ">
+        <div id="SiteMapPath">
+            <ul>
+                <li><a href="/">{companyname}首页</a></li>
+                <li><a href="/services/CloudHost/">云主机</a></li>
+            </ul>
+        </div>
+        <div class="news-box cl">
+            <div id="Cloud_Content_Box">
+
+
+                <div >
+                    <h4>云主机线路介绍</h4>
+                    <p>　　 {companyname}云主机集群位于中国电信8大核心节点之一的五星级数据中心，我司技术人员24小时值守。 机房依照中国电信钻石五星AA级标准修建的专业IDC机房，机房共计4层，使用面积近3000平米，装机容量可达到近万台，08年6月正式启用使用。机房地 址：四川省成都市光华大道三段2045号。<br />
+                       机房的网络由2台交换机组成核心层，共通过6条10GE以太网链路方式上联至INTERNET骨干网，之间运行OSPF协议，出口带宽总共60G，负责各汇聚层业 务的接入和聚合以及高端用户的千兆直接接入，并可根据出口带宽需求的增长，不断地对出口带宽进行扩容，以保证网络流量峰值不大于出口带宽的70% 。核心层到汇聚层的交换机均为全冗余连接、配置，确保网络的高可用性、高稳定性。</p>
+                    <h4>IP地址：</h4>
+                    <p>默认提供一个IP，可付费增加：280元/个/年，每台主机最多增加10个IP。</p>
+                    <h4>适用的客户群：</h4>
+                    <p>网站、ERP、邮局、游戏、OA等，拒绝私服、外挂、色情等非法应用。</p>
+                    <h4>防护系统：</h4>
+                    <p>60G黑洞集群流量清洗；主机内置&quot;<a href="http://wangzhan.360.cn/" target="_blank">360网站卫士</a>&quot;功能，可以一键开启360网站卫士200G流量清洗服务（免费）。</p>
+                    <h4>入口线路：</h4>
+                    <p>中国电信。电信客户上传及远程桌面均非常快，联通、网通客户直接用电信IP上传速度较慢，但利用控制面板中提供的VPN连接后，再进行上 传或远程桌面，速度会有提升。&nbsp;如果您本地采用电信线路上网，推荐您选择智能多线或电信线路； 如果您本地使用联通或长宽等方式上网，强烈建议您选择<a href="/services/server/servr_room_info_bjsy.asp">北京BGP机房</a>。</p>
+                    <h4>出口线路：</h4>
+                    <p>提供&quot;电信线路&quot;、&quot;智能多线&quot;和&ldquo;亚洲数据中心&rdquo;供客户自由选择。其中&quot;电信线路&quot;适合主要客户群在电信的情况，如果希望联通、网通的客户访问流畅， 请选择&quot;智能多线&quot;。 &quot;智能多线&quot;通过域名的智能解析，会让电信客户（约占70%）直接访问电信IP，网通、联通等其他网络的客户(约占25%左右)在 访问时会通过高品质的BGP路由访问，从而也保障了这部分客户的访问速度。搜索引擎固定走电信线路。（智能解析服务由dnspod提供）</p>
+                    <p>若选择线路为&ldquo;<a href="/services/Server/servr_room_info_aisa_ebs.asp" target="_blank">亚洲数据中心&quot;</a>，则系统会提供二个IP，一个为中国电信的IP，另外一个为香港机房IP。大陆IP若需开办网站，需要备案通过并提交白名单，默认支持60个域名。 香港IP不需要备案， 解析到IP上可以直接使用（需要在管理中心添加域名到白名单）。香港IP只开放80端口。上传数据及远程桌面连接等使用国内IP进行连接。</p>
+                    <p><img src="/newimages/dnspod.jpg" width="697" height="191" /></p>
+                    <p><br />
+                        特别说明：如果选择&quot;智能多线&quot;，请将您的域名做别名(cname)至主机赠送 的二级域名即可实现智能解析功能，如果直接解析到IP地址则联通用户无加速效果。<br />
+                    </p>
+                    <br />
+
+                    <div><a href="http://cloudsppedtest.gotoip3.com/download.rar" target="_blank" class="link">下载速度测试</a></div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{#bottom.html}
+</body>
+
+
+</html>

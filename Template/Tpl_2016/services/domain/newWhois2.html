@@ -1,0 +1,2466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<SCRIPT language="javascript">
+var esym=""
+function CheckIfEnglish( String )
+{
+    var Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-";
+     var i;
+     var c;
+      if(String.charAt( 0 )=='-')
+	return false;
+      if( String.charAt( String.length - 1 ) == '-' )
+          return false;
+     for( i = 0; i < String.length; i ++ )
+     {
+          c = String.charAt( i );
+	  if (Letters.indexOf( c ) < 0)
+	     return false;
+     }
+     return true;
+}
+function submitchecken(v) {
+
+// var pds = v.zxwpds.value;
+var searchedDomainName=v.searchedDomainName.value.Trim();
+var searchedDomainName1=searchedDomainName;
+if (searchedDomainName == "") {
+	alert("请输入您要查询的英文域名。");
+	v.searchedDomainName.focus();
+	return false;
+}
+
+var   re1   =   /(\n)/g;     
+var   re2   =   /(\r)/g;     
+searchedDomainName1=searchedDomainName1.replace(re1 ,"");   
+searchedDomainName1=searchedDomainName1.replace(re2 ,"");   
+
+
+if (!CheckIfEnglish(searchedDomainName1)) {
+alert("在查询英文域名应输入英文不能输入中文及非法字符！");
+v.searchedDomainName.focus();
+return false;
+}
+
+
+var suftmp="";
+	$("input[name='suffix']:checked").each(function(){
+		suftmp+=","+$(this).val();
+		});
+  
+	if(searchedDomainName1.length<3 && (suftmp.indexOf(".cn")>-1 && suftmp.indexOf(".gov.cn")==-1)){
+		alert("查询.cn域名请至少输入3个字符。");
+		v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if (searchedDomainName1.length<3 && suftmp.indexOf(".cm")>-1 ){
+		alert("查询.cm域名请至少输入3个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if (searchedDomainName1.length<2 && suftmp.indexOf(".hk")>-1 ){
+		alert("查询域名中包含了.hk,请至少输入2个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if(searchedDomainName1.length<4 && suftmp.indexOf(".ws")>-1){
+		alert("查询域名中包含了.ws,请至少输入4个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+esym=v.searchedDomainName.value.Trim();
+
+
+
+
+v.searchType.value = "IntDomain";
+domainArray=v.searchedDomainName.value.split("\n");
+var newdomainstr="";
+var cur=0;
+
+
+for(var u=0;u<domainArray.length;u++){
+	var newstrs=domainArray[u].Trim();
+	if(newstrs!=""){
+		if (newstrs.length>40){
+			alert("抱歉.您输入的域名中有超过40个字符的,请重输.");
+			return false;
+		}
+		cur=cur+1;
+		newdomainstr=newdomainstr + "," + newstrs;
+	}
+}
+if (cur>100){
+	alert("查询英文域名不能多于100个！");
+	return false;
+}
+
+
+
+var suffixobj=v.suffix;
+var module=v.module.value;
+var searchType="IntDomain";
+var suffix=""	
+for(var i=0;i<suffixobj.length;i++){
+	if(v.suffix[i].checked){
+		suffix=suffix + "," + v.suffix[i].value;
+	}
+}
+var psuffix=document.getElementById("p_domain");
+if(psuffix){
+	if (psuffix.value!='') suffix+=","+psuffix.value;
+}
+///////////////////////////////////////////////////////////////////////
+if (newdomainstr.length<=0) return false;
+if(newdomainstr.substr(0,1)==",") newdomainstr=newdomainstr.substr(1);
+if (suffix.length<=0) return false;
+if(suffix.substr(0,1)==",") suffix=suffix.substr(1);
+
+
+var dv=$("#contentID");
+var ajaxurlstr="newAjax.asp?action=1" ;
+var info="searchedDomainName="+ newdomainstr.Trim() +"&suffix="+ suffix.Trim() +"&module="+ module +"&searchType="+ searchType+"&r="+Math.random();
+
+
+
+document.getElementById("hrefimg0").disabled=true;
+document.body.scrollTop=10;
+
+makeRequestPost4(ajaxurlstr,info,'contentID');
+
+return false;
+
+}
+function submitchecken2(domain,suffix){
+	esym=domain
+	showelite()
+	var ajaxurlstr="newAjax.asp?action=2";
+	var info="searchedDomainName="+ domain.Trim() +"&suffix="+ suffix.Trim() +"&module=domainsearch";
+	document.getElementById("hrefimg0").disabled=true;
+
+	makeRequestPost4(ajaxurlstr,info,"contentID");
+}
+function functionxml(divID,txt){
+
+						document.getElementById("hrefimg0").disabled=false;
+
+				
+}
+function doselected(v){
+	var p=v.check_all.checked;
+	var items=v.domains;
+	for(var i=0;i<items.length;i++){
+		v.domains[i].checked=p;
+	}
+}
+function dosubmits(href,j){
+    if (href!=''){
+	     
+		document.getElementById("domain"+j).name="domain";
+		
+		document.form1.ajaxFree.value=document.frmsearchInt.freeid.value; 
+	    document.form1.action=href;
+	    document.form1.submit();
+		return true;
+	}
+	 
+   
+}
+function getTopost(url,domainstr){
+	if(url!="" && domainstr!=""){
+	
+		document.form1.domain.value=domainstr;
+	
+		document.form1.ajaxFree.value=document.frmsearchInt.freeid.value;
+		document.form1.action=url;
+		
+		document.form1.submit();
+	}
+}
+function doallsub(v){
+//dmbuy_net.asp,dmbuy_cn.asp,dmbuy.asp
+	var items=v.domains;
+	var pd=false;
+	
+	if(items!=null){
+	
+		if(items.length!=undefined){
+				for(var i=0;i<items.length;i++){
+					if(v.domains[i].checked==true){
+						pd=true;
+						v.domains[i].name="domain";
+					}
+				}
+		}else{
+			if(v.domains.checked==true){
+				pd=true;
+				v.domains.name="domain";
+			}
+		}
+	}
+	var itemsset=v.domainsset;
+
+	if(itemsset!=null){
+		
+		if(itemsset.length!=undefined){
+			iendcount=itemsset.length-1
+		for(var ii=iendcount;ii>=0;ii--)
+			{
+//			alert(itemsset.length)
+			//if(ii==9){alert(10)}
+					if(itemsset[ii].checked==true){
+					pd=true;
+					itemsset[ii].name="domain";
+				}
+			}
+
+		}else{
+			if(itemsset.checked==true){
+				pd=true;
+				itemsset.name="domain";
+			}
+			
+		}
+	}
+
+	if(pd==true){
+		v.action="/services/domain/dmbuymore.asp";
+		v.ajaxFree.value=document.frmsearchInt.freeid.value;
+		v.submit();
+		return true;
+	}else{
+		alert("请选择您要注册的域名");
+		return false;
+	}
+
+ 
+}
+function showelite(){
+	 
+ 
+if(esym!="" && esym!=undefined)
+{
+ 
+	var dv=$("#elitedom");
+	//if (dv.attr('isdo')=='1') return false;
+//	dv.attr('isdo','1');
+	$.post("APrice.asp","k="+esym+"&r="+Math.random(),function(xml){
+		if (xml!="")
+		//xml= JSON.parse(xml);
+		xml=jQuery.parseJSON(xml)
+			 xgstr="<dl><dt>与您查询相关的二手域名</dt><dd><ul>";
+		for(var i=0;i<xml.elite.length;i++)
+		{
+	xgstr+=" <li><span class='dom_1'><strong>"+xml.elite[i].d+"</strong></span><span class='dom_3'><a target='newwin' href='testbuy.asp?d="+xml.elite[i].d+"&price="+xml.elite[i].p+"'>购买</a></span><span class='dom_2'>￥"+xml.elite[i].p+" </span></li>"
+   }
+  xgstr+="</ul></dd></dl><dl><dt>您可能感兴趣的二手域名 </dt><dd><ul>"
+
+  		for(var i=0;i<xml.other.length;i++)
+		{
+	xgstr+=" <li><span class='dom_1'><strong>"+xml.other[i].d+"</strong></span><span class='dom_3'><a target='newwin' href='testbuy.asp?d="+xml.other[i].d+"&price="+xml.other[i].p+"'>购买</a></span><span class='dom_2'>￥"+xml.other[i].p+" </span></li>"
+   }
+    xgstr+="</ul></dd></dl><dl>"
+		
+		
+			dv.html(xgstr).fadeIn();
+	})	
+}
+}
+
+</SCRIPT>
+
+<title>国际国内cn域名注册申请-{companyname}-专业虚拟主机域名注册服务商!域名注册虚拟主机租用</title>
+<meta name="description" content="域名服务-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="域名服务-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/whois.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	<script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+	<script language="javascript" src="/template/Tpl_2016/jscripts/jquery.cookie.js"></script>
+	<script language="javascript" src="/template/Tpl_2016/jscripts/common.js"></script>
+</head>
+<body class="min990">
+{#top.html}
+
+
+<div id="content">
+	<!--查询框 开始-->
+	<div class="whois-search">
+		<div class="wide1190 cl pos-r">
+			<div class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</div>
+			<div class="searchDiv">
+				<form class="query-input-container" action="/main/whois.asp" method="post" id="J_queryDomainForm" onsubmit="return whois2016.submitchecken(this);">
+					<p class="input-wrapper">
+						<textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="请输入您要注册的域名，如:west" id="J_searchedDomainName"></textarea>
+						<input name="du" value="" type="hidden">
+						<input value="domainsearch" name="module" type="hidden">
+						<input value="IntDomain" name="searchType" type="hidden">
+						<input value="check" name="action" type="hidden">
+						<input value="one" name="zxwpds" type="hidden">
+						<input value="" name="suffix" type="hidden">
+						<span class="clear-domain-input"></span>
+					</p>
+					<input class="domain-query-btn pngFix" value="查域名" type="submit">
+				</form>
+			</div>
+			<div class="cl">
+				<div class="whois-search-more" id="J_expandDomainExt">点击展开更多域名查询</div>
+			</div>
+			<div class="domain-ext-cate-container" id="J_domainExtContainer">
+				<span class="close-icon"></span>
+				<ul class="wjf-ui-tab-small cl" id="domainsTab">
+					<li>
+						<a class="active" href="javascript:void(0);" data-target="hotDomain">热销域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="newTopDomain">新顶级域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="chineseDomain">中文域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="nationDomain">国别域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="provinceDomain">CN域名</a>
+					</li>
+				</ul>
+				<!-- 热销域名 -->
+				<div id="hotDomain" class="wjf-ui-tab-content active">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="hot_select_op_1">
+								<input class="select-op" id="hot_select_op_1" name="select-op-1" value="0" type="radio">全选</label>
+							<label for="hot_select_op_2">
+								<input class="select-op" id="hot_select_op_2" name="select-op-1" value="1" type="radio">全不选</label>
+							<label for="hot_select_op_3">
+								<input class="select-op" id="hot_select_op_3" name="select-op-1" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix">
+
+						<label class="checked" for="label_for_1_0">
+							<input name="suffix" checked="checked" value=".top" common-use="1" id="label_for_1_0" type="checkbox">
+							<a href="/domains/top.asp">.top</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_1">
+							<input name="suffix" checked="checked" value=".club" common-use="1" id="label_for_1_1" type="checkbox">
+							<a href="/domains/club.asp">.club</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_2">
+							<input name="suffix" checked="checked" value=".xyz" common-use="1" id="label_for_1_2" type="checkbox">
+							<a href="/domains/xyz.asp">.xyz</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_3">
+							<input name="suffix" checked="checked" value=".wang" common-use="1" id="label_for_1_3" type="checkbox">
+							<a href="/domains/wang.asp">.wang</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_4">
+							<input name="suffix" checked="checked" value=".win" common-use="1" id="label_for_1_4" type="checkbox">
+							<a href="/domains/win.asp">.win</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_5">
+							<input name="suffix" checked="checked" value=".com" common-use="1" id="label_for_1_5" type="checkbox">
+							<a href="/domains/com.asp">.com</a>
+						</label>
+
+						<label class="checked" for="label_for_1_6">
+							<input name="suffix" checked="checked" value=".tech" common-use="1" id="label_for_1_6" type="checkbox">
+							<a href="/domains/tech.asp">.tech</a>
+						</label>
+
+						<label class="checked" for="label_for_1_7">
+							<input name="suffix" checked="checked" value=".net" common-use="1" id="label_for_1_7" type="checkbox">
+							<a href="/domains/net.asp">.net</a>
+						</label>
+
+						<label class="" for="label_for_1_8">
+							<input name="suffix" value=".cn.com" common-use="0" id="label_for_1_8" type="checkbox">
+							<a href="/domains/cndotcom.asp">.cn.com</a>
+						</label>
+
+						<label class="checked" for="label_for_1_9">
+							<input name="suffix" checked="checked" value=".cn" common-use="1" id="label_for_1_9" type="checkbox">
+							<a href="/domains/cn.asp">.cn</a>
+						</label>
+
+						<label class="" for="label_for_1_10">
+							<input name="suffix" value=".hk" common-use="0" id="label_for_1_10" type="checkbox">
+							<a href="/domains/hk.asp">.hk</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_11">
+							<input name="suffix" checked="checked" value=".cc" common-use="1" id="label_for_1_11" type="checkbox">
+							<a href="/domains/cc.asp">.cc</a>
+						</label>
+
+						<label class="checked" for="label_for_1_12">
+							<input name="suffix" checked="checked" value=".pw" common-use="1" id="label_for_1_12" type="checkbox">
+							<a href="/domains/pw.asp">.pw</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="" for="label_for_1_13">
+							<input name="suffix" value=".red" common-use="0" id="label_for_1_13" type="checkbox">
+							<a href="/domains/red.asp">.red</a>
+						</label>
+
+						<label class="checked" for="label_for_1_14">
+							<input name="suffix" checked="checked" value=".site" common-use="1" id="label_for_1_14" type="checkbox">
+							<a href="/domains/site.asp">.site</a>
+						</label>
+
+						<label class="" for="label_for_1_15">
+							<input name="suffix" value=".me" common-use="0" id="label_for_1_15" type="checkbox">
+							<a href="/domains/me.asp">.me</a>
+						</label>
+
+						<label class="" for="label_for_1_16">
+							<input name="suffix" value=".mobi" common-use="0" id="label_for_1_16" type="checkbox">
+							<a href="/domains/mobi.asp">.mobi</a>
+						</label>
+
+						<label class="checked" for="label_for_1_17">
+							<input name="suffix" checked="checked" value=".com.cn" common-use="1" id="label_for_1_17" type="checkbox">
+							<a href="/domains/comcn.asp">.com.cn</a>
+						</label>
+
+						<label class="" for="label_for_1_18">
+							<input name="suffix" value=".org" common-use="0" id="label_for_1_18" type="checkbox">
+							<a href="/domains/org.asp">.org</a>
+						</label>
+
+						<label class="" for="label_for_1_19">
+							<input name="suffix" value=".bid" common-use="0" id="label_for_1_19" type="checkbox">
+							<a href="/domains/bid.asp">.bid</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_1_20">
+							<input name="suffix" checked="checked" value=".info" common-use="1" id="label_for_1_20" type="checkbox">
+							<a href="/domains/info.asp">.info</a>
+						</label>
+
+						<label class="" for="label_for_1_21">
+							<input name="suffix" value=".biz" common-use="0" id="label_for_1_21" type="checkbox">
+							<a href="/domains/biz.asp">.biz</a>
+						</label>
+
+						<label class="" for="label_for_1_22">
+							<input name="suffix" value=".pro" common-use="0" id="label_for_1_22" type="checkbox">
+							<a href="/domains/pro.asp">.pro</a>
+						</label>
+
+						<label class="checked" for="label_for_1_23">
+							<input name="suffix" checked="checked" value=".vip" common-use="1" id="label_for_1_23" type="checkbox">
+							<a href="/domains/vip.asp">.vip</a>
+						</label>
+
+						<label class="" for="label_for_1_24">
+							<input name="suffix" value=".ren" common-use="0" id="label_for_1_24" type="checkbox">
+							<a href="/domains/ren.asp">.ren</a>
+						</label>
+
+						<label class="" for="label_for_1_25">
+							<input name="suffix" value=".gs" common-use="0" id="label_for_1_25" type="checkbox">
+							<a href="/domains/engs.asp">.gs</a>
+						</label>
+
+						<label class="" for="label_for_1_26">
+							<input name="suffix" value=".cx" common-use="0" id="label_for_1_26" type="checkbox">
+							<a href="/domains/cx.asp">.cx</a>
+						</label>
+
+					</div>
+				</div>
+				<!-- 热销域名 结束 -->
+				<!-- 新顶级域名  -->
+				<div id="newTopDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="new_select_op_1">
+								<input class="select-op" id="new_select_op_1" name="select-op-2" value="0" type="radio">全选</label>
+							<label for="new_select_op_2">
+								<input class="select-op" id="new_select_op_2" name="select-op-2" value="1" type="radio">全不选</label>
+							<label for="new_select_op_3">
+								<input class="select-op" id="new_select_op_3" name="select-op-2" value="2" checked="checked" type="radio">常用</label>
+						</div>
+
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix">
+
+						<label class="checked" for="label_for_2_0">
+							<input name="suffix" checked="checked" value=".top" common-use="1" id="label_for_2_0" type="checkbox">
+							<a href="/domains/top.asp">.top</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_2_1">
+							<input name="suffix" checked="checked" value=".club" common-use="0" id="label_for_2_1" type="checkbox">
+							<a href="/domains/club.asp">.club</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_2_2">
+							<input name="suffix" checked="checked" value=".xyz" common-use="1" id="label_for_2_2" type="checkbox">
+							<a href="/domains/xyz.asp">.xyz</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_2_3">
+							<input name="suffix" checked="checked" value=".wang" common-use="1" id="label_for_2_3" type="checkbox">
+							<a href="/domains/wang.asp">.wang</a>
+						</label>
+
+						<label class="checked" for="label_for_2_4">
+							<input name="suffix" checked="checked" value=".vip" common-use="0" id="label_for_2_4" type="checkbox">
+							<a href="/domains/vip.asp">.vip</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_2_5">
+							<input name="suffix" checked="checked" value=".win" common-use="1" id="label_for_2_5" type="checkbox">
+							<a href="/domains/win.asp">.win</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_2_6">
+							<input name="suffix" checked="checked" value=".ren" common-use="1" id="label_for_2_6" type="checkbox">
+							<a href="/domains/ren.asp">.ren</a>
+						</label>
+
+						<label class="checked" for="label_for_2_7">
+							<input name="suffix" checked="checked" value=".space" common-use="1" id="label_for_2_7" type="checkbox">
+							<a href="/domains/space.asp">.space</a>
+						</label>
+
+						<label class="checked" for="label_for_2_8">
+							<input name="suffix" checked="checked" value=".online" common-use="1" id="label_for_2_8" type="checkbox">
+							<a href="/domains/online.asp">.online</a>
+						</label>
+
+						<label class="checked" for="label_for_2_9">
+							<input name="suffix" checked="checked" value=".site" common-use="1" id="label_for_2_9" type="checkbox">
+							<a href="/domains/site.asp">.site</a>
+						</label>
+
+						<label class="checked" for="label_for_2_10">
+							<input name="suffix" checked="checked" value=".date" common-use="0" id="label_for_2_10" type="checkbox">
+							<a href="/domains/date.asp">.date</a>
+						</label>
+
+						<label class="checked" for="label_for_2_11">
+							<input name="suffix" checked="checked" value=".red" common-use="0" id="label_for_2_11" type="checkbox">
+							<a href="/domains/red.asp">.red</a>
+						</label>
+
+						<label class="checked" for="label_for_2_12">
+							<input name="suffix" checked="checked" value=".kim" common-use="0" id="label_for_2_12" type="checkbox">
+							<a href="/domains/kim.asp">.kim</a>
+						</label>
+
+						<label class="" for="label_for_2_13">
+							<input name="suffix" value=".website" common-use="1" id="label_for_2_13" type="checkbox">
+							<a href="/domains/website.asp">.website</a>
+						</label>
+
+						<label class="checked" for="label_for_2_14">
+							<input name="suffix" checked="checked" value=".bid" common-use="0" id="label_for_2_14" type="checkbox">
+							<a href="/domains/bid.asp">.bid</a>
+						</label>
+
+						<label class="checked" for="label_for_2_15">
+							<input name="suffix" checked="checked" value=".live" common-use="1" id="label_for_2_15" type="checkbox">
+							<a href="/domains/live.asp">.live</a>
+						</label>
+
+						<label class="checked" for="label_for_2_16">
+							<input name="suffix" checked="checked" value=".sale" common-use="1" id="label_for_2_16" type="checkbox">
+							<a href="/domains/sale.asp">.sale</a>
+						</label>
+
+						<label class="" for="label_for_2_17">
+							<input name="suffix" value=".run" common-use="0" id="label_for_2_17" type="checkbox">
+							<a href="/domains/run.asp">.run</a>
+						</label>
+
+						<label class="" for="label_for_2_18">
+							<input name="suffix" value=".gold" common-use="0" id="label_for_2_18" type="checkbox">
+							<a href="/domains/gold.asp">.gold</a>
+						</label>
+
+						<label class="" for="label_for_2_19">
+							<input name="suffix" value=".help" common-use="1" id="label_for_2_19" type="checkbox">
+							<a href="/domains/help.asp">.help</a>
+						</label>
+
+						<label class="" for="label_for_2_20">
+							<input name="suffix" value=".gift" common-use="1" id="label_for_2_20" type="checkbox">
+							<a href="/domains/gift.asp">.gift</a>
+						</label>
+
+						<label class="" for="label_for_2_21">
+							<input name="suffix" value=".tech" common-use="0" id="label_for_2_21" type="checkbox">
+							<a href="/domains/tech.asp">.tech</a>
+						</label>
+
+						<label class="" for="label_for_2_22">
+							<input name="suffix" value=".faith" common-use="0" id="label_for_2_22" type="checkbox">
+							<a href="/domains/faith.asp">.faith</a>
+						</label>
+
+						<label class="" for="label_for_2_23">
+							<input name="suffix" value=".loan" common-use="0" id="label_for_2_23" type="checkbox">
+							<a href="/domains/loan.asp">.loan</a>
+						</label>
+
+						<label class="" for="label_for_2_24">
+							<input name="suffix" value=".trade" common-use="0" id="label_for_2_24" type="checkbox">
+							<a href="/domains/trade.asp">.trade</a>
+						</label>
+
+						<label class="" for="label_for_2_25">
+							<input name="suffix" value=".zone" common-use="0" id="label_for_2_25" type="checkbox">
+							<a href="/domains/zone.asp">.zone</a>
+						</label>
+
+						<label class="" for="label_for_2_26">
+							<input name="suffix" value=".ink" common-use="0" id="label_for_2_26" type="checkbox">
+							<a href="/domains/ink.asp">.ink</a>
+						</label>
+
+						<label class="" for="label_for_2_27">
+							<input name="suffix" value=".lol" common-use="0" id="label_for_2_27" type="checkbox">
+							<a href="/domains/lol.asp">.lol</a>
+						</label>
+
+						<label class="" for="label_for_2_28">
+							<input name="suffix" value=".game" common-use="0" id="label_for_2_28" type="checkbox">
+							<a href="/domains/game.asp">.game</a>
+						</label>
+
+						<label class="" for="label_for_2_29">
+							<input name="suffix" value=".store" common-use="0" id="label_for_2_29" type="checkbox">
+							<a href="/domains/store.asp">.store</a>
+						</label>
+
+						<label class="" for="label_for_2_30">
+							<input name="suffix" value=".ltd" common-use="0" id="label_for_2_30" type="checkbox">
+							<a href="/domains/ltd.asp">.ltd</a>
+						</label>
+
+						<label class="" for="label_for_2_31">
+							<input name="suffix" value=".xin" common-use="0" id="label_for_2_31" type="checkbox">
+							<a href="/domains/xin.asp">.xin</a>
+						</label>
+
+						<label class="" for="label_for_2_32">
+							<input name="suffix" value=".party" common-use="0" id="label_for_2_32" type="checkbox">
+							<a href="/domains/party.asp">.party</a>
+						</label>
+
+						<label class="" for="label_for_2_33">
+							<input name="suffix" value=".pub" common-use="0" id="label_for_2_33" type="checkbox">
+							<a href="/domains/pub.asp">.pub</a>
+						</label>
+
+						<label class="" for="label_for_2_34">
+							<input name="suffix" value=".news" common-use="0" id="label_for_2_34" type="checkbox">
+							<a href="/domains/news.asp">.news</a>
+						</label>
+
+						<label class="" for="label_for_2_35">
+							<input name="suffix" value=".men" common-use="0" id="label_for_2_35" type="checkbox">
+							<a href="/domains/men.asp">.men</a>
+						</label>
+
+						<label class="" for="label_for_2_36">
+							<input name="suffix" value=".vin" common-use="0" id="label_for_2_36" type="checkbox">
+							<a href="/domains/vin.asp">.vin</a>
+						</label>
+
+						<label class="" for="label_for_2_37">
+							<input name="suffix" value=".fund" common-use="0" id="label_for_2_37" type="checkbox">
+							<a href="/domains/fund.asp">.fund</a>
+						</label>
+
+						<label class="" for="label_for_2_38">
+							<input name="suffix" value=".wiki" common-use="0" id="label_for_2_38" type="checkbox">
+							<a href="/domains/wiki.asp">.wiki</a>
+						</label>
+
+						<label class="" for="label_for_2_39">
+							<input name="suffix" value=".pink" common-use="0" id="label_for_2_39" type="checkbox">
+							<a href="/domains/pink.asp">.pink</a>
+						</label>
+
+						<label class="checked" for="label_for_2_40">
+							<input name="suffix" checked="checked" value=".mom" common-use="1" id="label_for_2_40" type="checkbox">
+							<a href="/domains/mom.asp">.mom</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="" for="label_for_2_41">
+							<input name="suffix" value=".blue" common-use="0" id="label_for_2_41" type="checkbox">
+							<a href="/domains/blue.asp">.blue</a>
+						</label>
+
+						<label class="" for="label_for_2_42">
+							<input name="suffix" value=".pet" common-use="0" id="label_for_2_42" type="checkbox">
+							<a href="/domains/pet.asp">.pet</a>
+						</label>
+
+						<label class="" for="label_for_2_43">
+							<input name="suffix" value=".link" common-use="0" id="label_for_2_43" type="checkbox">
+							<a href="/domains/link.asp">.link</a>
+						</label>
+
+						<label class="" for="label_for_2_44">
+							<input name="suffix" value=".work" common-use="0" id="label_for_2_44" type="checkbox">
+							<a href="/domains/work.asp">.work</a>
+						</label>
+
+						<label class="" for="label_for_2_45">
+							<input name="suffix" value=".fit" common-use="0" id="label_for_2_45" type="checkbox">
+							<a href="/domains/fit.asp">.fit</a>
+						</label>
+
+						<label class="" for="label_for_2_46">
+							<input name="suffix" value=".cool" common-use="0" id="label_for_2_46" type="checkbox">
+							<a href="/domains/cool.asp">.cool</a>
+						</label>
+
+						<label class="" for="label_for_2_47">
+							<input name="suffix" value=".life" common-use="0" id="label_for_2_47" type="checkbox">
+							<a href="/domains/life.asp">.life</a>
+						</label>
+
+						<label class="" for="label_for_2_48">
+							<input name="suffix" value=".city" common-use="0" id="label_for_2_48" type="checkbox">
+							<a href="/domains/city.asp">.city</a>
+						</label>
+
+						<label class="" for="label_for_2_49">
+							<input name="suffix" value=".webcam" common-use="0" id="label_for_2_49" type="checkbox">
+							<a href="/domains/webcam.asp">.webcam</a>
+						</label>
+
+						<label class="" for="label_for_2_50">
+							<input name="suffix" value=".science" common-use="0" id="label_for_2_50" type="checkbox">
+							<a href="/domains/science.asp">.science</a>
+						</label>
+
+						<label class="" for="label_for_2_51">
+							<input name="suffix" value=".accountant" common-use="0" id="label_for_2_51" type="checkbox">
+							<a href="/domains/accountant.asp">.accountant</a>
+						</label>
+
+						<label class="" for="label_for_2_52">
+							<input name="suffix" value=".review" common-use="0" id="label_for_2_52" type="checkbox">
+							<a href="/domains/review.asp">.review</a>
+						</label>
+
+						<label class="" for="label_for_2_53">
+							<input name="suffix" value=".download" common-use="0" id="label_for_2_53" type="checkbox">
+							<a href="/domains/download.asp">.download</a>
+						</label>
+
+						<label class="" for="label_for_2_54">
+							<input name="suffix" value=".cricket" common-use="0" id="label_for_2_54" type="checkbox">
+							<a href="/domains/cricket.asp">.cricket</a>
+						</label>
+
+						<label class="" for="label_for_2_55">
+							<input name="suffix" value=".racing" common-use="0" id="label_for_2_55" type="checkbox">
+							<a href="/domains/racing.asp">.racing</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="" for="label_for_2_56">
+							<input name="suffix" value=".taipei" common-use="0" id="label_for_2_56" type="checkbox">
+							<a href="/domains/taipei.asp">.taipei</a>
+						</label>
+
+						<label class="" for="label_for_2_57">
+							<input name="suffix" value=".yoga" common-use="0" id="label_for_2_57" type="checkbox">
+							<a href="/domains/yoga.asp">.yoga</a>
+						</label>
+
+						<label class="" for="label_for_2_58">
+							<input name="suffix" value=".games" common-use="0" id="label_for_2_58" type="checkbox">
+							<a href="/domains/games.asp">.games</a>
+							<i class="icon new"></i>
+
+						</label>
+
+					</div>
+				</div>
+				<!-- 新顶级域名 结束 -->
+				<!-- 中文域名  -->
+				<div id="chineseDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label id="cn_select_op_1">
+								<input class="select-op" id="cn_select_op_1" name="select-op-3" value="0" type="radio">全选</label>
+							<label id="cn_select_op_2">
+								<input class="select-op" id="cn_select_op_2" name="select-op-3" value="1" type="radio">全不选</label>
+							<label id="cn_select_op_3">
+								<input class="select-op" id="cn_select_op_3" name="select-op-3" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix">
+
+						<label class="checked" for="label_for_3_0">
+							<input name="suffix" checked="checked" value=".中国" common-use="1" id="label_for_3_0" type="checkbox">
+							<a href="/domains/china.asp">.中国</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_1">
+							<input name="suffix" checked="checked" value=".我爱你" common-use="0" id="label_for_3_1" type="checkbox">
+							<a href="/services/domain/520.asp">.我爱你</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_2">
+							<input name="suffix" checked="checked" value=".公司" common-use="1" id="label_for_3_2" type="checkbox">
+							<a href="/domains/gs.asp">.公司</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_3">
+							<input name="suffix" checked="checked" value=".网络" common-use="1" id="label_for_3_3" type="checkbox">
+							<a href="/domains/wl.asp">.网络</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_4">
+							<input name="suffix" checked="checked" value=".top" common-use="1" id="label_for_3_4" type="checkbox">
+							<a href="/domains/top.asp">.top</a>
+						</label>
+
+						<label class="checked" for="label_for_3_5">
+							<input name="suffix" checked="checked" value=".cn" common-use="1" id="label_for_3_5" type="checkbox">
+							<a href="/domains/cn.asp">.cn</a>
+						</label>
+
+						<label class="checked" for="label_for_3_6">
+							<input name="suffix" checked="checked" value=".wang" common-use="1" id="label_for_3_6" type="checkbox">
+							<a href="/domains/wang.asp">.wang</a>
+						</label>
+
+						<label class="checked" for="label_for_3_7">
+							<input name="suffix" checked="checked" value=".com" common-use="1" id="label_for_3_7" type="checkbox">
+							<a href="/domains/com.asp">.com</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_8">
+							<input name="suffix" checked="checked" value=".net" common-use="1" id="label_for_3_8" type="checkbox">
+							<a href="/domains/net.asp">.net</a>
+						</label>
+
+						<label class="checked" for="label_for_3_9">
+							<input name="suffix" checked="checked" value=".cc" common-use="1" id="label_for_3_9" type="checkbox">
+							<a href="/domains/cc.asp">.cc</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="" for="label_for_3_10">
+							<input name="suffix" value=".tv" common-use="0" id="label_for_3_10" type="checkbox">
+							<a href="/domains/tv.asp">.tv</a>
+						</label>
+
+						<label class="" for="label_for_3_11">
+							<input name="suffix" value=".集团" common-use="0" id="label_for_3_11" type="checkbox">
+							<a href="/domains/jituan.asp">.集团</a>
+						</label>
+
+						<label class="checked" for="label_for_3_12">
+							<input name="suffix" checked="checked" value=".ren" common-use="1" id="label_for_3_12" type="checkbox">
+							<a href="/domains/ren.asp">.ren</a>
+						</label>
+
+						<label class="checked" for="label_for_3_13">
+							<input name="suffix" checked="checked" value=".世界" common-use="1" id="label_for_3_13" type="checkbox">
+							<a href="/domains/shijie.asp">.世界</a>
+						</label>
+
+						<label class="" for="label_for_3_14">
+							<input name="suffix" value=".biz" common-use="0" id="label_for_3_14" type="checkbox">
+							<a href="/domains/biz.asp">.biz</a>
+						</label>
+
+						<label class="" for="label_for_3_15">
+							<input name="suffix" value=".xyz" common-use="1" id="label_for_3_15" type="checkbox">
+							<a href="/domains/xyz.asp">.xyz</a>
+						</label>
+
+						<label class="" for="label_for_3_16">
+							<input name="suffix" value=".tm" common-use="0" id="label_for_3_16" type="checkbox">
+							<a href="/domains/tm.asp">.tm</a>
+						</label>
+
+						<label class="" for="label_for_3_17">
+							<input name="suffix" value=".广东" common-use="0" id="label_for_3_17" type="checkbox">
+							<a href="/domains/cngd.asp">.广东</a>
+						</label>
+
+						<label class="" for="label_for_3_18">
+							<input name="suffix" value=".佛山" common-use="0" id="label_for_3_18" type="checkbox">
+							<a href="/domains/cnfs.asp">.佛山</a>
+						</label>
+
+						<label class="checked" for="label_for_3_19">
+							<input name="suffix" checked="checked" value=".信息" common-use="0" id="label_for_3_19" type="checkbox">
+							<a href="/domains/xinxi.asp">.信息</a>
+							<i class="icon new"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_20">
+							<input name="suffix" checked="checked" value=".club" common-use="0" id="label_for_3_20" type="checkbox">
+							<a href="/domains/club.asp">.club</a>
+							<i class="icon new"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_3_21">
+							<input name="suffix" checked="checked" value=".网店" common-use="1" id="label_for_3_21" type="checkbox">
+							<a href="/domains/wangdian.asp">.网店</a>
+							<i class="icon new"></i>
+
+						</label>
+
+					</div>
+				</div>
+				<!-- 中文域名 结束 -->
+				<!-- 国别域名  -->
+				<div id="nationDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="nation_select_op_1">
+								<input class="select-op" id="nation_select_op_1" name="select-op-4" value="0" type="radio">全选</label>
+							<label for="nation_select_op_2">
+								<input class="select-op" id="nation_select_op_2" name="select-op-4" value="1" type="radio">全不选</label>
+							<label for="nation_select_op_3">
+								<input class="select-op" id="nation_select_op_3" name="select-op-4" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix">
+
+						<label class="checked" for="label_for_4_0">
+							<input name="suffix" checked="checked" value=".cn" common-use="1" id="label_for_4_0" type="checkbox">
+							<a href="/domains/cn.asp">.cn</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_4_1">
+							<input name="suffix" checked="checked" value=".cc" common-use="0" id="label_for_4_1" type="checkbox">
+							<a href="/domains/cc.asp">.cc</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_4_2">
+							<input name="suffix" checked="checked" value=".cm" common-use="0" id="label_for_4_2" type="checkbox">
+							<a href="/domains/cm.asp">.cm</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="checked" for="label_for_4_3">
+							<input name="suffix" checked="checked" value=".pw" common-use="0" id="label_for_4_3" type="checkbox">
+							<a href="/domains/pw.asp">.pw</a>
+						</label>
+
+						<label class="checked" for="label_for_4_4">
+							<input name="suffix" checked="checked" value=".com.cn" common-use="1" id="label_for_4_4" type="checkbox">
+							<a href="/domains/comcn.asp">.com.cn</a>
+						</label>
+
+						<label class="" for="label_for_4_5">
+							<input name="suffix" value=".net.cn" common-use="1" id="label_for_4_5" type="checkbox">
+							<a href="/domains/netcn.asp">.net.cn</a>
+						</label>
+
+						<label class="" for="label_for_4_6">
+							<input name="suffix" value=".org.cn" common-use="1" id="label_for_4_6" type="checkbox">
+							<a href="/domains/orgcn.asp">.org.cn</a>
+						</label>
+
+						<label class="" for="label_for_4_7">
+							<input name="suffix" value=".gov.cn" common-use="0" id="label_for_4_7" type="checkbox">
+							<a href="/domains/govcn.asp">.gov.cn</a>
+						</label>
+
+						<label class="" for="label_for_4_8">
+							<input name="suffix" value=".in" common-use="0" id="label_for_4_8" type="checkbox">
+							<a href="/domains/in.asp">.in</a>
+							<i class="icon hot"></i>
+
+						</label>
+
+						<label class="" for="label_for_4_9">
+							<input name="suffix" value=".us" common-use="0" id="label_for_4_9" type="checkbox">
+							<a href="/domains/us.asp">.us</a>
+						</label>
+
+						<label class="" for="label_for_4_10">
+							<input name="suffix" value=".me" common-use="0" id="label_for_4_10" type="checkbox">
+							<a href="/domains/me.asp">.me</a>
+						</label>
+
+						<label class="" for="label_for_4_11">
+							<input name="suffix" value=".gg" common-use="0" id="label_for_4_11" type="checkbox">
+							<a href="/domains/gg.asp">.gg</a>
+						</label>
+
+						<label class="" for="label_for_4_12">
+							<input name="suffix" value=".asia" common-use="0" id="label_for_4_12" type="checkbox">
+							<a href="/domains/asia.asp">.asia</a>
+						</label>
+
+						<label class="" for="label_for_4_13">
+							<input name="suffix" value=".la" common-use="0" id="label_for_4_13" type="checkbox">
+							<a href="/domains/la.asp">.la</a>
+						</label>
+
+						<label class="" for="label_for_4_14">
+							<input name="suffix" value=".tm" common-use="0" id="label_for_4_14" type="checkbox">
+							<a href="/domains/tm.asp">.tm</a>
+						</label>
+
+						<label class="checked" for="label_for_4_15">
+							<input name="suffix" checked="checked" value=".hk" common-use="0" id="label_for_4_15" type="checkbox">
+							<a href="/domains/hk.asp">.hk</a>
+						</label>
+
+						<label class="checked" for="label_for_4_16">
+							<input name="suffix" checked="checked" value=".com.hk" common-use="0" id="label_for_4_16" type="checkbox">
+							<a href="/domains/comhk.asp">.com.hk</a>
+						</label>
+
+						<label class="" for="label_for_4_17">
+							<input name="suffix" value=".co" common-use="0" id="label_for_4_17" type="checkbox">
+							<a href="/domains/co.asp">.co</a>
+						</label>
+
+						<label class="" for="label_for_4_18">
+							<input name="suffix" value=".gs" common-use="0" id="label_for_4_18" type="checkbox">
+							<a href="/domains/engs.asp">.gs</a>
+						</label>
+
+						<label class="" for="label_for_4_19">
+							<input name="suffix" value=".ws" common-use="0" id="label_for_4_19" type="checkbox">
+							<a href="/domains/ws.asp">.ws</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="" for="label_for_4_20">
+							<input name="suffix" value=".tw" common-use="0" id="label_for_4_20" type="checkbox">
+							<a href="/domains/tw.asp">.tw</a>
+						</label>
+
+						<label class="" for="label_for_4_21">
+							<input name="suffix" value=".com.tw" common-use="0" id="label_for_4_21" type="checkbox">
+							<a href="/domains/tw.asp">.com.tw</a>
+						</label>
+
+						<label class="" for="label_for_4_22">
+							<input name="suffix" value=".sc" common-use="0" id="label_for_4_22" type="checkbox">
+							<a href="/domains/sc.asp">.sc</a>
+						</label>
+
+						<label class="checked" for="label_for_4_23">
+							<input name="suffix" checked="checked" value=".vc" common-use="0" id="label_for_4_23" type="checkbox">
+							<a href="/domains/vc.asp">.vc</a>
+							<i class="icon promotion"></i>
+
+						</label>
+
+						<label class="" for="label_for_4_24">
+							<input name="suffix" value=".lc" common-use="0" id="label_for_4_24" type="checkbox">
+							<a href="/domains/lc.asp">.lc</a>
+						</label>
+
+						<label class="" for="label_for_4_25">
+							<input name="suffix" value=".im" common-use="0" id="label_for_4_25" type="checkbox">
+							<a href="/domains/im.asp">.im</a>
+						</label>
+
+						<label class="" for="label_for_4_26">
+							<input name="suffix" value=".cx" common-use="0" id="label_for_4_26" type="checkbox">
+							<a href="/domains/cx.asp">.cx</a>
+						</label>
+
+						<label class="" for="label_for_4_27">
+							<input name="suffix" value=".hn" common-use="0" id="label_for_4_27" type="checkbox">
+							<a href="/domains/hn.asp">.hn</a>
+						</label>
+
+						<label class="" for="label_for_4_28">
+							<input name="suffix" value=".name" common-use="0" id="label_for_4_28" type="checkbox">
+							<a href="/domains/name.asp">.name</a>
+						</label>
+
+						<label class="" for="label_for_4_29">
+							<input name="suffix" value=".tv" common-use="0" id="label_for_4_29" type="checkbox">
+							<a href="/domains/tv.asp">.tv</a>
+						</label>
+
+						<label class="" for="label_for_4_30">
+							<input name="suffix" value=".com.co" common-use="0" id="label_for_4_30" type="checkbox">
+							<a href="/domains/com.co.asp">.com.co</a>
+						</label>
+
+					</div>
+				</div>
+				<!-- 国别域名 结束 -->
+				<!-- 省级域名  -->
+				<div id="provinceDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="province_select_op_1">
+								<input class="select-op" id="province_select_op_1" name="select-op-5" value="0" type="radio">全选</label>
+							<label for="province_select_op_2">
+								<input class="select-op" id="province_select_op_2" name="select-op-5" value="1" type="radio">全不选</label>
+							<label for="province_select_op_3">
+								<input class="select-op" id="province_select_op_3" name="select-op-5" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix">
+
+						<label class="checked" for="label_for_5_0">
+							<input name="suffix" checked="checked" value=".cn" common-use="0" id="label_for_5_0" type="checkbox">
+							.cn
+						</label>
+
+						<label class="checked" for="label_for_5_1">
+							<input name="suffix" checked="checked" value=".com.cn" common-use="0" id="label_for_5_1" type="checkbox">
+							.com.cn
+						</label>
+
+						<label class="checked" for="label_for_5_2">
+							<input name="suffix" checked="checked" value=".net.cn" common-use="0" id="label_for_5_2" type="checkbox">
+							.net.cn
+						</label>
+
+						<label class="" for="label_for_5_3">
+							<input name="suffix" value=".org.cn" common-use="0" id="label_for_5_3" type="checkbox">
+							.org.cn
+						</label>
+
+						<label class="" for="label_for_5_4">
+							<input name="suffix" value=".gov.cn" common-use="0" id="label_for_5_4" type="checkbox">
+							.gov.cn
+						</label>
+
+						<label class="" for="label_for_5_5">
+							<input name="suffix" value=".ac.cn" common-use="0" id="label_for_5_5" type="checkbox">
+							.ac.cn
+						</label>
+
+						<label class="" for="label_for_5_6">
+							<input name="suffix" value=".bj.cn" common-use="0" id="label_for_5_6" type="checkbox">
+							.bj.cn
+						</label>
+
+						<label class="" for="label_for_5_7">
+							<input name="suffix" value=".sh.cn" common-use="0" id="label_for_5_7" type="checkbox">
+							.sh.cn
+						</label>
+
+						<label class="" for="label_for_5_8">
+							<input name="suffix" value=".tj.cn" common-use="0" id="label_for_5_8" type="checkbox">
+							.tj.cn
+						</label>
+
+						<label class="" for="label_for_5_9">
+							<input name="suffix" value=".cq.cn" common-use="0" id="label_for_5_9" type="checkbox">
+							.cq.cn
+						</label>
+
+						<label class="" for="label_for_5_10">
+							<input name="suffix" value=".he.cn" common-use="0" id="label_for_5_10" type="checkbox">
+							.he.cn
+						</label>
+
+						<label class="" for="label_for_5_11">
+							<input name="suffix" value=".sn.cn" common-use="0" id="label_for_5_11" type="checkbox">
+							.sn.cn
+						</label>
+
+						<label class="" for="label_for_5_12">
+							<input name="suffix" value=".sx.cn" common-use="0" id="label_for_5_12" type="checkbox">
+							.sx.cn
+						</label>
+
+						<label class="" for="label_for_5_13">
+							<input name="suffix" value=".nm.cn" common-use="0" id="label_for_5_13" type="checkbox">
+							.nm.cn
+						</label>
+
+						<label class="" for="label_for_5_14">
+							<input name="suffix" value=".ln.cn" common-use="0" id="label_for_5_14" type="checkbox">
+							.ln.cn
+						</label>
+
+						<label class="" for="label_for_5_15">
+							<input name="suffix" value=".jl.cn" common-use="0" id="label_for_5_15" type="checkbox">
+							.jl.cn
+						</label>
+
+						<label class="" for="label_for_5_16">
+							<input name="suffix" value=".hl.cn" common-use="0" id="label_for_5_16" type="checkbox">
+							.hl.cn
+						</label>
+
+						<label class="" for="label_for_5_17">
+							<input name="suffix" value=".js.cn" common-use="0" id="label_for_5_17" type="checkbox">
+							.js.cn
+						</label>
+
+						<label class="" for="label_for_5_18">
+							<input name="suffix" value=".zj.cn" common-use="0" id="label_for_5_18" type="checkbox">
+							.zj.cn
+						</label>
+
+						<label class="" for="label_for_5_19">
+							<input name="suffix" value=".ah.cn" common-use="0" id="label_for_5_19" type="checkbox">
+							.ah.cn
+						</label>
+
+						<label class="" for="label_for_5_20">
+							<input name="suffix" value=".fj.cn" common-use="0" id="label_for_5_20" type="checkbox">
+							.fj.cn
+						</label>
+
+						<label class="" for="label_for_5_21">
+							<input name="suffix" value=".jx.cn" common-use="0" id="label_for_5_21" type="checkbox">
+							.jx.cn
+						</label>
+
+						<label class="" for="label_for_5_22">
+							<input name="suffix" value=".sd.cn" common-use="0" id="label_for_5_22" type="checkbox">
+							.sd.cn
+						</label>
+
+						<label class="" for="label_for_5_23">
+							<input name="suffix" value=".ha.cn" common-use="0" id="label_for_5_23" type="checkbox">
+							.ha.cn
+						</label>
+
+						<label class="" for="label_for_5_24">
+							<input name="suffix" value=".hb.cn" common-use="0" id="label_for_5_24" type="checkbox">
+							.hb.cn
+						</label>
+
+						<label class="" for="label_for_5_25">
+							<input name="suffix" value=".hn.cn" common-use="0" id="label_for_5_25" type="checkbox">
+							.hn.cn
+						</label>
+
+						<label class="" for="label_for_5_26">
+							<input name="suffix" value=".gd.cn" common-use="0" id="label_for_5_26" type="checkbox">
+							.gd.cn
+						</label>
+
+						<label class="" for="label_for_5_27">
+							<input name="suffix" value=".gx.cn" common-use="0" id="label_for_5_27" type="checkbox">
+							.gx.cn
+						</label>
+
+						<label class="" for="label_for_5_28">
+							<input name="suffix" value=".hi.cn" common-use="0" id="label_for_5_28" type="checkbox">
+							.hi.cn
+						</label>
+
+						<label class="" for="label_for_5_29">
+							<input name="suffix" value=".sc.cn" common-use="0" id="label_for_5_29" type="checkbox">
+							.sc.cn
+						</label>
+
+						<label class="" for="label_for_5_30">
+							<input name="suffix" value=".gz.cn" common-use="0" id="label_for_5_30" type="checkbox">
+							.gz.cn
+						</label>
+
+						<label class="" for="label_for_5_31">
+							<input name="suffix" value=".yn.cn" common-use="0" id="label_for_5_31" type="checkbox">
+							.yn.cn
+						</label>
+
+						<label class="" for="label_for_5_32">
+							<input name="suffix" value=".gs.cn" common-use="0" id="label_for_5_32" type="checkbox">
+							.gs.cn
+						</label>
+
+						<label class="" for="label_for_5_33">
+							<input name="suffix" value=".qh.cn" common-use="0" id="label_for_5_33" type="checkbox">
+							.qh.cn
+						</label>
+
+						<label class="" for="label_for_5_34">
+							<input name="suffix" value=".nx.cn" common-use="0" id="label_for_5_34" type="checkbox">
+							.nx.cn
+						</label>
+
+						<label class="" for="label_for_5_35">
+							<input name="suffix" value=".xj.cn" common-use="0" id="label_for_5_35" type="checkbox">
+							.xj.cn
+						</label>
+
+						<label class="" for="label_for_5_36">
+							<input name="suffix" value=".tw.cn" common-use="0" id="label_for_5_36" type="checkbox">
+							.tw.cn
+						</label>
+
+						<label class="" for="label_for_5_37">
+							<input name="suffix" value=".hk.cn" common-use="0" id="label_for_5_37" type="checkbox">
+							.hk.cn
+						</label>
+
+						<label class="" for="label_for_5_38">
+							<input name="suffix" value=".mo.cn" common-use="0" id="label_for_5_38" type="checkbox">
+							.mo.cn
+						</label>
+
+						<label class="" for="label_for_5_39">
+							<input name="suffix" value=".xz.cn" common-use="0" id="label_for_5_39" type="checkbox">
+							.xz.cn
+						</label>
+
+					</div>
+				</div>
+				<!-- 省级域名 结束 -->
+			</div>
+		</div>
+	</div>
+	<!--查询框 结束-->
+</div>
+
+<div class="whois-content">
+	<div class="wide1190 horizontal-center">
+		<div class="whois-content-title">域名查询结果<div class="hide reg-tip" id="J_whTips">提示：.com/.net/.cc接口正在维护中((9:00-9:45)，暂停查询、注册、续费，请稍后再试...</div></div>
+		<!--查询结果显示 开始-->
+		<div class="whois-info">
+			<div id="MainContentDIV">
+
+
+
+				<script language="javascript">
+					var title_ok=false;
+					var title_de=false;
+					var title_er=false;
+					var searchbutton="new";
+					var iscustom=0;
+					var ischeckok=0     ;  //显示弹窗内容
+					var isalert=false;
+					var domainsort="fdfd.top,fdfd.club";
+					var loginsuccess="";
+					function sortInsertHtml(domain,html){
+
+						if((","+domainsort+",").indexOf(","+domain+",")>=0){
+							var domainlist=$("input[name='domain']:checkbox");
+							var isfind;
+							$.each(domainsort.split(","),function(i,s_domain){
+								isfind=false;
+								if(s_domain==domain){
+									if(domainlist.get(0)){
+										$.each(domainlist,function(ii,dd){
+											var domainSort=$(dd).attr("sort");
+											if(!isNaN(domainSort)){
+												if(i<Number(domainSort)){
+													$(dd).parents("li").before(html);
+													$("input[name='domain'][data='"+ domain +"']:checkbox").attr("sort",i)
+													isfind=true;
+													return false;
+												}
+											}
+										});
+									}
+									if(!isfind){
+										$("#batch").before(html);
+										$("input[name='domain'][data='"+ domain +"']:checkbox").attr("sort",i)
+									}
+									return false;
+								}
+							});
+						}else{
+							$("#batch").before(html);
+						}
+					}
+
+					function gettok_whoisinfo(){
+						$.ajax({
+							async:false,
+							type:'GET',
+							url:'/services/domain/whoisinfo.asp?act=gettok',
+							data:null,
+							cache:false,
+							dataType:'script',
+							error:function(jqXHR,textStatus,errorThrown){
+								//alert('获取令牌失败');
+								return;
+							}
+						});
+					}
+
+
+					function checkall()
+					{
+						var obj=$("input[name='checkallallowreg']:checked")
+						if (obj.val()=="1"){
+							$(".allowreg li input[name='domain']").prop("checked",true)
+						}else if(obj.val()=="2"){
+							$(".allowreg li input[name='domain']").each(function(index,element)
+									{
+										if($(this).prop('checked'))
+										{
+											$(this).prop('checked',false)
+										}else
+										{
+											$(this).prop('checked',true)
+										}
+									}
+							)
+						}else if(obj.val()=="3"){
+							$.each($(".allowreg li input[name='domain']:checkbox"),function(i,n){
+								if($(n).val().indexOf("|")>=0){
+									$(n).prop('checked',true);
+								}else{
+									$(n).prop('checked',false);
+								}
+							})
+						}else if(obj.val()=="4"){
+							$.each($(".allowreg li input[name='domain']:checkbox"),function(i,n){
+								if($(n).val().indexOf("|")>=0){
+									$(n).prop('checked',false);
+								}else{
+									$(n).prop('checked',true);
+								}
+							})
+						}
+
+					}
+
+					function showdomain(domainname,mark){
+						if (mark=='a:' || mark=='d:'){
+							if (!title_ok){
+								showtitle("allowreg","<strong class='font16 green'>太棒了！以下域名可以注册,抢在他人下手之前购买此域名！</strong>   <label  class='ml-10 mr-10'><input type=\"radio\" name=\"checkallallowreg\" id=\"checkallallowreg\" value=\"1\" onclick=\"checkall()\" > 全选</label>  <label  class='mr-10'><input type=\"radio\" name=\"checkallallowreg\" id=\"checkunallallowreg\"  onclick=\"checkall()\" value=\"2\" > 反选</label> <label  class='mr-10'><input type=\"radio\" name=\"checkallallowreg\" value=\"3\" onclick=\"checkall()\" > 溢价</label>  <label  class='mr-10'><input type=\"radio\" name=\"checkallallowreg\" onclick=\"checkall()\" value=\"4\" > 非溢价</label>");
+								//$(".allowreg ul").append("<li id=\"batch\" class=\"clearfix\"><h2 class='f-r'><a href=### onclick=\"javascript:domainreg()\" class=column-btn><b>[批量注册]</b></a></h2></li>");
+								$(".allowreg ul").append("<li id=\"batch\" class=\"cl hidden \"></li>");
+								$("#canreg").append('<a href="javascript:;" onclick="domainreg()" class="whois-btn batch-reg">批量注册所选域名</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" onclick="domainreg2()" class="whois-btn offline-reg">离线自动注册</a>&nbsp;&nbsp;&nbsp;&nbsp;');
+								title_ok=true;
+							}
+							var gaojia="";
+							if(mark=="d:"){
+								var feedomain="",feeprice="",feecatestr="",feecate="",feetype="",feecatestr_="";
+								if(/(.+)\=([\d\.]+)(\/\s*feecate\s*\:\s*[\w\+\- ]+\s*\|\s*feetype\s*\:\s*[\w\+\- ]+)?/ig.test(domainname)){
+									feedomain=RegExp.$1;
+									feeprice=RegExp.$2;
+									feecatestr=RegExp.$3;
+									if(feecatestr!=""){
+										if(/feecate\s*\:\s*([\w\+\- ]+)\s*\|\s*feetype\s*\:\s*([\w\+\- ]+)/ig.test(feecatestr)){
+											feecate=RegExp.$1;
+											feetype=RegExp.$2;
+											feecatestr_="|"+feecate+"|"+feetype;
+										}
+									}
+
+								}
+								gaojia="|"+feeprice+feecatestr_;
+								domainname=feedomain+"|高价域名(<a href=\"/faq/list.asp?unid=941#renewinfo\" target=\"_blank\" style=\"color:red\">【必读】溢价域名续费政策</a>)|<span class='price-color'>"+ feeprice +"</span>元/首年|no"
+							}
+
+							var spStr=domainname.split("|");
+							var strdomain=spStr[0];
+							var strinfo=spStr[1];
+							var strprice=spStr[2];
+							var isonlychk=spStr[3];//不允许批量注册
+							var domaintype=(spStr.length>=5)?domaintype=spStr[4]:"";
+							var infos='<span class="priceclass">'+strprice+'</span><span class="infoclass">'+strinfo+'</span>'
+							var links='<span class="linkclass"><a href=# onclick="javascript:domainreg(\''+ strdomain + gaojia +'\')" class="column-btn">立即注册</a></span>'
+							var links1='<span class="linkclass"><a href=# onclick="javascript:domainreg1(\''+ strdomain +'\')" class="column-btn">立即注册</a></span>'
+							tips='<span class="tipclass">';
+							if (isgovcn(strdomain))
+								tips+='<a href="/services/domain/govcn.asp" target="_blank" class="Link_Blue">[政府域名注册须知]</a>';
+							if (isdomaincn(strdomain))
+							//tips+='<a href="/services/domain/domcn.asp" target="_blank" class="Link_Blue">[CN域名注册须知]</a>';
+								if (isonlychk=="yes")
+									tips+='[单个注册]';
+							if(mark=="d:"){
+
+								if(/(.+)\=([\d\.]+)/ig.test(strdomain)){
+									strdomain=RegExp.$1;
+									tips+='[高价域名]';
+								}
+							}
+							tips+='</span>';
+							//if (isdomaincom(strdomain) && strdomain.indexOf("xxx")>=0)
+							//{
+							//	$("#batch").before("<li class=\"cl\"><h1 class='f-l'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ strdomain +"</h1><h2 class='f-r'>禁止注册含有\"xxx\"的国际域名</h2></li>");
+							//}else if(isonlychk=="yes"){
+
+							if(isonlychk=="yes"){
+								sortInsertHtml(strdomain,"<li class=\"cl\"><h1 class='f-l'>&nbsp;<label><input type=\"checkbox\" disabled=\"disabled\" name=\"domain\" dmtype=\""+ domaintype +"\" data=\""+ strdomain +"\" /><span class='domain-name'>"+ strdomain.replace(/l/ig,"L") +"</span></label></h1><h2 class='f-r'>"+ links1 + infos + tips +"</h2></li>");
+							}else{
+								sortInsertHtml(strdomain,"<li class=\"cl\"><h1 class='f-l'>&nbsp;<label><input type=\"checkbox\" name=\"domain\" dmtype=\""+ domaintype +"\" data=\""+ strdomain +"\" value=\""+ strdomain + gaojia +"\" checked=true /><span class='domain-name' "+ strdomain + gaojia +"\')\">"+ strdomain.replace(/l/ig,"L") +"</span></label></h1><h2 class='f-r'>"+ links + infos + tips +"</h2></li>");
+
+							}
+							domainname=strdomain;
+						}else if(mark=='b:'){
+							if (!title_de){
+								showtitle("denialreg","<strong class='redColor font16'>以下域名已经被注册</strong>");
+								title_de=true;
+							}
+//                              var regedhtml=$("<li class=\"cl\"><h1 class='f-l'>&nbsp;<a class='domain-name' href=\"/web/whois/whoisinfo?domain="+ escape(domainname) +"\">"+ domainname.replace(/l/ig,"L") +"</a></h1><h2 class='f-r'><a target=_blank href=\"/web/whois/whoisinfo?domain="+ escape(domainname) +"\" onclick=\"gettok_whoisinfo();\">[查看whois]</a></h2></li>");
+							var regedhtml=$("<li class=\"cl\"><a class='domain-name' style=\"overflow:hidden;display:block;height:22px;\" onclick=\"gettok_whoisinfo();\" href=\"/web/whois/whoisinfo?domain="+ escape(domainname) +"\" target=\"_blank\"><h1 class='f-l'>&nbsp;<span class=\"domain-name\">"+ domainname.replace(/l/ig,"L")+"</span></h1><h2 class='f-r font12'> [查看whois]</h2></li>");
+							$(".denialreg ul").append(regedhtml);
+
+							checkpaimai(regedhtml,domainname);
+							showelite();
+						}else{
+
+							if(checkIsdigDomain(domainname)){
+								if (!title_ok){
+									showtitle("allowreg","以下域名可以注册");
+									//$(".allowreg ul").append("<li id=\"batch\" class=\"cl noborder \"></li>"); //不再使用，先注释
+									$("#canreg").append('<a href="javascript:;" onclick="domainreg()" class="whois-btn batch-reg">批量注册所选域名</a>&nbsp;&nbsp;&nbsp;&nbsp;');
+									title_ok=true;
+								}
+								$("#batch").before(insertdigDomain(domainname));
+							}
+							else{
+								if (!title_er){
+									showtitle("errreg","<strong class='font16'>以下域名未查询到状态</strong>");
+									title_er=true;
+								}
+								$(".errreg ul").append("<li class=\"cl\"><h1 class='f-l'><span class='domain-name'>"+ domainname.replace(/l/ig,"L") +"</span></h1><h2 class='f-r'><span class='gray'>[不能注册]</span></h2></li>");
+							}
+						}
+						//removeli(domainname);
+					}
+					function setcache(){
+//						return false
+//						if(loginsuccess!=""){
+//							if(!$(".chkload").get(0)){
+//								var cacheObj={};
+//								var dmcache=$.cookie("dmcache");
+//								if(dmcache!=undefined){
+//									cacheObj=eval("("+ dmcache +")");
+//									if(!isjson(cacheObj)) cacheObj={};
+//								}
+//								var isput=false;
+//								$.each($(".allowreg li.clearfix"),function(ii,li){
+//									var dmtype=$(li).find("input[name='domain']:checkbox").attr("dmtype");
+//									if(dmtype!="" && undefined!=dmtype){
+//										var price=$(li).find(".priceclass span").text();
+//										if(dmtype in cacheObj){
+//											if(price!=eval("cacheObj."+dmtype+".pc")){
+//												eval("cacheObj."+dmtype+".pc=price");
+//												isput=true;
+//											}
+//										}else{
+//											eval("cacheObj."+dmtype+"={pc:price}");
+//											isput=true;
+//										}
+//									}
+//
+//								});
+//
+//								if(isput){
+//									$.cookie("dmcache","",{path:'/'});
+//								}
+//							}
+//						}
+
+					}
+					function checkpaimai(v,domain){
+
+						$.post(window.location.pathname,"act=getpaimai&pmdomain="+ escape(domain),function(data){
+							if(data!=""){
+								dataJsonArr=eval("("+ data +")");
+								if(isjson(dataJsonArr)){
+									if("pm" in dataJsonArr){
+										var dataJson=dataJsonArr.pm;
+//                                          v.find("h1").html("&nbsp;<span class='domain-name'>"+dataJson.p_domian+"</span>&nbsp;&nbsp;域名市场售卖中：<span class=\"pmprice\">"+ (dataJson.p_type!="3"?"￥"+dataJson.price:"")  +"</span>&nbsp;<a   class=\"blue-link\" target=\"_blank\" href=\""+ (dataJson.p_type=="1"?"/services/paimai/show.asp?pid="+dataJson.p_id:"/services/paimai/show.asp?pid="+dataJson.p_id) +"\">立即出价</a>");
+										v.find("h1").html("&nbsp;<span class='domain-name'>"+dataJson.p_domian+"</span>");
+										v.find('a.domain-name').append("<span class=\"ljyd-wrapper\" style=\"float: right;font-weight: normal;\">域名市场售卖中：<span class=\"pmprice\">"+ (dataJson.p_type!="3"?"&yen;<span class=\"redColor\">"+dataJson.price+"</span>":"")  +"</span>&nbsp;<a   class=\"btn-ljyd\" target=\"_blank\" href=\""+ (dataJson.p_type=="1"?"/services/paimai/show.asp?pid="+dataJson.p_id:"/services/paimai/show.asp?pid="+dataJson.p_id) +"\">立即购买</a></span>");
+									}else if("jp" in dataJsonArr){
+										var dataJson=dataJsonArr.jp;
+										v.find("h1").html("&nbsp;"+dataJson.p_domian+"&nbsp;&nbsp;精品域名：<span class=\"pmprice\">￥"+ dataJson.price +"</span>&nbsp;<a style=\"color:#06c\" class=\"paimaibtn\" target=\"_blank\" href=\"/services/domain/aprice/show.asp?d="+ escape(dataJson.p_domian) +"&price="+ dataJson.price +"\">立即购买</a>");
+									}else{
+										// 没有在拍卖的情况下 再查下SEDO信息
+										checkSEDO(v,domain);
+									}
+								}
+							}else{
+								// 无拍卖数据的情况下 再查下SEDO信息
+								checkSEDO(v,domain);
+							}
+						});
+					}
+					// 查询其sedo平台下 是否有做拍卖
+					function checkSEDO(v,domain) {
+						var ip ="118.114.245.37";
+//                            if(ip !="118.114.245.37"){
+//                                return;
+//                            }
+						var ext = domain.match(/([^\.]+)\.(.*)/);
+						var result = searchSEDOInfo({
+							keyword:ext[1],
+							precise:1,
+							ext:ext[2],
+							success:function(data) {
+								if(data&&data.data){
+									if(!(data.data instanceof  Array)){
+										var tmpArr=[]
+										for(var x in data.data){
+											tmpArr[0] = data.data[x];
+											tmpArr[0].domain = decodeURIComponent(tmpArr[0].domain);
+											break;
+										}
+										data.data = tmpArr;
+									}
+									if(data.data.length!=1){
+										return;
+									}
+									var domainInfo = data.data[0];
+									v.find('a.domain-name').append('<span class="ljyd-wrapper">域名市场售卖中:&yen;<span class="redColor">'+domainInfo.current_minimum_price+'</span><a class="btn-ljyd" href="javascript:;" onclick="preBuy(\''+domainInfo.domain+'\',\''+domainInfo.search_price+'\');">立即预购</a></span>');
+								}
+							}
+						});
+					}
+					function checkIsdigDomain(domain){
+						var rgexp=/^([a-z0-9\-]+\.)+[\u4e00-\u9fa5]+$/;
+						return rgexp.test(domain);
+					}
+
+					function insertdigDomain(domain){
+						tips="<span class=\"tipclass\"><a href=\"/news/list.asp?newsid=486\" target=\"_blank\" class=\"Link_Blue\">[数字/英文.中国注册须知]</a></span>";
+						digDomainStr="<li class=\"cl\"><h1 class='f-l'>&nbsp;<label><input type=\"checkbox\" name=\"domain\" value=\""+ domain +"\" checked=true /><span class='domain-name'>"+ domain +"</span></label></h1><h2 class='f-r'><span class=\"linkclass\"><a href=###  onclick=\"javascript:domainreg('"+ domain +"')\" class=\"column-btn\">[优先注册]</a></span>" + tips +"</h2></li>";
+						return digDomainStr
+					}
+
+					function showtitle(classname,labelname){
+						var prenode=$("form[name='whoisform'] dt");
+						if (classname=='denialreg'){
+							if ($(".allowreg").length>0)
+								prenode=$(".allowreg");
+						}
+						if (classname=='errreg'){
+							if ($(".denialreg").length>0){
+								prenode=$(".denialreg");
+							}else if ($(".allowreg").length>0)
+								prenode=$(".allowreg");
+						}
+						prenode.after("<dd class=\""+classname+" pt-20\">"+labelname+"<ul></ul></dd>");
+					}
+
+					function removeli(strdm){
+						$(".query h1").each(function(){
+							if ($(this).attr("domain").toLowerCase()==strdm.toLowerCase()){
+								$(this).parent().remove();
+								return false;
+							}
+						});
+						if ($(".query li").length==0){
+							$(".query").remove();
+						}
+					}
+
+					function getdomain(retstr){
+						var retlist=retstr.split(";");
+						var dmlist=[];
+						for(i=0;i<retlist.length;i++){
+							stritem=retlist[i];
+							strmark=stritem.substring(0,2);
+							strdomain=stritem.substring(2);
+							if (strdomain!='' && strdomain!=null){
+								alldomain=strdomain.split(",");
+								for(j=0;j<alldomain.length;j++){
+									if (alldomain[j].indexOf(".")>0)
+										dmlist[alldomain[j]]=strmark;
+								}
+							}
+						}
+						return dmlist;
+					}
+
+					function querydomains(groups,fn){
+						//var groups=;
+						var url;
+						if($.isArray(groups)){
+							$.each(groups,function(i,n){
+								var data=n.split(":");
+								var domain=data[0];
+								var suffix=data[1];
+								loadQuery(domain,suffix,n,"");
+							});
+						}else if(groups.indexOf(":")>=0){
+							var data=groups.split(":");
+							var domain=data[0];
+							var suffix=data[1];
+							loadQuery(domain,suffix,groups,fn);
+						}else{
+							var sd=groups.indexOf(".");
+							var domain=groups.substring(0,sd);
+							var suffix=groups.substring(sd);
+							loadQuery(domain,suffix,domain+":"+suffix,fn);
+						}
+					}
+					function loadQuery(domain,suffix,n,fn){
+						if (fn=="requery"){
+							setquerystate(domain+suffix);
+						}
+
+						$.ajax({
+							type:'GET',
+							timeout:65000,
+							async:true,
+							url:'?act=query&domains='+escape(domain)+'&suffixs='+escape(suffix)+'&du=&v='+Math.random(),
+							error:function(info){
+								tempdata=n.split(":");
+								arrdomain=tempdata[0].split(",");
+								arrsuffix=tempdata[1].split(",");
+								for(strdm in arrdomain){
+									for(strsx in arrsuffix){
+										seterror(arrdomain[strdm]+arrsuffix[strsx],"<a href=\"###\" onclick=\"loadQuery('"+arrdomain[strdm]+"','"+arrsuffix[strsx]+"','"+arrdomain[strdm]+":"+arrsuffix[strsx]+"','requery')\">(查询失败)</a>");
+									}
+								}
+							},
+							success:function(retinfo){
+
+								if(retinfo.indexOf("令牌验证失败")>0){ischeckok=1}
+								if(retinfo.indexOf("超过查询限制")>0){ischeckok=2}
+
+								if (retinfo.substring(0,3)=='200' && retinfo.indexOf(",")>0)
+								{
+									ipos=retinfo.indexOf(",");
+									querydata=retinfo.substring(ipos+1);
+									domainarr=getdomain(querydata);
+
+									for(strdomain in domainarr){
+										if (strdomain.indexOf(".")>0)
+										{
+											showdomain(strdomain,domainarr[strdomain]);
+										}
+
+									}
+									if(fn=="requery"){
+										$(".query li h1:contains("+ domain+suffix +")").parents("li").remove();
+									}
+								}else{
+									tempdata=n.split(":");
+									arrdomain=tempdata[0].split(",");
+									arrsuffix=tempdata[1].split(",");
+									for(strdm in arrdomain){
+										for(strsx in arrsuffix){
+											seterror(arrdomain[strdm]+arrsuffix[strsx],retinfo);
+										}
+									}
+								}
+								showalertmsg(ischeckok)
+							},
+							complete:function(XHR, TS){
+								XHR=null;
+								if($.isFunction(fn)){
+									fn.call($);
+								}
+							//	setcache();
+							}
+
+						});
+					}
+					function seterror(strdomain,errstr){
+						$(".query h1").each(function(i,n){
+
+							if($.trim($(n).attr("domain"))==$.trim(strdomain))
+							{
+								$(n).removeClass();
+								$(n).find("img").attr("src","/newimages/web_icon_009.gif");
+								$(n).next().filter("h2").html(errstr);
+								return false;
+							}
+						});
+					}
+					function setquerystate(strdomain){
+						$(".query h1").each(function(i,n){
+							if($.trim($(n).attr("domain"))==$.trim(strdomain))
+							{
+								$(n).removeClass();
+								$(n).find("img").attr("src","/images2016/loading-small.gif");
+								$(n).next().filter("h2").html("(查询中)");
+								return false;
+							}
+						});
+					}
+					function isdomaincom(strdomain){
+						var startindex=strdomain.lastIndexOf(".");
+						if(startindex>=0){
+							var thisdomainsuffix=$.trim(strdomain.substr(startindex).toLowerCase())
+							if(".com"==thisdomainsuffix || ".net"==thisdomainsuffix)
+								return true;
+						}
+						return false;
+					}
+					function isgovcn(strdomain){
+						var startindex=strdomain.indexOf(".");
+						if(startindex>=0){
+							if(".gov.cn"==$.trim(strdomain.substr(startindex).toLowerCase()))
+								return true;
+						}
+						return false;
+					}
+					function isdomaincn(strdomain){
+						var startindex=strdomain.lastIndexOf(".");
+						if(startindex>=0){
+							if(".cn"==$.trim(strdomain.substr(startindex).toLowerCase()))
+								return true;
+						}
+						return false;
+					}
+					function showelite(){
+						var dv=$("#elitedom");
+						if (dv.attr('isdo')=='1') return false;
+						dv.attr('isdo','1');
+						$.get("/services/domain/aprice/aprice.asp?k=fdfd",function(xml){
+							if (xml.indexOf('<!--200 ok-->')>0)
+								dv.html(xml).fadeIn();
+						})
+					}
+
+					function domainreg2(){
+						var domainObj=document.forms["whoisform"];
+						if(arguments.length>=1){
+							for(var i=0;i<domainObj.elements.length;i++){
+								var e = domainObj.elements[i];
+								if ((e.type=='checkbox')&&(!e.disabled) ){
+									if(domainObj[i].value==arguments[0]){
+										domainObj[i].checked=true;
+									}else{
+										domainObj[i].checked=false;
+									}
+								}
+							}
+
+						}
+						var ischeck=false;
+						for(var i=0;i<domainObj.elements.length;i++){
+							var e = domainObj.elements[i];
+							if ((e.type=='checkbox')&&(!e.disabled) ){
+								if(domainObj[i].checked){
+									ischeck=true;
+									break;
+								}
+							}
+						}
+						if(!ischeck){
+							alert("抱歉，您还没有选择要注册的域名");
+							return false;
+						}
+						$("input[name='domain']:hidden").val("");
+						$("form[name='whoisform']").attr("action","/manager/domain/reg_zh.asp");
+
+						 $("form[name='whoisform']").submit(); 
+
+					}
+
+					function domainreg(){
+						var domainObj=document.forms["whoisform"];
+						if(arguments.length>=1){
+							for(var i=0;i<domainObj.elements.length;i++){
+								var e = domainObj.elements[i];
+								if ((e.type=='checkbox')&&(!e.disabled) ){
+									if(domainObj[i].value==arguments[0]){
+										domainObj[i].checked=true;
+									}else{
+										domainObj[i].checked=false;
+									}
+								}
+							}
+
+						}
+						var ischeck=false;
+						for(var i=0;i<domainObj.elements.length;i++){
+							var e = domainObj.elements[i];
+							if ((e.type=='checkbox')&&(!e.disabled) ){
+								if(domainObj[i].checked){
+									ischeck=true;
+									break;
+								}
+							}
+						}
+						if(!ischeck){
+							alert("抱歉，您还没有选择要注册的域名");
+							return false;
+						}
+						$("input[name='domain']:hidden").val("");
+
+						$("form[name='whoisform']").attr("action","/services/domain/dmbuymore.asp");
+
+
+
+						 $("form[name='whoisform']").submit(); 
+					}
+					function domainreg1(strdomain){
+					 
+							$("input[name='domain']:checkbox").attr("checked",false);
+							$("input[name='domain']:hidden").val(strdomain);
+							$("form[name='whoisform']").attr("action","/services/domain/dmbuymore.asp");
+							$("form[name='whoisform']").submit();
+						 
+
+					}
+					function bufferQuery_(groups){
+						ischeckok=0
+						isalert=false
+						if(groups.length>0){
+							var groupsstr=groups[0];
+							var groupdomainlist=fomatgroups(groupsstr);
+							querydomains(groupsstr,function(){
+								$(".query li h1.chkload").each(function(i, e) {
+									if((","+groupdomainlist+",").indexOf(","+$.trim($(e).attr("domain")+","))>=0){
+										$(e).parent("li").remove();
+									}
+								});
+								if ($(".query li").length==0){
+									$(".query").remove();
+								}
+
+							});
+							groups.shift();
+							bufferQuery_(groups);
+						}else{
+							if ($(".query li").length==0){
+								$(".query").remove();
+							}
+							if(searchbutton=="new" && "False"=="True"){
+								$(".othersearchbtn").show(0);
+							}
+
+
+						}
+					}
+					function fomatgroups(str){
+						var domainlist="";
+						if(str.indexOf(":")>=0){
+							var tmpArr=str.split(":");
+							if(tmpArr.length>0){
+								var domainArr=tmpArr[0].split(",");
+								var suffixArr=tmpArr[1].split(",");
+								for(var ff=0;ff<domainArr.length;ff++){
+									for(var ii=0;ii<suffixArr.length;ii++){
+										domainlist+=$.trim(domainArr[ff])+$.trim(suffixArr[ii])+",";
+									}
+								}
+							}
+						}
+
+						return domainlist;
+					}
+					function bufferQuery(){
+						var qli=$(".query li h1.chkload:first");
+						if(qli.get(0)){
+							querydomains(qli.attr("domain"),function(){
+								$(".query li h1.chkload:first").parent().remove();
+								bufferQuery();
+							});
+						}else{
+							if ($(".query li").length==0){
+								$(".query").remove();
+							}
+							if(searchbutton=="new" && "False"=="True"){
+								$(".othersearchbtn").show(0);
+							}
+						}
+					}
+					function queryotherdomains(){
+						$(".othersearchbtn").hide(0);
+						$("form[name='whoisform'] dl").append("<dd class=\"query\"><strong class='font16 gray'>正在进行域名查询...</strong><ul></ul></dd>");
+						searchbutton="other";
+						bufferQuery_(["fdfd:.asia,.in,.name,.us,.es,.ws","fdfd:.com,.net","fdfd:.org","fdfd:.cn,.com.cn,.org.cn,.gov.cn,.net.cn","fdfd:.tm","fdfd:.hk","fdfd:.pw,.site,.tech","fdfd:.tv","fdfd:.ooo","fdfd:.love","fdfd:.info,.pro","fdfd:.me","fdfd:.biz","fdfd:.mobi","fdfd:.co","fdfd:.cc"]);
+					}
+
+
+					function showalertmsg(t)
+					{
+						if(t>0)
+						{
+							if(!isalert)
+							{
+								if(t==1)
+								{
+									$.dialog({
+										title:'域名查询失败',
+										content: '获取令牌失败，请确保您的浏览器支持javascript, 点击确定可重新查询。如果仍有问题请更换浏览器再试或咨询客服！',
+										lock:true,
+										min:false,
+										max:false,
+										icon:'alert.gif',
+										minWidth:200,
+										button:[{name:'确定',focus:true}],
+										close:function(){
+											window.location='/services/domain/';
+										}
+									});
+								}
+
+								if(t==2)
+								{
+									$.dialog({
+										title:'域名查询失败',
+										content: '提示：您使用的IP查询频率过快，超过当日限制，请使用域名批量查询功能。',
+										lock:true,
+										min:false,
+										max:false,
+										icon:'alert.gif',
+										minWidth:200,
+										button:[{name:'确定',focus:true}],
+										close:function(){
+											window.location='/services/mi/index_m.asp';
+										}
+									});
+								}
+							}
+							isalert=true
+
+						}
+
+					}
+
+				</script>
+				<div id="whois">
+					<div id="whois_top"></div>
+					<div id="whois_mid" class="whois-list">
+						<form name="whoisform" action="" method="post">
+							<dl>
+								<dt></dt><dd class="denialreg pt-20"><strong class="redColor font16">以下域名已经被注册</strong><ul><li class="cl"><a class="domain-name" style="overflow:hidden;display:block;height:22px;" onclick="gettok_whoisinfo();" href="/web/whois/whoisinfo?domain=fdfd.top" target="_blank"><h1 class="f-l">&nbsp;<span class="domain-name">fdfd.top</span></h1><h2 class="f-r font12"> [查看whois]</h2></a></li><li class="cl"><a class="domain-name" style="overflow:hidden;display:block;height:22px;" onclick="gettok_whoisinfo();" href="/web/whois/whoisinfo?domain=fdfd.club" target="_blank"><h1 class="f-l">&nbsp;<span class="domain-name">fdfd.cLub</span></h1><h2 class="f-r font12"> [查看whois]</h2></a></li></ul></dd>
+
+
+							</dl>
+
+
+							<span id="canreg"></span><a href="/services/domain/" class="whois-btn">重新查询</a>
+
+
+
+							<div class="whois_bottom"></div>
+							<input name="domain" type="hidden">
+						</form>
+					</div>
+					<div id="whois_bottom"></div>
+				</div>
+				<script language="javascript">
+					searchbutton="new";
+					if(iscustom>0)
+					{
+						bufferstr=""
+						var temp=domainsort.split(",")
+						for(var i=0;i<temp.length;i++)
+						{
+							var v_=temp[i]
+							var dm_=v_.substring(0,v_.indexOf("."))
+							var sf_=v_.substring(v_.indexOf("."),v_.length)
+							if(bufferstr=="")
+							{
+								bufferstr="\""+dm_+":"+sf_+"\""
+							}else
+							{
+								bufferstr+=",\""+dm_+":"+sf_+"\""
+							}
+						}
+						bufferQuery_(eval("["+bufferstr+"]"));
+					}else{
+						bufferQuery_(["fdfd:.top","fdfd:.club"]);
+					}
+				</script>
+
+
+
+
+
+
+			</div>
+		</div>
+		<!--查询结果显示 结束-->
+
+
+
+	</div>
+</div>
+  <!--<div id="MainContentDIV">
+
+<div id="MainRight">
+
+<link href="/css/Domain_whois1.css" rel="stylesheet" type="text/css" />
+<div id="whois">
+  <div id="whois_top"></div>
+  <div id="whois_mid">
+
+      <div class="whois_top"></div>
+      <dl class="clearfix">
+      	<dt></dt>
+      	 <dd class="nocheck_content"><div id="contentID" name="contentID"><br>
+      	   请稍后,正在查询您选择的域名 ...</div></dd>
+      </dl>
+      <div class="whois_bottom"></div>
+
+  </div>
+  <div id="whois_bottom"></div>
+</div>
+
+<style>
+#elitedom dl,#elitedom dt,#elitedom dd{padding:0; margin:0; background:none}
+#elitedom{
+	width:712px;
+	padding:10px 10px 10px 20px;
+	margin:10px 0 10px 2px;
+	border:1px solid #B9BFCC;
+	background:#fff;
+	border-radius:5px;
+	overflow:hidden;
+	display:none;
+}
+#elitedom dl,#elitedom dt,#elitedom li,#elitedom ul,#elitedom dd{
+	padding:0;margin:0;list-style:none
+}
+#elitedom dl{
+	float:left;
+	width:50%;
+	background:none;
+
+}
+#elitedom dt{
+	font-size:14px;
+	font-weight:bold;
+	padding:5px;
+	width:330px;
+	border-bottom:1px solid #829ABF;
+	margin-bottom:5px;
+	clear:both
+}
+#elitedom dt a:link{
+	float:right;
+	width:50px;
+	background:url(/Template/Tpl_05/images/dotmore.gif) no-repeat -2px 4px;
+}
+#elitedom dl dt{
+	 height:25px;
+	 background:none;
+	}
+#elitedom dd{
+	height:200px;
+	width:330px;
+	float:left;
+	overflow-y:scroll;
+	clear:both;
+}
+#elitedom dd ul{}
+#elitedom dd ul li{
+	height:20px;
+	padding-left:15px;
+	clear:both;
+	background:url(/Template/Tpl_05/images/icon.gif) no-repeat 4px;
+}
+#elitedom dd ul li .dom_1{
+	float:left;
+	width:170px;
+	background:url(/Template/Tpl_05/images/domainquery_bg01.gif);
+}
+#elitedom dd ul li .dom_1 strong{
+	background:#fff;
+	float:left;
+	font-weight:normal;
+}
+#elitedom dd ul li .dom_2{
+	float:right;
+}
+#elitedom dd ul li .dom_3{
+	float:right;
+	padding:0 5px 0 10px;
+}
+#elitedom dd ul li .dom_3 a:link,#elitedom dd ul li .dom_3 a:visited{
+	color:#0080C0
+}
+#elitedom dd ul li .dom_3 a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+#elitedom .message{
+	padding-top:15px;
+	color:#004080;
+}
+.clear{clear:both;}
+</style>
+<div id='elitedom'> </div>
+ 
+<div id="DomainSearch">
+  <div class="DomainSearchTitleNew">英文域名注册查询</div>
+  <ul id="domain_whois_box" >
+    <li class="tab_left_on" onclick="switchTab(this)"><span class="round_on">&nbsp;</span>多个域名后缀</li>
+      <li class="tab_center_off" onclick="switchTab(this)" style="width:92px;"><span class="round_off" style=" margin-left:5px; padding-left:12px;">&nbsp;</span>单域名后缀</li>
+  </ul>
+  <span class="adstext"><a href="/services/domain/" target="_blank">{companyname}域名零利润促销活动进行中！</a><a href="/services/webhosting/SpeedTest.htm"></a></span>
+  <div style="width:600px;"><img src="/Template/Tpl_05/newimages/spacer.gif" width="1" height="1" /></div>
+  <div id="domain_whois_box_1">
+    <form name="frmsearchInt" id="frmsearchInt" action="newWhois.asp" method="post" onsubmit="return submitchecken(this);">
+      <div class="searchDiv_A">
+        <div class="searchinput">
+          <input name="searchedDomainName"  value="英文域名查询" onclick="if(this.value=='英文域名查询')this.value=''" type="text" class="inputbox" size="25" />
+        </div>
+        <div class="SearchButton">
+          <input id="hrefimg0" name="imageField2" type="image" src="/Template/Tpl_05/newimages/Domains/ico_LongButton_DomainSearch.gif" width="84" height="24"  border="0" />
+        </div>
+      </div>
+      <div class="DomainSuffix"> 
+        <ul>                                      <table cellspacing=0 cellpadding=3 border=0 width="100%">
+                                        <tbody> 
+                                        <tr>
+                                        &lt;!&ndash; BEGIN suffixlist &ndash;&gt;
+                                        <td nowrap> 
+                                           <input type="{buttontype}" {selectedstr} value="{suffixstr}" name="suffix">
+                                           <strong>{suffixstr}                   </strong></td>
+                                        {trstr}
+                                        &lt;!&ndash; END suffixlist &ndash;&gt;
+                                        <td>{savelist}</td>
+                                        </tr>
+                                       </tbody> 
+                                      </table>
+        </ul>
+      </div>
+         			<input type='hidden' value='domainsearch' name='module'>
+                                            <input type='hidden' value='IntDomain' name='searchType'>
+                                            <input type='hidden' value='check' name='action'>
+                                            <input type="hidden" value="one" name="zxwpds">
+                                            <input type="hidden" value="{freeid}" name="freeid">
+    </form>
+  </div>
+  <div id="domain_whois_box_2" style="display:none">
+    <form action="newWhois.asp?str=2" method="post" name="frmsearchInt1" id="frmsearchInt1" onSubmit="return submitchecken(this)">
+      <div class="searchDiv_B">
+        <div class="searchinput">
+          <textarea name="searchedDomainName" cols="25" rows="3" onclick="javascript:if(this.value=='英文域名查询'){this.value='';}" style="height:40px;width:200px;">英文域名查询</textarea>
+        </div>
+        <div class="SearchButton">
+          <input name="imageField2" type="image" src="/Template/Tpl_05/newimages/Domains/ico_LongButton_DomainSearch.gif" width="84" height="24"  border="0" />
+        </div>
+        <div id="SearchTXT">每行输入一个域名后请回车</div>
+      </div>
+      <div class="DomainSuffix">
+        <ul>
+			<li><input id="suffix" type="radio"  value=".com" name="suffix" checked><strong>.com</strong></li>
+				<li><input id="suffix" type="radio"  value=".net" name="suffix"><strong>.net</strong></li>
+				<li><input id="suffix" type="radio" value=".org" name="suffix"><strong>.org</strong></li>
+				<li><input id="suffix" type="radio"  value=".cn" name="suffix"><strong>.cn</strong></li>
+				<li><input id="suffix" type="radio" value=".com.cn" name="suffix"><strong>.com.cn</strong></li>
+				<li><input id="suffix" type="radio" value=".net.cn" name="suffix"><strong>.net.cn</strong></li>
+				<li><input id="suffix" type="radio" value=".gov.cn" name="suffix"><strong>.gov.cn</strong></li>
+				<li><input id="suffix" type="radio" value=".org.cn" name="suffix"><strong>.org.cn</strong></li>
+				<li><input id="suffix" type="radio" value=".tv" name="suffix"><strong>.tv</strong></li>
+				<li><input id="suffix" type="radio" value=".cc" name="suffix"><strong>.cc</strong></li>
+				<li><input id="suffix" type="radio" value=".info" name="suffix"><strong>.info</strong></li>
+				<li><input id="suffix" type="radio" value=".biz" name="suffix"><strong>.biz</strong></li>
+				<li><input id="suffix" type="radio" value=".mobi" name="suffix"><strong>.mobi</strong></li>
+				<li><input id="suffix" type="radio" value=".name" name="suffix"><strong>.name</strong></li>
+				<li><input id="suffix" type="radio" value=".asia" name="suffix"><strong>.asia</strong></li>
+				<li><input id="suffix" type="radio" value=".me" name="suffix"><strong>.me</strong></li>
+				<li><input id="suffix" type="radio" value=".ws" name="suffix"><strong>.ws</strong></li>
+				<li><input id="suffix" type="radio" value=".es" name="suffix"><strong>.es</strong></li>
+				<li><input id="suffix" type="radio" value=".in" name="suffix"><strong>.in</strong></li>
+				<li><input id="suffix" type="radio"  value=".co" name="suffix"><strong>.co</strong></li>
+				<li><input id="suffix" type="radio" value=".pw" name="suffix"><strong>.pw</strong></li>
+				<li><input id="suffix" type="radio" value=".xyz" name="suffix"><strong>.xyz</strong></li>
+				<li><input id="suffix" type="radio" value=".club" name="suffix"><strong>.club</strong></li>
+				<li><input id="suffix" type="radio" value=".la" name="suffix"><strong>.la</strong></li>
+				<li><input id="suffix" type="radio" value=".tm" name="suffix"><strong>.tm</strong></li>
+				<li><input id="suffix" type="radio" value=".us" name="suffix"><strong>.us</strong></li>
+				<li><input id="suffix" type="radio"  value=".hk" name="suffix"><strong>.hk</strong></li>
+				<li><input id="suffix" type="radio" value=".wang" name="suffix"><strong>.wang</strong></li>
+&lt;!&ndash;	<li><input id="suffix" type="radio" value=".ru" name="suffix"><strong>.ru</strong></li>
+				<li><input id="suffix" type="radio" value=".de" name="suffix"><strong>.de</strong></li>&ndash;&gt;
+				<li><input id="suffix" type="radio" value=".website" name="suffix">.website</li>
+				<li><input id="suffix" type="radio" value=".pro" name="suffix"><strong>.pro</strong></li>
+				<li><input id="suffix" type="radio" value=".top" name="suffix"><strong>.top</strong></li>
+				<li><input id="suffix" type="radio" value=".ren" name="suffix"><strong>.ren</strong></li>
+			<li>{savelist}</li>
+          <li>
+            <input type=hidden value=domainsearch name=module>
+            <input type=hidden value=IntDomain name=searchType>
+            <input type=hidden value=check name=action>
+            <input type="hidden" value="one" name="zxwpds">
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+  <div class="TongYongDomain">
+   <a href="/services/webhosting/sites.asp" ><img src="/Template/Tpl_05/newimages/Domains/CN_PIC_ican.jpg" width="245" height="130" border="0" /></a>
+  </div>
+</div>
+<div id="DomainFlashSub">
+  <div id="DomainFlashSub_left"><img src="/Template/Tpl_05/newimages/spacer.gif" width="1" height="1" /></div>
+  <div id="DomainFlashSub_mid">
+    <ul>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_1.jpg" width="65" height="61" /><br />
+        四星认证 </li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_2.jpg" width="65" height="61" /><br />
+        五大优势</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_3.jpg" width="65" height="61" /><br />
+        六组DNS轮循</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_4.jpg" width="65" height="61" /><br />
+        七年经营</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_5.jpg" width="65" height="61" /><br />
+        10分钟快速解析</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_6.jpg" width="65" height="61" /><br />
+        动态解析</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_7.jpg" width="65" height="61" /><br />
+        送域名停放</li>
+      <li><img src="/Template/Tpl_05/newimages/Domains/pic_ico_8.jpg" width="70" height="61" /><br />
+        最强控制面板</li>
+    </ul>
+  </div>
+  <div id="DomainFlashSub_right"><img src="/Template/Tpl_05/newimages/spacer.gif" width="1" height="1" /></div>
+</div>
+<div id="DomainInfo">
+  <div class="Title_Box_Top">
+    <ul id="domain_info_box">
+      <li class="tab_left_on" onMouseOver="switchTab(this)"><span class="round_on">&nbsp;</span>推荐域名</li>
+      <li class="tab_right_off" onMouseOver="switchTab(this)"><span class="round_off">&nbsp;</span>域名优势</li>
+    </ul>
+    <div id="DomainPriceList_ico"><a href="/customercenter/productprice.asp"><img src="/Template/Tpl_05/newimages/Domains/GetDomainPrice.gif" width="287" height="43" /></a></div>
+  </div>
+  <div id="domain_info_box_1">
+    <div class="Info_Box">
+      <div class="Info_Box_pic"><img src="/Template/Tpl_05/newimages/Domains/domin_info_01.gif" width="110" height="90" /></div>
+      <strong>国际英文域名</strong><br />
+      国际最广泛流行的通用域名格式<br />
+      <span class="price">{Price(domcom)}</span> 元/首年<img src="/Template/Tpl_05/newimages/server/jjj.gif" alt="d" /><br />
+      <a href="/services/domain/" target="_blank"><img src="/Template/Tpl_05/newimages/Domains/ico_LongButton_buynow.gif" width="84" height="24" /></a> </div>
+    <div class="Info_Box">
+      <div class="Info_Box_pic"><img src="/Template/Tpl_05/newimages/Domains/domin_info_02.gif" width="110" height="90" /></div>
+      <strong>.cn英文域名</strong><br />
+      中国国家顶级域名走向网络世界的通路<br />
+      <span class="price">{Price(domcn)}</span> 元/年<img src="/Template/Tpl_05/newimages/server/jjj.gif" alt="d" /><br />
+      <a href="/services/domain/" target="_blank"><img src="/Template/Tpl_05/newimages/Domains/ico_LongButton_buynow.gif" width="84" height="24" /></a> </div>
+    <div class="Info_Box">
+      <div class="Info_Box_pic"><img src="/Template/Tpl_05/newimages/Domains/domin_info_03.gif" width="110" height="90" /></div>
+      <strong>.me我的域名</strong><br />
+      展现真我风采 体现以人为本企业内涵<br />
+      <span class="price">{Price(domme)}</span> 元/年<br />
+      <a href="/services/domain/" target="_blank"><img src="/Template/Tpl_05/newimages/Domains/ico_LongButton_buynow.gif" width="84" height="24" /></a></div>
+    <div class="Info_Box">
+      <div class="Info_Box_pic"><br />
+        <a href="/services/domain/defaultcn.asp"><img src="/Template/Tpl_05/newimages/Domains/cn.jpg" width="72" height="80" border="0" /></a></div>
+      <strong>中文域名</strong><br />
+      2009投资新宠，火热抢注中...<br />
+      <span class="price">{Price(domchina)}</span>
+      元/年<br />
+      <a href="/services/domain/defaultcn.asp"><img src="/Template/Tpl_05/newimages/default/LongButton_View_server.gif" width="84" height="24" border="0" /></a> </div>
+  </div>
+  <div id="domain_info_box_2" style="background:#fff;display:none;">
+    <div class="The_Table_List_B">
+      <table>
+        <tr>
+          <td>比较项目</td>
+          <td>{companyname}</td>
+          <td>其它服务商</td>
+        </tr>
+        <tr>
+          <td><strong>是否是星级注册商</strong></td>
+          <td>是CNNIC认证四星服务商</td>
+          <td>仅少数服务商通过认证</td>
+        </tr>
+        <tr>
+          <td><strong>免费域名解析</strong></td>
+          <td>免费提供50条</td>
+          <td>免费提供10-30条</td>
+        </tr>
+        <tr>
+          <td><strong>dns服务器</strong></td>
+          <td>多达6组</td>
+          <td>2组</td>
+        </tr>
+        <tr>
+          <td><strong>域名解析生效时间</strong></td>
+          <td>全球同步&lt;10分钟</td>
+          <td>10分钟至24小时</td>
+        </tr>
+        <tr>
+          <td><strong>域名动态解析</strong></td>
+          <td>可以支持</td>
+          <td>仅少数支持</td>
+        </tr>
+        <tr>
+          <td><strong>泛域名解析</strong></td>
+          <td>支持</td>
+          <td>少数支持</td>
+        </tr>
+        <tr>
+          <td><strong>DNS轮循</strong></td>
+          <td>支持</td>
+          <td>部分支持</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+       </div>
+ {searchedJSscript}
+ 
+ </div>-->
+<script src="/Template/Tpl_2016/jscripts/whois.js"></script>
+
+{#bottom.html}
+ 
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+尊敬的{user_name} ：您好！
+	因您遗失了用户ID: {user_name}的登陆密码，该密码已经不安全，系统自动为您生成了一个新的密码为: {u_passwordstring}
+	请妥善保管好您的密码，谢谢！
+	
+如果您有任何问题，请访问我们的客户中心：{companynameurl}查看＞常见问题＞或在＞有问必答＞栏目中提交问题。同时，您也可拨打客户服务热线电话：{telphone}-客户服务部 "
+			顺祝
+						商祺！
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+
+

@@ -1,0 +1,409 @@
+#Reg_Box {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_bg.gif) repeat-y;
+	width:857px;
+	margin:10px auto auto auto;
+}
+#Reg_Box #Reg_Box_Title {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_Title.gif) no-repeat;
+	width:857px;
+	height:85px;
+	padding:80px 0px 0px 0px;
+}
+#Reg_Box #Reg_Box_Content {
+	background:url(/Template/Tpl_05/newimages/Reg/main_3_81.jpg) no-repeat;
+	padding:50px 0 0 50px;
+	width:700px;
+	margin:auto;
+}
+#Reg_Box_Content .Info_Title {
+	font-size:16px;
+	font-weight:bold;
+	padding:19px 0 0 50px;
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_box_Title_pic.gif) no-repeat;
+	height:24px;
+}
+#Reg_Box_Content #User_Info_1 {
+	margin:15px 0 0 15px;
+	height:220px;
+}
+#Reg_Box #Reg_Box_Bottom {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_bottom.gif) no-repeat;
+	width:857px;
+	height:19px;
+}
+#Reg_Box_Content ul li {
+	float:left;
+}
+._Name {
+	width:135px;
+	text-align:right;
+	font-weight:bold;
+	color:#069;
+	margin:0 0 0 0px;
+	height:35px;
+}
+._InputRadio ul li {
+	width:230px;
+}
+#Reg_Box_Title #Reg_remark {
+	width:325px;
+	float:right;
+	padding:10px 20px 0px 0px;
+}
+#Reg_remark ul li {
+	background:url(/Template/Tpl_05/newimages/Reg/spk.gif) no-repeat;
+	padding-left:25px;
+}
+._Input {
+	width:265px;
+	margin:0 0 0 25px;
+	height:35px;
+}
+._star {
+	width:10px;
+	margin:0 0 15px 0px;
+	font-size:14px;
+	color:#F06;
+	margin:0 0 0 0;
+	height:35px;
+}
+._Remark {
+	width:215px;
+	margin:0 0 0 25px;
+	height:35px;
+}
+#Reg_Box_Content #User_Info_2 {
+	margin:15px 0 0 15px;
+	height:285px;
+}
+#Reg_Box_Content #User_Info_3 {
+	margin:15px 0 0 15px;
+	height:80px;
+}
+._InputRadio {
+	width:450px;
+	margin:0 0 0 25px;
+	height:130px;
+}
+._TextLink {
+	width:465px;
+	margin:0 0 0 25px;
+	height:35px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+}
+#Reg_Box_Content #User_Info_4 {
+	margin:15px 0 0 15px;
+	height:395px;
+	background:url(/Template/Tpl_05/newimages/Reg/main_3_82.jpg) no-repeat 100% 100%;
+}
+#Forget_pass_box {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_bg.gif) repeat-x;
+	height:470px;
+	width:930px;
+	margin:30px auto auto auto;
+	padding:20px 0px 20px 0px;
+}
+#Forget_pass_box #Forget_pass_box_1 {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_box_1.gif) no-repeat;
+	height:388px;
+	width:318px;
+	float:left;
+	padding:80px 0 0 25px;
+	margin-left:10px;
+}
+#Forget_pass_box #Forget_pass_box_2 {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_box_2.gif) no-repeat;
+	height:388px;
+	width:318px;
+	float:left;
+	padding:80px 0 0 25px;
+	margin-left:10px;
+}
+.H3_Name {
+	font-size:14px;
+	font-weight:bold;
+	color:#06C;
+}
+.H3_Content {
+	margin-top:10px;
+}
+.H3_Content ul li {
+	float:left;
+	height:25px;
+	margin-top:5px;
+}
+.h4_cont {
+	margin-left:20px;
+	width:215px;
+}
+.h4_name {
+	width:76px;
+	text-align:right;
+}
+#Forget_pass_box #Forget_pass_box_3 {
+	background:url(/Template/Tpl_05/newimages/Reg/Help_Box.jpg) no-repeat;
+	width:183px;
+	float:left;
+	height:355px;
+	margin-left:15px;
+	margin-top:-20px;
+}
+#Forget_Help_Box ul li {
+	line-height:25px;
+	color:#333;
+	background:url(/Template/Tpl_05/newimages/Reg/20080524145511373.gif) no-repeat 0px 5px;
+	padding-left:25px;
+}
+#Forget_Help_Box {
+	width:880px;
+	margin:20px auto;
+}
+.h4_question {
+	margin-left:20px;
+	width:290px;
+	font-weight:bold;
+	color:#F00;
+}
+.h4_cont_2 {
+	margin-bottom:14px;
+	margin-left:20px;
+}
+#Reg_success_Box {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_ok_bg.jpg) no-repeat;
+	height:286px;
+	width:742px;
+	margin:20px auto;
+	padding:22px 0 0 22px;
+}
+#Reg_ok_pic {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_ok_Pic.jpg) no-repeat;
+	height:101px;
+	width:206px;
+	float:left;
+}
+#Login_failure_pic {
+	background:url(/Template/Tpl_05/newimages/Reg/Login_failure_pic.jpg) no-repeat;
+	height:101px;
+	width:206px;
+	float:left;
+}
+#Reg_ok_text {
+	float:left;
+	margin:60px 0 0 20px;
+	width:465px;
+}
+#Reg_ok_text ul li {
+	line-height:30px;
+	background:url(/Template/Tpl_05/newimages/default/Activelist_arrow.gif) no-repeat 0px 12px;
+	padding-left:14px;
+}
+#Reg_success_Box #FreeTel {
+	width:480px;
+	float:left;
+	margin:0px 0px 0px 36px;
+	text-align:right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	letter-spacing:1px;
+	color:#C4C3C3;
+	line-height:30px;
+}
+#MainContentDIV #LoginDiv {
+	width:931px;
+	margin:10px auto;
+	height:350px;
+}
+#LoginDiv #LoginDiv_left {
+	width:551px;
+	height:198px;
+	background:url(/Template/Tpl_05/newimages/Reg/Login_pic_1.jpg) no-repeat;
+	margin-top:23px;
+}
+#LoginDiv #LoginDiv_mid {
+	width:258px;
+	height:305px;
+	background:url(/Template/Tpl_05/newimages/Reg/Login_pic_2.jpg) no-repeat;
+	float:left;
+	padding:20px 25px;
+}
+#LoginDiv #LoginDiv_right {
+	width:72px;
+	height:198px;
+	background:url(/Template/Tpl_05/newimages/Reg/Login_pic_3.jpg) no-repeat;
+	margin-top:23px;
+	float:left;
+}
+#LoginDiv_mid #Login_box_Title {
+	padding-left:23px;
+	background:url(/Template/Tpl_05/newimages/Reg/tabicons_064.gif) no-repeat 0px 1px;
+	font-weight:bold;
+	font-size:16px;
+	color:#C00;
+}
+#LoginDiv_mid #NeedLoginBox {
+	margin-top:10px;
+	letter-spacing:4px;
+	text-align:center;
+	border:1px solid #e29a9a;
+	background:#fbf3f3;
+	color:#333;
+	height:25px;
+	line-height:26px;
+}
+#LoginDiv_mid #LoginBox {
+	margin-top:10px;
+	height:143px;
+}
+#LoginBox ul {
+	margin-left:20px;
+	height:25px;
+}
+#LoginBox ul li {
+}
+.Input_Title {
+	width:40px;
+	height:24px;
+	float:left;
+	padding-top:1px;
+	margin-top:10px;
+	padding-left:20px;
+}
+.Input_box {
+	height:25px;
+	float:left;
+	width:150px;
+	margin-left:15px;
+	margin-top:10px;
+}
+#LoginDiv_mid #RegBox {
+	margin-top:15px;
+	line-height:23px;
+}
+.Input_CheckBox {
+	width:20px;
+	height:24px;
+	float:left;
+	padding-top:1px;
+	margin-top:10px;
+	margin-left:25px;
+}
+#LoginDiv #LoginDiv_Allright {
+	height:350px;
+	float:left;
+}
+#LoginDiv #LoginDiv_Allleft {
+	width:551px;
+	float:left;
+}
+#LoginDiv_Allleft #DownTextBox {
+	height:128px;
+	width:551px;
+}
+#LoginDiv_mid #newRegBox {
+	margin-top:10px;
+	text-align:right;
+}
+.Input_text {
+	height:23px;
+	float:left;
+	width:125px;
+	margin-left:7px;
+	margin-top:10px;
+	padding-top:2px;
+}
+.Input_button {
+	height:24px;
+	float:left;
+	width:84px;
+	margin-left:25px;
+	margin-top:10px;
+	text-align:center;
+}
+#DownTextBox ul li {
+	float:right;
+	width:148px;
+	background:url(/Template/Tpl_05/newimages/Reg/login_0902_wn_02.gif) repeat-y 168px 166px;
+	padding-left:12px;
+	padding-right:12px;
+	margin-top:20px;
+}
+#DownTextBox ul li h6 {
+	margin:0px;
+	color:#09C;
+}
+#DownTextBox ul li p {
+	width:138px;
+}
+.no_li_bg {
+	background:none repeat 200px 0px;
+}
+.Input_forget {
+	height:24px;
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	text-align:center;
+	padding-top:2px;
+}
+.t_ico {
+	background:url(/Template/Tpl_05/newimages/Reg/tabicons_137.gif) no-repeat;
+}
+.p_ico {
+	background:url(/Template/Tpl_05/newimages/Reg/tabicons_066.gif) no-repeat;
+}
+.loginhrclass {
+	float:left;
+	height:1px;
+	width:260px;
+	background:#C4C3C3;
+	margin-left:255px;
+}
+.error_class {
+	height:101px;
+	width:206px;
+	float:left;
+	background:url(/Template/Tpl_05/newimages/Reg/errormessage_pic.gif);
+}
+.permission_class {
+	height:101px;
+	width:206px;
+	float:left;
+	background:url(/Template/Tpl_05/newimages/Reg/permissionerror_pic.gif);
+}
+.login_adv_l {
+	height:191px;
+	width:924px;
+	background:url(/Template/Tpl_05/newimages/Reg/login_adv_bg.gif) no-repeat;
+	margin-left:7px;
+	padding-top:40px;
+	padding-left:15px;
+}
+.login_adv_li{
+	float:right;
+	display:block;
+	margin-right:20px;
+	padding-top:110px;
+	}
+.login_adv_li li {
+	width:160px;
+	height:70px;
+	float:left;
+	display:block;
+	padding-right:7px;
+	background:url(/Template/Tpl_05/newimages/Reg/login_adv_line.gif) repeat-y 163px;
+}
+.login_adv_li li div{
+	display:block;
+	padding-top:5px;
+	width:218px;
+	text-align:center;
+}
+.message_class {
+	height:101px;
+	width:206px;
+	float:left;
+	background:url(/Template/Tpl_05/newimages/Reg/act_message_pic.gif);
+}
+

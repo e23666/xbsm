@@ -1,0 +1,98 @@
+<script>
+location.href="/services/webhosting/SpeedTest.asp";
+</script>
+
+<script language="javascript">
+	var URLS=Array();
+	var loading=1;
+	URLS[2]="http://sa3423423.w175.myhostadmin.net/speedtest.asp";
+	URLS[3]="http://morelinenew.w199.myhostadmin.net/speedtest.asp";
+	URLS[4]="http://speedtest124.w24.myhostadmin.net/speedtest.asp";
+	URLS[5]="http://shspeedtestb.b150.myhostadmin.net/speedtest.asp";
+	URLS[6]="http://bjspeed2.b209.myhostadmin.net/speedtest.asp";
+	URLS[7]="http://shspeed.b110.myhostadmin.net/speedtest.asp";
+	URLS[8]="http://zzspeed.w177.myhostadmin.net/speedtest.asp";
+	URLS[9]="http://speedtest3.w64.myhostadmin.net/speedtest.asp?varname=cnc";
+	URLS[10]="http://twhostspeed.t108.myhostadmin.net/speedtest.asp";
+	URLS[11]="http://usaspeedtest6.w237.myhostadmin.net/speedtest.asp";
+	
+
+	function loadNext(turn){
+		if (turn==loading){
+			loading++;
+			if (loading<12){
+			nFrame=document.getElementById("ld"+loading);
+			nFrame.src=URLS[loading];
+			}
+		}
+	}
+</script>
+<html><title>机房速度测试</title><body leftmargin="0" topmargin="0">
+<form name="form1" method="post" action="">
+  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center"><table width="450" border="0" align="center" cellpadding="0" cellspacing="0">
+	  
+    <tr> 
+      <td><img src="/Template/Tpl_01/images/speedtest_01.gif" width="450" height="37"></td>
+    </tr>
+    <tr> 
+      <td background="/Template/Tpl_01/images/speedtest_02.gif"><table width="380" height="100" border="0" align="center" cellpadding="3" cellspacing="0" bordercolor="#111111"  bordercolorlight="#FFFFFF" id="AutoNumber1" style="border-collapse: collapse" >
+                <tr> 
+                  <td align="center"> <img src="/Template/Tpl_01/images/arrow4.gif"> <font size="2">提示：测试值越大说明速度越快.</font></td>
+                </tr>
+                <tr> 
+                  <td align="center"> <iframe src='http://telspeed.w56.myhostadmin.net/speedtest.asp?varname=tel' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(1);"></iframe> 
+                  </td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld2" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(2);"></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld3" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(3);"></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld4" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(4);"></iframe></td>
+                </tr>
+
+                <tr> 
+                  <td align="center"><iframe id="ld5" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(5);"></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld6" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(6);"></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld7" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(7);"></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld8" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(8);"></iframe></td>
+                </tr>
+                <tr> 
+                <tr> 
+                  <td align="center"><iframe id="ld9" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1'onload="loadNext(9);" ></iframe></td>
+                </tr>
+                <tr> 
+                  <td align="center"><iframe id="ld10" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1'onload="loadNext(10);" ></iframe></td>
+                </tr>
+                <tr> 
+                <tr>
+                  <td align="center"><iframe id="ld11" src='about:blank' width='80%' height='22' scrolling='no' frameborder='1' onload="loadNext(11);"></iframe></td>
+                </tr>
+                  <td align="center"><img src="/Template/Tpl_01/images/photo/whyhost.gif" width="18" height="14"><a href="/faq/list.asp?unid=298" target="_blank"><font size="2">为什么双线、多线没有电信快?</font></a></td>
+                </tr>
+                <tr> 
+                  <td align="center"> 
+                    <input type="button" name="Button" value="关闭" onClick="window.close();">
+                    <input type="button" name="Button2" value="重新测试" onClick="window.location.reload();">
+                  </td>
+                </tr>
+              </table>      </td>
+    </tr>
+    <tr>
+      <td><img src="/Template/Tpl_01/images/speedtest_04.gif" width="450" height="14"></td>
+    </tr>
+  </table></td>
+    </tr>
+  </table>
+  
+  </form></html>

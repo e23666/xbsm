@@ -1,0 +1,24 @@
+尊敬的{username_cn}： 
+       恭喜您成为{companyname}的用户，同时感谢您对{companyname}的关注与支持并欢迎您使用{companyname}的产品与服务。
+您的用户名为：{username} ,密码为{password} 以后您可以直接用该用户名和密码登陆{companynameurl},同时您仍可以用支付宝快捷登陆。
+
+       请登陆{companyname}({companynameurl})，检验用户名及密码。您可以在管理中心->个人资料修改中修改您的资料，请保持你的email和手机号的更新，今后的业务续费通知将通过Email和手机短信通知您！
+
+　　　"双赢"是{companyname}企业文化的重要组成部分，我们希望能与有共同市场追求的企业、个人结成市场伙伴，在合作中实现企业文化与销售业绩的共同提升，并最终实现共同的利润最大化。申请成为{companyname}代理，享受特殊折扣价格和个性化服务，请点击{companynameurl}
+
+　　　如果您有任何问题，请访问我们的客户中心：{companynameurl}　查看"常见问题"或在"有问必答"栏目中提交问题。同时，您也可拨打客户服务热线电话:{telphone}。
+
+
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+-----------------------------------
+
+欢迎参加{companyname}广告联盟，让你的网站流量为您带来收入！
+详情请访问：{companynameurl}
+本邮件由系统自动发送，请勿回复！
+

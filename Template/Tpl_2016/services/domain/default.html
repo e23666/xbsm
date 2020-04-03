@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>域名注册域名申请国际域名国内域名cn域名注册-{companyname}</title>
+    <meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商，名列全国10强。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+    <meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,双线虚拟主机,asp空间">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/domain.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+	<script type="text/javascript" src="/database/cache/domainconfig.js"></script>
+</head>
+
+<body class="min990">
+<script type="text/javascript">
+<!--
+	var freeid="{freeid}";
+	var freesuffixlist="{suffixlist}"
+	$(function(){
+		if(freeid!="")
+		{
+			var t_=freesuffixlist.split(",")
+			var temp_=""
+			for(var i=0;i<t_.length;i++)
+			{
+				if(temp_=="")
+				{
+					temp_="{\"suffix\":\""+t_[i]+"\",\"property\":0,\"ischeck\":1}"
+				}else{
+					temp_+=",{\"suffix\":\""+t_[i]+"\",\"property\":0,\"ischeck\":1}"
+				}
+			}
+			var html__=$("#domainsTab>.first>.active").html().replace("热销域名","赠品域名")
+			$("#domainsTab>.first>.active").html(html__)
+			domainconfig.hot=eval("["+temp_+"]");
+		}
+	
+	
+	})
+//-->
+</script>
+{#top.html}
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+    <div class="slide-pagination">
+        <ul></ul>
+    </div>
+    <div class="slide-wrapper">
+        <ul>
+            <li>
+                <a href="/services/cloudhost/" target="_blank" class="slide" title="xyz活动" style="background-image: url('/template/Tpl_2016/images/banner/domain-banner.jpg');" >xyz活动</a>
+            </li>
+            <li>
+                <a href="/services/cloudhost/" target="_blank" class="slide" title="xyz活动" _bgimg="/template/Tpl_2016/images/banner/domain-banner.jpg" >xyz活动</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- banner 结束 -->
+<!-- 内容区域 开始 -->
+<div id="content">
+    <!-- banner区域+查询区域 开始 -->
+    <div class="domain-content">
+        <div class="wide1190">
+            <!-- 域名查询 开始 -->
+            <div class="normal-bg">
+                <div class="domain-search mt-50">
+                    <ul class="wjf-ui-tab cl" id="domainsTab">
+                        <li class="first">
+                            <a class="active" href="javascript:void(0);" data-target="hotDomain">热销域名  <span>◆</span><i class="triangle-top"></i></a>
+
+                        </li>
+                        <li>
+                            <a  href="javascript:void(0);" data-target="newTopDomain">新顶级域名  <span>◆</span><i class="triangle-top"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-target="chineseDomain">中文域名 <span>◆</span><i class="triangle-top"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-target="nationDomain">国别域名 <span>◆</span><i class="triangle-top"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-target="provinceDomain">CN域名 <span>◆</span><i class="triangle-top"></i></a>
+                        </li>
+                        <li class="last">
+                            <a href="javascript:void(0);" data-target="customDomain">自定义域名 <i class="triangle-top"></i></a>
+                        </li>
+                    </ul>
+                    <!-- 热销域名 -->
+                    <div id="hotDomain" class="wjf-ui-tab-content active">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" onsubmit="return domainReg.submitchecken(this);" method="post" action="newWhois.asp?str=2">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="注册域名先查询，请输入域名，如demo， 也可以输入demo.cn直接查询"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <input type="hidden" value="" name="suffix">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+								<input type=hidden value="{freeid}" name="freeid">
+                                <input type="submit" class="domain-query-btn pngFix" value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <label for="hot_select_op_1">
+                                    <input type="radio" class="select-op" id="hot_select_op_1" name="select-op-1" value="0">全选</label>
+                                <label for="hot_select_op_2">
+                                    <input type="radio" class="select-op" id="hot_select_op_2" name="select-op-1" value="1">全不选</label>
+                                <label for="hot_select_op_3">
+                                    <input type="radio" class="select-op" id="hot_select_op_3" name="select-op-1" value="2" checked="checked">常用</label>
+                            </div>
+                            <div class="f-r">
+                                <!-- 常用链接 开始 -->
+                                <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                                <!-- 常用链接 结束 -->
+                            </div>
+                        </div>
+                        <!-- 域名列表 -->
+                        <div class="domext-wrapper clearfix" id="rxhz">
+                           
+                        </div>
+                    </div>
+                    <!-- 热销域名 结束 -->
+                    <!-- 新顶级域名  -->
+                    <div id="newTopDomain" class="wjf-ui-tab-content ">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" onsubmit="return domainReg.submitchecken(this);" method="post" action="/services/domain/newWhois.asp?str=2">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="注册域名先查询，请输入域名，如demo， 也可以输入demo.cn直接查询"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <input type="hidden" value="" name="suffix">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+                                <input type="submit" class="domain-query-btn pngFix" value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <label for="new_select_op_1">
+                                    <input type="radio" class="select-op" id="new_select_op_1" name="select-op-2" value="0">全选</label>
+                                <label for="new_select_op_2">
+                                    <input type="radio" class="select-op" id="new_select_op_2" name="select-op-2" value="1">全不选</label>
+                                <label for="new_select_op_3">
+                                    <input type="radio" class="select-op" id="new_select_op_3" name="select-op-2" value="2" checked="checked">常用</label>
+                            </div>
+                            <div class="f-r">
+                                <!-- 常用链接 开始 -->
+                                <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                                <!-- 常用链接 结束 -->
+                            </div>
+                        </div>
+                        <!-- 域名列表 -->
+                        <div class="domext-wrapper clearfix" id="newhz">
+                        </div>
+                    </div>
+                    <!-- 新顶级域名 结束 -->
+                    <!-- 中文域名  -->
+                    <div id="chineseDomain" class="wjf-ui-tab-content">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" onsubmit="return domainReg.submitchecken(this);" method="post" action="/services/domain/newWhois.asp?str=2" name="chineseDomainForm">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="注册域名先查询，请输入域名，如demo， 也可以输入demo.cn直接查询"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <input type="hidden" value="" name="suffix">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+                                <input type="submit" class="domain-query-btn pngFix" value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <label id="cn_select_op_1">
+                                    <input type="radio" class="select-op" id="cn_select_op_1" name="select-op-3" value="0">全选</label>
+                                <label id="cn_select_op_2">
+                                    <input type="radio" class="select-op" id="cn_select_op_2" name="select-op-3" value="1">全不选</label>
+                                <label id="cn_select_op_3">
+                                    <input type="radio" class="select-op" id="cn_select_op_3" name="select-op-3" value="2" checked="checked">常用</label>
+                            </div>
+                                <div class="f-r">
+                             <!-- 常用链接 开始 -->
+                    <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                             <!-- 常用链接 结束 -->
+                        </div>
+                        </div>
+                        <!-- 域名列表 -->
+                        <div class="domext-wrapper clearfix" data-cn="china" id="chinahz">
+                           
+                        </div>
+                    </div>
+                    <!-- 中文域名 结束 -->
+                    <!-- 国别域名  -->
+                    <div id="nationDomain" class="wjf-ui-tab-content">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" onsubmit="return domainReg.submitchecken(this);" method="post" action="/services/domain/newWhois.asp?str=2">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="注册域名先查询，请输入域名，如demo， 也可以输入demo.cn直接查询"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <input type="hidden" value="" name="suffix">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+                                <input type="submit" class="domain-query-btn pngFix" value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <label for="nation_select_op_1">
+                                    <input type="radio" class="select-op" id="nation_select_op_1" name="select-op-4" value="0">全选</label>
+                                <label for="nation_select_op_2">
+                                    <input type="radio" class="select-op" id="nation_select_op_2" name="select-op-4" value="1">全不选</label>
+                                <label for="nation_select_op_3">
+                                    <input type="radio" class="select-op" id="nation_select_op_3" name="select-op-4" value="2" checked="checked">常用</label>
+                            </div>
+                            <div class="f-r">
+                                <!-- 常用链接 开始 -->
+                                <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                                <!-- 常用链接 结束 -->
+                            </div>
+                        </div>
+                        <!-- 域名列表 -->
+                        <div class="domext-wrapper clearfix" id="cohz">
+                        </div>
+                    </div>
+                    <!-- 国别域名 结束 -->
+                    <!-- 省级域名  -->
+                    <div id="provinceDomain" class="wjf-ui-tab-content">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" onsubmit="return domainReg.submitchecken(this);" method="post" action="/services/domain/newWhois.asp?str=2">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="注册域名先查询，请输入域名，如demo， 也可以输入demo.cn直接查询"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <input type="hidden" value="" name="suffix">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+                                <input type="submit" class="domain-query-btn pngFix"   value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <label for="province_select_op_1">
+                                    <input type="radio" class="select-op" id="province_select_op_1" name="select-op-5" value="0">全选</label>
+                                <label for="province_select_op_2">
+                                    <input type="radio" class="select-op" id="province_select_op_2" name="select-op-5" value="1">全不选</label>
+                                <label for="province_select_op_3">
+                                    <input type="radio" class="select-op" id="province_select_op_3" name="select-op-5" value="2" checked="checked">常用</label>
+                            </div>
+                            <div class="f-r">
+                                <!-- 常用链接 开始 -->
+                                <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                                <!-- 常用链接 结束 -->
+                            </div>
+                        </div>
+                        <!-- 域名列表 -->
+                        <div class="domext-wrapper clearfix" id="cnhz">                           
+                        </div>
+                    </div>
+                    <!-- 省级域名 结束 -->
+                    <!-- 自定义查询  -->
+                    <div id="customDomain" class="wjf-ui-tab-content">
+                        <!-- 查询框 -->
+                        <p class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</p>
+                        <div class="searchDiv">
+                            <form class="query-input-container" name="customForm" onsubmit="return domainReg.submitcheck_custom(this);" method="post" action="/services/domain/newWhois.asp?str=2">
+                                <p class="input-wrapper">
+                                    <textarea type="text" name="searchedDomainName_custom" class="common-input" value="" placeholder="请输入您要注册的域名，如:demo.cn"></textarea>
+                                    <input type="hidden" name="du" value="">
+                                    <input type="hidden" name="iscustom" value="1">
+                                    <input type="hidden" value="domainsearch" name="module">
+                                    <input type="hidden" value="IntDomain" name="searchType">
+                                    <input type="hidden" value="check" name="action">
+                                    <input type="hidden" value="one" name="zxwpds">
+                                    <span class="clear-domain-input"></span>
+                                </p>
+                                <input type="submit" class="domain-query-btn pngFix" value="查域名">
+                            </form>
+                        </div>
+                        <div class="domext-select-container">
+                            <div class="left-radio f-l">
+                                <!--  <label>
+                            <input type="radio" class="select-op" name="select-op-6" value="0">全选</label>
+                        <label>
+                            <input type="radio" class="select-op" name="select-op-6" value="1">全不选</label>
+                        <label>
+                            <input type="radio" class="select-op" name="select-op-6" value="2" checked="checked" >常用</label> -->
+                            </div>
+                            <div class="f-r">
+                                <!-- 常用链接 开始 -->
+                                <a href="/customercenter/productprice.asp" target="_blank">域名价格列表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/services/domain/transfer.asp" target="_blank">域名转入</a>
+                                <!-- 常用链接 结束 -->
+                            </div>
+                        </div>
+                        <!-- 域名列表 结束 -->
+                    </div>
+                    <!-- 自定义查询 结束 -->
+                </div>
+
+            </div>
+            <!-- 域名查询 结束 -->
+        </div>
+    </div>
+    <!-- banner区域+查询区域 结束 -->
+    <!-- 域名优势 开始 -->
+    <div class="gray-bg">
+        <div class="domain-advantage wide1190">
+            <h1 class="title">{companyname}域名优势</h1>
+            <div class="line-color"></div>
+            <ul class="adList horizontal-center cl">
+                <li>
+                    <span class="advantage_img pngFix advantage_img_1"></span>
+                    <div class="ad_right">
+                        <span class="title">高品质保障</span>
+                        <p class="font14">
+                            ICANN及CNNIC双重认证顶级域名注册服务商 连续5年被评选为中国五星级域名注册服务商。
+                        </p>
+                    </div>
+                </li>
+                <li class="col-middle">
+                    <span class="advantage_img pngFix advantage_img_2"></span>
+                    <div class="ad_right">
+                        <span class="title">NewG优选平台</span>
+                        <p class="font14">
+                            新顶级<a href="http://www.west.cn/services/domain/" class="g-link">域名注册</a>保有量已超过500万个，占全球1/4 ，域名总保有量已超过900万。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="advantage_img pngFix advantage_img_3"></span>
+                    <div class="ad_right">
+                        <span class="title">全方位域名生态系统</span>
+                        <p class="font14">
+                            域名"注册+交易+金融+行情+交流"一站式 服务平台，域名相关服务一应俱全，旨为您所想。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="advantage_img pngFix advantage_img_4"></span>
+                    <div class="ad_right">
+                        <span class="title">种类齐全性价比高</span>
+                        <p class="font14">
+                            支持上百种域名后缀注册，提供预定抢注功能，坚 持让您用少量的花费，享受更好的产品和服务。
+                        </p>
+                    </div>
+                </li>
+                <li class="col-middle">
+                    <span class="advantage_img pngFix advantage_img_5"></span>
+                    <div class="ad_right">
+                        <span class="title">域名管理便捷安全</span>
+                        <p class="font14">
+                            批量查询、离线注册、自动续费，自由操作转出过户 一键锁定和隐私保护，轻松搞定域名管理。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="advantage_img pngFix advantage_img_6"></span>
+                    <div class="ad_right">
+                        <span class="title">域名解析快速稳定</span>
+                        <p class="font14">
+                            独有6组DNS轮循，确保运行稳定可靠，多种解析方式可选， 解析即刻生效，更有智能自动解析。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 域名优势 结束 -->
+</div>
+<!-- 内容区域 结束 -->
+{#bottom.html}
+
+<script type="text/javascript" src="/template/Tpl_2016/jscripts/domain2016.js"></script>
+</body>
+
+</html>

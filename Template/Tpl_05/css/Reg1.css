@@ -1,0 +1,256 @@
+#Reg_Box {
+	position:relative;
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_bg.gif) repeat-y;
+	width:857px;
+	margin:10px auto auto auto;
+	text-align:center;
+	overflow:hidden;
+}
+#Reg_Box .rb_title_forget {
+	background:url(/Template/Tpl_05/newimages/Reg/forget_Box_Title.gif) no-repeat;
+	height:85px;
+	padding:20px 0px 0px 0px;
+}
+#Reg_Box .rb_title {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_Title.gif) no-repeat;
+	height:85px;
+	padding:20px 0px 0px 0px;
+}
+#Reg_Box .rb_title ul,#Reg_Box .rb_title_forget ul {
+	display:block;
+	width:405px;
+	float:right;
+	margin:0 20px 0 0;
+	padding:0;
+}
+#Reg_Box .rb_title ul li,#Reg_Box .rb_title_forget ul li {
+	display:block;
+	background:url(/Template/Tpl_05/newimages/Reg/045631101.gif) 1px 2px no-repeat;
+	padding-left:26px;
+}
+#Reg_Box .rb_m_top {
+	background:url(/Template/Tpl_05/newimages/Reg/main_3_81.jpg) left no-repeat;
+	margin:0 auto;
+	height:463px;
+	width:800px;
+}
+#Reg_Box .rb_m_bottom {
+	background:url(/Template/Tpl_05/newimages/Reg/main_3_82.jpg) right bottom no-repeat;
+	height:760px;
+	margin:0 auto;
+	width:800px;
+}
+#Reg_Box .rb_bottom {
+	background:url(/Template/Tpl_05/newimages/Reg/Reg_Box_bottom.gif) bottom no-repeat;
+	width:857px;
+	height:19px;
+}
+/* 内容 */
+dl, dt, dd {
+	display:block;
+	text-align:left;
+	margin:0;
+	padding:0;
+	clear:both;
+}
+h1, h2, h3, h4 {
+	display:block;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-weight:normal;
+}
+#Reg_Box dl {
+	position:absolute;
+	margin:0 auto;
+	width:650px;
+	top:120px;
+	left:100px;
+	z-index:1px;
+}
+#Reg_Box dt {
+	font-weight:bold;
+	font-size:20px;
+	/*height:42px;*/
+	line-height:30px;
+	padding-left:67px;
+	padding-top:15px;
+	margin-top:20px;
+	color:#000;
+}
+.Num_dt_1 {
+	background:url(/Template/Tpl_05/newimages/Reg/reg_num_1.gif) no-repeat;
+}
+.Num_dt_2 {
+	background:url(/Template/Tpl_05/newimages/Reg/reg_num_2.gif) no-repeat;
+}
+.Num_dt_3 {
+	background:url(/Template/Tpl_05/newimages/Reg/reg_num_3.gif) no-repeat;
+}
+.Num_dt_4 {
+	background:url(/Template/Tpl_05/newimages/Reg/reg_num_4.gif) no-repeat;
+}
+
+
+
+
+#Reg_Box dd {
+/* border-bottom:1px dotted #999; */
+height:auto;
+overflow:hidden;
+
+}
+#Reg_Box h1, #Reg_Box h2, #Reg_Box h3, #Reg_Box label {
+	float:left;
+	width:210px;
+	height:30px;
+	line-height:30px;
+}
+#Reg_Box h2 {
+	width:10px;
+	font-size:14px;
+	color:#F06;
+}
+#Reg_Box h3 {
+	width:270px;
+}
+/* 特殊行定义 */
+#Reg_Box dd.dd_address h1 {
+	width:320px;
+}
+#Reg_Box dd.dd_address h3 {
+	width:160px;
+}
+#Reg_Box dd.dd_knowfrom h1 {
+	width:490px;
+	height:100px;
+}
+#Reg_Box label {
+	text-align:right;
+	color:#C00;
+	width:160px;
+	font-weight:bold;
+}
+#Reg_Box dd.rb_cart {
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+#Reg_Box dd.rb_submit {
+	text-align:center;
+	height:60px;
+	padding-top:5px;
+	border-bottom:none;
+}
+#Reg_Box dd select {
+	border:1px #666 solid;
+	height:22px;
+}
+/* ------------------找回密码-------------------- */
+#Forget_pass_box {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_bg.gif) repeat-x;
+	height:470px;
+	width:930px;
+	margin:30px auto auto auto;
+	padding:20px 0 20px 0;
+}
+#Forget_pass_box ul, #Forget_pass_box li {
+	display:block;
+	margin:0;
+	padding:0;
+}
+#Forget_pass_box li {
+	float:left;
+	text-align:center;
+}
+#Forget_pass_box #Forget_pass_box_1 {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_box_1.gif) no-repeat;
+	height:468px;
+	width:343px;
+	margin-left:10px;
+}
+#Forget_pass_box #Forget_pass_box_2 {
+	background:url(/Template/Tpl_05/newimages/Reg/getpass_box_2.gif) no-repeat;
+	height:468px;
+	width:343px;
+	margin-left:20px;
+}
+#Forget_pass_box #Forget_pass_box_3 {
+	background:url(/Template/Tpl_05/newimages/Reg/Help_Box.jpg) no-repeat;
+	width:183px;
+	float:left;
+	height:355px;
+	margin-left:15px;
+	margin-top:-20px;
+}
+ul#Forget_Help_Box li {
+	line-height:25px;
+	color:#333;
+	background:url(/Template/Tpl_05/newimages/Reg/20080524145511373.gif) no-repeat 0px 5px;
+	padding-left:25px;
+}
+#Forget_pass_box label {
+	display:block;
+	margin:0;
+	padding:0;
+	float:left;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	text-align:right;
+}
+#Forget_pass_box h1, #Forget_pass_box h2 {
+	float:left;
+	text-align:left;
+	height:30px;
+	line-height:30px;
+}
+#Forget_pass_box h1 {
+	width:200px;
+}
+#Forget_pass_box h2 {
+	width:10px;
+}
+#Forget_pass_box form {
+	margin:0;
+	padding:0;
+	display:block;
+	text-align:center;
+}
+#Forget_pass_box dl {
+	margin:0 auto;
+	margin-top:80px;
+	width:320px;
+}
+#Forget_pass_box dt {
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+	color:#06C;
+}
+#Forget_pass_box .nextbottom {
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	padding-top:10px;
+}
+h1.code input {
+	display:block;
+	float:left;
+	margin:0;
+	margin-top:5px;
+	margin-left:5px;
+}
+h1.code img {
+	display:block;
+	float:right;
+	margin:0;
+	padding:0;
+}
+.reg_red_info_box
+{
+	padding:20px;
+}
+td{font-weight:normal;}

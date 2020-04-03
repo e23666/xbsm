@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！至强5420四核/4G内存/146Gsas硬盘仅需999元.">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/template/Tpl_05/css/CloudHost.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function DoRoomPriceSelect(vps_type,k)
+
+{
+
+	objTab=document.getElementById("vps_Big_Room_"+vps_type);
+
+	div_list=objTab.getElementsByTagName("div");
+
+	
+
+	for(i=1;i<=div_list.length;i++)
+
+	{
+
+		divObj=document.getElementById("vpsromprice_"+vps_type+"_"+i);
+
+		radioOBJ=document.getElementById("radio_"+vps_type+"_"+i);
+
+		if(i!=k)
+
+		{
+
+			divObj.style.display="none";
+
+			radioOBJ.checked=false;
+
+		}
+
+		else
+
+		{
+
+			radioOBJ.checked=true;
+
+			divObj.style.display="";
+
+		}
+
+		
+
+		objTab_tar_1=document.getElementById(vps_type+"_cpu");
+
+		objTab_tar_2=document.getElementById(vps_type+"_flux");
+
+		
+
+		if(k==2 || k==4)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 2.0G(四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		if(k==5)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+	}
+
+}
+
+</script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/CloudHost/">云主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+        {#cloudhostleft.html}
+
+    <div id="MainRight">
+      <div id="DomainFlash">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+          <param name="movie" value="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <embed src="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+        </object>
+      </div>
+<div id="Cloud_Content_Box"><div id="Title_info"><img src="/images/CloudHost/what_cloud.jpg" width="267" height="61"></div>
+<div style="width:710px;margin:0 auto; line-hight:200px;">
+        <p> 云主机是{companyname}基于大规模分布式计算系统，通过虚拟化技术整合IT资源，为各行业提供互联网基础设施服务。云主机具有自助管理、数据安全保障、自动故障恢复和防网络攻击等高级功能，帮您降低成本。<br>
+        </p>
+        <p>{companyname}云计算核心技术 <br>
+          <br>
+          虚拟化技术<br>
+          虚拟化平台将1000台以上的服务器集群虚拟为多个性能可配的虚拟机(VM)，对整个集群系统中所有VM进行监控和管理，并根据实际资源使用情况灵活 
+          分配和调度资源池。</p>
+        <p>分布式存储<br>
+          分布式存储用于将大量服务器整合为一台超级计算机，提供海量的数据存储和处理服务。分布式文件系统、分布式数据库允许访问共同存储资源，实现应用数据文件的IO共享。我们的云存储系统同时兼顾数据安全与IO问题。个别服务商保存3份数据以牺牲IO速度为代价，只有极低的IO速度，其他国内<a href="https://www.west.cn/cloudhost/" target="_blank">云主机</a>厂商一般采用本机阵列存储，虽然IO快但是可靠性不高，本机硬件或存储损坏的情况下，业务中断时间较长。{companyname}创造性地解决了这个问题，通过高速的万M网络和极优的算法，既保证了数据安全也提供极优的磁盘读写速度。<br>
+        </p>
+        <p>资源调度<br>
+          虚拟机可以突破单个物理机的限制，动态的资源调整与分配消除服务器及存储设备的单点故障,实现高可用性。当一个计算节点的主机需要维护时，可以将其上运行的虚拟机通过热迁移技术在不停机的情况下迁移至其他空闲节点，用户会毫无感觉。在计算节点物理损坏的情况也，也可以在3分钟左右将其业务迁移至其他节点运行，大大提高了系统的可靠性。</p>
+        <p>智能管理平台<br>
+          通过API接口对云主机资源进行调配，实现对VM的一键式系统安装、备份、远程重启、状态监控等功能。 <br>
+        </p>
+        <p align="center"><img src="/images/CloudHost/ebscloud/jiagouimg.jpg" width="666" height="887" alt="云主机"></p>
+        <p>云主机平台的每个集群节点被部署在互联网的骨干机房，可独立提供 计算、存储、在线备份、托管、带宽等互联网基础设施服务。集群节点由以下硬件构成：</p>
+		  <p>　　管理服务器：采取双机热备的方式，对整个节点的所有计算服务器、共享存储、网络进行管理，同时对外提供管理整个节点的API。</p>
+          <p>    存储服务器群：存储服务器是若干具有超大容量、配置了SAS 硬盘+ Raid5阵列的服务器，通过 集群文件系统组成一个统一的存储池，为节点内的虚拟机提供逻辑磁盘存储、非结构数据存储以及整合备份服务。</p>
+          <p>　　计算服务器群：计算服务器是成百上千台高配置的服务器，通过虚拟化、集群技术进行资源整合，通过云端控制平台按需生成相关主机资源。</p>
+          <p>　　交换机：按不同功能和节点性能要求配备多个三层交换机，分别负责管理网段、公网交换网段、内部交换网段、存储网段等。其中内部存储系统与计算节点之间采用万M网络连接以保证传输速度。
+        </p><p><a href="/services/CloudHost/vs.asp" target="_blank"><font color="#0000FF">更多介绍</font></a>... 
+        </p><p>&nbsp;
+        </p></div>
+    </div>
+  </div>
+</div>
+{#bottom.html} 
+</body>
+</html>

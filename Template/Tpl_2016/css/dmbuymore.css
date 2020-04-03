@@ -1,0 +1,328 @@
+.content {
+	padding:20px 0;
+	background:#F8F8F8
+}
+.dmbuymore-content {
+	padding:30px 40px 36px;
+	background:#fff;
+	border:1px solid #e1e1e1
+}
+.dmbuymore-content .content-title {
+	padding-bottom:10px;
+	border-bottom:1px solid #eee
+}
+.dmbuymore-content .content-title h2 {
+	padding-left:10px;
+	border-left:3px solid #3db514;
+	font-size:18px;
+	color:#4c4c4c
+}
+.dmbuymore-info {
+	padding:0 50px
+}
+.dmbuymore-info .info-title {
+	padding-top:36px;
+	font-size:16px;
+	color:#404040
+}
+.dmbuymore-info .info-title span {
+	font-size:12px;
+	color:#a4a4a4
+}
+.dmbuymore-info .info-search {
+	padding-top:18px
+}
+.dmbuymore-info .info-search .info-input {
+	margin-top:-3px;
+	padding-left:10px;
+	width:200px;
+	height:28px;
+	line-height:28px;
+	border:1px solid #dcdcdc;
+	border-right:0
+}
+.dmbuymore-info .info-search .info-btn {
+	margin-left:-4px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	background:#1989e9;
+	color:#fff;
+	text-align:center
+}
+.dmbuymore-info .info-search .info-link {
+	color:#067edb;
+	vertical-align:bottom;
+	margin-left:10px
+}
+.dmbuymore-info .info-list {
+}
+.dmbuymore-info .info-list li {
+}
+.dmbuymore-info .info-list li a {
+	display:block;
+	padding:2px 5px 3px;
+	background:#fff;
+	color:#6a6a6a;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis
+}
+.dmbuymore-info .info-list li a:hover {
+	color:#fff;
+	background:#449de8
+}
+.dmbuymore-info .info-list li i {
+	display:none;
+	width:21px;
+	height:24px;
+
+	border:1px solid #a1d1fa;
+	border-left:0;
+	vertical-align:bottom;
+	cursor:pointer
+}
+#J_mouldContainer {
+	width:209px;
+	border:1px solid #dcdcdc;
+	border-top:0;
+	position:absolute;
+	z-index:10;
+	left:0;
+	top:48px;
+	max-height:300px;
+	overflow:auto;
+	display:none
+}
+#J_mouldContainer .moulddt {
+	overflow:hidden
+}
+#J_mouldContainer .molddiv {
+	float:none;
+	margin-right:0
+}
+#J_mouldContainer .loadding-mould {
+	height:24px;
+
+	padding-left:22px;
+	line-height:24px
+}
+#J_mouldContainer .no-comparemould {
+	padding-left:10px;
+	color:#e04242;
+	line-height:24px;
+	height:24px
+}
+.dmbuymore-info .info-list .active a {
+	background:#daf6ff;
+	color:#067edb
+}
+.dmbuymore-info .info-list .active i {
+	background-position:1px -3px
+}
+.dmbuymore-form {
+	margin-top:36px;
+	padding-left:30px;
+	background:#fbfeff;
+	border:1px solid #d4eaf9
+}
+.dmbuymore-form .dmbuymore-form-left {
+	width:49%;
+	float:left
+}
+.dmbuymore-form .dmbuymore-form-right {
+	padding-bottom:40px;
+	float:left;
+	width:49%
+}
+.dmbuymore-form-right .dmbuymore-section {
+	padding-left:30px;
+	border-left:1px solid #d4eaf9
+}
+.dmbuymore-section dt {
+	margin-top:20px;
+	padding-left:24px;
+
+	font-weight:700;
+	color:#2e60b3;
+	font-size:14px
+}
+.dmbuymore-section dd {
+	margin-top:15px;
+	color:#525252;
+	vertical-align:middle;
+	position:relative
+}
+.dmbuymore-section-title {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:130px;
+	text-align:right;
+	color:#525252;
+	font-size: 14px
+}
+.reg-star {
+	color:red
+}
+.dm-txt {
+	color:#b1b1b1;
+	font-weight:400
+}
+.dm-optional {
+	padding-left:10px;
+	color:#898989
+}
+.Link_Orange {
+	color:#fe6b1b
+}
+.Link_Orange:hover {
+	color:#3db514
+}
+.dmbuymore-section .common-input {
+	position:relative
+}
+.width200 {
+	width:200px
+}
+.dmbuymore-section .dm-area-select {
+	padding-left:4px;
+	margin-right:0;
+	width:118px
+}
+.dm-prompt,.dm-error,.dm-success {
+	display:none;
+	position:absolute;
+	top:40px;
+	left:144px
+}
+.dmbuymore-section .dm-error {
+	padding-left:22px;
+
+	color:#ff5e5e;
+	vertical-align:middle
+}
+.dmbuymore-section .dm-error-txt {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	padding-top:4px;
+	padding-left:144px;
+	color:#F30;
+	width:235px
+}
+.dmbuymore-section .dm-success {
+	width:18px;
+	height:18px;
+
+	margin-top:0;
+	vertical-align:middle
+}
+.dmbuymore-section .dm-prompt {
+	position:absolute;
+	top:0;
+	left:390px;
+	z-index:9;
+	background-color:#fff;
+	word-break:break-all
+}
+.dm-prompt .triangle-arrow {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	position:absolute;
+	top:16px;
+	left:-8px;
+	width:10px;
+	height:19px;
+
+}
+.dmbuymore-section .dm-prompt .dm-prompt-txt {
+	width:200px;
+	padding:8px 4px 8px 30px;
+
+	border:1px solid #e7e7e7;
+	color:#717171;
+	overflow:hidden
+}
+.dmbuymore-section .dm-prompt .dm-prompt-txt p {
+	padding-left:8px;
+	border-left:1px solid #e7e7e7
+}
+.dmbuymore-info .dmbuymore-info-buy {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:200px;
+	height:44px;
+	line-height:44px;
+	background:#3db514;
+	color:#fff;
+	text-align:center
+}
+.dmbuymore-info .dmbuymore-info-qk {
+	margin-left:10px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:140px;
+	height:44px;
+	line-height:44px;
+	background:#efefef;
+	color:#777;
+	text-align:center
+}
+.dmbuymore-info .dmbuymore-info-mb {
+	padding-left:10px;
+	cursor:pointer
+}
+.dmbuymore-info .dmbuymore-info-txt {
+	margin:50px 20px 0;
+	line-height:26px;
+	background:#fffdfd;
+	border:1px solid #ffe0e0;
+	text-align:center;
+	padding:5px;
+	color:#ff5d5d
+}
+.dmbuymore-info .dmbuymore-info-txt i {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-right:6px;
+	width:18px;
+	height:18px;
+	padding-bottom:0;
+
+	vertical-align:middle
+}
+@media screen and (max-width:1206px) {
+	.dmbuymore-content {
+		padding:30px 20px 36px
+	}
+	.dmbuymore-info {
+		padding:0
+	}
+	.dmbuymore-form,.dmbuymore-form-right .dmbuymore-section {
+		padding-left:20px
+	}
+}
+.desktop .dmbuymore-content {
+	padding:30px 20px 36px
+}
+.desktop .dmbuymore-info {
+	padding:0
+}
+.desktop .dmbuymore-form,.dmbuymore-form-right .dmbuymore-section {
+	padding-left:20px
+}
+
+#regdomainmsg li{padding:15px 0;border-bottom: 1px dashed #E1E1E1;}
+#regdomain .domaintitle{font-size: 16px;font-weight: bold;color: #4B4B4B;}
+#regdomain .info-search .info-input{margin-top: 0px;}
+#regdomain .info-search .info-btn{border: none; cursor: pointer;}
+#regdomain .molddiv{float: left; margin-right: 10px;}
+input.dmbuymore-info-qk,input.dmbuymore-info-buy{border: none; font-size: 14px; cursor: pointer;}

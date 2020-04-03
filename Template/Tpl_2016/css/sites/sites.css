@@ -1,0 +1,363 @@
+/*
+    本页样式为----成品网站超市首页
+*/
+
+
+/****************banner 样式重置 开始****************/
+.slide-h-440 {
+    height: 480px;
+    overflow: hidden;
+}
+.slide-h-440 .slide-wrapper li {
+    height: 480px;
+    display: block;
+}
+/*******banner导航 开始*******/
+.slide-h-440 .wide1190{
+   /* position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 1;*/
+}
+.banner-nav{
+    margin-top: 50px;
+    padding:10px 0 10px 20px;
+    width: 170px;
+    height: auto;
+    background-color: rgba(31, 31, 31, 0.651);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 3;
+}
+.banner-nav .bn-list{
+
+}
+.banner-nav .bn-list li{
+
+}
+.banner-nav .bn-list li a{
+    color: #fff;
+    display: block;
+    line-height: 57px;
+    font-size: 16px;
+}
+.banner-nav .bn-list li a:hover{
+    color: #ffc539;
+}
+/*小图标*/
+.banner-nav .bn-list .bn-icon{
+    margin-right: 20px;
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background: url("/template/Tpl_2016/images/sites/sites-icon.png") no-repeat;
+    vertical-align: middle;
+}
+.banner-nav .bn-list .bn-icon1{
+    background-position: -22px 0px;
+}
+.banner-nav .bn-list .bn-icon2{
+    background-position: -55px 1px;
+}
+.banner-nav .bn-list .bn-icon3{
+    background-position: -87px 0px;
+}
+.banner-nav .bn-list .bn-icon4{
+    background-position: -116px 0px;
+}
+.banner-nav .bn-list .bn-icon5{
+    background-position: -145px 0px;
+}
+.banner-nav .bn-list .bn-icon6{
+    background-position: -177px 0px;
+}
+.banner-nav .bn-list .bn-icon7{
+    background-position: -209px 2px;
+}
+.banner-nav .bn-list .bn-icon8{
+    background-position: -240px 2px;
+}
+
+/*******banner导航 结束*******/
+/****************banner 样式重置 结束****************/
+
+/****************模块分类 开始****************/
+.sites-section{
+    padding-top: 20px;
+}
+.sites-section .ss-list{
+    background: #fff;
+    border: 1px solid #d8d8d8;
+}
+.sites-section .ss-list li{
+    padding: 20px 0;
+    float: left;
+    width: 16.6666666666666667%;
+    text-align: center;
+    border-right: 1px solid #d8d8d8;
+    box-sizing: border-box;
+}
+/*文字*/
+.sites-section .ss-list li p{
+    padding-top: 10px;
+    font-size: 18px;
+    color: #343434;
+}
+/*图标*/
+.sites-section .ss-list .ss-icon{
+    margin: 0 auto;
+    width: 44px;
+    height: 44px;
+    background: url("/template/Tpl_2016/images/sites/sites-icon.png") no-repeat;
+}
+.sites-section .ss-list .ss-icon1{
+    background-position: 0px -37px;
+}
+.sites-section .ss-list .ss-icon2{
+    background-position: -52px -40px;
+}
+.sites-section .ss-list .ss-icon3{
+    background-position: -102px -36px;
+    width: 30px;
+}
+.sites-section .ss-list .ss-icon4{
+    background-position: -136px -37px;
+}
+.sites-section .ss-list .ss-icon5{
+    background-position: -188px -38px;
+    width: 50px;
+}
+.sites-section .ss-list .ss-icon6{
+    background-position: -243px -36px;
+}
+/*激活*/
+.sites-section .ss-list li:hover p{
+    color: #2086EE;
+}
+.sites-section .ss-list li:hover .ss-icon1{
+    background-position: 0px -89px;
+}
+.sites-section .ss-list li:hover .ss-icon2{
+    background-position: -52px -92px;
+}
+.sites-section .ss-list li:hover .ss-icon3{
+    background-position: -102px -88px;
+    width: 30px;
+}
+.sites-section .ss-list li:hover .ss-icon4{
+    background-position: -136px -89px;
+}
+.sites-section .ss-list li:hover .ss-icon5{
+    background-position: -188px -90px;
+    width: 50px;
+}
+.sites-section .ss-list li:hover .ss-icon6{
+    background-position: -243px -88px;
+}
+/****************模块分类 结束****************/
+.sites-main{
+    padding-bottom: 40px;
+}
+/****************楼层模板 开始****************/
+.sites-box{
+
+}
+/*******标题*******/
+.sites-box .sb-title{
+    padding-bottom: 14px;
+}
+.sites-box1 .sb-title{
+    border-bottom: 2px solid #2086ee;
+}
+.sites-box2 .sb-title{
+    border-bottom: 2px solid #17b2b3;
+}
+.sites-box3 .sb-title{
+    border-bottom: 2px solid #5c8bc1;
+}
+.sites-box4 .sb-title{
+    border-bottom: 2px solid #726bd6;
+}
+.sites-box .sb-title h3 a{
+    font-size: 22px;
+    color: #292828;
+}
+/*楼层数字*/
+.sites-box .sb-title .sb-num{
+    margin-right: 20px;
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    vertical-align: bottom;
+}
+.sites-box .sb-title .sb-num i{
+    display: inline-block;
+    width: 12px;
+    height: 31px;
+    background: url("/template/Tpl_2016/images/sites/sites-icon.png") no-repeat 0 0;
+    position: absolute;
+    top: 10px;
+    right: -12px;
+}
+/*小文字*/
+.sites-box .sb-title h3 label{
+    font-size: 14px;
+    color: #515151;
+    cursor: pointer;
+}
+/*按钮*/
+.sites-box .sb-title .sb-btn{
+    margin-top: 18px;
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+/*******左侧*******/
+.sites-box .sb-left{
+    padding: 200px 0 0 14px;
+    float: left;
+    width: 220px;
+    height: 350px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e4e4e4;
+}
+.sites-box .sb-left ul li{
+    line-height: 30px;
+    font-size: 16px;
+    color: #292828;
+}
+.sites-box .sb-left ul li i{
+    margin-right: 10px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: url('/template/Tpl_2016/images/sites/sites-icon.png') no-repeat -277px 0;
+    vertical-align: middle;
+}
+/*******右侧*******/
+.sites-box .sb-right{
+    background: #fff;
+}
+.sites-box .sb-right ul li{
+    float: left;
+}
+.sites-box .sb-right .item{
+    display: inline-block;
+    padding-top: 16px;
+    width: 242.5px;
+    height: 175px;
+    border-bottom: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    text-align: center;
+}
+.sites-box .sb-right .item:hover{
+    outline: 1px solid #99cbff;
+    position: relative;
+}
+.sites-box .sb-right h4{
+    font-size: 18px;
+    color: #000;
+}
+.sites-box .sb-right p{
+    line-height: 30px;
+    font-size: 12px;
+    color: #666;
+}
+.sites-box .sb-right .li-img{
+    width: 100%;
+    height: 110px;
+    font-size: 0;
+}
+/*右侧大图片*/
+.sites-box .sb-right .right-item{
+    float: right;
+}
+.sites-box .sb-right .right-item .item{
+    width: 485px;
+    height: 350px;
+}
+.sites-box .sb-right .right-item .item p{
+    font-size: 14px;
+}
+.sites-box .sb-right .right-item .li-img{
+    margin: 10px auto 0;
+    width: 425px;
+    height: auto;
+}
+/*第二层模板部分公共css*/
+.sites-box .sb-right .sb-list{
+
+}
+.sites-box .sb-right .sb-list .item{
+    padding-top: 36px;
+    height: 350px;
+}
+.sites-box .sb-right .sb-list .item h4{
+    font-size: 20px;
+}
+.sites-box .sb-right .sb-list .item p{
+    padding-top: 10px;
+    /*padding-left: 36px;*/
+    /*text-align: left;*/
+}
+.sites-box .sb-right .sb-list .li-img{
+    height: 252px;
+}
+/****************楼层模板 结束****************/
+
+/****************各楼层颜色+图片 结束****************/
+/*f1*/
+.sites-box1 .sb-title .sb-num, .sites-box1 .sb-title .sb-btn{
+    background: #2086ee;
+}
+.sites-box1 .sb-left{
+    background: url("/template/Tpl_2016/images/sites/f1-img-left.gif") no-repeat top left;
+}
+/*f2*/
+.sites-box2 .sb-title .sb-num, .sites-box2 .sb-title .sb-btn{
+    background: #17b2b3;
+}
+.sites-box2 .sb-left{
+    background: url("/template/Tpl_2016/images/sites/f2-img-left.gif") no-repeat top left;
+}
+/*f3*/
+.sites-box3 .sb-title .sb-num, .sites-box3 .sb-title .sb-btn{
+    background: #5c8bc1;
+}
+.sites-box3 .sb-left{
+    background: url("/template/Tpl_2016/images/sites/f3-img-left.gif") no-repeat top left;
+}
+/*f4*/
+.sites-box4 .sb-title .sb-num, .sites-box4 .sb-title .sb-btn{
+    background: #726bd6;
+}
+.sites-box4 .sb-left{
+    background: url("/template/Tpl_2016/images/sites/f4-img-left.gif") no-repeat top left;
+}
+/****************各楼层颜色+图片 结束****************/
+
+@media screen and (max-width: 1206px) {
+    /*右侧大图片*/
+    /*.sites-box .sb-right .right-item .item{
+        width: 425px;
+    }
+    .sites-box .sb-right .item{
+        width: 172.5px;
+    }*/
+
+}
+
+/***********IE6-8 responsed START*************/
+
+
+/***********IE6-8 responsed END*************/

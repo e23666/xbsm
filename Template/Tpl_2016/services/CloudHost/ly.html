@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/pjList.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/cloudhostly.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+  <link href="/images/CloudHost/jqtransform.css" rel="stylesheet" type="text/css" />
+  
+<script language="javascript" src="/jscripts/check.js"></script>
+
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+
+<script language="javascript" src="/jscripts/diyserver.js"></script>
+ <script language="javascript" src="/jscripts/inputrange.js"></script>
+<script language="javascript" src="/jscripts/jquery.jqtransform.js"></script>
+
+<script language="javascript">
+var cpucount={cpucount};
+var ramcount={ramcount};
+var paytestprice={paytestprice};
+var username="{user_name}";
+var diyconfig={diyjson};
+var userinfo={userinfo};
+var useripmsg="{useripmsg}"
+
+
+function pagestart(){
+	$("input[name^='S_radio_']:radio:checked").each(function(i, n) {
+        var proid=$(n).attr("name").replace("S_radio_","");
+		setmsg(proid);
+    });	
+	$("input[name^='S_radio_']:radio").click(function(){
+		var proid=$(this).attr("name").replace("S_radio_","");
+		setmsg(proid);
+	});
+}
+function setmsg(proid){
+	var roomObj=$("input[name^='S_radio_"+ $.trim(proid) +"']:radio:checked");	
+	var roomid=roomObj.val();	
+	$("div[id^='S_price_"+ proid +"']").slideUp(0);
+	$("#S_price_"+ proid +"_"+roomid).slideDown(0);
+	var Memory=$("input[name='memsize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var HardDisk=$("input[name='dissize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var pname=$("input[name='pname_"+ proid +"']:hidden").val();
+	$("#"+proid+"_flux").html($("input[name='r_vpsband_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#"+proid+"_ip").html($("input[name='ismodrr_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#"+proid+"_mem").html(Memory);
+	$("#"+proid+"_disk").html(HardDisk);
+	$("#"+proid).click(function(){
+		if (proid!="xcloudF" && proid!="oemyun1")
+	{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*4 (四核心)")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}else{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*2")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}
+	});
+}
+$(function(){
+	pagestart();
+
+	});    	
+</script>
+<script language="javascript"> 
+ 
+
+$(function(){
+    $(".sec-banner").slide({
+        mainCell: ".slide-wrapper ul",
+        titCell: '.slide-pagination ul',
+        effect: 'fold',
+        // 背景图片属性
+        switchLoad: '_bgimg',
+        // 背景图片容器
+        switchLoadTag: 'a',
+        autoPage: true,
+        autoPlay: true
+    });
+	$(".tabs a").click(function(){
+		var objp=$(this).parent().parent();
+		objp.find("a").removeClass("active");
+		$(this).addClass("active");
+		objp.find("a").each(function(index,e){
+			if($(this).attr("class")=="active")
+			{
+				$('#'+$(this).attr("data-target")).show()
+			}
+			else{
+				$('#'+$(this).attr("data-target")).hide()
+			} 
+		})
+	})
+ 
+})
+ 
+
+</script>
+
+ 
+ 
+</head>
+
+<body class="min990">
+{#top.html}
+
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+    <div class="slide-pagination">
+        <ul></ul>
+    </div>
+    <div class="slide-wrapper">
+        <ul>
+            <li>
+                <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/template/Tpl_2016/images/banner/banner-2016sj.jpg');" >免备案香港云虚拟主机 全新升级</a>
+            </li>
+            <li>
+                <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" _bgimg="/template/Tpl_2016/images/banner/banner-2016sj.jpg" >免备案香港云虚拟主机 全新升级</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- banner 结束 -->
+
+<div class="wide1190">
+    <ul class="banner-bottom cl horizontal-center">
+        <li>
+            <div class="bb_right">
+                <i class="pngFix bb-img_1" style="margin-left: inherit;"></i>
+                <p>
+                    <b class="font18" style="color: #484848;"><a href="/services/CloudHost/io.asp">超快IO</a></b>
+                    <br> 领先的分布式文件存储+万M传输网络+优化的算法
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="bb_right">
+                <i class="pngFix bb-img_2"></i>
+                <p>
+                    <b class="font18" style="color: #484848;">强劲稳定</b>
+                    <br> 超过1000台云服务器的资源池，完美支持热迁移
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="bb_right">
+                <i class="pngFix bb-img_3"></i>
+                <p>
+                    <b class="font18" style="color: #484848;">安全可靠</b>
+                    <br> 每个云服务器的数据保留4份，外加异机备份，数据安全高枕无忧！
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="bb_right">
+                <i class="pngFix bb-img_4"></i>
+                <p>
+                    <b class="font18" style="color: #484848;"><a href="/services/cloudhost/peichang.asp">100倍赔偿</a></b>
+                    <br> 因我们导致您服务器无法使用，按故障时间的百倍进行赔偿
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<div id="content">
+    <!-- 弹性云主机+套餐云主机 开始 -->
+    <div class="host-content">
+        <div class="wide1190">
+            <!-- 选项卡 -->
+            <div class="CloudRightMainSelectMenu">
+				 <ul class="wjf-ui-tab-style2 cl tabs">
+					<li class="Tab_tx_b"><a id="Tab_tx_a" class="active" href="javascript:void(0);" data-target="J_txHostDom">弹性云主机</a></li>
+					<li class="Tab_tc_b"><a id="Tab_tx_b" href="javascript:void(0);"  data-target="J_tcHostDom">套餐云主机</a></li>
+				</ul>
+            </div>
+
+            <div class="host-config cl">
+                <div class="tx-host">
+                   <div id="J_txHostDom">
+                        <div class="tuijian-config"  id="tuijian_msg">
+                            <input type="button" name="tuijian_btn_0" value="入门型" class="btn_page_" >
+                            <input type="button" name="tuijian_btn_1" value="标准型" class="btn_page_ btn_page_1" >
+                            <input type="button" name="tuijian_btn_2" value="商务型" class="btn_page_" >
+                            <input type="button" name="tuijian_btn_3" value="舒适型" class="btn_page_" >
+                            <input type="button" name="tuijian_btn_4" value="企业型" class="btn_page_" >
+                            <input type="button" name="tuijian_btn_5" value="豪华型" class="btn_page_" >
+                        </div>
+                        <!--ebs--->
+                        <div>
+
+                        </div>
+
+                        <div class="z_buymsg clearfix" style="padding-top:20px; padding-left:20px; padding-right:20px;">
+
+                            <dl class="linebox1">
+                                <dd class=" ddline clearfix" ></dd>
+                                <dd class="dd-list clearfix" id="cpumsg">
+                                    <div id="cpu_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none">建议至少用双核，单核在很多情况下容易发生CPU100%占用影响性能</div>
+                                    <label class="cpu_label">CPU</label>
+                                    <div class="cpu_icon"></div>
+                                    <label class="msg" >
+                                        <div class="clearfix " id="cpu_range"> </div>
+                                        <div  class="clearfix " id="cpuvalue" style="margin:15px 0 0 5px">
+                                            <div style="float: left; margin: 0px 0px 0px 15px; text-align: left; width: 148px; padding: 0px; font-weight: normal; color: #3db514;">1核</div>
+                                            <div style="float: left; margin: 0px; text-align: left; width: 150px; padding: 0px; font-weight: normal; color: #3db514;">2核</div>
+                                            <div style="float: left; margin: 0px; text-align: left; width: 150px; padding: 0px; font-weight: normal; color: #3db514;">4核</div>
+                                            <div style="float: left; margin: 0px; text-align: left; width: 150px; padding: 0px; font-weight: normal; color: #3db514;">8核</div>
+                                            <div style="float: left; margin: 0px; text-align: left; width: 150px; padding: 0px; font-weight: bold; color: rgb(0, 102, 153);">12核</div>
+                                            <div style="float: left; margin: 0px; text-align: left; width: 45px; padding: 0px; font-weight: normal; color: #3db514;">16核</div>
+                                        </div>
+                                    </label>
+                                </dd>
+                                <dd class="dd-list clearfix" id="rammsg">
+                                    <div id="ram_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center;display:none ">建议选择1G以上内存以获得更好的服务体验！</div>
+                                    <label class="ram_label">内存</label>
+                                    <div class="ram_icon"></div>
+                                    <label class="msg" >
+                                        <div class="clearfix " id="ram_range"> </div>
+                                        <div class="clearfix width540" id="ramvalue" style="margin:15px 0 0 5px"><div style="float: left; margin: 0px 0px 0px 1px; text-align: left; width: 40px; padding: 0px; font-weight: bold; color: rgb(0, 102, 153);">0.5G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">1G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">2G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">3G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">4G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">6G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">8G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">12G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">16G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">32G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">64G</div><div style="float: left; margin: 0px 0px 0px 29px; text-align: right; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">128G</div></div>
+                                    </label>
+                                </dd>
+                                <dd class="dd-list clearfix" id="datamsg" >
+                                    <label class="data_label">硬盘</label>
+                                    <div class="data_icon"></div>
+                                    <label class="msg" >
+                                        <div class="clearfix " id="data_range"><a class="slider-leftbutton"></a><div class="slider"><div class="progress" style="width: 38.3px;"></div><a href="#" class="handle" style="left: 21.8px;"></a></div><a class="slider-rightbutton"></a><input type="text" data-orig-type="range" name="data" min="50" max="500" step="10" class="range"><div style="float:left;display:inline;margin-top:7px">GB</div></div>
+                                        <div style="width:820px;clear:both;margin:15px 0 0 5px" class="clearfix">
+                                            <div style="float:left; display:inline;margin:0;margin-left:30px; text-align:left">50G(系统盘分配大小为30GB)</div>
+                                            <div style=" float:left;margin:0;display:inline; width:40px; margin-left:482px; text-align:right">1000G</div>
+                                            <div style="float:left; width:80px; margin-left:25px;display:inline;">(10GB递增)</div>
+                                        </div>
+
+                                    </label>
+                                </dd>
+
+                                <dd class="dd-list clearfix" id="fluxmsg">
+                                    <div id="flux_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none ">选择0M带宽不能访问公网（不分配公网IP），且后期亦不能升级带宽！</div>
+                                    <label class="flux_label">带宽</label>
+                                    <div class="flux_icon"></div>
+                                    <label class="msg" >
+                                        <div  class="clearfix " id="flux_range"></div>
+                                        <div  class="clearfix " style="margin:15px 0 0 5px">
+                                            <div style="float:left;margin:0;display:inline; width:40px;margin-left:30px; text-align:left">1M</div>
+                                            <div  style=" float:left;margin:0;display:inline; width:40px; margin-left:600px; text-align:right;">100M</div>
+                                            <div style="float:left; width:80px;display:inline; margin-left:24px ">(1Mbps递增)</div>
+                                        </div>
+                                    </label>
+                                </dd>
+                                <dd class="dd-list clearfix " style="margin-bottom:20px;">
+                                    <label>操作系统</label>
+                                    <label class="msg"  >
+                                        {getCHOICE_OS}
+                                    </label>
+                                </dd>
+                                 <dd class="clearfix mindd notop">
+                    <label style=" margin:40px 0 0 0px;">线路</label>
+                    <label class="msg" for=" ">
+						<div class="otherbox">
+
+						    <div class="divhengzhelai">
+                                {getserverRoom}
+							
+                            </div>
+								<div class="clearfix"></div>
+						</div>
+                    </label>
+                  </dd>
+
+                                <dd CLASS="dd-list clearfix  notop" >
+                                    <label>存储模式</label>
+                                   <label class="msg" for=" ">
+									<div class="otherbox">
+                                         {getdisktype}
+								    </div>
+                                    </label>
+                                </dd>
+
+
+                                <dd class="dd-list clearfix  notop">
+                                    <label><a href="/services/server/vip.asp" target="_blank"   title="查看服务标准">服务标准</a></label>
+									  <label class="msg" for=" ">
+									<div class="otherbox">
+                                         {servicetype}
+								    </div>
+                                    
+                                </dd>
+                                <dd class="dd-list clearfix ">
+                                    <label>付费方式:</label>
+                                      <div class="divlaiinput">{getVpsPayMethod}
+									  </div>
+                                </dd>
+                                <dd class="dd-list clearfix ">
+                                    <label>购买时长:</label>
+                                    <label class="msg" id="renewtime_msg" ></label>
+                                </dd>
+                                <dd class="dd-list clearfix ">
+                                    <label>购买数量:</label>
+                                    <label class="msg" >
+                                        <select name="buycount" style="width:200px;">
+                                            <option value="1">1台</option>
+
+                                            <option value="2">2台</option>
+
+                                            <option value="3">3台</option>
+
+                                            <option value="4">4台</option>
+
+                                            <option value="5">5台</option>
+
+                                            <option value="6">6台</option>
+
+                                            <option value="7">7台</option>
+
+                                            <option value="8">8台</option>
+
+                                            <option value="9">9台</option>
+
+                                            <option value="10">10台</option>
+                                        </select>
+                                    </label>
+
+
+                                </dd>
+                                <dd class="dd-list clearfix ">
+                                    <label>价格:</label>
+
+                                    <label class="msg clearfix" >
+                                        <div class="price_red" id="pricelist" style="font-size:24px; height:30px; line-height:30px; float:left; "></div>
+                                        <div style="font-size:16px; height:30px; line-height:30px; float:left">元</div>
+                                    </label>
+
+                                </dd>
+                                <dd class="dd-list  clearfix" >
+                                    <label style="display:inline; width:auto; float:none; line-height:25px; height:25px" for="agreement">
+                                        <input name="agreement" id="agreement" type="checkbox" value="1">
+                                        我已阅读并同意</label>
+                                    <a href="/customercenter/yunxiyi.asp" target="_blank" style="color:#06c">{companyname}云主机租用协议</a> </dd>
+                                <dd class="dd-list " >
+                                    <input type="button" class="z_btn-submit-diy" name="subbtton">
+                                    <input type="button" class="z_btn-submit-buytest-diy" name="testbtton">
+                                    <div id="loadsubinfo">数据正在处理中.请勿刷新或关闭浏览器...</div>
+                                    <input type="hidden" name="act"><input type="hidden" name="paytype" value="0">
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+         </div>
+
+<!--end ebs-->
+
+           </div>
+                     
+           <div id="J_tcHostDom" style="display: none;">
+
+ tc
+        
+           </div> 
+                        
+                         
+                        
+         </div>
+
+
+
+
+<div class="product-append-info">
+        <div id="J_anchorNavDom" class="wjf-page-anchor-nav-container">
+            <ul class="wjf-page-anchor-nav cl tabs">
+                <li><a href="javascript:void(0);" data-target="J_cloudIntroduceDom" id="J_cloudIntroduceDomF" class="active">云服务器介绍</a></li>
+                <li><a href="javascript:void(0);" data-target="J_cloudAdvantageDom" id="J_cloudAdvantageDomF" >性能对比</a></li>
+                <li><a href="javascript:void(0);" data-target="J_cloudFaqDom" id="J_cloudFaqDomF" >常见问题</a></li>
+            </ul>
+        </div>
+		<div class="wide1190">
+			<div id="J_cloudIntroduceDom">云服务器介绍</div>
+			<div id="J_cloudAdvantageDom"  style="display: none;">性能对比</div>
+			<div id="J_cloudFaqDom"  style="display: none;">常见问题</div>
+		</div>
+</div>
+
+
+
+
+    
+</div>
+
+
+{#bottom.html}
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>域名注册域名申请国际域名国内域名cn域名注册-{companyname}</title>
+<meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商，经6年经营，拥有4万余家客户，名列全国10强。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+<meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,双线虚拟主机,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/domain.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/Template/Tpl_05/jscripts/common.js"></script>
+<script language="javascript" src="/Template/Tpl_05/jscripts/check.js"></script>
+<script language="javascript" src="/jscripts/jq.js"></script>
+<style type="text/css">
+
+.Other_list li h5{
+	font-size:12px;
+	padding:0;margin:0;
+	color:#069
+}
+.Other_list li{
+	list-style:none;
+	color:#333;
+	margin-bottom:12px;
+}
+.Other_list li p{
+	text-indent:2em;
+	padding:0;margin:0
+}
+.Other_list .domain{
+	font-size:18px;
+	font-weight:bold;
+	color:green;
+}
+.Other_list .price{
+	font-size:18px;
+}
+</style>
+
+</head>
+<body id="thrColEls">
+<div class="Style2009">
+
+<script language=javascript1.2>
+function CheckIfEnglish( String )
+{
+    var Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-";
+     var i;
+     var c;
+      if(String.charAt( 0 )=='-')
+	return false;
+      if( String.charAt( String.length - 1 ) == '-' )
+          return false;
+     for( i = 0; i < String.length; i ++ )
+     {
+          c = String.charAt( i );
+	  if (Letters.indexOf( c ) < 0)
+	     return false;
+     }
+     return true;
+}
+
+
+function CheckIfChinese( String )
+{ 
+     var Letters = "`=~!@#$%^&*()_+[]{}\\|/?.>,<;:'\"";
+     var i;
+     var c;
+     for( i = 0; i < String.length; i ++ )
+     {
+         c = String.charAt( i );
+	     if (Letters.indexOf( c ) >= 0)
+	       return false;
+     }
+     return true;
+}
+
+function CheckIfSpace(String)
+{
+	 var i;
+     for( i = 0; i < String.length; i ++ )
+     {
+	 	  if(String.charAt(i) == ' ')
+		   	 return true;
+     }
+     return false;
+}
+
+
+function submitchecken(v) {
+
+  var searchedDomainName=cTrim(v.searchedDomainName.value,0);
+  var searchedDomainName1=searchedDomainName;
+	if (searchedDomainName == "") {
+		alert("请输入您要查询的英文域名。");
+		v.searchedDomainName.focus();
+		return false;
+	}
+
+		var   re1   =   /(\n)/g;     
+        var   re2   =   /(\r)/g;     
+       searchedDomainName1=searchedDomainName1.replace(re1 ,"");   
+       searchedDomainName1=searchedDomainName1.replace(re2 ,"");   
+		
+	if (!CheckIfEnglish(searchedDomainName1)) {
+		alert("在查询英文域名应输入英文不能输入中文及非法字符！");
+		v.searchedDomainName.focus();
+		return false;
+	}
+	
+ 
+	
+	
+	
+	var suftmp="";
+	$("input[name='suffix']:checked").each(function(){
+		suftmp+=","+$(this).val();
+		});
+  
+	if(searchedDomainName1.length<3 && (suftmp.indexOf(".cn")>-1 && suftmp.indexOf(".gov.cn")==-1)){
+		alert("查询.cn域名请至少输入3个字符。");
+		v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if (searchedDomainName1.length<3 && suftmp.indexOf(".cm")>-1 ){
+		alert("查询.cm域名请至少输入3个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if (searchedDomainName1.length<4 && suftmp.indexOf(".hk")>-1 ){
+		alert("查询域名中包含了.hk,请至少输入4个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+		
+	if(searchedDomainName1.length<4 && suftmp.indexOf(".ws")>-1){
+		alert("查询域名中包含了.ws,请至少输入4个字符。");
+	v.searchedDomainName.focus();
+		return false;
+		}
+
+	
+	
+	
+	
+	
+	
+	var domainArray=searchedDomainName.split("\r\n");
+	var newdomainstr="";
+	var cur=0;
+	for(var u=0;u<domainArray.length;u++){
+		var newstrs=cTrim(domainArray[u],0)
+		if(newstrs!=""){
+		cur=cur+1;
+		//newdomainstr=newdomainstr + "," + newstrs;
+		}
+	}
+	if (cur>10){
+		alert("查询英文域名不能多于10个！");
+		return false;
+	}
+	//v.action= "newWhois.asp?str=2";
+	return true;
+}
+
+function submitcheckcn(theform) 
+{
+
+	if (theform.domain_name.value == "") 
+	{
+		alert("请输入您要查询的中文域名。");
+		theform.domain_name.focus();
+		return false;
+	}
+
+	if (! CheckIfChinese(theform.domain_name.value)) 
+	{
+		alert("在查询中文域名应输入中文与英文不能输入非法字符！");
+		theform.domain_name.focus();
+		return false;
+	}
+
+	if (CheckIfSpace(theform.domain_name.value)) 
+	{
+		alert("在查询中文域名应输入中文与英文不能输入空格！");
+		theform.domain_name.focus();
+		return false;
+	}
+	
+	if (CheckIfEnglish(theform.domain_name.value)) 
+	{
+		alert("在查询中文域名应输入中文与英文不能输入全为英文！");
+		theform.domain_name.focus();
+		return false;
+	}
+	
+	var i=0;
+    for (i=0;i<theform.suffix.length;i++){
+		if (theform.suffix[i].checked) break;
+	
+ }
+	if (i==theform.suffix.length){
+		alert('抱歉,请选择域名的类型');
+		return false;
+		}
+	return true;
+}
+
+
+</script>
+{#top.html}
+<div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/domain/">域名注册</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+ {#DomainLeft.html}
+
+    <div id="MainRight">
+      
+
+<div id="DomainFlash">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+    <param name="movie" value="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/Domain/FlashList.xml" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <embed src="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/Domain/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+  </object>
+</div>
+
+
+
+
+
+
+
+
+ <div class="Other_list">
+<!--开始-->
+
+
+	
+<div style="font-size:16px;height:160px;padding-top:10px;">
+          <p><strong>交易域名：</strong> <span class="domain">{d}</span><br />
+            <br />
+            <strong>卖家报价：</strong> <span class="price">{price}</span>元<br />
+            <br />
+            购买请联系我司域名业务专员： <img src='/Template/Tpl_05/newimages/qq_online.jpg' width="12" height="12" /> <a href="http://wpa.qq.com/msgrd?v=3&uin={qq}&site=qq&menu=yes" target="_blank" style="color:">QQ{qq}</a> 电话：{tel}</p>
+          <p>&nbsp;</p>
+        </div>
+
+
+        <ul style="border-top:1px dashed #369;padding:10px;">
+          <li> 
+            <h5>1、什么是二手域名？</h5>
+            <p>答：二手域名是{companyname}推出的二手域名购买服务，{companyname}整合超过300万的二手域名资源，当用户不能通过注册获得合适的域名时，即可参考{companyname}系统推荐的二手域名，直接按照公示价格购买，简单方便，安全可靠。<br>
+            </p>
+          </li>
+          <li> 
+            <h5>2、二手域名价格为什么比注册价格高？二手域名费用中，是否包含续费一年的费用？</h5>
+            <p>答：实际上，二手域名是已经注册下来的域名，得到现有注册所有人的允许，只要买家按照约定价格支付购买费用，就可以变为买家所有。是的，公示的价格已包含续费一年的费用。</p>
+          </li>
+          <li> 
+            <h5>3、支付费用后，是否可以放弃购买，并申请退款？</h5>
+            <p>答：当费用支付成功后，不能放弃域名购买，除非域名本身问题导致无法购买成功可以退款外，如果客户坚持进行退款，则需扣除域名销售价格的10%作为违约金处罚。</p>
+          </li>
+          <li> 
+            <h5>4、为什么二手域名都支付费用了，最后却购买失败？</h5>
+            <p>答：二手域名最终是否能购买成功，有多种原因，域名现所有人是否放弃出售、域名是否收到上游机构的监管而不能出售等等，总之，我们会协调各种资源，尽量确保二手域名顺利完成购买，一旦购买失败，我们将全额退款给用户。</p>
+          </li>
+          <li> 
+            <h5>5、购买二手域名为com等国际域名后缀，购买完成后直接可以在域名管理中看到是吗？</h5>
+            <p>答：是的，com等国际域名，购买成功后，域名将直接在域名管理中查看到，并已经替换为用户自己的信息</p>
+          </li>
+          <li> 
+            <h5>6、整个交易过程一般需要多长时间能成功到我的账户下？</h5>
+            <p>答：国内域名购买完成预计需要25天时间；如果是com等国外域名，域名购买完成预计需要15天时间；</p>
+          </li>
+          <li> 
+            <h5>7、购买的流程是什么？</h5>
+            答：先注册为会员，然后在线支付足够的预付款（所公示的域名价格），然后联系我司域名业务专员办理即可： QQ {qq} 
+            电话：{tel}</li>
+        </ul>
+
+<!--结束-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+</div>
+  </div>
+</div>
+{#bottom.html}
+
+</body>
+</html>

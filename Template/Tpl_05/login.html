@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户登陆</title>
+<meta name="description" content="用户登陆-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="用户登陆-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Reg.css" rel="stylesheet" type="text/css">
+</head>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+<script language=javascript>
+function CheckLogin()
+{	
+     if (document.formlogin.u_name.value.length==0) 
+	 {
+		alert("【{companyname}提醒您】\n\n登录名不能为空！");
+		document.formlogin.u_name.focus();
+     	return false;
+     }	
+     ii=0;
+     bString="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-";
+    
+	 while (ii<document.formlogin.u_name.value.length) 
+	 {
+		if (bString.indexOf(document.formlogin.u_name.value.substring(ii,ii+1))==-1) 
+		{
+			alert("【{companyname}提醒您】\n\n登录名必须是 a-z A-Z 0-9 之间的字母和数字组合，长度不能超过16位。");
+			document.formlogin.u_name.focus();
+			return false;
+		}
+		ii=ii+1;
+     }
+	 
+	var u_passwordobj=document.forms["formlogin"].u_password;
+	var reg=/^.{4,16}$/;
+	if(!reg.test(u_passwordobj.value)){
+		alert("抱歉,密码格式不正确.长度应为4～16位之间");
+		u_passwordobj.focus();
+		return false;
+	}
+	
+     return true;
+}
+</script>
+
+ <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/login.asp">用户登录</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV"><div id="LoginDiv">
+      <div id="LoginDiv_Allleft">
+        <div id="LoginDiv_left">
+    	<ul class="login_adv_li">
+        	<li><a href="/services/CloudHost/"><img src="/Template/Tpl_05/newimages/Reg/login_adv_1.gif" width="160" height="70" /></a></li>
+        	<li><a href="/services/vpsserver/"><img src="/Template/Tpl_05/newimages/Reg/login_adv_2.gif" width="160" height="70" /></a></li>
+        	<li style=" padding-right:0px;"><a href="/services/webhosting/sites.asp"><img src="/Template/Tpl_05/newimages/Reg/login_adv_3.gif" width="160" height="70" /></a></li>
+        </ul>
+        
+        </div>
+        <div id="DownTextBox">
+          <ul>
+            <li class="no_li_bg">
+              <h6>专业的网络安全维护</h6>
+              <p>25G高速带宽接入,黑洞防DDOS攻击防火墙7x24小时技术支持</p>
+            </li>
+            <li>
+              <h6>先试用 满意付款</h6>
+              <p>虚拟主机,企业邮局免费7天试用,满意后才付款,免除您的后顾之忧.</p>
+            </li>
+             <li>
+              <h6>7年经营 全国10强</h6>
+              <p>全国10强互联网服务企业，7年经营，40000用户的共同选择！</p>
+             </li>
+         </ul>
+        </div>
+      </div>
+      <div id="LoginDiv_Allright">
+        <div id="LoginDiv_mid">
+          <div id="Login_box_Title">用户登陆</div>
+          <div id="NeedLoginBox">您的操作需要登陆后才能继续</div>
+          <div id="LoginBox">
+		  <FORM name=formlogin onSubmit="return CheckLogin()" action="/chklogin.asp" method=post>
+        <INPUT type=hidden value=enterzone name=module>
+            <ul>
+              <li>
+                <div class="Input_Title">用户名</div>
+                <div class="Input_box">
+                  <input name=u_name type="text" class="inputbox" id="u_name" size="20" maxLength=20 />
+                </div>
+              </li>
+              <li>
+                <div class="Input_Title">密　码</div>
+                <div class="Input_box">
+                  <input name=u_password type="password" class="inputbox" id="u_password"  size="21" maxLength=16  />
+                </div>
+              </li>
+              <li>
+                <div class="Input_CheckBox">
+                  <input name="chkAutoLogin" type="checkbox" id="chkAutoLogin" value="OKAY">
+                  
+                </div>
+                <div class="Input_text">在此计算机上记住密码</div>
+                <div class="Input_button">
+                  <input type="image" src="/Template/Tpl_05/newimages/Reg/LongButton_login.gif" />
+                  
+                </div>
+                <div class="Input_forget RedLink"><a href="/reg/forget.asp">忘记密码?</a></div>
+              </li>
+            </ul>
+            <INPUT type=hidden value=enterzone name=module>
+			<input type="hidden" name="back_path2" value="{HTTP_REFERER}">
+            </FORM>
+          </div>
+          <div id="RegBox"><span class="redColor">还不是{companyname}会员?</span>快捷方便的免费注册，让你立刻尽享{companyname}提供的各项优惠及服务...</div>
+          <div id="newRegBox">{alipaylog}<a href="/reg/"><img src="/Template/Tpl_05/newimages/Reg/Login_Reg_Button.gif" width="151" height="28" /></a></div>
+        </div>
+        <div id="LoginDiv_right"></div>
+      </div>
+    </div>
+    
+  </div>
+
+      
+      
+</div>
+{#bottom.html}
+</body>
+</html>

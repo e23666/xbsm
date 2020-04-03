@@ -1,0 +1,7 @@
+尊敬的{Thisusername},您好
+　　　您在{companyname}申请的VCP已经通过审核。您可通过<a href={companynameurl}>{companynameurl}</a>会员登录处直接登录管理系统，对所属用户进行查看，同时可统计利润，查看相关财务信息等。
+　　　您的域名生效后，你就可以用你的域名来发展业务了，更多内容，请参考：<a href={companynameurl}/agent/>{companynameurl}/agent/</a>
+　　　顺祝
+商琪
+ 　　　{companyname}
+ 　　　{RegmailSendTime}

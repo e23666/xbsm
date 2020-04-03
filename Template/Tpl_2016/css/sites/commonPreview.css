@@ -1,0 +1,158 @@
+/*
+    本页样式为----PC预览、手机预览、样式
+*/
+
+body.min990 {
+    min-width: 1190px;
+}
+
+/*****************公共头部样式 开始*****************/
+.header {
+    padding: 0 150px;
+    height: 56px;
+    background: #313131;
+    font-size: 14px;
+    color: #76b3cc;
+}
+
+.header .header-list li {
+    float: right;
+    height: 56px;
+    line-height: 56px;
+}
+
+/*电脑图标*/
+.header .header-list li .header-icon {
+    margin-right: 6px;
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    background: url("../img/icon.png") no-repeat;
+    vertical-align: middle;
+}
+
+.header .header-list li .pc-icon {
+    background-position: -164px -385px;
+}
+
+.header .header-list li .mobile-icon {
+    width: 14px;
+    height: 25px;
+    background-position: -140px -385px;
+}
+
+/*白色文字*/
+.header .header-list li span {
+    color: #fff;
+}
+
+/*价格颜色*/
+.header .header-list li span[class="font18"] {
+    color: #ffae00;
+}
+
+/*竖线*/
+.header .header-list li .line {
+    display: inline-block;
+    margin: 0 20px;
+    width: 1px;
+    height: 18px;
+    background: #4f4f4f;
+    vertical-align: middle;
+}
+
+/*按钮*/
+.header .header-btn {
+    margin-left: 20px;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    background: #0b90ea;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #e8feff;
+    text-align: center;
+    box-shadow: 0px 3px 0px 0px rgba(0, 96, 158, 0.83);
+}
+
+/*****************公共头部样式 结束*****************/
+
+/*****************手机预览 开始*****************/
+.mobile-content {
+    height: 865px;
+    background: url("../img/template/mobilepreview-bg.png") repeat top left;
+}
+
+/*容器*/
+.mobile-content .mc-box {
+
+}
+
+.mobile-content .mc-box .mc-box-l {
+    float: left;
+    width: 50%;
+    text-align: right;
+    margin-left: 35px;
+    z-index: 1;
+    position: relative;
+}
+
+.mobile-content .mc-box .mc-box-r {
+    float: left;
+    width: 50%;
+    margin-left: -35px;
+    z-index: -1;
+}
+
+/*容器*/
+.mc-box .mc-box-r .mc-inner {
+    margin-top: 170px;
+    padding: 30px 0 40px;
+    width: 328px;
+    background: #fafafa;
+    border: 1px solid #dadada;
+    color: #555;
+    text-align: center;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.16);
+}
+
+.share-icon {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background: url("../img/icon.png") no-repeat !important;
+    vertical-align: middle;
+    /*基于插件构建 重置插件自身添加的相关样式*/
+    float: none !important;
+    padding-left: 0 !important;;
+    margin: auto !important;;
+}
+
+.tx {
+    background-position: 3px -419px !important;;
+}
+
+.sina {
+    background-position: -20px -419px !important;
+}
+
+/*按钮*/
+.mc-box .mc-box-r .mc-inner .mc-btn {
+    margin: 30px auto 0;
+    display: inline-block;
+    width: 246px;
+    height: 46px;
+    line-height: 46px;
+    background: #2086ee;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.mc-box .mc-box-r .mc-inner .mc-btn:hover {
+    background: #1579e0;
+}
+
+/*****************手机预览 结束*****************/

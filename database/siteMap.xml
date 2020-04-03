@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!--下列url里的值全部为小写且一个文件只能写一次,不然不能生效-->
+<siteMap>
+	<siteMapNode url="default.asp" title="首页" description="这里返回首页">
+		<siteMapNode url="error.asp" title="错误" description="" />
+		<siteMapNode url="login.asp" title="登陆" description="" />
+		<siteMapNode url="services/webhosting/default.asp" title="虚拟主机" description="">
+			<siteMapNode url="services/webhosting/twolinevhost.asp" title="双线主机" description="" />
+			<siteMapNode url="services/webhosting/buy.asp" title="主机购买" description="" />
+			<siteMapNode url="services/webhosting/morelinevhost.asp" title="多线主机" description="" />
+			<siteMapNode url="services/webhosting/basic.asp" title="基本主机" description=""/>
+			<siteMapNode url="services/webhosting/commerce.asp" title="商务主机" description=""/>
+			<siteMapNode url="services/webhosting/bbs.asp" title="论坛主机" description=""/>
+			<siteMapNode url="services/webhosting/function.asp" title="功能主机" description=""/>
+			<siteMapNode url="services/webhosting/vip.asp" title="VIP合租主机" description=""/>
+			<siteMapNode url="services/webhosting/superg.asp" title="超G主机" description=""/>
+			<siteMapNode url="services/webhosting/usa.asp" title="美国主机" description=""/>
+			<siteMapNode url="services/webhosting/diysitehost.asp" title="智能建站主机" description=""/>
+			<siteMapNode url="services/webhosting/database.asp" title="数据库" description=""/>
+			<siteMapNode url="services/mssql/buy.asp" title="数据库购买" description=""/>
+			
+		</siteMapNode>
+		<siteMapNode url="services/domain/default.asp" title="域名注册" description="">
+			<siteMapNode url="services/domain/newwhois.asp" title="域名查询" description="">
+				<siteMapNode url="services/domain/dmbuymore.asp" title="域名注册" description=""/>
+			</siteMapNode>
+			<siteMapNode url="services/domain/defaultcn.asp" title="中文域名注册" description="">
+				<siteMapNode url="services/domain/whoiscn.asp" title="中文域名查询" description="" />
+			</siteMapNode>
+			<siteMapNode url="services/domain/dns.asp" title="DNS管理" description="" />
+		</siteMapNode>
+		<siteMapNode url="services/mail/default.asp" title="企业邮局" description="">
+			<siteMapNode url="services/mail/buy.asp" title="邮局购买" description="" />
+		</siteMapNode>
+		<siteMapNode url="services/server/default.asp" title="服务器租用" description="">
+			<siteMapNode url="services/server/order.asp" title="服务器下订单" description="" />
+			<siteMapNode url="services/server/youshi.asp" title="我司优势" description="" />
+			<siteMapNode url="services/trusteehost/default.asp" title="主机托管" description="" />
+		</siteMapNode>
+		<siteMapNode url="agent/default.asp" title="代理专区" description="">
+			<siteMapNode url="agent/liuchen.asp" title="步骤流程" description="" />
+			<siteMapNode url="agent/level.asp" title="代理级别" description="" />
+			<siteMapNode url="agent/youshi.asp" title="代理优势" description="" />
+			<siteMapNode url="agent/apply.asp" title="在线申请" description="" />
+		</siteMapNode>
+		<siteMapNode url="bagshow/orderlist.asp" title="下订单成功" description="" />
+		<siteMapNode url="bagshow/default.asp" title="我的购物车" description="" />
+		<siteMapNode url="status/default.asp" title="交易结果" description="" />
+		<siteMapNode url="reg/default.asp" title="用户注册" description="" />
+		
+		<siteMapNode url="reg/forget.asp" title="密码取回" description=""/>
+		<siteMapNode url="reg/forgetsub.asp" title="密码取回" description=""/>
+		<siteMapNode url="news/list.asp" title="新闻中心" description="" />
+	</siteMapNode>
+	
+</siteMap>

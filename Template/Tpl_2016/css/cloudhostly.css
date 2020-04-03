@@ -1,0 +1,1049 @@
+.banner-bottom {
+	padding: 16px 0
+}
+.banner-bottom .bb_right i {
+	float: left;
+	margin: 0 10px 0 30px;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background: url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat
+}
+.banner-bottom .bb_right .bb-img_1 {
+	background-position: 0 0
+}
+.banner-bottom .bb_right .bb-img_2 {
+	background-position: -110px 0
+}
+.banner-bottom .bb_right .bb-img_3 {
+	background-position: -220px 0
+}
+.banner-bottom .bb_right .bb-img_4 {
+	background-position: -330px 0
+}
+.banner-bottom .bb_right p {
+	color: #666;
+	margin: 0;
+	overflow: hidden
+}
+.banner-bottom li {
+	width: 25%;
+*width:297px;
+	float: left
+}
+
+.host-config .current-config {
+	padding-left: 28px;
+	float: right;
+	width: 252px;
+	text-align: left;
+	-webkit-transition: all .31s;
+	-moz-transition: all .31s;
+	transition: all .31s
+}
+.host-config .current-config-fixed {
+	position: fixed;
+	right: 90px;
+	top: -40px;
+	background-color: #fff
+}
+.host-config .current-config-absolute {
+	position: absolute;
+	bottom: 65px;
+	right: 0;
+	top: auto
+}
+.low-config-tip-visible {
+	opacity: 1;
+	-ms-filter: alpha(opacity=100);
+	filter: alpha(opacity=100)
+}
+.config-box .config-modify {
+	float: left;
+	width: 24px;
+	height: 24px;
+	background: url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat 0 -1618px;
+	cursor: pointer;
+	visibility: hidden
+}
+.config-box .config-minus {
+	margin-right: 6px
+}
+.config-box .config-plus {
+	margin-left: 6px;
+	background-position: -94px -1618px
+}
+.config-box .link-btn {
+	display: inline-block;
+	margin-bottom: 16px;
+	margin-right: 13px;
+	padding: 8px 10px;
+	font-size: 14px;
+	background: #f4f4f4;
+	color: #6a6a6a;
+	cursor: pointer;
+	position: relative
+}
+.config-box .link-btn.active {
+	background: #4a9ced;
+	color: #fff
+}
+.slider {
+	background: #f1f1f1;
+	height: 12px;
+	position: relative;
+	cursor: pointer;
+	border: 5px solid #f1f1f1;
+	width: 600px;
+	float: left;
+	clear: right;
+	border-radius: 15px;
+	margin-top: 2px
+}
+.progress {
+	height: 12px;
+	background-color: #3db514;
+	display: block;
+	border-radius: 15px;
+	width: 0
+}
+.flux-container .progress {
+	background-color: #7dd794
+}
+.handle {
+	background: url(/template/Tpl_2016/images/cloudhost-icon_1.png) repeat-x 0 -208px;
+	height: 46px;
+	width: 41px;
+	top: -15px;
+	position: absolute;
+	display: block;
+	margin-top: 1px;
+	cursor: pointer
+}
+
+.range-desc {
+	margin-top: 10px;
+	padding-left: 30px
+}
+.range-desc li {
+	float: left;
+	padding-left: 15px
+}
+#J_cpuRangeDesc li {
+	width: 98px
+}
+#J_cpuRangeDesc li.last {
+	width: 50px
+}
+#J_ramRangeDesc li {
+	width: 36px
+}
+#J_ramRangeDesc li.last {
+	padding-left: 12px;
+	width: auto;
+	float: left
+}
+#J_dataRangeDesc {
+	width: 670px
+}
+#J_dataRangeDesc li.first {
+	float: left
+}
+#J_dataRangeDesc li.last {
+	float: right;
+	padding-left: 0;
+	padding-right: 64px
+}
+p.system-disk-size-tip {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	top: 32px;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px
+}
+#J_fluxRangeDesc {
+	width: 670px
+}
+#J_fluxRangeDesc li.first {
+	float: left
+}
+#J_fluxRangeDesc li.last {
+	float: right;
+	padding-left: 0;
+	padding-right: 64px
+}
+.config-count {
+	width: 68px;
+	height: 30px;
+	line-height: 30px;
+	background: url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat 0 -309px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 6px;
+	border: 0;
+	visibility: hidden
+}
+.config-count-unit {
+	position: relative;
+	color: #fff;
+	font-size: 14px;
+	margin-left: -26px;
+	zoom: 1;
+	z-index: 10;
+	vertical-align: middle
+}
+.config-box .wjf-ui-select-wrapper {
+	margin-right: 20px
+}
+#systemSubTypeContainer {
+	width: 398px
+}
+#systemSubTypeContainer li.first {
+}
+.icon-type {
+	display: inline-block;
+*display:inline;
+*zoom:1;
+	width: 25px;
+	height: 28px;
+	background-image: url(/template/Tpl_2016/images/cloudhost-icon_2.jpg);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 8px
+}
+.windows {
+	background-position: 2px -181px
+}
+.linux {
+	background-position: 2px -109px
+}
+.selected .windows, .wjf-ui-select-item-hover .windows {
+	background-position: -118px -181px
+}
+.selected .linux, .wjf-ui-select-item-hover .linux {
+	background-position: -118px -109px
+}
+.icon-ver {
+	display: inline-block;
+*display:inline;
+*zoom:1;
+	width: 18px;
+	height: 28px;
+	background-image: url(/template/Tpl_2016/images/cloudhost-icon_2.jpg);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-left: 6px
+}
+.icon-64 {
+	background-position: 1px -676px
+}
+.icon-32 {
+	background-position: 1px -610px
+}
+.selected .icon-64, .wjf-ui-select-item-hover .icon-64 {
+	background-position: -112px -676px
+}
+.selected .icon-32, .wjf-ui-select-item-hover .icon-32 {
+	background-position: -112px -610px
+}
+.room-tip {
+	background-color: #FFC;
+	clear: both;
+	border: 1px solid #FC3;
+	text-align: center;
+	margin-left: 100px;
+	overflow: hidden;
+	margin-right: 100px;
+	position: absolute;
+	z-index: 1;
+	left: 42px;
+	top: 10px;
+	display: none
+}
+#J_roomsContainerDom {
+	padding-left: 100px
+}
+.config-box .link-btn .btn-desc {
+	position: absolute;
+	height: 20px;
+	line-height: 20px;
+	top: -26px;
+	display: block;
+	color: #fff;
+	background-color: #fe7a00;
+	border-radius: 2px;
+	padding-left: 5px;
+	left: -50%;
+	margin-left: -10px;
+	opacity: 0;
+	-ms-filter: alpha(opacity=0);
+	filter: alpha(opacity=0);
+	font-size: 12px;
+	font-family: 'ËÎÌו';
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	white-space: nowrap;
+	display: none \9
+}
+
+
+.linebox1 dd.clearfix label {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 120px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+.linebox1 dd.clearfix label.msg {
+    width: auto;
+    text-align: left;
+    color: #333;
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+.cpu_icon,.ram_icon,.data_icon,.flux_icon {
+    width: 50px;
+    height: 40px;
+    background: url(/images/CloudHost/ebscloud/50.jpg) no-repeat;
+    float: left;
+    display: inline-block;	
+
+	}
+.cpu_icon {
+   	 margin: 0 10px;
+	 background-position: 0px -45px;
+}
+.ram_icon {    
+    margin: 0 10px;
+	 background-position: 0px -85px;
+}
+.data_icon {
+    margin: 0 5px 0 10px;
+	 background-position: 0px -1px;
+}
+.flux_icon {    
+    margin: 0 5px 0 10px;
+	 background-position: 0px -125px;
+}
+.handle {
+    background: url(/template/Tpl_2016/images/cloudhost-icon_1.png) repeat-x 0 -208px;
+    height: 46px;
+    width: 41px;
+    top: -15px;
+    position: absolute;
+    display: block;
+    margin-top: 1px;
+    cursor: pointer;
+}
+.slider {
+    background: #f1f1f1;
+    height: 12px;
+    position: relative;
+    cursor: pointer;
+    border: 5px solid #f1f1f1;
+    width: 650px;
+    float: left;
+    clear: right;
+    border-radius: 15px;
+    margin-top: 2px;
+}
+#cpumsg .slider,#rammsg .slider{
+	width:800px; 
+	margin-bottom:5px;
+}
+a.slider-rightbutton {
+    display: block;
+	width: 24px;
+	height: 24px;
+	background: transparent url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat scroll -94px -1618px;
+    margin: 0 0 0 4px;
+    float: left;
+    cursor: pointer;
+}
+a.slider-leftbutton {
+	width: 24px;
+	height: 24px;
+	background: transparent url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat scroll 0px -1618px;
+    display: block;
+    margin: 3px 4px 0 0;
+    float: left;
+    cursor: pointer;
+}
+.range {
+    float:left;
+	font-weight:bold;
+    margin:0px 5px 0 5px;
+	border:none;
+	width: 68px;
+	height: 30px;
+	line-height: 30px;
+	background: #FFF url(/template/Tpl_2016/images/cloudhost-icon_2.jpg) no-repeat scroll 0px -309px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFF;
+	margin-left: 6px
+
+}
+#ram_range input.range, #cpu_range input.range {
+    display: none;
+}
+
+/*new add*/
+
+.host-config .tx-host .tuijian-config {
+	padding: 50px 0px 0px 0px;display: inline-block
+}
+.host-config .tx-host .tuijian-config input {
+	margin-right:8px;
+	display:inline-block;
+	width:128px;
+	height:38px;
+	line-height:38px;
+	background:#f4f4f4;
+	font-size:14px;
+	text-align:center;
+	border:1px solid #f4f4f4;
+	color:#6a6a6a;
+	cursor: pointer;
+	position:relative
+}
+.host-config .tx-host .tuijian-config input.btn_page_1 {
+	background:#f2ffee;
+	border:1px solid #3db514
+}
+.host-config .tx-host .count-info {
+	padding-bottom:70px
+}
+.host-config .tx-host .count-info .title {
+	margin:30px 40px 0 20px;
+	padding-left:16px;
+	height:30px;
+	line-height:30px;
+	border-left:4px solid #bfe0fc;
+	background:#f0f8fe;
+	font-size:16px;
+	color:#303030
+}
+.host-config .tx-host .count-info .count a {
+	width:24px;
+	height:24px;
+	font-weight:700;
+	background:#fff;
+	font-size:16px;
+	text-align:center;
+	color:#bbb;
+	line-height:24px;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	border:1px solid #e1e1e1;
+	vertical-align:middle
+}
+.host-config .tx-host .count-info .count input {
+	width:48px;
+	text-align:center;
+	color:#ff9600;
+	font-size:16px;
+	height:24px;
+	line-height:24px;
+	border:1px solid #e1e1e1;
+	padding:0;
+	margin:0 -5px
+}
+
+
+@media screen and (max-width:1206px) {
+	.banner-bottom li {
+		*width:247px
+	}
+	.host-config .tx-host .tuijian-config input {
+		width:96px
+	}
+	.config-box .slider {
+		width:413px
+	}
+	#J_cpuRangeDesc li {
+		width:60px
+	}
+	#J_ramRangeDesc li {
+		width:19px
+	}
+	#J_dataRangeDesc {
+		width:474px
+	}
+	#J_dataRangeDesc li.last {
+		padding-right:60px
+	}
+	#J_fluxRangeDesc {
+		width:474px
+	}
+	#J_fluxRangeDesc li.last {
+		padding-right:60px
+	}
+	.config-box .wjf-ui-select-wrapper {
+		margin-right:8px
+	}
+	.config-box .config-service dt {
+		width:138px
+	}
+	.host-config .tx-host .tuijian-config input.active {
+		background-position:67px -1270px
+	}
+	.config-box .config-time .turn-back .btn-desc {
+		right:0;
+		left:auto
+	}
+	.tc-host .taocan-list li.taocan-item {
+		width:329px
+	}
+	.cloud-introduce .honor-list li {
+		padding-right:10px
+	}
+	.cloud-introduce .honor-list .none {
+		display:none
+	}
+	.cc-list .item {
+		width:250px
+	}
+	.cp-pk .cp-info {
+		padding:20px 20px 0
+	}
+	.cloud-advantage .cloud-advantage-list li {
+		width:318px;
+		padding:86px 16px 0 0
+	}
+	.cloud-case .case-box .case-ganyan {
+		text-overflow:ellipsis;
+		white-space:nowrap
+	}
+}
+.desktop {
+}
+.desktop .banner-bottom li {
+	*width:247px
+}
+.desktop .host-config .tx-host .tuijian-config input {
+	width:96px
+}
+.desktop .config-box .slider {
+	width:413px
+}
+.desktop #J_cpuRangeDesc li {
+	width:60px
+}
+.desktop #J_ramRangeDesc li {
+	width:19px
+}
+.desktop #J_dataRangeDesc {
+	width:474px
+}
+.desktop #J_dataRangeDesc li.last {
+	padding-right:60px
+}
+.desktop #J_fluxRangeDesc {
+	width:474px
+}
+.desktop #J_fluxRangeDesc li.last {
+	padding-right:60px
+}
+.desktop .config-box .wjf-ui-select-wrapper {
+	margin-right:8px
+}
+.desktop .config-box .config-service dt {
+	width:138px
+}
+.desktop .host-config .tx-host .tuijian-config input.active {
+	background-position:67px -1270px
+}
+.desktop .config-box .config-time .turn-back .btn-desc {
+	right:0;
+	left:auto
+}
+.desktop .tc-host .taocan-list li.taocan-item {
+	width:329px
+}
+.desktop .cloud-introduce .honor-list li {
+	padding-right:10px
+}
+.desktop .cloud-introduce .honor-list .none {
+	display:none
+}
+.desktop .cc-list .item {
+	width:250px
+}
+.desktop .cp-pk .cp-info {
+	padding:20px 20px 0
+}
+.desktop .cloud-advantage .cloud-advantage-list li {
+	width:318px;
+	padding:86px 16px 0 0
+}
+.desktop .cloud-case .case-box .case-ganyan {
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+div.tb-void {
+	margin:0 auto;
+	border-top:1px solid #E6E6E6;
+	overflow:hidden
+}
+div.tb-void table {
+	border-collapse:collapse;
+	border:solid #E6E6E6;
+	border-width:0 1px 1px;
+	width:100%;
+	margin:0
+}
+div.tb-void th {
+	background:#f7f7f7 url(/newimages/tb-th_2011.gif) 0 bottom repeat-x;
+	height:31px;
+	color:#666;
+	font-weight:400;
+	padding:0
+}
+div.tb-void td {
+	border:solid #E6E6E6;
+	border-width:1px 0 0 1px;
+	padding:5px 4px;
+	text-align:center
+}
+input.textstyle {
+	padding:0 5px;
+	border-radius:3px;
+	font-size:16px;
+	line-height:28px;
+	border:1px solid #999;
+	color:#000;
+	height:28px;
+	letter-spacing:1px
+}
+input.btnstyle {
+	background:#1b75b8;
+	padding:0 20px;
+	border-radius:3px;
+	font-size:14px;
+	line-height:30px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:30px;
+	text-indent:0
+}
+input.btnstyle_up {
+	background:#1b75b8;
+	padding:0 15px;
+	border-radius:3px;
+	font-size:12px;
+	line-height:20px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:20px
+}
+input.textbtn {
+	background:#F30;
+	padding:0 20px;
+	border-radius:3px;
+	font-size:14px;
+	line-height:30px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:30px;
+	text-indent:0
+}
+input.textbtn:hover {
+	background:red
+}
+input.btnstyle:hover {
+	background-color:#06c
+}
+#setebsidbox {
+	margin:5px 10px
+}
+
+.dd-list{position: relative;padding-top: 25px}
+.dd-list .cloud-btn{width: 150px;height: 45px;line-height: 45px}
+.cloud-introduce .cloud-introduce-top {
+	padding-bottom:86px;
+	margin:46px 0 0 15px;
+	background:url(/template/Tpl_2016/images/introduce.jpg) no-repeat left top;
+	border-bottom:1px dashed #ddd
+}
+.cloud-introduce .cloud-introduce-top p {
+	padding-top:32px;
+	padding-left:290px;
+	line-height:24px;
+	text-indent:28px;
+	font-size:14px
+}
+.cloud-introduce .cloud-introduce-middle {
+	margin-top:44px
+}
+.cloud-introduce .cloud-introduce-middle img {
+	max-width:100%;
+	_width:100%
+}
+.cloud-advantage .cloud-advantage-list {
+	margin-bottom:70px
+}
+.cloud-advantage .cloud-advantage-list li {
+	padding:86px 66px 0 0;
+	float:left;
+	width:352px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img {
+	float:left;
+	margin-right:10px;
+	width:98px;
+	height:98px;
+	background:url(/template/Tpl_2016/images/advantage-icon_1.jpg) no-repeat center center
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_1 {
+	background-position:0 0
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_2 {
+	background-position:0 -198px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_3 {
+	background-position:0 -396px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_4 {
+	background-position:0 -594px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_5 {
+	background-position:0 -792px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_6 {
+	background-position:0 -990px
+}
+.cloud-advantage .cloud-advantage-list p {
+	font-size:14px;
+	overflow:hidden
+}
+.cloud-advantage .cloud-advantage-list .cloud-title {
+	padding:6px 0 10px;
+	font-size:18px;
+	line-height:1;
+	font-weight:700
+}
+.cloud-advantage .cloud-advantage-list .cloud-title {
+	padding:6px 0 10px;
+	font-size:18px;
+	line-height:1;
+	font-weight:700
+}
+.cloud-advantage .cloud-advantage-list .cloud_img {
+	float:left;
+	margin-right:10px;
+	width:98px;
+	height:98px;
+	background:url(/template/Tpl_2016/images/advantage-icon_1.jpg) no-repeat center center
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_1 {
+	background-position:0 0
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_2 {
+	background-position:0 -198px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_3 {
+	background-position:0 -396px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_4 {
+	background-position:0 -594px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_5 {
+	background-position:0 -792px
+}
+.cloud-advantage .cloud-advantage-list .cloud_img_6 {
+	background-position:0 -990px
+}
+.cloud-faq {
+	margin-top:26px
+}
+.cloud-faq .faq-list {
+	line-height:1
+}
+.cloud-faq .faq-list dt {
+	padding:30px 0 8px;
+	font-size:16px;
+	color:#3db514
+}
+.cloud-faq .faq-list dd {
+	padding:10px 0 14px;
+	line-height:1.7;
+	font-size:14px;
+	color:#7d7d7d;
+	border-bottom:1px dashed #d3d3d3
+}
+.cloud-faq .faq-list dt span,.cloud-faq .faq-list dd span {
+	float:left;
+	padding-right:10px;
+	font-weight:700
+}
+.cloud-faq .faq-list dt span,.cloud-faq .faq-list dd p {
+	overflow:hidden
+}
+.cloud-faq .faq-btn {
+	display:block;
+	margin:38px auto 30px;
+	width:280px;
+	height:50px;
+	line-height:50px;
+	background:#eee;
+	font-size:14px;
+	color:#7b7b7b;
+	text-align:center
+}
+.cloud-faq .faq-btn:hover {
+	background:#e4e4e4
+}
+
+/*new add end*/
+.z_bubblebox, .z_bubblebox li, .z_bubblebox div {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+}
+.divhengzhelai div {
+    float: left;
+    width: 350px;
+}
+.z_bubblebox, .z_bubblebox li, .z_bubblebox div {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+}
+.otherbox{
+width: 815px; margin: 0;background: #fff;padding: 10px 0 0 0;  border: solid 1px #F8F7F7; box-shadow: 0 0 10px #ccc; padding:10px; line-height:25px;
+}
+
+#rebox{    width: 1000px;margin: 0px auto;}
+
+@media screen and (max-width:1206px) {
+	.banner-bottom li {
+		*width:247px
+	}
+	.host-config .tx-host .tuijian-config a {
+		width:96px
+	}
+	.config-box .slider {
+		width:413px
+	}
+	#J_cpuRangeDesc li {
+		width:60px
+	}
+	#J_ramRangeDesc li {
+		width:19px
+	}
+	#J_dataRangeDesc {
+		width:474px
+	}
+	#J_dataRangeDesc li.last {
+		padding-right:60px
+	}
+	#J_fluxRangeDesc {
+		width:474px
+	}
+	#J_fluxRangeDesc li.last {
+		padding-right:60px
+	}
+	.config-box .wjf-ui-select-wrapper {
+		margin-right:8px
+	}
+	.config-box .config-service dt {
+		width:138px
+	}
+	.host-config .tx-host .tuijian-config a.active {
+		background-position:67px -1270px
+	}
+	.config-box .config-time .turn-back .btn-desc {
+		right:0;
+		left:auto
+	}
+	.tc-host .taocan-list li.taocan-item {
+		width:329px
+	}
+	.cloud-introduce .honor-list li {
+		padding-right:10px
+	}
+	.cloud-introduce .honor-list .none {
+		display:none
+	}
+	.cc-list .item {
+		width:250px
+	}
+	.cp-pk .cp-info {
+		padding:20px 20px 0
+	}
+	.cloud-advantage .cloud-advantage-list li {
+		width:318px;
+		padding:86px 16px 0 0
+	}
+	.cloud-case .case-box .case-ganyan {
+		text-overflow:ellipsis;
+		white-space:nowrap
+	}
+}.desktop {
+ }.desktop .banner-bottom li {
+	  *width:247px
+  }
+.desktop .host-config .tx-host .tuijian-config a {
+	width:96px
+}
+.desktop .config-box .slider {
+	width:413px
+}
+.desktop #J_cpuRangeDesc li {
+	width:60px
+}
+.desktop #J_ramRangeDesc li {
+	width:19px
+}
+.desktop #J_dataRangeDesc {
+	width:474px
+}
+.desktop #J_dataRangeDesc li.last {
+	padding-right:60px
+}
+.desktop #J_fluxRangeDesc {
+	width:474px
+}
+.desktop #J_fluxRangeDesc li.last {
+	padding-right:60px
+}
+.desktop .config-box .wjf-ui-select-wrapper {
+	margin-right:8px
+}
+.desktop .config-box .config-service dt {
+	width:138px
+}
+.desktop .host-config .tx-host .tuijian-config a.active {
+	background-position:67px -1270px
+}
+.desktop .config-box .config-time .turn-back .btn-desc {
+	right:0;
+	left:auto
+}
+.desktop .tc-host .taocan-list li.taocan-item {
+	width:329px
+}
+.desktop .cloud-introduce .honor-list li {
+	padding-right:10px
+}
+.desktop .cloud-introduce .honor-list .none {
+	display:none
+}
+.desktop .cc-list .item {
+	width:250px
+}
+.desktop .cp-pk .cp-info {
+	padding:20px 20px 0
+}
+.desktop .cloud-advantage .cloud-advantage-list li {
+	width:318px;
+	padding:86px 16px 0 0
+}
+.desktop .cloud-case .case-box .case-ganyan {
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+div.tb-void {
+	margin:0 auto;
+	border-top:1px solid #E6E6E6;
+	overflow:hidden
+}
+div.tb-void table {
+	border-collapse:collapse;
+	border:solid #E6E6E6;
+	border-width:0 1px 1px;
+	width:100%;
+	margin:0
+}
+div.tb-void th {
+	background:#f7f7f7 url(/template/Tpl_2016/images/tb-th_2011_1.gif) 0 bottom repeat-x;
+	height:31px;
+	color:#666;
+	font-weight:400;
+	padding:0
+}
+div.tb-void td {
+	border:solid #E6E6E6;
+	border-width:1px 0 0 1px;
+	padding:5px 4px;
+	text-align:center
+}
+input.textstyle {
+	padding:0 5px;
+	border-radius:3px;
+	font-size:16px;
+	line-height:28px;
+	border:1px solid #999;
+	color:#000;
+	height:28px;
+	letter-spacing:1px
+}
+input.btnstyle {
+	background:#1b75b8;
+	padding:0 20px;
+	border-radius:3px;
+	font-size:14px;
+	line-height:30px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:30px;
+	text-indent:0
+}
+input.btnstyle_up {
+	background:#1b75b8;
+	padding:0 15px;
+	border-radius:3px;
+	font-size:12px;
+	line-height:20px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:20px
+}
+input.textbtn {
+	background:#F30;
+	padding:0 20px;
+	border-radius:3px;
+	font-size:14px;
+	line-height:30px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	height:30px;
+	text-indent:0
+}
+input.textbtn:hover {
+	background:red
+}
+input.btnstyle:hover {
+	background-color:#06c
+}
+#setebsidbox {
+	margin:5px 10px
+}

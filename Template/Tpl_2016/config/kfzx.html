@@ -1,0 +1,331 @@
+<!--从腾迅得到qq在线状态-->
+<script language="javascript">
+var iscolse=false;
+var thisSeeHeiht=((document.documentElement.clientHeight==0)?document.body.clientHeight:document.documentElement.clientHeight);
+var isotherhide=((thisSeeHeiht>400)?false:true);
+String.prototype.Trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+function dolookmenu(v){
+	if(v=="close"){
+		document.getElementById("kfbox").style.display="none";
+	}else if(v=="xiao"){
+		iscolse=true;
+		closeed();
+	}
+}
+function getsendQQstr(qqarrlist){
+	var qqstring="";
+	for(var j=0;j<qqarrlist.length;j++){
+		if(qqarrlist.length>=1)
+			var qqarritem=qqarrlist[j][1];
+		else
+			continue;
+		var qqnewarr=qqarritem.split("|");
+		for(var jj=0;jj<qqnewarr.length;jj++){
+			if(qqnewarr[jj].indexOf(",")>=0){
+				var qqnewarr1=qqnewarr[jj].split(",");
+				if(qqnewarr1.length>=2){
+					if(!isNaN(qqnewarr1[0])){	
+						qqstring = qqstring + qqnewarr1[0].toString().Trim() + ":";
+					}
+				}
+			}
+		}
+		
+	}
+	return qqstring;
+}
+function newlistArr(QQlistArr,onlineArr){
+	var QQindex=0;
+	var newQQlist=new Array();
+	for (var i=0;i<QQlistArr.length;i++ ){			
+		var itemtitle=QQlistArr[i][0].Trim();
+		var itemlist=QQlistArr[i][1].split("|");		
+		for (var j=0;j<itemlist.length ;j++ ){
+			itemlist[j] +="," + onlineArr[QQindex].toString().Trim();
+			QQindex++;
+		}
+		newQQlist[i]=new Array(itemtitle,itemlist.join("|"));
+	}
+	return newQQlist;
+}
+function resetArr(userArr){
+	userArr.sort(function(){return Math.random()>0.5?-1:1;});
+	userArr.sort(function(a,b){return a.indexOf(",1")==-1?1:-1;});
+	return userArr;
+}
+	
+	var QQlist=new Array();
+	QQlist[0]=new Array("售前咨询",
+	"800019263,企业QQ,4");//第一组
+	QQlist[1]=new Array("售后客服",	
+	"800019263,企业QQ,5");
+	QQlist[2]=new Array("<span title='绵阳电信机房技术支持18981116101'>机房客服</span>",	
+	"1024537353,段燕平,");
+	QQlist[3]=new Array("<span title='负责独立主机和VPS技术支持'>VPS客服</span>",	
+	"1187079926,李玉林,236|"+
+	"1142739808,张东超,242");
+	QQlist[4]=new Array("<span title='备案、财务、信息安全等'>专项客服</span>",
+	"1411766081,备 案,272|"+
+	"1306102751,安 全,202|"+
+	"1309890865,域 名,204|"+
+	"499513144,渠 道,208|"+
+	"635483282,财 务,224|"+
+	"643955288,合 作,228|"+
+	"330522678,发 票,223|"+
+	"241975952,投 诉,209");
+	var online=new Array();
+	document.write("<sc" + "ript src=\"/config/getQQonline.asp?QQstr="+ getsendQQstr(QQlist) +"\"></scr" + "ipt>");
+	var cur=0;
+</script>
+<!--在线状态结束-->
+<div class="kfbox" id="kfbox" onmouseover="javascript:show()" onmouseout="javascript:dopar=setTimeout(function(){closeed()},800)">
+	<div class="kfhead">
+                 <img src="/Template/Tpl_05/newimages/kfmune/qq_11.gif" class="log" id="qqtitlelog" onclick="javascript:dolookmenu('xiao')" />
+                <img src="/Template/Tpl_05/newimages/kfmune/qq_06.gif" class="xiao" id="qqxiao" onclick="javascript:dolookmenu('xiao')" />
+                <img src="/Template/Tpl_05/newimages/kfmune/qq_08.gif" class="close" id="qqclose" onclick="javascript:dolookmenu('close')" />
+    <!--<img border="0" src="/Template/Tpl_05/newimages/kfmune/index_bot2_01.gif" />-->
+    </div>
+    <div class="kfmain" id="kfmain">
+	<div class="kfcontent" id="kfcontent">
+        		<script language=javascript>
+				var newQQlist=newlistArr(QQlist,online);
+				for (var i=0;i<newQQlist.length;i++ )
+				{
+						var title=newQQlist[i][0].Trim();
+						var itemlist=newQQlist[i][1].split("|");
+						var echostr="<div class=\"kfitemtitle\" onClick=\"showandhide("+ i +")\"><img src=/newimages/kfmune/boot.jpg style='margin:5px auto'>&nbsp;&nbsp;&nbsp;&nbsp;"+ title + "</div>";
+							
+								if(i==0 || i==1)
+									echostr+="<div id=\"k"+ i +"\" class=\"kfitem\"><ul>";
+								else
+									echostr+="<div id=\"k"+ i +"\" class=\"kfitem\" style=\"display:none\"><ul>";
+						for (var j=0;j<itemlist.length ;j++ )
+						{
+				
+						   var qqitem=itemlist[j];
+						   if(qqitem.indexOf(",")>=0){
+						   	  var qqitemArr=qqitem.split(",");
+							  if(qqitemArr.length>=2){
+							  	   var qqnum=qqitemArr[0].Trim();
+								   var qqname=qqitemArr[1].Trim();
+								   var qqtel=qqitemArr[2].Trim();
+								   var qqstart=qqitemArr[3].Trim();
+								   if(qqtel!="")
+								   		qqtel="(<img src='/newimages/kfmune/tel1.gif' border=0><a href='#'><span class=\"titletel\"><img src='/newimages/kfmune/tel2.gif' border=0>&nbsp;电话:<br>028-86263960-<b>"+ qqtel +"</b></span>"+ qqtel +"</a>)"
+								    if(i==-1)
+										var qqnamestr="<a href=\"/dialog_1.htm\" target=\"_blank\">"+ qqname + "<span class=\"title\"><img src='/newimages/kfmune/tokf.png' style=\"margin:2px\" border=0>&nbsp;进入在线交谈<br></span></a>"
+									else
+										var qqnamestr="<a target='_blank'  href='tencent://message/?uin="+ qqnum +"&Site={companyname}&Menu=yes'>" + qqname + "<span class=\"title\"><img src='/newimages/kfmune/tokf.png' style=\"margin:2px\" border=0><br>&nbsp;QQ:<b>"+ qqnum +"</b><br>请加为好友再交谈</span></a>"
+								   if(isNaN(qqnum)) 
+								   	  continue;
+									if(qqstart.toString()=="0"){
+								    //if (online[cur]==0){
+										echostr +="<li class=\"QQoffline\">&nbsp;&nbsp;<a target='_blank' href='/customercenter/subquestion.asp'><img src=\"/Template/Tpl_05/newimages/kfmune/QQoffline.gif\">&nbsp;&nbsp;"+ qqname + "<span class=\"title\">QQ不在线<br>请提交有问必答</span></a>" + qqtel + "</li>";
+									}else{
+										echostr +="<li class=\"QQonline\">&nbsp;&nbsp;<a target='_blank'  href='tencent://message/?uin="+ qqnum +"&Site={companyname}&Menu=yes'><img src=\"/Template/Tpl_05/newimages/kfmune/QQonline.gif\" ><span class=\"title\"><img src='/newimages/kfmune/tokf.png' style=\"margin:2px;\" border=0>&nbsp;QQ:<b>"+ qqnum +"</b><br>请加为好友再交谈</span></a>&nbsp;&nbsp;"+ qqnamestr + qqtel + "</li>";
+									}
+									cur++;
+							   }
+							}
+						}
+					
+                echostr +="</ul></div>";
+				document.write(echostr);
+			}
+			</script>
+        </div>
+        <div id="kfmenu" class="kfmenu" onclick="javascript:show()"><img src="/Template/Tpl_05/newimages/kfmune/menu_on.gif" border="0" id="kfmenuimg" onclick="javascript:dolookmenu('xiao')" /></div>
+      <div class="kf53button">
+        
+        <a href="/customercenter/subquestion.asp" target="_blank" ><img border="0" src="/Template/Tpl_05/newimages/kfmune/qq3.gif" />
+        <span class="title">
+        抱歉.客服不在线，<br />请提交有问必答。<br />
+        
+        <img src="/Template/Tpl_05/newimages/kfmune/tel.gif" />紧急问题请联系电话:<br />
+        028-86263960-<b>5</b><br />
+        028-86262244-<b>5</b>
+        
+        </span>
+        </a>
+   </div>
+	</div>
+    <div class="kffoot"><img border="0" src="/Template/Tpl_05/newimages/kfmune/index_bot2_04.gif" /></div>
+</div>
+<script language="javascript"> 
+function showandhide(ii) {
+	var alli=4;//总项数,以0开始
+	for(var c=0;c<=alli;c++){
+		var doobj=document.getElementById("k"+c);
+		doobj.style.display="none";
+	}
+		if(isotherhide){
+			document.getElementById("k"+ii).style.display="";
+		}else if(ii==1 || ii==0){
+			document.getElementById("k"+1).style.display="";
+			document.getElementById("k"+0).style.display="";
+		}else{
+			document.getElementById("k"+ii).style.display="";
+		}
+}
+ 
+var tips; 
+var theTop = 186;
+var old = theTop;
+var prox;
+var proy;
+var proxc;
+var proyc;
+var dopar;
+var dropmsg;
+var movetop=80;//设定上移多少px '180
+var ismovetop=true;
+var objbox=document.getElementById("kfbox");
+var objmenuimg=document.getElementById("kfmenuimg");
+var objcontent=document.getElementById("kfcontent");
+var objboxmain=document.getElementById("kfmain");
+var objkfmenu=document.getElementById("kfmenu");
+//objkfmenu.style.height=isotherhide?"310px":"465px";
+//var kfboxh=isotherhide?380:530;//parseInt(objboxmain.offsetHeight);
+objkfmenu.style.height="310px";
+var kfboxh=380;
+var kfboxh1=kfboxh;
+
+objboxmain.style.height="210px";
+function initFloatTips() 
+{ 
+	tips = document.getElementById('kfbox');
+	moveTips();
+}
+ 
+function moveTips()
+{
+		clearTimeout(dropmsg);
+	 	  var tt=50; 
+		  if (window.innerHeight) 
+		  {
+			  pos = window.pageYOffset  
+		  }else if (document.documentElement && document.documentElement.scrollTop) {
+			 pos = document.documentElement.scrollTop  
+		  }else if (document.body) {
+		    pos = document.body.scrollTop;  
+		  }
+		  
+		  pos=pos-tips.offsetTop+theTop; 
+		  pos=tips.offsetTop+pos/5; 
+		  if (pos < theTop){
+			 pos = theTop;
+		  }
+		  if (pos != old) { 
+			 tips.style.top = pos+"px";
+			 tt=10; 
+		  }
+		  old = pos;
+		  dropmsg=setTimeout(moveTips,tt);
+}
+initFloatTips();
+
+function show(){
+	if(iscolse)
+		return;
+	clearInterval(prox);
+	clearInterval(proy);
+	clearInterval(proxc);
+	clearInterval(proyc);
+	clearTimeout(dopar);
+	
+	objmenuimg.src="/Template/Tpl_05/newimages/kfmune/menu_off.gif";
+	prox = setInterval(function(){openx(objbox,150)},10);
+}
+function openx(o,x){//横起打开
+	var cx = parseInt(o.offsetWidth);
+	if(cx < x)
+	{
+		o.style.width = (cx + Math.ceil((x-cx)/2)) +"px";
+	}
+	else
+	{
+		if(ismovetop){
+			var thistop=objbox.offsetTop;
+			//objbox.style.top=(thistop - movetop)+"px";
+			theTop=theTop-movetop;
+			ismovetop=false;
+			objcontent.style.display="block";
+			document.getElementById("qqtitlelog").style.display="";
+			document.getElementById("qqxiao").style.display="";	
+		}
+		clearInterval(prox);
+		
+		proy = setInterval(function(){openy(objboxmain,kfboxh)},10);
+	}
+
+} 
+function openy(o,y){
+	var cy = parseInt(o.offsetHeight);
+	if(cy < y)
+	{
+		o.style.height = (cy + Math.ceil((y-cy)/1)) +"px";
+	}
+	else
+	{
+		
+		clearInterval(proy);	
+		
+		return;
+	}
+}
+function closeed(){
+		clearInterval(prox);
+		clearInterval(proy);
+		clearInterval(proxc);
+		clearInterval(proyc);
+		clearTimeout(dopar);
+		proyc = setInterval(function(){closey(objbox)},10);			
+}	
+function closey(o){
+		if(kfboxh1 > 210)
+		{
+			kfboxh1 = kfboxh1-Math.ceil(kfboxh1/10);
+			
+			objboxmain.style.height =kfboxh1  +"px";
+		}
+		else
+		{
+			clearInterval(proyc);
+			kfboxh1=kfboxh;
+			//objcontent.style.width=0;
+			objcontent.style.display="none";
+				document.getElementById("qqtitlelog").style.display="none";
+				document.getElementById("qqxiao").style.display="none";	
+			proxc = setInterval(function(){closex(o)},10);
+			
+		}
+}
+function closex(o){
+		var cx = parseInt(o.offsetWidth);
+		if(cx>25)
+		{
+			o.style.width = (cx - Math.ceil(cx/10)) +"px";
+		}else{
+			if(!ismovetop){
+				var thistop=objbox.offsetTop;
+				theTop=theTop+movetop;
+				ismovetop=true;
+			}
+			clearInterval(proxc);
+			objmenuimg.src="/Template/Tpl_05/newimages/kfmune/menu_on.gif";
+			iscolse=false;
+			return;
+		}
+}
+
+</script>
+
+
+
+<script>document.write("<scr"+"ipt language=\"javascript\" src=\"http://www.53kf.com/kf.php?arg=west263&style=1&keyword="+escape(document.referrer)+"\"></scr"+"ipt>");</script>
+
+
+</div>

@@ -1,0 +1,438 @@
+/*
+    本页样式为----成品网站超市--价格页
+*/
+
+.see-more-config{
+    display: inline-block;
+    padding: 10px 100px;
+    background: #fff;
+    border: 1px solid #2086ee;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #2086ee;
+}
+.see-more-config:hover{
+    background: #2086ee;
+    color: #fff;
+    transition: all .2s cubic-bezier(0.4,0,.2,1) 0s;
+}
+
+.price-content {
+    padding-bottom: 40px;
+}
+
+/*banner*/
+.banner {
+    height: 362px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/***************tab 开始***************/
+.price-tab {
+    background: #efefef;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+/*tab公共样式重置*/
+.site-tab {
+    border: 0;
+}
+
+.site-tab li {
+    width: 33.333333333%;
+    height: 66px;
+    line-height: 66px;
+    box-sizing: border-box;
+    margin-left: 0;
+    border: 0;
+}
+
+/*激活*/
+.site-tab li.active {
+    margin-left: 0;
+}
+
+.disable-change .type {
+    cursor: not-allowed;
+}
+
+.disable-change .active {
+    cursor: pointer;
+}
+
+/***************tab 结束***************/
+
+/***************表格样式 开始***************/
+.price-table {
+    padding-top: 50px;
+}
+
+.table-info {
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    /*table-layout: fixed;*/
+    text-align: center;
+}
+
+.table-info .price-select {
+    width: 160px;
+}
+
+/*表头*/
+.table-info tr th {
+    padding-bottom: 16px;
+    background: #f8f8f8;
+    font-size: 16px;
+    color: #fff;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+}
+
+.table-info tr th h3 {
+    padding: 20px 0 4px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/*基础版*/
+.table-info tr th.jc {
+    background: #21ab00;
+    border-bottom: 12px solid #1f9403;
+    border-right-color: #21ab00;
+}
+
+/*标准版*/
+.table-info tr th.bz {
+    background: #036ac1;
+    border-bottom: 12px solid #036ac1;
+    border-right-color: #1f9403;
+}
+
+/*营销版*/
+.table-info tr th.yx {
+    background: #19b0d0;
+    border-bottom: 12px solid #1898b3;
+    border-right-color: #19b0d0;
+}
+/*营销版*/
+.table-info tr th.zz {
+    background: #f78800;
+    border-bottom: 12px solid #e07b00;
+    border-right-color: #f78800;
+}
+/*表头hover效果*/
+.table-info tr th {
+    position: relative;
+}
+
+.table-info tr th.active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    top: -15px;
+    border-right: 1px solid red;
+    left: -1px;
+    padding-right: 1px;
+}
+
+.table-info tr th.active::before {
+    height: 15px;
+}
+
+.table-info tr .active.jc::before {
+    background: #21ab00;
+    border-color: #21ab00;
+}
+
+.table-info tr .active.bz::before {
+    background: #036ac1;
+    border-color: #036ac1;
+}
+
+.table-info tr .active.yx::before {
+    background: #19b0d0;
+    border-color: #19b0d0;
+}
+.table-info tr .active.zz::before {
+    background: #f78800;
+    border-color: #f78800;
+}
+/*表头左侧空白单元格*/
+.table-info tr th.empty {
+    border: 1px solid #e9e9e9;
+    border-right: 1px solid #21ab00;
+}
+
+/*tbody区域样式开始*/
+.table-info tr td {
+    height: 56px;
+    border-top: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    font-size: 12px;
+    color: #3b3b3b;
+}
+
+/*左侧信息*/
+.table-info tr td.left {
+    width: 18%;
+    background: #f8f8f8;
+    border: 1px solid #e9e9e9;
+    font-size: 14px;
+    color: #202020;
+}
+
+.table-info tr td.prev {
+    border-right: 1px solid #036ac1;
+}
+
+/*线路*/
+.table-info tr td .ti-room {
+    height: 32px;
+    line-height: 32px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.table-info tr td .ti-room span {
+    margin-right: 10px;
+    color: #747474;
+    cursor: pointer;
+}
+
+.table-info tr td .ti-room span.active {
+    color: #1e78e7;
+    font-weight: bold;
+    border: none;
+}
+
+/*价格*/
+.table-info tr td .ti-price {
+    position: relative;
+}
+
+.table-info tr td .ti-price span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff5f20;
+}
+
+.table-info tr td .ti-price .original-price {
+    font-size: 14px;
+    color: #ff5f20;
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-weight: normal;
+}
+ 
+/*隔行变色*/
+.table-info tr:nth-child(2n) {
+    background: #f4faff;
+}
+
+/*图标*/
+.table-info tr .icon {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background: url('/template/Tpl_2016/images/sites/icon.png') -25px -120px;
+    vertical-align: middle;
+}
+
+.table-info tr .blue-link {
+    font-family: '宋体';
+}
+
+/*优惠信息*/
+.table-info tr .activity-link {
+    margin-top: 10px;
+}
+
+.table-info tr .activity-link::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat -113px -311px;
+    vertical-align: bottom;
+    position: relative;
+    left: -4px;
+}
+
+.table-info tr .activity-link a {
+    font-size: 12px;
+    color: #ff3030;
+}
+
+.table-info tr .activity-link a:hover {
+    text-decoration: underline;
+}
+
+/*td hover效果选中*/
+.table-info tr td.active {
+    border-left: 1px solid #036ac1;
+    border-right: 1px solid #036ac1;
+}
+
+.table-info tr td.active.last {
+    position: relative;
+}
+
+.table-info tr td.active.last p {
+    margin-left: -1px;
+    width: 100%;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #036ac1;
+    border-top: 0;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+/*购买按钮*/
+.table-info tr .btn {
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    background: #2086ee;
+    border-radius: 0;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+/*向上启用*/
+.buy_limit_ulti tr .pro-btn {
+    background-color: #e0e0e0;
+    color: #999;
+}
+
+/*商业版  禁用 pro ulti*/
+.buy_limit_shop tr .pro-btn,
+.buy_limit_shop tr .ulti-btn {
+    background-color: #e0e0e0;
+    color: #999;
+}
+
+.disable-change .table-info tr .btn {
+    background-color: #e0e0e0;
+    color: #999;
+}
+
+/***************表格样式 结束***************/
+
+/*弹窗*/
+.zz-wrap-tpl{
+    text-align: center;
+}
+.zz-wrap-tpl .zz-list{
+
+}
+.zz-list li{
+    margin-bottom: 20px;
+    font-size: 0;
+}
+.zz-list li.li-temp{
+
+}
+.zz-list li.li-temp .zzl-box{
+    margin: 0 50px;
+    display: inline-block;
+    position: relative;
+}
+.zz-list li.li-temp .zzl-icon{
+    margin: 0 auto;
+    padding-top: 16px;
+    display: block;
+    width: 94px;
+    height: 68px;
+    background: #fffff9;
+    border: 1px solid #f3ab4e;
+    box-sizing: border-box;
+    text-align: center;
+}
+.zz-list li.li-temp .zzl-box:nth-of-type(2) .zzl-icon{
+    background: #effffd;
+    border: 1px solid #2ae6e8;
+}
+.zz-list li.li-temp .zzl-icon i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sites-icon-new.png") no-repeat -94px -45px #fff;
+    position: absolute;
+    top: -10px;
+    right: -6px;
+    display: none;
+}
+.zz-list li.li-temp .zzl-icon.active i{
+    display: block;
+}
+.zz-list li.li-temp .zzl-icon em{
+    display: inline-block;
+    background: url("../img/sites-icon-new.png") no-repeat;
+}
+.zz-list li.li-temp .zzl-icon em.zzl-icon-em1{
+    width: 40px;
+    height: 37px;
+    background-position: 0px -45px;
+}
+.zz-list li.li-temp .zzl-icon em.zzl-icon-em2{
+    width: 34px;
+    height: 35px;
+    background-position: -50px -45px;
+}
+
+.zz-list li.li-temp .zzl-title{
+    padding-top: 4px;
+    font-size: 16px;
+    color: #333;
+}
+.zz-list li.li-temp p{
+    font-size: 16px;
+    color: #c5c4c4;
+}
+.zz-list li .zzl-left{
+    display: inline-block;
+    font-size: 16px;
+    color: #666666;
+    vertical-align: top;
+}
+.zz-list li .zzl-right{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.zz-list li .zzl-right label{
+    font-size: 16px;
+    color: #666666;
+    vertical-align: middle;
+}
+.zz-list li .zzl-right label span{
+    font-size: 18px;
+    color: #ff5f20;
+}
+
+.zz-wrap-btn{
+    width: 140px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.r-width-sel {
+    vertical-align: text-bottom;
+    width: 140px;
+    margin-top: 0;
+    !important: ;
+}
+.l-width-sel {
+    vertical-align: text-bottom;
+    width: 80px;
+}

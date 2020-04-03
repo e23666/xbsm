@@ -1,0 +1,116 @@
+
+HR {
+	color: #CCCCCC;
+	height: 1;
+	border: 1px dashed;
+}
+IMG { border: 0}
+
+A:LINK {
+	color: #003399;
+	text-decoration: none;
+}
+A:VISITED { color: #003399; text-decoration: none}
+A:HOVER { color: #FF9900; text-decoration: underline}
+
+
+.titlebar-top {
+}
+
+td {
+	font-size: 12px;
+}
+
+.content {
+	padding: 10px;
+}
+.tab-on {
+	padding: 2px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	cursor: pointer;
+	color: #000000;
+	background-color: #FFFFFF;
+	width: 120px;
+}
+.tab-off {
+	padding: 2px;
+	background-color: #F6F6F6;
+	color: #666666;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px none #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	cursor: pointer;
+	width: 120px;
+}
+.tab-none {
+	padding: 2px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.tab-content {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	vertical-align: top;
+	background-color: #FFFFFF;
+	padding: 5px;
+
+
+}
+
+.text_note_yellow {
+	color: #FF8800;
+}
+.td_heading {
+	padding: 3px 3px 3px 10px;
+	color: #999999;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.hide-table {
+	display: none
+	}
+.show-table {
+	display: block
+	}

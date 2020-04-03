@@ -1,0 +1,187 @@
+{
+    "config": [
+     {
+		"id": 38,
+		"name": "点餐多门店",
+		"proid": "xcx_dcdmd"
+     },
+     {
+		"id": 37,
+		"name": "名片",
+		"proid": "xcx_mpyy"
+     },
+     {
+		"id": 36,
+		"name": "签到",
+		"proid": "xcx_qdyy"
+	},
+     {
+		"id": 35,
+		"name": "投票应用",
+		"proid": "xcx_tpyy"
+	},
+	 {
+		"id": 34,
+		"name": "答题",
+		"proid": "xcx_dtyy"
+	},
+	{
+		"id": 33,
+		"name": "福袋管理",
+		"proid": "xcx_fdyy"
+	},
+	 {
+		"id": 32,
+		"name": "砍价",
+		"proid": "xcx_kjyy"
+	},
+	 {
+		"id": 31,
+		"name": "房产中介",
+		"proid": "xcx_fczj"
+	},
+	 {
+		"id": 30,
+		"name": "预约专家版",
+		"proid": "xcx_yyzjb"
+	},
+	 {
+		"id": 29,
+		"name": "拼车应用",
+		"proid": "xcx_pcyy"
+	},
+	{
+		"id": 28,
+		"name": "商家入驻",
+		"proid": "xcx_sjrz"
+	},
+	{
+		"id": 27,
+		"name": "预约基础版",
+		"proid": "xcx_yyfw"
+	},
+	{
+		"id": 23,
+		"name": "万能表单",
+		"proid": "xcx_wnbd"
+	},	
+	{
+	    "id": 22,
+	    "name": "幸运砸金蛋",
+	    "proid": "xcx_zjd"
+	},
+	{
+	    "id": 21,
+	    "name": "幸运大抽奖",
+	    "proid": "xcx_xycj"
+	},
+	{
+	    "id": 20,
+	    "name": "储值卡",
+	    "proid": "xcx_czk"
+	},
+	{
+	    "id": 17,
+	    "name": "推广员",
+	    "proid": "xcx_tgy"
+	},
+	{
+	    "id": 16,
+	    "name": "微站",
+	    "proid": ""
+	},
+	{
+	    "id": 15,
+	    "name": "去除版权",
+	    "proid": ""
+	},
+	{
+	    "id": 14,
+	    "name": "同城生活",
+	    "proid": "xcx_tcyy"
+	},
+	{
+	    "id": 13,
+	    "name": "微信支付",
+	    "proid": ""
+	},
+	{
+	    "id": 12,
+	    "name": "酒店预定",
+	    "proid": "xcx_jdyd"
+	},
+	{
+	    "id": 11,
+	    "name": "点餐外卖",
+	    "proid": "xcx_dcyy"
+	},
+	{
+	    "id": 9,
+	    "name": "自定义logo",
+	    "proid": ""
+	},
+	{
+	    "id": 8,
+	    "name": "商城",
+	    "proid": "xcx_scyy"
+	},
+	{
+	    "id": 7,
+	    "name": "知识付费",
+	    "proid": "xcx_ktyy"
+	},
+	{
+	    "id": 4,
+	    "name": "相册",
+	    "proid": "xcx_xcyy"
+	},
+	{
+	    "id": 3,
+	    "name": "内容资讯",
+	    "proid": "xcx_nryy"
+	},
+	{
+	    "id": 2,
+	    "name": "社群",
+	    "proid": "xcx_sqyy"
+	},
+	{
+	    "id": 1,
+	    "name": "活动票务",
+	    "proid": "xcx_hdyy"
+	}
+    ],
+    "package": [
+	{
+	    "proid": "xcx_jcb",
+	    "name": "基础版小程序",
+	    "product_ids": "16,15,9"
+	},
+	{
+	    "proid": "xcx_zsl",
+	    "name": "展示类小程序",
+	    "product_ids": "16,15,9,3"
+	},
+	{
+	    "proid": "xcx_yd",
+	    "name": "票务.活动.预定",
+	    "product_ids": "20,16,15,9,1"
+	},
+	{
+	    "proid": "xcx_dc",
+	    "name": "点餐小程序",
+	    "product_ids": "20,16,15,11,9"
+	},
+	{
+	    "proid": "xcx_ds",
+	    "name": "电商小程序",
+	    "product_ids": "20,17,16,15,9,8"
+	}
+	,
+	{
+	    "proid": "xcx_zzyy",
+	    "name": "在线预约",
+	    "product_ids": "27,16,15,9"
+	}
+    ]
+}

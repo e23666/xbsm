@@ -1,0 +1,51 @@
+.linebox dt{
+	font-size:14px; color:#06c;
+	font-weight:bold;
+	width:auto;
+}
+.linebox dd{
+	border-bottom:1px dotted #ccc;
+	width:auto;
+}
+.linebox label{
+	display:block;
+	float:left;
+	width:400px;
+	margin:0; padding:0;
+	height:25px; line-height:25px;
+}
+.linebox label.title{
+	font-size:14px;
+	text-align:right;
+	font-weight:bold;
+	width:150px;
+}
+.linebox select{
+	display:block;
+	float:left;
+	width:200px;
+	margin-top:3px;
+}
+.linebox .buttonmsg{
+	display:block;
+	float:none;
+	margin:5px auto;
+	text-align:center;
+	border-bottom:none;
+	clear:both;
+}
+.linebox .buttonmsg input{
+	display:inline;
+	float:none;
+	margin-top:3px;
+}
+.price {
+	FONT-FAMILY:Arial;
+	font-weight:bold;
+	COLOR:#F60;
+	FONT-SIZE: 16px
+}
+div.tb-void { margin:0 auto; border-top:1px solid #E6E6E6; overflow:hidden; }
+div.tb-void table { border-collapse:collapse; border:solid #E6E6E6; border-width:0 1px 1px 1px; width:100%; margin:0 }
+div.tb-void th { background:#f7f7f7 url(/images/tb-th_2011.gif) repeat-x; height:31px; color:#666666; font-weight:normal; padding:0 }
+div.tb-void td { border:solid #E6E6E6; border-width:1px 0 0 1px; padding:5px 4px; text-align:center

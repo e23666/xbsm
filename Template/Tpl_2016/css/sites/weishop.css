@@ -1,0 +1,167 @@
+/*
+    本页样式为----成品网站超市--微小店
+*/
+
+/*banner*/
+.banner {
+    height: 440px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+/*下滑小图标*/
+.banner .banner-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat -254px -363px;
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    margin-left: -22px;
+}
+/******************微小店 基于微信的店家管理系统 开始******************/
+.weishop-part1 {
+    padding: 60px 0 50px;
+    background: url("/template/Tpl_2016/images/sites/weishop/weishop-bg.png") no-repeat bottom center;
+}
+/*容器*/
+.weishop-part1 .wp-box{
+    margin-top: 20px;
+    background: url("/template/Tpl_2016/images/sites/weishop/weishop-img.png") no-repeat left top;
+}
+/************微小店选购************/
+.wp-box-buy{
+    float: right;
+    margin-right: 10px;
+    width: 308px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+/*小标题*/
+.wp-box-buy .wb-title{
+    padding: 26px 0 16px;
+    background: #2086ee;
+    font-size: 24px;
+    color: #fff;
+}
+/*价格*/
+.wp-box-buy .wb-price{
+    padding: 8px 0 10px;
+    background: #f4fbff;
+    border-bottom: 1px solid #d8d8d8;
+}
+/*下拉框*/
+
+/*机房*/
+.wp-box-buy .wb-jf{
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px solid #d8d8d8;
+    text-align: left;
+}
+.wp-box-buy .wb-jf label{
+    padding-right: 20px;
+    font-size: 14px;
+    color: #272626;
+}
+/*配置信息*/
+.wp-box-buy .wb-config{
+    padding: 10px 0 30px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.wp-box-buy .wb-config li{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #272626;
+    text-align: left;
+}
+
+/*图标*/
+.wp-box-buy .wb-config .wb-icon{
+    margin-right: 10px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat -104px -142px;
+    vertical-align: middle;
+}
+/*按钮*/
+.wp-box-buy .wb-btn{
+    padding: 15px 0;
+    background: #f6f6f6;
+}
+.wp-box-buy .wb-btn a{
+    display: inline-block;
+    width: 196px;
+    height: 42px;
+    line-height: 42px;
+    background: #2086ee;
+    font-size: 16px;
+    color: #fff;
+}
+/************微小店选购 结束************/
+.wp-box .wp-txt{
+    float: right;
+    margin-top: 120px;
+    margin-right: 70px;
+    width: 310px;
+    line-height: 34px;
+    font-size: 18px;
+    color: #2d2d2d;
+}
+.wp-box .wp-txt span{
+    font-family: '微软雅黑 Light';
+    font-size: 80px;
+    color: #b2b2b2;
+}
+.wp-box .wp-txt p {
+    margin-top: -28px;
+    text-align: center;
+}
+/******************微小店 基于微信的店家管理系统 结束******************/
+
+/******************文字在左 图片在右 开始******************/
+.weishop-left{
+    padding-top: 40px;
+    padding-left: 40px;
+    min-height: 460px;
+    background: url("/template/Tpl_2016/images/sites/weishop/weishop-bg1.png") no-repeat bottom right;
+}
+/*标题公共样式重置*/
+.weishop-left .common-title h3{
+    background: #f9f9f9;
+}
+/*标题*/
+.ws-title{
+    padding-top: 100px;
+    font-size: 30px;
+    color: #178aff;
+}
+/*文字*/
+.ws-txt{
+    padding-top: 10px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #181818;
+}
+/******************文字在左 图片在右 结束******************/
+
+/******************文字在右 图片在左 开始******************/
+.weishop-right{
+    padding-bottom: 60px;
+    height: 440px;
+    background: url("/template/Tpl_2016/images/sites/weishop/weishop-bg2.png") no-repeat left 20px;
+}
+/*标题*/
+.weishop-right .ws-title{
+    padding-top: 180px;
+    padding-left: 700px;
+}
+.weishop-right .ws-txt{
+    padding-left: 700px;
+}
+
+/******************文字在右 图片在左 结束******************/

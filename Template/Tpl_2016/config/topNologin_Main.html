@@ -1,0 +1,30 @@
+	  <script language="JavaScript">
+	  function checkLogin()
+	  {
+	  	if(myform.u_name.value=="")
+		{
+			alert("用户名不能为空！");
+			myform.u_name.focus();
+			return false;
+		}
+	  	if(myform.u_password.value=="")
+		{
+			alert("密码不能为空！");
+			myform.u_password.focus();
+			return false;
+		}
+	  }
+	  </script>
+	  <table border="0" cellspacing="0" cellpadding="3">
+        <form name="myform" action="/chklogin.asp" method="post" onSubmit="return checkLogin()">
+          <tr> 
+            <td nowrap>用户名:</td>
+            <td nowrap><input name="u_name" type="text" class="inputbox" size="16"></td>
+            <td nowrap>密　码: </td>
+            <td nowrap><input name="u_password" type="password" class="inputbox" size="16"></td>
+            <td nowrap><input type="submit" class="ButtonBox" value="登 陆" width="80" height="21" border="0" /></td>
+            <td nowrap><input type="button" name="button" id="button" value="注 册" class="ButtonBox" onclick="javascript:location.href='/reg.asp'" /></td>
+            <td nowrap><a href="/reg/forget.asp"><font color="#CC0000">忘记密码？</font></a></td>
+          </tr>
+        </form>
+      </table>

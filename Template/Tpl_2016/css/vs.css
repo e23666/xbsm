@@ -1,0 +1,207 @@
+@charset "gb2312";
+/* CSS Document */
+
+.vsfont{ color:#b40000; font-size:16px;}
+.vstable{padding:0 20px 0 20px; }
+
+.vstable table {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	background:#FFF;
+}
+.vstable table tr th {
+	
+	
+	border:1px #d5d5d5 solid;
+	color:#3d3d3d; font-size:16px; text-align:center;
+}
+.vstable table tr td {
+	vertical-align:top;
+      padding:10px;
+	border:1px #d5d5d5 solid;
+	color:#666;
+}
+.vstitle{ background:url(/newimages/CloudHost/table-title2.jpg) repeat-x; height:39px; line-height:39px;}
+.vstable table tr th.vscloud{ background:#c40000 url(/newimages/CloudHost/table-title.jpg) repeat-x; height:39px; border:none; color:#fff; width:200px;}
+.vscen{ text-align:center; font-weight:bold; width:60px;}
+.vstable table tr td.vsyun{ color:#b40000; width:200px; background:#f4f4f4;}
+.vsbtn{ margin:10px 10px 10px 100px; display:inline-block; float:left;}
+
+#Link_msg a{
+color: #069;
+text-decoration: underline;}
+#Link_msg a:hover{
+
+text-decoration: none;}
+
+ 
+.vstable { padding:0 20px 0 20px; }
+.vstable table { width:100%; margin:auto; border-collapse:collapse; background:#FFF; }
+.vstable table tr th { border:1px #d5d5d5 solid; color:#3d3d3d; font-size:16px; text-align:center; }
+.vstable table tr td { vertical-align:top; padding:10px; border:1px #d5d5d5 solid; color:#666; }
+.vstitle { background:url(/newimages/CloudHost/table-title2.jpg) repeat-x; height:39px; line-height:39px; }
+.vstable table tr th.vscloud { background:url(/newimages/CloudHost/table-title.jpg) repeat-x; height:39px; border:none; color:#fff; width: 230px; }
+.vscen { text-align:center; font-weight:bold; width:60px; }
+.vscen2 {  width:150px; }
+.vstable table tr td.vsyun { color:#00659e; width:200px; background:#f4f4f4; }
+.vsbtn { margin: 10px 10px 10px 280px; display:inline-block; float:left; }
+.vs{font-size: 80px;line-height:80px;
+color: #ff6000;}
+.vs_center{ padding-top:140px;}
+.vslist{ padding:20px 0; overflow:hidden; zoom:1;}
+.vslist p{ text-align:center; font-size:14px;}
+.marginbottom{ margin-bottom:40px;}
+
+
+
+
+
+#Link_msg a { color: #069; text-decoration: underline; }
+#Link_msg a:hover { text-decoration: none; }
+.whybanner { width: 977px; padding: 0px; margin: auto; height:236px; overflow: hidden; }
+.whytd, .whycus, .chanpin { padding:0 20px 15px 20px; overflow:hidden; zoom:1; }
+.whytd p { padding:50px 0px 0 25px; _padding-top:53px; *padding-top:53px; text-align: left;
+display:block; width:240px; color:#3a3a3a; }
+.whyone { float:left; display:inline-block; margin:0 5px 5px 0; background:url(/newimages/CloudHost/whyicon.jpg) no-repeat left top; width:451px; height:142px; }
+.whytwo { float:left; display:inline-block; margin:0 0px 5px 5px; background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -451px top; width:451px; height:142px; }
+.whythree { float:left; display:inline-block; margin:5px 5px 5px 0; background:url(/newimages/CloudHost/whyicon.jpg) no-repeat left -142px; width:451px; height:142px; }
+.whyfour { float:left; display:inline-block; margin:5px 0px 5px 5px; background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -451px -142px; width:451px; height:142px; }
+.whycusl { float:left; padding-right:30px; }
+.whycusr { float:left; width:485px; }
+.custitle { background:url(/newimages/CloudHost/titlebg.jpg) repeat-x left bottom; height:25px; }
+.custitle h1 { font-size:16px; color:#1e7bb4; margin-bottom:0; height:25px; padding-bottom:0px; width:100px; /*border-bottom:2px solid #ffa800; _margin-top:2px; _height:26px;*/ background:url(/newimages/CloudHost/titlebg1.jpg) repeat-x left bottom; }
+.cusyoushi { padding-top:10px; overflow:hidden; zoom:1; }
+.ysl { float:left; padding-right:20px; width:226px; }
+.ysr,.leftimg,.float { float:left; }
+.imgl { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -80px -284px; width:52px; height:53px; float:left; }
+.imgl2 { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -132px -284px; width:52px; height:53px; float:left; }
+.imgl3 { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -184px -284px; width:52px; height:53px; float:left; }
+.imgl4 { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -236px -284px; width:52px; height:53px; float:left; }
+.imgl5 { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -288px -284px; width:52px; height:53px; float:left; }
+.imgl6 { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -340px -284px; width:52px; height:53px; float:left; }
+.ysfont { color:#0087d0; font-weight:bold; padding-bottom:5px; padding-top:5px; }
+.wzr { float:left; padding-left:10px; }
+.cptitle { background:url(/newimages/CloudHost/titlebg.jpg) repeat-x; background-position:bottom; width:913px; height:34px; _height:32px; }
+.xhosting { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -87px -342px; width:87px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#666; font-weight:bold; font-family:"ËÎÌו"; display:inline-block; margin-right:5px; cursor:pointer; }
+.thosting { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -87px -342px; width:87px; height:34px; line-height:34px; text-align:center; font-size:16px; color:#666; font-weight:bold; font-family:"ËÎÌו"; display:inline-block; margin-right:5px; cursor:pointer; }
+.cloudbg { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat left -342px; color:#1e7bb4; }
+.more { text-align:right; margin-left:500px; }
+.more a { color:#1e7bb4; }
+.cplist { padding:15px 10px 0 0; float:left; overflow:hidden; zoom:1; }
+.cplist p { line-height:0.7em; }
+.cplist .cptop { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -174px -363px; height:6px; width:295px; overflow:hidden; zoom:1; }
+.cplist .cpbom { background:url(/newimages/CloudHost/whyicon.jpg) no-repeat -174px -369px; height:7px; width:295px; }
+.cplist .cpmain { background:url(/newimages/CloudHost/mainbg.jpg) repeat-y; width:280px; overflow:hidden; padding-left:15px; padding-top:5px; }
+.cplist .cpmain h1 { padding:0; margin:0; color:#1e7bb4; font-size:14px; }
+.wbtn { display:inline-block; background:url(/newimages/CloudHost/whyicon.jpg) no-repeat left -284px; width:80px; height:27px; margin:0px 0 0 50px; }
+.redColor2 { color:red; font-size:24px; font-weight:bold; }
+.wdisplay, .wdisplay2 { display:none; }
+.dis { display:block; }
+.wlist { clear:both; overflow:hidden; zoom:1; }
+.vstableA { margin:10px 0; }
+.vs_infoBox { padding:20px 80px; line-height:26px; }
+.BigFont { font-size: 18px; font-weight: bold; width: auto; }
+
+
+.waitingDiv{  margin: 20px auto; text-align:center;}
+.zongping_div { padding:10px; border:solid 1px #ddd; background:#f7f7f7; margin:0 15px 15px 15px; margin-bottom:30px;}
+.div_line_3{ height:1px; margin:25px 8px; background:#ddd;}
+
+#CloudList002 {
+display: none;
+}
+
+
+.selectform{ padding-left:15px; padding-top:20px; position:relative;  width:750px;  }
+
+
+.nav_unitive { height: 30px; background: url(/images/Cloudhost/navbg00.gif) 0px 0px repeat-x; }
+.nav_unitive ul { list-style-type: none; }
+.nav_unitive ul li { list-style-type: none; height: 24px; float: left; padding: 6px 0 0 0; text-align: center; width: 120px; margin-right: 2px; display:inline; }
+.normal { background: url(/images/Cloudhost/navbg00.gif) no-repeat 0px -80px; color: #666; font-size: 14px; font-weight: bold; color: #333; padding: 8px 10px 0 10px; cursor:pointer; }
+.active { background: url(/images/Cloudhost/navbg00.gif) no-repeat 0 -110px!important; color:#069; font-size: 14px; font-weight: bold; }
+.vps_lable_css_a { overflow:hidden; height:auto;padding:0px 1px 3px 1px; border:solid 1px #ddd; border-top:none; margin:0 8px; }
+.waitingDiv{  margin: 20px auto; text-align:center;}
+.cloud_border{
+overflow: hidden;
+zoom:1;
+height: auto;
+
+border: solid 1px #ddd;
+border-top: none;
+padding:32px 0 10px 0;
+}
+
+.sel_youshi li{	
+overflow:hidden;
+zoom:1;
+padding: 0px 10px 40px 20px;
+	}
+	.sel_youshi img {
+float: left;
+padding-right: 25px;
+}
+
+.jieshao img {
+float: left;
+padding-left: 25px;}
+
+
+.vstable table tr th.vscloud {
+background: url(/images/CloudHost/table-title.jpg) repeat-x;
+height: 39px;
+border: none;
+color: #fff;
+width: 230px;
+}
+.whyone { float:left; display:inline-block; margin:0 5px 5px 0; background:url(/images/CloudHost/whyicon.jpg) no-repeat left top; width:451px; height:142px; }
+.whytwo { float:left; display:inline-block; margin:0 0px 5px 5px; background:url(/images/CloudHost/whyicon.jpg) no-repeat -451px top; width:451px; height:142px; }
+.whythree { float:left; display:inline-block; margin:5px 5px 5px 0; background:url(/images/CloudHost/whyicon.jpg) no-repeat left -142px; width:451px; height:142px; }
+.whyfour { float:left; display:inline-block; margin:5px 0px 5px 5px; background:url(/images/CloudHost/whyicon.jpg) no-repeat -451px -142px; width:451px; height:142px; }
+.whycusl { float:left; padding-right:30px; }
+.whycusr { float:left; width:485px; }
+
+h1.vsfont {
+color: #00659e;
+font-size: 20px;
+line-height: 22px;
+border-bottom: 1px solid #ddd;
+margin: 15px 0;
+overflow: hidden;
+zoom: 1;
+clear: both;
+}
+h1 {
+margin: 0;
+padding: 0;
+color: #333;
+padding-bottom: 10px;
+}
+H1 {
+MARGIN-BOTTOM: 12px;
+FONT-SIZE: 14px;
+FONT-WEIGHT: bold;
+}
+user agent stylesheeth1 {
+display: block;
+font-size: 2em;
+-webkit-margin-before: 0.67em;
+-webkit-margin-after: 0.67em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+
+
+.ys_icon1{background:url(/images/CloudHost/cloudall.jpg) no-repeat -458px 0px; width:44px; height:40px; margin-right:25px; display:inline-block;}
+.ys_icon2{background:url(/images/CloudHost/cloudall.jpg) no-repeat -504px 0px; width:47px; height:32px; margin-right:25px; display:inline-block; margin-top:5px;  }
+.ys_icon3{background:url(/images/CloudHost/cloudall.jpg) no-repeat -552px 0px; width:50px; height:35px; margin-right:25px; display:inline-block;  }
+.ys_icon4{background:url(/images/CloudHost/cloudall.jpg) no-repeat -604px 0px; width:46px; height:45px; margin-right:25px; display:inline-block; }
+.ys_icon5{background:url(/images/CloudHost/cloudall.jpg) no-repeat -652px 0px; width:44px; height:45px; margin-right:25px; display:inline-block; }
+.ys_icon6{background:url(/images/CloudHost/cloudall.jpg) no-repeat -696px 0px; width:48px; height:33px; margin-right:25px; display:inline-block; }
+
+.rightword {
+width: 320px;
+float: left;
+}

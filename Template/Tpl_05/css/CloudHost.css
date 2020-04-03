@@ -1,0 +1,191 @@
+#MainRight #Server_Top_Info {
+	height:222px;
+	margin-top:10px;
+}
+#Server_Top_Info .ImgDiv_to_Left {
+	background:url(/template/Tpl_05/newimages/CloudHost/CloudHost_pic.jpg) no-repeat 0px 10px;
+	height:220px;
+	width:320px;
+}
+.ImgDiv_to_Left #speed_test {
+	height:27px;
+	width:114px;
+	margin-left:160px;
+	margin-top:150px;
+}
+#Server_Top_Info #cloud_title_pic {
+	background:url(/template/Tpl_05/newimages/CloudHost/Cloud_host_Title.jpg) no-repeat;
+	width:267px;
+	height:59px;
+	float:left;
+}
+#Server_Top_Info #link_list {
+	float:left;
+	width:345px;
+	padding-left:25px
+}
+#link_list ul {
+	list-style-type:decimal-leading-zero;
+}
+#link_list ul li {
+	margin-top:6px;
+}
+#MainRight #Cloud_List_Box {
+	margin:20px 10px;
+	overflow:hidden;
+	
+}
+#Cloud_List_Box ul li {
+	width:348px;
+	height:auto;
+	overflow:hidden;
+	background:url(/template/Tpl_04/newimages/CloudHost/Cloud_host_list_bg.jpg) no-repeat;
+	float:left;
+	margin-left:5px;
+	margin-bottom:20px;
+	display:block;
+	border:solid 1px #d1d1d1;
+}
+li .Li_Title {
+	margin:10px 0 0 15px;
+	color:#C00;
+	font-size:16px;
+	font-weight:bold;
+}
+li .Li_PIC_d {
+	height:101px;
+}
+
+li .Li_PIC_e {
+	background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_pic_.gif) no-repeat;
+	height:86px;
+	width:195px;
+	margin:15px 0 0 10px ;
+	float:left;
+}
+li .Li_Content {
+	margin:15px 0 0 15px;
+	height:auto;
+	overflow:hidden;
+}
+li .Li_Content .aal {
+	float:left;
+	font-weight:bold;
+	color:#C00;
+	width:96px;
+	margin-bottom:5px;
+	text-align:right;
+}
+li .Li_Content .ccl {
+	float:left;
+	width:220px;
+	margin-bottom:5px;
+	margin-left:10px;
+}
+li .Li_PIC_d .button_a {
+	height:24px;
+	width:84px;
+	float:left;
+	margin:30px 0 0 30px ;
+}
+li .Li_PIC_d .button_b {
+	height:24px;
+	width:84px;
+	float:left;
+	margin:10px 0 0 30px ;
+}
+li .Li_Content .ppl {
+	float:left;
+	width:318px;
+	margin-top:15px;
+	margin-left:10px;
+}
+#MainRight #Cloud_Content_Box {
+	width:733px;
+	margin:auto;
+	margin-top:15px;
+	background:url(/template/Tpl_05/newimages/CloudHost/Cloud_host_info_bg.jpg) no-repeat;
+	padding:16px 0 0 17px;
+}
+#Server_Top_Info .ImgDiv_to_Left #Link_msg {
+	margin-top:20px;
+	width:275px;
+	text-align:right;
+}
+
+.cloudleftpic_title { margin-left:15px; width:152px; }
+.cloudleftpic_list { width:171px; margin-left:15px; margin:13px 0 13px 15px; overflow:hidden; }
+.cloudleftpic_list_Pic { margin-bottom:5px; width:152px; }
+.cloudleftpic_list_ul { display:block; overflow:hidden; }
+.cloudleftpic_list_ul li { display:block; overflow:hidden; background:url(/template/Tpl_05/newimages/CloudHost/redpoint.jpg) no-repeat 4px; padding-left:12px; margin:2px 0; }
+.line_a { width:171px; margin-left:15px; background:url(/template/Tpl_05/newimages/CloudHost/chosi_re_bg.gif); display:block; height:1px; }
+
+.CloudRighticos { width:750px; overflow:hidden; height:auto; margin-top:10px; }
+.CloudRighticos ul { display:block; overflow:hidden; height:auto; }
+.CloudRighticos ul li { float:left; height:88px; width:107px; display:block; }
+.CloudRighticos ul span { display:block; padding-left:9px; }
+.Tab_xing_a { background:url(/template/Tpl_05/newimages/CloudHost/xing_tab_a.jpg) no-repeat; width:375px; height:72px; }
+.Tab_xing_b { background:url(/template/Tpl_05/newimages/CloudHost/xing_tab_b.jpg) no-repeat; width:375px; height:72px; }
+.Tab_teng_a { background:url(/template/Tpl_05/newimages/CloudHost/teng_tab_a.jpg) no-repeat; width:375px; height:72px; }
+.Tab_teng_b { background:url(/template/Tpl_05/newimages/CloudHost/teng_tab_b.jpg) no-repeat; width:375px; height:72px; }
+
+
+.CloudRightMain { display:block; overflow:hidden; background:url(/template/Tpl_05/newimages/CloudHost/box_bg.jpg); margin-top:8px; width:750px; }
+.CloudRightMainSelectMenu ul { display:block; width:750px; overflow:hidden; height:72px; }
+.CloudRightMainSelectMenu ul li { display:block; width:375px; float:left; }
+
+.line_a { width:171px; margin-left:15px; background:url(/template/Tpl_05/newimages/CloudHost/chosi_re_bg.gif); display:block; height:1px; }
+.CloudRightMainbuttom { }
+.CloudinfoBox { width:740px; margin:10px 5px; overflow:hidden; zoom:1; }
+.CloudinfoBox p { display:block; margin:5px 10px 0 23px; letter-spacing:2px; padding-left:30px; }
+.noA { background:url(/template/Tpl_05/newimages/CloudHost/cloudhost_no_01.jpg) no-repeat 0 4px; }
+.noB { background:url(/template/Tpl_05/newimages/CloudHost/cloudhost_no_02.jpg) no-repeat 0 4px; }
+.line_b_b { width:651px; margin-left:53px; display:block; height:1px; background:#dbdbdb; margin-top:10px; margin-bottom:10px; }
+.whyuseus { width:705px; text-align:right; margin-top:3px; }
+.CloudProBox { width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox3 {  width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox4 { width:356px; float:left; margin:5px; overflow:hidden; }
+.CloudProBox_title { /*margin-left:134px;*/ font-size:18px; padding-top:14px; color:#a40000; font-weight:bold; font-family:"Î¢ÈíÑÅºÚ";background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_top.jpg) no-repeat; height:45px; text-align:center; text-indent:20px;  }
+.ProListinfoList {background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_bg.jpg) repeat-y;width:346px;   padding:12px 0 0 10px; height:auto; overflow:hidden; }
+.ProListinfoList .aal { float:left; font-weight:bold; color:#000; width:70px; margin-bottom:0px; text-align:right; }
+.ProListinfoList .ccl { float:left; width:246px; margin-bottom:0px; margin-left:10px; }
+.ProListinfoList .ppl { float:left; width:325px; margin-top:10px; margin-left:5px; text-align:right; }
+ .ppl2{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_bottom.jpg) no-repeat; height:89px;}
+  .ppl3{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_bottom3.jpg) no-repeat; height:89px;}
+    .ppl4{ clear:both; padding-top:10px; text-align:right; padding-right:20px;background:url(/template/Tpl_05/newimages/CloudHost/cloud_list_bottom2.jpg) no-repeat; height:89px;}
+.CloudRightMainMid { width:730px; margin:auto; }
+.CloudRightMain { display:block; overflow:hidden; background:url(/template/Tpl_05/newimages/CloudHost/box_bg.jpg); margin-top:8px; width:750px; }
+#WebHost .webhostTitle { margin:13px 0px 0px 10px; height:39px; }
+#chy_box li { float:left; width:92px; cursor:pointer; padding-top:10px; margin-bottom:10px; }
+.zhizhiul { display:block; overflow:hidden; }
+.zhizhiul li { float:left; display:block; padding:1px; margin:35px 12px 35px 14px; border:solid 1px #666666; }
+
+.cloud_text_info { display:block; margin:5px 10px 0 23px; letter-spacing:2px; padding-left:30px; overflow:hidden; height:auto; }
+.lefPic_a { float:left; margin-right:30px; }
+.bottomInfoText { display:block; overflow:hidden; }
+.bottomInfoTextli { float:left; display:block; padding:1px; margin:0 12px 0 0px; }
+.cloudleftpic_list_b { width:200px; margin:0 0 13px 0; overflow:hidden; }
+.cuscase { border-bottom:1px dashed #c8c8c8; overflow:hidden; zoom:1; padding:10px 0px; margin-left:30px; }
+.left_img, .right_word { float:left; color:#000; }
+.left_img { border:1px solid #e5e5e5; }
+.right_word { width:560px; padding-left:10px; }
+.user_js { color:#828181; }
+.right_word strong { color:#000; }
+.partnerlist { padding:10px 0; }
+.partnerlist a { display:inline-block; margin-right:10px; }
+.ftitle{  text-indent:25px; padding-left:30px;}
+.xingbg{ background:url(/template/Tpl_05/newimages/CloudHost/cloudhost2top.jpg) no-repeat; width:750px; height:72px; }
+
+
+
+.vstable { padding:0 20px 0 20px; }
+.vstable table { width:100%; margin:auto; border-collapse:collapse; background:#FFF; }
+.vstable table tr th { border:1px #d5d5d5 solid; color:#3d3d3d; font-size:16px; text-align:center; }
+.vstable table tr td { vertical-align:top; padding:10px; border:1px #d5d5d5 solid; color:#666; }
+.vstitle { background:url(/newimages/CloudHost/table-title2.jpg) repeat-x; height:39px; line-height:39px; }
+.vstable table tr th.vscloud { background:url(/newimages/CloudHost/table-title.jpg) repeat-x; height:39px; border:none; color:#fff; width: 230px; }
+
+.rightword {
+width: 320px;
+float: left;
+}

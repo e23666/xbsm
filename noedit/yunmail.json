@@ -1,0 +1,64 @@
+{
+    "seting": {
+        "trytempdisk": "10",
+        "postsize": "0",
+        "minmailcount": "5",
+        "maxmsg": "80",
+        "tempdisk": "10",
+        "disksize": "5",
+        "freedisksize": "0.1",
+        "sharedisk": "1",
+        "maxmailcount": "5000",
+        "trypostsize": "0",
+        "freesharedisk": "0.5",
+        "tryday": "30",
+        "freetempdisk": "1",
+        "trydisksize": "5",
+        "freepostsize": "5",
+        "freepricedis": "0.5"
+    },
+    "price": [
+        {
+            "price12": "100",
+            "beginnum": "5",
+            "price1": "10",
+            "price3": "30",
+            "state": "1"
+        },
+        {
+            "price12": "90",
+            "beginnum": "30",
+            "price1": "9",
+            "price3": "27",
+            "state": "1"
+        },
+        {
+            "price12": "80",
+            "beginnum": "50",
+            "price1": "8",
+            "price3": "24",
+            "state": "1"
+        },
+        {
+            "price12": "70",
+            "beginnum": "100",
+            "price1": "7",
+            "price3": "21",
+            "state": "1"
+        },
+        {
+            "price12": "60",
+            "beginnum": "200",
+            "price1": "6",
+            "price3": "18",
+            "state": "1"
+        },
+        {
+            "price12": "50",
+            "beginnum": "1000",
+            "price1": "5",
+            "price3": "15",
+            "state": "1"
+        }
+    ]
+}

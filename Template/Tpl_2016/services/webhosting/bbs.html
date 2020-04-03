@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>论坛空间租用论坛主机租用论坛虚拟主机论坛主页空间</title>
+    <META http-equiv="Refresh" content="0; url=/services/webhosting/">
+<meta name="description" content="{companyname}-专业提供论坛空间租用论坛主机租用论坛虚拟主机论坛主页空间.200M虚拟主机200元,国际域名80元.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="论坛空间租用,虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/webhosting-common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+</head>
+<body class="min990">
+{#top.html}
+
+<div id="content">
+    <div class="content">
+        <div class="wide1190">
+            <!--选择主机-->
+            <div class="select-webhost">
+                <dl class="cl">
+                    <dt>主机类型：</dt>
+                    <dd><a href="/services/webhosting/basic.asp" >基本型主机</a></dd>
+                    <dd><a href="/services/webhosting/twolinevhost.asp">双线主机</a></dd>
+                    <dd><a href="/services/webhosting/morelinevhost.asp">多线主机</a></dd>
+                    <dd><a href="/services/webhosting/hostlist.asp">集群主机</a></dd>
+                    <dd><a href="/services/webhosting/twhost.asp">香港主机</a></dd>
+                    <dd><a href="/services/webhosting/usa.asp">美国主机</a></dd>
+                    <dd><a href="/services/webhosting/asp_net.asp" class="select-active">ASP.NET主机</a></dd>
+                    <dd><a href="/services/webhosting/linux_host.asp">Linux主机</a></dd>
+                    <dd><a href="/services/webhosting/superg.asp">超G型主机</a></dd>
+                </dl>
+                <dl class="mt-10 cl">
+                    <dt>数据库产品：</dt>
+                    <dd><a href="/services/webhosting/database.asp" >Mysql数据库/MSSQL数据库</a></dd>
+                </dl>
+            </div>
+            <!--选择主机end-->
+
+            <!--主机介绍 开始-->
+            <div class="content-title basic-title mt-20">
+                <h1>论坛型虚拟主机</h1>
+                <p class="pt-20">
+                    支持个人及企业开设的各式论坛，稳定、快速！
+                    分作八款不同类型的空间
+                    支持PHP、CGI、ASP 支持动网、雷傲、VBB、DISCUSZ等各类论坛。
+                    环球数码233联手phpwind推出的特别授权主机，集我司多年虚拟主机服务、管理经验及Phpwind的强大功能于一身，管理方便，功能强大，预装Phpwind，强强联合，必将给论坛用户带来全新的体验。支持PHP、Mysql、电信、网通机房任选 、千M防火墙、不限IIS连接数、全自动数据恢复..
+                </p>
+
+
+            </div>
+            <!--主机介绍 结束-->
+            <!--tab切换 开始-->
+            <div class="webhosting-tab">
+                <ul class="webhosting-tab-list cl" id="J_webhostingTabContainer">
+                    <li class="active">
+                        <a href="javascript:void(0);" class="active" data-target="J_tab_1">主机配置</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="javascript:void(0);" data-target="J_tab_2">环境配置</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="javascript:void(0);" data-target="J_tab_3">控制面板功能</a>
+                    </li>
+                    <li class="" style="margin-right: 0;">
+                        <a class="" href="javascript:void(0);" data-target="J_tab_4">安全及售后</a>
+                    </li>
+                </ul>
+            </div>
+            <!--tab切换 结束-->
+            <!--表格 开始-->
+            <!--主机配置 开始-->
+            <div class="wjf-ui-tab-content webhosting-server active" id="J_tab_1">
+                <div class="webhosting-info">
+                    <!-- data-tableindex 用于区分表格  直接使用table对象作为key存在bug -->
+                    <table class="webhosting-table" data-tableindex="1">
+                        <thead>
+                        <tr>
+                            <th class="left">产品名称</th>
+                            <th>入门型论坛</th>
+                            <th>小型论坛</th>
+                            <th>中型论坛A</th>
+                            <th>中型论坛B</th>
+                            <th>大型论坛</th>
+                            <th>巨型论坛</th>
+                            <th>LinuxC</th>
+                            <th>LinuxD</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="left">价格</td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B007)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B007" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B008)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B008" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B009)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B009" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B010)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B010" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B011)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B011" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B014)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B014" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B032)}</span>元/年
+                                </p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B032" target="_blank">立即购买</a>
+                            </td>
+                            <td>
+                                <p class="info-price">
+                                    <span>{Price(B033)}</span>元/年</p>
+                                <a class="info-btn" href="/services/webhosting/buy.asp?productid=B033" target="_blank">立即购买</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">网页空间</td>
+                            <td>200M</td>
+                            <td>400M</td>
+                            <td>500M</td>
+                            <td>1G</td>
+                            <td>2G</td>
+                            <td>500M</td>
+                            <td>1G</td>
+                            <td>3G</td>
+                        </tr>
+                        <tr>
+                            <td class="left">产品编号</td>
+                            <td>a001</td>
+                            <td>b019</td>
+                            <td>b020</td>
+                            <td>a023</td>
+                            <td>a024</td>
+                            <td>B061</td>
+                            <td>B064</td>
+                            <td>B066</td>
+                        </tr>
+                        <tr>
+                            <td class="left">单月流量</td>
+                            <td>20G</td>
+                            <td>30G</td>
+                            <td>50G</td>
+                            <td>75G</td>
+                            <td>125G</td>
+                            <td>30G</td>
+                            <td>40G</td>
+                            <td>60G</td>
+                        </tr>
+                        <tr>
+                            <td class="left"><a class="blue-link" href="/services/webhosting/dirbind.asp">可开子网站数</a></td>
+                            <td>
+                                <i class="info-icon no"></i>
+                            </td>
+                            <td>
+                                <i class="info-icon no"></i>
+                            </td>
+                            <td>1个</td>
+                            <td>2个</td>
+                            <td>4个</td>
+                            <td>
+                                <i class="info-icon no"></i>
+                            </td>
+                            <td>2个</td>
+                            <td>4个</td>
+                        </tr>
+                        <tr>
+                            <td class="left">MSSQL数据库</td>
+                            <td>50M</td>
+                            <td>50M</td>
+                            <td>50M</td>
+                            <td>100M</td>
+                            <td>200M</td>
+                            <td>50M</td>
+                            <td>100M</td>
+                            <td>200M</td>
+                        </tr>
+                        <tr>
+                            <td class="left">mysql数据库</td>
+                            <td>50M</td>
+                            <td>50M</td>
+                            <td>50M</td>
+                            <td>100M</td>
+                            <td>200M</td>
+                            <td>50M</td>
+                            <td>100M</td>
+                            <td>200M</td>
+                        </tr>
+                        <tr>
+                            <td class="left">赠送邮箱容量</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                            <td>500M</td>
+                        </tr>
+                        <tr>
+                            <td class="left">邮箱用户数量</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                            <td>5个</td>
+                        </tr>
+                        <tr>
+                            <td class="left">并发连接数</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                            <td>不限</td>
+                        </tr>
+                        <tr>
+                            <td class="left">绑定域名</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                            <td>15个</td>
+                        </tr>
+                        <tr>
+                            <td class="left">机房线路</td>
+                            <td>国内电信/联通</td>
+                            <td>国内电信/联通</td>
+                            <td>国内电信/联通</td>
+                            <td>多线机房</td>
+                            <td>多线机房</td>
+                            <td>双线机房</td>
+                            <td>双线机房</td>
+                            <td>双线机房</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table style="left: 141px; width: 132px;" class="high-light-table"><tbody><tr><th>ASP.NET入门型</th></tr><tr><td>
+                        <p class="info-price">
+                            <span>248</span>元/年</p>
+                        <a class="info-btn" href="/services/webhosting/buy.asp?productid=a001" target="_blank">立即购买</a>
+                    </td></tr><tr><td>200M</td></tr><tr><td>a001</td></tr><tr><td>20G</td></tr><tr><td>
+                        <i class="info-icon no"></i>
+                    </td></tr><tr><td>50M</td></tr><tr><td>50M</td></tr><tr><td>500M</td></tr><tr><td>5个</td></tr><tr><td>不限</td></tr><tr><td>15个</td></tr><tr class="last-row"><td>国内电信/联通</td></tr></tbody></table>
+                </div>
+            </div>
+            <!--主机配置 结束-->
+            <!--环境配置 开始-->
+            <div class="wjf-ui-tab-content webhosting-hj" id="J_tab_2">
+                <div class="webhosting-info">
+                    <table class="webhosting-table" data-tableindex="2">
+                        <thead>
+                        <tr>
+                            <th class="left">产品名称</th>
+                            <th>ASP.NET入门型</th>
+                            <th>
+                                ASP.NET I型
+                            </th>
+                            <th>ASP.NET商用型</th>
+                            <th>ASP.NET II型</th>
+                            <th>ASP.NET豪华型</th>
+                            <th>双线企业型</th>
+                            <th>双线商务型</th>
+                            <th>双线超值型</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="left">产品编号</td>
+                            <td>a001</td>
+                            <td>b019</td>
+                            <td>b020</td>
+                            <td>a023</td>
+                            <td>a024</td>
+                            <td>B061</td>
+                            <td>B064</td>
+                            <td>B066</td>
+                        </tr>
+                        <tr>
+                            <td class="left">操作系统</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                            <td>Windows2008</td>
+                        </tr>
+                        <tr>
+                            <td class="left">PHP</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">ASP</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+
+                        </tr>
+                        <tr>
+                            <td class="left">ASP.net</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">MSSQL<br>版本：2000/2005/<br>2008/2012</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">MySQL<br>版本:5.1/5.6</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Access数据库</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">zend</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Jmail</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Gzip压缩</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">图片组件</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="high-light-table hide"></table>
+                    <div class="text-right pt-10">
+                        <a class="link_blue" href="/faq/list.asp?unid=868" target="_blank">??查看常用组件版本支持情况</a>
+                    </div>
+                </div>
+            </div>
+            <!--环境配置 结束-->
+            <!--控制面板功能 开始-->
+            <div class="wjf-ui-tab-content webhosting-control" id="J_tab_3">
+                <div class="webhosting-info">
+                    <table class="webhosting-table" data-tableindex="3">
+                        <thead>
+                        <tr>
+                            <th class="left">产品名称</th>
+                            <th>ASP.NET入门型</th>
+                            <th>
+                                ASP.NET I型
+                            </th>
+                            <th>ASP.NET商用型</th>
+                            <th>ASP.NET II型</th>
+                            <th>ASP.NET豪华型</th>
+                            <th>双线企业型</th>
+                            <th>双线商务型</th>
+                            <th>双线超值型</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="left">产品编号</td>
+                            <td>a001</td>
+                            <td>b019</td>
+                            <td>b020</td>
+                            <td>a023</td>
+                            <td>a024</td>
+                            <td>B061</td>
+                            <td>B064</td>
+                            <td>B066</td>
+                        </tr>
+                        <tr>
+                            <td class="left">设置首页</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">错误页面定义</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">rar在线压缩</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">免费预装软件</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">Urlrewrite</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">流量分析</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">访问统计</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">日志自助下载</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">360攻击防护</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">百度云加速</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">控制面板演示</td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                            <td>
+                                <a class="link_blue" href="http://www.myhostadmin.net/vhost/checklogin.asp?ftpname=newdemo&amp;password=123456" target="_blank">演示</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="high-light-table hide"></table>
+                </div>
+            </div>
+            <!--控制面板功能 结束-->
+            <!--安全及售后 开始-->
+            <div class="wjf-ui-tab-content webhosting-service" id="J_tab_4">
+                <div class="webhosting-info">
+                    <table class="webhosting-table" data-tableindex="4">
+                        <thead>
+                        <tr>
+                            <th class="left">产品名称</th>
+                            <th>ASP.NET入门型</th>
+                            <th>
+
+                                ASP.NET I型
+                            </th>
+                            <th>ASP.NET商用型</th>
+                            <th>ASP.NET II型</th>
+                            <th>ASP.NET豪华型</th>
+                            <th>双线企业型</th>
+                            <th>双线商务型</th>
+                            <th>双线超值型</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="left">产品编号</td>
+                            <td>a001</td>
+                            <td>b019</td>
+                            <td>b020</td>
+                            <td>a023</td>
+                            <td>a024</td>
+                            <td>B061</td>
+                            <td>B064</td>
+                            <td>B066</td>
+                        </tr>
+                        <tr>
+                            <td class="left">数据定期备份</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">数据自助恢复</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">10重安全保障</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">千兆防火墙系统</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">QQ全球免费电话</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">24x7x365<br>在线有问必答</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="left">24x7x365<br>电话技术支持</td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                            <td>
+                                <i class="info-icon right"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="high-light-table hide"></table>
+                </div>
+            </div>
+            <!--安全及售后 结束-->
+            <!--表格 结束-->
+            <!--说明 开始-->
+            <div class="webhosting-explain">
+                <div class="webhosting-explain-title">
+                    <span>图标说明：</span>
+                </div>
+                <h6>
+                    <i class="info-icon right"></i>表示支持、
+                    <i class="info-icon no"></i>表示不支持、
+                    <i class="info-icon add"></i>表示需要单独购买、/表示可选、推荐全能型主机，基于云技术，更稳定、更快速。
+                </h6>
+                <div class="webhosting-explain-txt">
+                    <span>特别提示：</span>
+
+                    <p>1、赠送产品如数据库、邮局、网站统计等不需要的，则表示放弃。</p>
+                    <p>2、域名赠品仅送首年，主机一次性购买多年，域名赠送时间为1年。</p>
+                    <p>3、linux虚拟主机的mysql数据库是跟WEB空间共享大小。</p>
+
+                    <p style="text-indent: 20px;">
+                        比如：LinuxA型主机，WEB空间+mysql数据库一共=300M，所有虚拟主机均免费赠送跟WEB空间同等大小的备份空间，用来自动备份和恢复数据。</p>
+
+                    <p>4、任何虚拟主机用户都严禁发送垃圾邮件。</p>
+                </div>
+            </div>
+            <!--说明 结束-->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/template/Tpl_2016/jscripts/common.js"></script>
+<script type="text/javascript" src="/template/Tpl_2016/jscripts/webhostingDetail2016.js"></script>
+{#bottom.html}
+</body></html>

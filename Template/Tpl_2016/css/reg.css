@@ -1,0 +1,238 @@
+.footer-middle {
+	display:none
+}
+#footer2016 .gray-line,#footer2016 .white-line {
+	display:none
+}
+.right-menu-bar {
+	display:none
+}
+.content {
+	padding:28px 0;
+	background-color:#F3F3F3;
+	font-size:14px
+}
+.reg-content {
+	padding:28px 46px 106px;
+	background:#fff;
+	border:1px solid #eaeaea
+}
+.reg-content .reg-title {
+	padding-bottom:12px;
+	border-bottom:1px solid #d4d4d4;
+	color:#4c4c4c
+}
+.reg-content .reg-title h3 {
+	float:left;
+	padding-left:12px;
+	font-size:18px;
+	border-left:3px solid #3DB514
+}
+.reg-content .reg-title p {
+	float:right
+}
+.reg-content .reg-title .login-btn {
+	color:#0365eb;
+	text-decoration:underline
+}
+.reg-content .reg-title .login-btn:hover {
+	color:#ff671c
+}
+.reg-content .reg-box {
+	padding:0 130px
+}
+.reg-flow {
+	padding-top:36px;
+	text-align:center
+}
+.reg-flow .flow-icon {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:72px;
+	height:72px;
+	background:url(../images/reg-icon.jpg) no-repeat;
+	z-index:9
+}
+.reg-flow .flow-icon-write {
+	background-position:-172px 0
+}
+.reg-flow .flow-icon-complete {
+	background-position:0 -172px
+}
+.reg-flow .reg-flow-left {
+	margin-top:-36px;
+	width:404px;
+	border-bottom:2px solid #dcdcdc
+}
+.reg-flow .reg-flow-right {
+	margin-top:-36px;
+	border-bottom:2px solid #dcdcdc
+}
+.reg-flow .reg-flow-txt {
+	padding-top:40px;
+	color:#818181
+}
+.active .reg-flow-right {
+	border-bottom:2px solid #1e7ccc
+}
+.active .flow-icon-write {
+	background-position:0 0
+}
+.active .reg-flow-left {
+	border-bottom:2px solid #1e7ccc
+}
+.active .flow-icon-complete {
+	background-position:-172px -172px
+}
+.reg-section table td{color:#525252; font-size: 14px; padding: 10px 5px; vertical-align: middle}
+.reg-section table td .common-input{ width: 100%;}
+.reg-section dt {
+	 padding:8px 0 8px 0px;
+	margin: 15px 0;
+	 border-bottom:1px dashed #e7e7e7;
+	 font-weight:700;
+	 color:#3db514
+ }
+.reg-section dd {
+	margin-top:18px;
+	color:#525252;
+	vertical-align:middle;
+	position:relative
+}
+.reg-section-title {
+	margin-right:8px;
+	font-weight:700
+}
+.reg-star {
+	color:red
+}
+.reg-txt {
+	color:#b1b1b1;
+	font-weight:400
+}
+.reg-optional {
+	padding-left:10px;
+	color:#898989
+}
+.Link_Orange {
+	color:#fe6b1b
+}
+.Link_Orange:hover {
+	color:#3db514
+}
+.reg-area-select {
+	margin-right:0;
+	width:78px
+}
+.reg-prompt,.reg-error,.reg-success {
+	display:none
+}
+.reg-error {
+	padding-left:22px;
+	margin-left:10px;
+	background:url(../images/reg-icon.jpg) no-repeat 0 -439px;
+	color:#ff5e5e;
+	vertical-align:middle
+}
+.reg-success {
+	width:18px;
+	height:18px;
+	margin-left:10px;
+	background:url(../images/reg-icon.jpg) no-repeat 0 -536px;
+	margin-top:0;
+	vertical-align:middle
+}
+.reg-prompt {
+	position:absolute;
+	top:0;
+	left:540px;
+	z-index:9;
+	background-color:#fff
+}
+.reg-prompt .triangle-arrow {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	position:absolute;
+	top:16px;
+	left:-8px;
+	width:10px;
+	height:19px;
+	background:url(../images/reg-icon.jpg) no-repeat 0 -733px
+}
+.reg-prompt .reg-prompt-txt {
+	width:200px;
+	padding:8px 4px 8px 30px;
+	background:url(../images/reg-icon.jpg) no-repeat 6px -616px;
+	border:1px solid #e7e7e7;
+	color:#717171;
+	overflow:hidden
+}
+.reg-prompt .reg-prompt-txt p {
+	padding-left:8px;
+	border-left:1px solid #e7e7e7
+}
+.reg-append-prompt {
+	padding-left:8px
+}
+.pwd-strenth-level {
+	background-color:#e4e4e4;
+	height:15px;
+	width:126px;
+	margin-top:5px
+}
+.pwd-strenth-level div {
+	height:100%
+}
+.pwd-strenth-level-0 div {
+	width:0
+}
+.pwd-strenth-level-1 div {
+	width:20%;
+	background-color:#fb7165
+}
+.pwd-strenth-level-2 div {
+	width:40%;
+	background-color:#ffcc1c
+}
+.pwd-strenth-level-3 div {
+	width:60%;
+	background-color:#b8d320
+}
+.pwd-strenth-level-4 div {
+	width:80%;
+	background-color:#15e73c
+}
+.pwd-strenth-level-5 div {
+	width:100%;
+	background-color:#00b4ff
+}
+.reg-btn {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:200px;
+	height:44px;
+	line-height:44px;
+	background:#3db514;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	border:0;
+	cursor: pointer
+}
+.reg-btn:hover {
+	background:#34a30d;
+	color:#fff
+}
+#J_customQuestionContainer {
+	display:none
+}
+@media screen and (max-width:1206px) {
+	.reg-content .reg-box {
+		padding:0 44px
+	}
+}.desktop .reg-content .reg-box {
+	 padding:0 44px
+ }

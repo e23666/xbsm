@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！至强5420四核/4G内存/146Gsas硬盘仅需999元.">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/template/Tpl_05/css/CloudHost.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function DoRoomPriceSelect(vps_type,k)
+
+{
+
+	objTab=document.getElementById("vps_Big_Room_"+vps_type);
+
+	div_list=objTab.getElementsByTagName("div");
+
+	
+
+	for(i=1;i<=div_list.length;i++)
+
+	{
+
+		divObj=document.getElementById("vpsromprice_"+vps_type+"_"+i);
+
+		radioOBJ=document.getElementById("radio_"+vps_type+"_"+i);
+
+		if(i!=k)
+
+		{
+
+			divObj.style.display="none";
+
+			radioOBJ.checked=false;
+
+		}
+
+		else
+
+		{
+
+			radioOBJ.checked=true;
+
+			divObj.style.display="";
+
+		}
+
+		
+
+		objTab_tar_1=document.getElementById(vps_type+"_cpu");
+
+		objTab_tar_2=document.getElementById(vps_type+"_flux");
+
+		
+
+		if(k==2 || k==4)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 2.0G(四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		if(k==5)
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+		else
+
+		{
+
+			objTab_tar_1.innerHTML="IntelXeon5405*2 (四核心)";
+
+			objTab_tar_2.innerHTML="100M共享";
+
+		}
+
+	}
+
+}
+
+</script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/CloudHost/">云主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+        {#cloudhostleft.html}
+
+    <div id="MainRight">
+      <div id="DomainFlash">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+          <param name="movie" value="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <embed src="/template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/template/Tpl_05/config/CloudHost/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+        </object>
+      </div>
+       <style>
+#Cloud_Content_Box{padding:20px; margin-bottom:30px;}
+#Cloud_Content_Box H4 {
+MARGIN-BOTTOM: 5px;
+margin-top: 30px;
+FONT-SIZE: 14px;
+background: none;
+padding-left: 0px;
+color: #264F6F;
+}
+#Cloud_Content_Box P {
+LINE-HEIGHT:200%;
+COLOR: #666;
+FONT-SIZE: 12px;
+}
+#Cloud_Content_Box a{ color:#00F;}
+ li{ list-style:none; }
+#Cloud_Content_Box ul li{ float:left; margin-right:10px;}
+.clear{ clear:both;}
+#Cloud_Content_Box ul{clear:both;}
+ </style>
+ <div id="Cloud_Content_Box">
+		
+        
+       
+          <div class="clear"></div> 
+                     <h4>高防线路机房介绍</h4>
+					
+		   <p>　　   {companyname}高防机房，是基于中国电信强大的网络资源优势，技术资源优势和人力资源优势所建立起来的电信级的互联网数据中心，1T光纤直接接入ChinaNet骨干网。
+              先进的网络设备，高品质电信级机房，7×24小时专业维护，机房有完善的出入管理制度。双路市电和智能UPS系统保障电力、并有多组柴油发电机真正保证持续供电；多台立式空调柜保持机房恒温恒湿；以及防静电接地处理及避雷措施；先进的消防系统，切实保障用户设备安全。
+          </p>
+
+          <h4>云集群介绍：</h4>
+            <p>领先的分布式文件存储+万M传输网络+优化的算法 。</p>
+            <p>每个云服务器的数据保留4份，外加异机备份，数据安全高枕无忧！</p>
+            <p>因我们导致您服务器无法使用，按故障时间的百倍进行赔偿 。</p>
+            <p>一台云服务器独享一个IP，专享独立带宽，同一台服务器不受其他用户影响；安全性高，搜索引擎收录快，认可度更高！！</p>
+            <p>所有参数按需购买，随时可扩容，如cpu、内存、带宽、防御值等 。</p>
+            <h4>攻击防御系统：</h4>
+
+
+                <p>机房出口带宽：1T</p>
+            <p> 最大防御值：500G</p>
+                <p>防御攻击类型：DoS/DDoS攻击，如 SYN Flood、TCP Flood，UDP Flood，ICMP Flood及其各种变种如Land，Teardrop，Smurf，Ping of Death等</p>
+                <p>防御监控：提供防御图表展示，实时防御，实时通知，攻击事件日志记录及查看</p>
+            <h4>适用的客户群:</h4>
+            <p>网站、ERP、邮局、游戏、OA等所有应用，拒绝私服、色情等非法应用。</p>
+
+            <h4>服务团队:</h4>
+            <p>    凭借多年积累的机房运营经验，西部数码拥有一支年轻而富有实践经验的客户服务队伍，企业管理已通过 ISO9001、ISO27001质量管理体系认证。严格的管理制度，完善的服务团队，为客户提供全天侯机房现场专业服务，确保客户网络稳定运行。
+                </p>
+            <p>1、7×24小时专业、专职客服人员负责公司各种业务客户的售前及售后一站式服务。</p>
+            <p>2、7×24小时技术支持，专业技术人员负责维护，确保网络稳定。</p>
+            <p>3、7×24小时的网络连接状况监控、服务器运行状态监测及流量监测。</p>
+
+
+
+
+	   
+	   
+
+
+ 			
+ </div>
+  </div>
+</div>
+{#bottom.html} 
+</body>
+</html>

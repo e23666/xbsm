@@ -1,0 +1,27 @@
+尊敬的客户{user_name}：您好！
+　　您的ftp站点:{ftpaccount},型号:{productid},管理密码:{ftppassword}已开通成功。
+	--注册时间:{now}
+	--ftp名:{ftpaccount}  绑定域名:{domainstr}
+	--三级域名:{freedomain}
+	--服务器IP:{serverip}
+	--密码:{ftppassword}
+ 
+
+　　
+登陆管理中心点业务管理>虚拟主机，可对虚拟主机进行完善的管理（如：修改FTP密码、绑定域名、修改默认页、虚拟主机续费等）。
+特别提示：文件上传成功后，必须在7天内对网站进行备案(在虚拟主机控制面板里面可以委托我司备案)，否则空间将被自动取消域名绑定！
+
+　　　如果您有任何问题，请访问我们的客户中心：{companynameurl}　查看“常见问题”或在“有问必答”栏目中提交问题。同时，您也可拨打客户服务热线电话:{telphone}。
+
+
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+-----------------------------------
+
+欢迎参加{companyname}广告联盟，让你的网站流量为您带来收入！
+详情请访问：{companynameurl}

@@ -1,0 +1,322 @@
+<script language=javascript>
+ function check_user(form){
+    isrank=false;
+    for (i=0;i<form.q_score.length;i++){
+		if (form.q_score[i].checked){isrank=true;qscore=form.q_score[i].value;break;}
+	}
+	if (!isrank){alert('尊敬的用户，请选择您对该问题回答结果所评分数值,谢谢');return false;}
+	   if (confirm('您确定对该问题的回复评' + qscore + '分吗?')) form.submit();
+	   return false;
+ }
+</script>
+
+<html>
+<head>
+<title>有问必答-{companyname}-专业虚拟主机域名注册服务商!域名注册虚拟主机租用</title>
+<meta name="description" content="有问必答-{companyname}是西南地区最大的虚拟主机、域名注册、服务器租用服务商！20项虚拟主机领先优势，30000用户的共同选择!领先的虚拟主机技术,配合NAS存储设备、ddos防火墙，为您打造性价比最高的虚拟主机!全国领先的双线路虚拟主机，南北畅通无阻！Cn域名58元起！">
+<meta name="keywords" content="有问必答-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<SCRIPT language=javascript>
+
+function checkstr()
+{
+	if(document.form1.subject.value==""){
+		alert("提示：\n\n请输入问题题目！");
+		document.form1.subject.focus();
+		return false;
+	}
+	if(document.form1.content.value==""){
+		alert("提示：\n\n请输入问题内容！");
+		document.form1.content.focus();
+		return false;
+	}
+	
+}
+
+
+</SCRIPT>
+<body leftmargin="0" topmargin="0">
+{#top.html}
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><img src="/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#707070">
+  <tr> 
+    <td><img src="/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FFFFFF"><img src="/images/top_main_2_cc.gif" width="778" height="120"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#707070">
+  <tr> 
+    <td><img src="/images/spacer.gif" width="3" height="1"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr> 
+    <td><img src="/images/spacer.gif" width="3" height="2"></td>
+  </tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr> 
+    <td width="230" valign="top" bgcolor="f9f9f9">
+     {#CustomerCenterLeft.html}
+    </td>
+    <td valign="top" width="2"><img src="/images/spacer.gif" width="2" height="2"></td>
+    <td align="center" valign="top">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td bgcolor="#000000"><img src="/images/spacer.gif" width="3" height="2"></td>
+        </tr>
+      </table>
+      <table width="100%" height="33" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="32" background="/images/Other_03.gif"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <td width="6%" align="right" class="DropShadow2"><img src="/images/%2B.gif" width="9" height="9"></td>
+                <td width="94%" class="DropShadow2"><strong><font color="#FFFFFF">有问必答</font></strong></td>
+              </tr>
+            </table></td>
+          <td width="60" align="right" background="/images/Other_03.gif"><img src="/images/Other_05.gif" width="60" height="33"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="/images/spacer.gif" width="3" height="1"></td>
+        </tr>
+      </table>
+     {#usermoney.html}
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table> 
+      <!-- BEGIN auswerlist -->
+      <table width="90%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>状态：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_status}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>来自：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_from}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>问题题目：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_subject}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>问题类别：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_type}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>相关域名：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_user_domain}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>相关IP地址：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_user_ip}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>提问时间：</strong></td>
+              </tr>
+            </table></td>
+
+
+          <td colspan="2">{q_reg_time}</td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>问题关键字：</strong></td>
+              </tr>
+            </table></td>
+
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_keyword}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>问题描述：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td>{q_content}</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>问题答复：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td><font color="red">{q_reply_content}</font></td>
+              </tr>
+            </table></td>
+        </tr>
+
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>答复时间：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td><font color="red">{q_reply_time}</font></td>
+              </tr>
+            </table></td>
+        </tr>
+
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        <tr {q_pic_display}> 
+          <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td align="right" nowrap><strong>附图：</strong></td>
+              </tr>
+            </table></td>
+          <td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td><a href="{q_pic}" target=_blank><img src="{q_pic}" border=0 width="392" height="58" alt="点击看大图"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+        
+          <tr {q_status_display}> 
+          <form name="form{q_id}" action="{script_name}" method="post">
+            <td width="25%" bgcolor="efefef"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr> 
+                  <td align="right" nowrap><strong>回答评分：</strong></td>
+                </tr>
+              </table></td>
+            	<td width="75%"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr> 
+                  <td>{q_score}</td>
+                </tr>
+              </table></td>
+           </form>
+          </tr>
+       
+        <tr> 
+          <td colspan="2" background="/images/line_23.gif"><img src="/images/line_23.gif" width="4" height="1"></td>
+        </tr>
+       
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><img src="/images/spacer.gif" width="3" height="3"></td>
+        </tr>
+      </table>
+  <!-- END auswerlist -->
+      <table width="90%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="60" align="center" bgcolor="efefef"><input type="image" src="/Template/Tpl_05/images/button_q2_11.gif" name="Button" value="我对此还有疑问" onClick="window.location.href='subquestion.asp?q_fid={q_id}';">
+          </td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+{#bottom.html}
+</body>
+</html>

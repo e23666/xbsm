@@ -1,0 +1,48 @@
+@charset "gb2312";
+/* CSS Document */
+table.gtable {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	background:#FFF;
+}
+table.gtable tr th {
+	
+	
+	border:1px #dbdbdb solid;
+	color:#666666; font-size:14px; text-align:center;
+	background:#f1f1f1;
+}
+table.gtable tr td {
+	vertical-align:top;
+      padding:5px;
+	border:1px #dbdbdb solid;
+	color:#ff5a00;
+	 text-align:center;
+	 font-weight:bold;
+}
+
+.googlead1{ padding-top:20px; padding-bottom:10px; overflow:hidden; zoom:1;}
+.gtitle1{ background:url(/Template/Tpl_05/newimages/Application/gtbg.gif) no-repeat; width:742px; height:41px; line-height:41px; text-indent:15px; font-size:18px; color:#fff; }
+.tcolor{ color:#ffd200; font-weight: bold;}
+.gmain{ padding-top:10px;}
+.graph,.rshuom{ float:left;}
+.rshuom{ width:260px; padding-left:10px;}
+.glist{ font-weight:bold; color:#005b86; font-size:14px; padding:15px 0 0px 0;}
+.glistmain{padding:0px 0 15px 0; line-height:20px;}
+.gwhy{ clear:both; font-size:18px; color:#252525; padding:15px 0 0px 0;}
+.gout{ padding-top:25px;}
+.gyoushi{ background:url(/Template/Tpl_05/newimages/Application/gtitle.gif) no-repeat; width:744px; height:39px; line-height:39px;text-indent:15px; font-size:18px;color:#252525; font-weight:bold; }
+.gyscon{ background:url(/Template/Tpl_05/newimages/Application/gmain.gif) repeat-y; width:744px; }
+
+.g-section{ padding:20px 0 0 30px; overflow:hidden; zoom:1;}
+.g-section2{padding:20px 0 0 20px;overflow:hidden; zoom:1;}
+.g-section2 img{margin:15px 0 15px 0px;overflow:hidden; zoom:1;}
+.g-section ul li{ float:left; width:330px; padding-right:20px;}
+.lianjie{padding-bottom:8px;}
+.lianjie a{ color:#006699; font-size:14px; font-weight:bold; text-decoration:underline; }
+.lianjie a:hover{ text-decoration:none;}
+
+a.more{ color:#006699; font-size:14px; font-weight:bold; text-decoration:underline; float:right; margin-right:20px; }
+a.more:hover{ text-decoration:none;}
+.ad{ float:left;}

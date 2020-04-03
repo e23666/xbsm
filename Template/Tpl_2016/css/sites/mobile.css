@@ -1,0 +1,189 @@
+/*
+    本页样式为----成品网站超市--移动营销型网站
+*/
+
+/*banner*/
+.banner{
+    height: 380px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+/******************优势介绍 开始******************/
+.mobile-advantage{
+    padding-top: 30px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.ma-bottom{
+    margin-top: 40px;
+    padding-bottom: 20px;
+    background: url("/template/Tpl_2016/images/sites/mobile/mobile-b2.png") no-repeat top right;
+}
+
+.ma-bottom .ma-list{
+    padding-left: 20px;
+}
+.ma-bottom .ma-list li{
+    padding-bottom: 30px;
+    clear: both;
+}
+/*图标*/
+.ma-bottom .ma-list li .ma-icon{
+    margin-right: 20px;
+    float: left;
+    width: 52px;
+    height: 60px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat;
+}
+.ma-bottom .ma-list li .ma-icon1{
+    background-position: -140px 0;
+}
+.ma-bottom .ma-list li .ma-icon2{
+    background-position: -140px -69px;
+}
+.ma-bottom .ma-list li .ma-icon3{
+    background-position: -140px -138px;
+}
+.ma-bottom .ma-list li .ma-icon4{
+    background-position: -140px -205px;
+}
+.ma-bottom .ma-list li .ma-icon5{
+    background-position: -140px -273px;
+}
+/*文字*/
+.ma-bottom .ma-list li .ma-list-txt{
+    width: 490px;
+    overflow: hidden;
+}
+.ma-bottom .ma-list li .ma-list-txt h6{
+    padding-top: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+.ma-bottom .ma-list li .ma-list-txt p{
+    padding-top: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #797979;
+}
+/******************优势介绍 结束******************/
+
+/******************手机模板推荐 开始******************/
+.mobile-tpl{
+    padding: 30px 0;
+}
+.mobile-tpl .mt-title{
+
+}
+.mobile-tpl .mt-title h3{
+    font-size: 24px;
+    color: #282828;
+}
+.mobile-tpl .mt-title h3 span{
+    padding-left: 10px;
+    font-size: 16px;
+    color: #6f6f6f;
+}
+/*更多模板*/
+.mobile-tpl .mt-title .mt-title-btn{
+    float: right;
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    background: #2086ee;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+/*容器*/
+.mobile-tpl .mt-box{
+    padding-top: 10px;
+}
+/*样式重置*/
+.mobile-tpl .mt-box .tpl-list-container li{
+    margin-right: 86px;
+}
+.mobile-tpl .mt-box .tpl-list-container li.row-last{
+    margin-right: 0;
+}
+
+/*查看更多*/
+.mobile-tpl .mt-btn{
+    margin-top: 30px;
+    display: inline-block;
+    width: 278px;
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 26px;
+    font-size: 16px;
+    color: #3b3b3b;
+    text-align: center;
+}
+.mobile-tpl .mt-btn:hover{
+    border-color: #2086ee;
+    color: #2086ee;
+}
+/******************手机模板推荐 结束******************/
+
+/******************移动版建站选购 开始******************/
+.mobile-taocan{
+    padding: 40px 0 50px;
+}
+.st-list{
+    padding-top: 50px;
+}
+.st-list .column{
+    background: #fff;
+    border-radius:0px;
+}
+/*标题*/
+.st-list .item .column .title{
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 130px;
+    background: url("/template/Tpl_2016/images/sites/mobile/mobile-img2.png") no-repeat top center;
+}
+.st-list .item .column-first .title{
+    height: 130px;
+    background: url("/template/Tpl_2016/images/sites/mobile/mobile-img1.png") no-repeat top center;
+}
+.st-list .item .column-last .title{
+    height: 130px;
+    background: url("/template/Tpl_2016/images/sites/mobile/mobile-img3.png") no-repeat top center;
+}
+.st-list .item .column .title h4{
+    padding: 36px 20px 8px;
+    display: inline-block;
+    font-size: 26px;
+    color: #fff;
+    border-bottom: 1px solid #ffe4a6;
+}
+.st-list .item .column-first .title h4{
+    border-bottom: 1px solid #d7e3ff;
+}
+.st-list .item .column-last .title h4{
+    border-bottom: 1px solid #d4f0ff;
+}
+.st-list .item .column .title p{
+    padding-top: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+.st-list .item .st-btn, .st-list .item:first-child .st-btn, .st-list .item:last-child .st-btn{
+    background: #2086ee;
+}
+/***********激活***********/
+.st-list .item .column:hover{
+    margin: 0;
+    border: 1px solid #e9e9e9;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/******************移动版建站选购 结束******************/

@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购买虚拟主机，虚拟主机在线开通</title>
+<meta name="description" content="{companyname}-大型虚拟主机服务商,专业提供虚拟主机,域名注册,主机租用等服务.200M虚拟主机200元,国际域名80元.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="购买虚拟主机,虚拟主机在线开通,虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/productDetailInfo.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/commonForm.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/buy.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	<link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" /> 
+	<script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script> 
+	<script language="javascript" src="/jscripts/addHost.js"></script>
+	<script language="javascript" src="/noedit/check/Validform.js"></script>
+
+<script language="javascript">
+ var buyinfo={buyinfo}
+ $(function(){
+	$("#buyhostform").Validform({
+	     showAllError:true,
+		 tiptype:2,
+		  btnSubmit:".submit-btn",
+		  datatype:{
+			"agree":function(gets,obj,curform,regxp)
+				{
+					num=curform.find("input[name='agreement']:checked").length;
+					if (num>0){
+						return true;
+					}else{
+						$.dialog.alert("请先阅读相关协议后点击勾选！")
+						return false;}
+				}
+		  }
+	})
+	$("input[name='paytype']:radio").click(function()
+	{
+		if($(this).val()=="1")
+		{
+			$("#J_tryTips").show(1)
+		}else{
+		$("#J_tryTips").hide(1)
+		}
+	
+	})
+ })
+
+</script> 
+ 
+</head>
+ <script>
+
+ function init(){
+	var objroom=$("select[name='room']")
+	var osobj=$("select[name='oslist']");
+	for(var roomid in buyinfo){
+		var tempstr=""
+		if(buyinfo[roomid].otherip=="1"){
+			objroom.append('<option value="'+roomid+'" title="true">'+buyinfo[roomid].name+'</option>') 
+		}else{
+			objroom.append('<option value="'+roomid+'">'+buyinfo[roomid].name+'</option>') 
+		}
+	}
+	objroom.on("change",function(){
+		getos()
+	})
+	osobj.on("change",function(){
+		getmysql()
+	})
+
+	getos()
+	getmysql()
+ }
+
+ function getos(){
+	var roomid=$("select[name='room']").val();
+	var osobj=$("select[name='oslist']");
+	osobj.empty()
+	for (var roomidobj in buyinfo)
+	{ 
+		if (roomidobj==roomid)
+		{ 
+			for (var os in buyinfo[roomidobj].os )
+			{
+				osobj.append('<option value="'+os+'">'+os+'</option>') 
+			}
+		}
+	}
+	 getmysql()
+ }
+
+ function getmysql(){
+	var roomid=$("select[name='room']").val();
+	var osid=$("select[name='oslist']").val();
+	var pmver=$("select[name='pmver']") 
+	pmver.empty() 
+	for (var mysql in buyinfo[roomid].os[osid])
+	{
+		pmver.append('<option value="'+mysql+'">'+mysql+'</option>')
+	}
+	pmver.append('<option>默认值</option>')
+ }
+
+
+	 $(function(){
+			init()
+
+		   $("select[name='room'],select[name='oslist'],select[name='years'],select[name='pmver']").attr("class","common-select std-width common-validate")
+		   $("select[name='years']").change(function(){
+		    showsummoney()
+		   })
+
+		   $("select[name='oslist']").change(function(){
+		//    getmysqlver()
+		   })
+
+	       showsummoney()
+		//   getmysqlver()
+	 })
+ function showsummoney()
+ {
+	    var m_=$("select[name='years']").find("[value='"+$("select[name='years']").val()+"']").html()+"";
+		$("#summoney").html(m_.split("元")[0]);
+ }	
+ function getneedprice(){
+	var iptype=$("input[name='iptype']:radio:checked").val();
+	var productid=$("input[name='productid']:hidden").val();
+	var info="module=getneedprice&iptype="+ escape(iptype) +"&productid="+escape(productid);
+	$("#pricemsg").html("load..");
+	$.post(window.location.mappath,info,function(data){
+		$("#pricemsg").html(data);
+bindprice()
+	});
+}
+function bindprice(){
+	$("select[name='years']").change(function()
+	{
+		$("#summoney").html($("select[name='years']").find("option:selected").text())
+	})
+
+}
+ function doiptype(){	
+	var isdisab=true;
+	if($("select[name='room'] option:selected").attr("title")=="true")
+	{
+		isdisab=false;
+	}
+	var iptypeObj=$("input[name='iptype']:radio");
+	if(iptypeObj.get(0)){
+		$.each(iptypeObj,function(i,n){
+		if($(n).val()=="1"){
+				$(n).attr("disabled",isdisab);
+				if(isdisab){
+					$(n).parent("label").css("color","#ccc");
+				}else{
+					$(n).parent("label").css("color","#333");
+				}
+			}
+		});	
+		iptypeObj.click(function(){
+			getneedprice();
+		});	
+		$("input[name='paytype']:radio").click(function(){
+			dopaytypemsg();
+		});
+	}
+	
+}
+ 
+function bdingos()
+{
+	$("select[name='oslist']").change(function(){
+				getmysqlver();
+			})
+}
+function dopaytypemsg(){
+	var paytypeObj=$("input[name='paytype']:radio:checked");
+	if(paytypeObj.val()==1 || paytypeObj.val()==2){
+		$("#iptypemsg").slideUp(50,function(){
+			$("input[name='iptype'][value=0]:radio").attr("checked",true);
+			getneedprice();
+		})
+	}else{
+		$("#iptypemsg").slideDown(50,function(){
+			getneedprice();
+		})
+	}
+}
+$(function(){
+	doiptype();
+	dopaytypemsg();
+	//$("select[name='room']").change(function(){
+	//	doiptype();		
+	//});
+})
+ </script>
+<body class="min990">
+ {#top.html}
+
+ <div class="content" id="content">
+	 <div class="wide1190 pt-40">
+		 <div class="page-content pos-r">
+
+			 <table class="config-table">
+				 <thead>
+				 <tr>
+					 <th colspan="2" class="title">产品基本信息</th>
+				 </tr>
+				 </thead>
+				 <tbody>
+				 <tr>
+					 <th>产品名：</th><td>{productname}</td>
+				 </tr>
+				 <tr>
+					 <th>产品编号：</th><td>{productid}</td>
+				 </tr>
+				 <tr>
+					 <th>空间大小：</th><td>{p_size}M</td>
+				 </tr>
+				 <tr>
+					 <th>单价：</th><td id="summoney"></td>
+				 </tr>
+
+				 <tr>
+					 <th>赠送邮局大小：</th><td class="import-info">{p_mailsize}M</td>
+				 </tr>
+
+				 </tbody>
+			 </table>
+			 <div class="page-info page-info-side">
+				 <form name="form1" id="buyhostform" class="common-form" action="buy.asp?module=addshopcart" method="post" onSubmit="return shopcheck()" style="padding-right: 30px;margin-right: 260px;border-right: 1px solid #e7e7e7;">
+					 <dl>
+						 <dt>服务器配置</dt>
+						 <div class="other-tip mt-20">
+							 <span class="icon-ip"></span>
+							 <p>
+								 {xltinxing}
+							 </p>
+							 <i></i>
+						 </div>
+						 <dd>
+							 <label class="common-label">
+								 <span class="required">*</span>
+								 选择数据机房：
+							 </label>
+							  <select name="room" class="common-select std-width common-validate"></select>
+							 <a class="flod" href="/services/webhosting/SpeedTest.asp" target="_blank">机房速度测试</a>
+							 <span style="display: inline-block;" class="validate-success"></span>
+                            <span style="display: none;" class="validate-prompt">
+                                <em class="triangle-arrow"></em>
+                                <div class="validate-prompt-text">
+                                    <p>请选择数据中心机房，网站出口线路默认会智能选择！</p>
+                                </div>
+                            </span>
+						 </dd>
+
+						
+						 <dd>
+							 <label class="common-label">
+								 <span class="required">*</span>
+								 FTP帐号：
+							 </label>
+ 
+
+
+
+
+
+							 <label><input name="ftpaccount" type="text" class="common-input std-width common-validate" size="15"  datatype="ftp" errormsg="ftp帐号由字母开头[a-z0-9]组合" maxlength="20" ajaxurl="/services/webhosting/buy.asp?module=checkftpname&productid={productid}">
+							 <input type="hidden" name="ismysql" id="ismysql" value="{ismysql}">
+							</label>
+                            <label><label class="Validform_checktip"></label></label>
+											
+						 </dd>
+						 <dd>
+							 <label class="common-label">
+								 <span class="required">*</span>
+								 FTP密码：
+							 </label>
+							 <label><input name="ftppassword" type="text" class="common-input std-width common-validate" size="30" value="{rndpass}"  nullmsg="请录入密码"  datatype="pwd" errormsg="ftp密码格式错误" /></label>
+							 <label><label class="Validform_checktip"></label></label>
+						 </dd>
+
+						 <dd>
+							 <label class="common-label">
+								 <span class="required">*</span>
+								 操作系统：
+							 </label>
+							 <label id="oslistdiv"> <select name="oslist"></select></label>
+							 <span class="validate-success"></span>
+                            <span class="validate-prompt">
+                                <em class="triangle-arrow"></em>
+                                <div class="validate-prompt-text">
+                                    <p>推荐使用2008系统，64位系统更快、更稳定！</p>
+                                </div>
+                            </span>
+						 </dd>
+						 <dd id="J_DBVersionContainer" >
+							 <label class="common-label">
+								 <span class="required">*</span>
+								 MYSQL版本：
+							 </label>
+							 <label id="mysqllistdiv"> <select name="pmver"></select></label>
+							 <span class="validate-success"></span>
+                            <span class="validate-prompt">
+                                <em class="triangle-arrow"></em>
+                                <div class="validate-prompt-text">
+                                    <p>MYSQL版本</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </span>
+						 </dd>
+						 
+
+						 <DD CLASS="clearfix" id="iptypemsg">
+						  <label  class="common-label">IP地址：</label>
+						  
+							<label style="float:none; display:inline; width:auto; margin-right:20px;">
+							  <input type="radio" value="0" name="iptype" id="iptype" checked="checked"/>
+							  共享IP</label>
+							<label style="float:none; display:inline; width:auto;" class="pl-10">
+							  <input type="radio" value="1" name="iptype" id="iptype" disabled="disabled" />
+							  独立IP</label>  
+							   <a class="pos-r" href="" target="_blank">
+								 <span class="icon-question"></span>
+								 <div class="manager-tip" style=" top: 30px;left: -16px; width: 264px; z-index: 99;">
+									 独立IP更利于搜索引擎优化，提高SEO权限，避免受其他网站的干扰和影响，强烈推荐！若需独立IP，可购买港台主机。
+									 <i></i>
+								 </div>
+							 </a>
+						 
+						</DD>          
+
+
+
+						 <dd class="buy-years" id="J_buyYears">
+							 <label class="common-label">
+								 购买年限：
+							 </label>
+							 <label id="pricemsg">{buyHostpriceList}</label>
+							 <span class="validate-error">请选择购买年限</span>
+							 <span class="validate-success"></span>
+						 </dd>
+						 <!-- 根据用户的userlevel 判断是否显示-->
+						 <div id="J_concatInfo"  class="mt-20">
+							 <dt>请填写联系人资料</dt>
+							 <dd class="pt-20">
+								 <label class="common-label">
+									 联系人：
+								 </label>
+								<label><input class="common-input std-width common-validate" name="appName" value="{appname}" type="text" datatype="cn2-18" errormsg="请输入正确中文联系人" maxlength="20"></label>
+								<label><label class="Validform_checktip"></label></label>
+
+							 </dd>
+							 <dd>
+								 <label class="common-label">
+									 联系手机：
+								 </label>
+								 <label><input name="appTel" class="common-input std-width common-validate" value="{apptel}" type="text"  datatype="m" errormsg="请输入正确的手机号码！" nullmsg="手机号码不能为空" maxlength="20"></label>
+								 <label><label class="Validform_checktip"></label></label>
+							 </dd>
+							 <dd>
+								 <label class="common-label va-t">
+									 联系E-mail：
+								 </label>
+								 <label><input name="appEmail" class="common-input std-width common-validate" value="{appEmail}" type="text" datatype="e" nullmsg="电子邮箱为空！" errormsg="电子邮箱格式错误！"></label>
+								 <label><label class="Validform_checktip"></label></label>
+							 </dd>
+						 </div>
+
+
+						 <dd class="text-center" style="margin-top: 50px;">
+
+							 <div>
+								 <label for="payone">
+									 <input name="paytype" id="payone" value="0" checked="" type="radio">
+									 正式购买
+								 </label>
+								 <a class="buy-help" href="javascript:void(0);" style="position: relative;vertical-align: middle;">
+									 <div class="other-tip paytype-tip">
+										 <p>如果您的帐户上面有足够的资金，则可以选择正式开通</p>
+										 <p>系统会扣除相应款项之后立即开通您的虚拟主机，并正式运行。(适合于代理商及老客户等）</p>
+										 <i></i>
+									 </div>
+								 </a>
+
+								 <label class="pl-10" for="paytwo">
+									 <input name="paytype" id="paytwo" value="1" type="radio">
+									 试用7天
+								 </label>
+								 <a class="buy-help" href="javascript:void(0);" style="position: relative;vertical-align: middle;">
+									 <div class="other-tip paytype-tip paytype-tip-2">
+										 <p>为防止利用我司试用主机从事非法活动,现开通试用主机需预收{demoprice}元服务费，转正时空间费用可优惠{demoprice}元。</p>
+										 <p>我司虚拟主机提供7天试用。如果没有转为正式购买，在第7天删除。</p>
+										 <p>试用期间可以在管理中心-主机管理-续费处点"正式购买"来转正。</p>
+										 <p>试用主机不能绑定域名(港台和美国除外),试用期间不能变更试用型号！</p>
+										 <p>为防止试用主机被滥用，所有<span style="color: #f60000;">试用主机必须输入用户名与密码</span>以后才可以访问，<span style="color: #f60000;">用户名:siteadmin，密码:110</span></p>
+										 <i></i>
+									 </div>
+								 </a>
+								 （收费{demoprice}元）
+
+							 </div>
+
+							 <div class="pt-10">
+								 <input value="1" name="agreement" id="J_agreement" type="checkbox" datatype="agree" errormsg="" checked>
+								 <label style="display:inline; width:auto; float:none;" for="J_agreement">
+									 我已阅读并同意{companyname}
+									 <a class="Link_Orange" href="/customercenter/hostxiyi.asp" target="_blank">虚拟主机购买协议</a>
+								 </label>
+							 </div>
+
+							 <div class="pt-20">
+								<input type="submit"  class="submit-btn" value="继续下一步"> 
+							 </div>
+						 </dd>
+					 </dl>
+
+					 <!-- 隐藏域 开始 数据由后端提供 该部分数据是通用部分 -->
+					 
+					 <input name="domainname" value="" size="17" class="common-validate" type="hidden">
+					   <input type="hidden" name="act">
+					  <input type="hidden" value="{productid}" name="productid">
+					  <input type="hidden" value="" name="freeid">
+					 <!-- 隐藏域 结束 -->
+				 </form>
+			 </div>
+			 <div class="product-explain" style="text-indent: initial;">
+				 <div><i></i><span class="title">重要提示</span></div>
+				 <div class="pt-10 hide" id="J_tryTips" style="margin-bottom: -10px;">
+					 <p style="display:inline-block;border-bottom: 2px solid #00a0e9;">
+						 为防止试用主机被滥用，所有<span class="warn-info">试用主机必须输入用户名与密码</span>以后才可以访问，用户名:<span class="warn-info">siteadmin</span>，
+						 密码:<span class="warn-info">110</span>
+					 </p>
+				 </div>
+				 <p class="pt-10">我司所有虚拟主机均禁止色情、木马、病毒、诈骗、私服、外挂、钓鱼网站、秒赞程序、垃圾邮件等非法网站，对于成人用品、
+								  空包网站、网络验证、专科医院、民营医院、弓驽刀剑、赌博用具、游戏币交易、减肥丰胸类、警用品、刷钻、
+								  刷信誉等高风险容易受攻击的网站不可购买我司虚拟主机，但可以购买我司电信线路的<a class="blue-link" href="/services/cloudhost/">云服务器</a>并开通360网站卫士或百度云加速进行安全防护。
+					 <span class="warn-info">我司有严格的监控措施，一经发现违规网站，立即永久关闭，并不退款！</span>所有国内虚拟主机必须备案成功后才能绑定域名。
+								  可能受攻击的网站请在虚拟主机控制面板中开启“360网站卫士”安全防护！
+				 </p>
+			 </div>
+			 <div class="product-detail-desc">
+				 <div class="title">
+					 <span>服务标准说明</span>
+				 </div>
+				 <p class="pt-5">
+					 [1] 基于{companyname}云计算平台，安全、可靠、稳定!;
+				 </p>
+				 <p>[2] 实时文件防病毒保护,黑客入侵检测,IIS 应用防火墙,自动抵抗各类病毒、攻击;</p>
+				 <p>[3] 各个网站以独立进程运行,不会被其他站点负载影响,在自己的空间中可以使用FSO和jmail等其他控件;</p>
+				 <p>[4] 功能强大控制面板,可以直接修改FTP密码,自行停止网站,自行绑定域名,修改网站缺省文档;</p>
+				 <p>[5] 提供WEB上传文件、恢复备份、RAR压缩、RAR解压、站点重定向、mime设置、目录保护、文件保护、脚本错误设置、ip限制、虚拟目录、错误页面定义等诸多高级管理功能;</p>
+				 <p>[6] 无障碍技术支持：24×7×365制技术支持，微笑面对任何用户。
+				 </p>
+				 <p>[7] 每3分钟自动访问网站一次，监控网站运行.</p>
+				 <p>[8] 自动每7天备份一次数据,用户能在管理中心自助恢复数据;</p>
+				 <p>[9] 采用独特的第六代高级虚拟主机系统、数据双重保护、软硬件/透明防火墙三重保障;</p>
+				 <p>[10] 在线支付，实时开设,CDN网络加速器可供选购，免费赠送功能强大的网站情报系统,如虎添翼般让您的网上空间发挥最大功效!</p>
+				 <p>[11] 为了保证服务器上所有虚拟主机用户站点均能正常稳定的运行，严禁上传及运行以下程序：1）聊天室； 2）江湖游戏； 3）大型软件下载； 4）在线播放,木马病毒等极为占用资源的程序。</p>
+				 <p>[12] 新的主机在系统架构上重新布置，有别于业内一般的传统单机系统，服务器群前端加装硬件防火墙，全面提速，稳定、安全、高效。 同时机房加装千M"黑洞"防火墙,完全效抵御DDOS攻击。</p>
+				 <p>[13]业界完善的主机控制面板，40余项管理功能，可以自行在管理中心恢复备份。
+				 </p>
+				 <p>[14]提供备案服务,空间开通后，请于7天内进行网站备案。</p>
+				 <p>[15] 试用7天.开设方式选择为"试用7天"即可。</p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+
+ 
+    
+  </div> 
+
+{#bottom.html}
+</body>
+</html>

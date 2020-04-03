@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购买虚拟主机，虚拟主机在线开通</title>
+<meta name="description" content="{companyname}-大型虚拟主机服务商,专业提供虚拟主机,域名注册,主机租用等服务.200M虚拟主机200元,国际域名80元.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="购买虚拟主机,虚拟主机在线开通,虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/WebHosting.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/buy_msg.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/config/ajax.js"></script>
+<script language="javascript" src="/jscripts/jq.js"></script>
+<script language="javascript" src="/jscripts/addHost.js"></script>
+<script language="javascript">
+var buyinfo={buyinfo}
+$(function(){ init()})
+ function init(){
+	var objroom=$("select[name='room']")
+	var osobj=$("select[name='oslist']");
+	for(var roomid in buyinfo){
+		var tempstr=""
+		if(buyinfo[roomid].otherip=="1"){
+			objroom.append('<option value="'+roomid+'" title="true">'+buyinfo[roomid].name+'</option>') 
+		}else{
+			objroom.append('<option value="'+roomid+'">'+buyinfo[roomid].name+'</option>') 
+		}
+	}
+	objroom.on("change",function(){
+		getos()
+	})
+	osobj.on("change",function(){
+		getmysql()
+	})
+
+	getos()
+	getmysql()
+ }
+
+ function getos(){
+	var roomid=$("select[name='room']").val();
+	var osobj=$("select[name='oslist']");
+	osobj.empty()
+	for (var roomidobj in buyinfo)
+	{ 
+		if (roomidobj==roomid)
+		{ 
+			for (var os in buyinfo[roomidobj].os )
+			{
+				osobj.append('<option value="'+os+'">'+os+'</option>') 
+			}
+		}
+	}
+	 getmysql()
+ }
+
+ function getmysql(){
+	var roomid=$("select[name='room']").val();
+	var osid=$("select[name='oslist']").val();
+	var pmver=$("select[name='pmver']") 
+	pmver.empty() 
+	for (var mysql in buyinfo[roomid].os[osid])
+	{
+		pmver.append('<option value="'+mysql+'">'+mysql+'</option>')
+	}
+	pmver.append('<option>默认值</option>')
+ }
+
+
+	function shopcheck()
+	{
+		if (typeof(document.getElementById('isftppd')!='undefined') && document.getElementById('isftppd')!=null){
+
+				var myv=document.getElementById('isftppd').value;
+
+				if (myv!=''){	
+
+					if (myv=='0'){
+
+								if(typeof(document.getElementById('okvalue')!='undefined') && document.getElementById('okvalue')!=null){
+
+									var vv=document.getElementById('okvalue').innerHTML;
+
+								}else{
+
+									var vv="输入格式有错误,请修正后重试";
+
+								}
+
+						alert(vv);
+
+						document.form1.ftpaccount.focus();
+
+						return false;
+
+					}
+
+				}
+
+		}
+
+
+
+		if (document.form1.ftpaccount.value=="")
+
+		{
+
+			alert ("\n\n必须输入FTP帐号！");
+
+			document.form1.ftpaccount.focus();
+
+			return false;
+
+		}
+
+		ii=0;
+
+     bString="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
+
+    	 if(document.form1.ftpaccount.value.length <4 || document.form1.ftpaccount.value.length > 15)
+
+		{
+
+			alert("\n\nFTP帐号必须是4-15位 a-z A-Z 0-9 之间的字母和数字组合!");
+
+			document.form1.ftpaccount.focus();
+
+			return false;
+
+		}
+
+		var ftpnamepds=document.form1.ftpaccount.value;
+
+		var ftpnancur=0
+
+		for (aa=0;aa<ftpnamepds.length;aa++)
+
+		{	
+
+			var strdo=ftpnamepds.substr(aa,1);
+
+				
+
+					if(isNaN(strdo)){
+
+						ftpnancur++;
+
+					}
+
+				
+
+		}
+
+		if (ftpnancur<1){
+
+			
+
+			alert("\n\nftp用户名不能全为数字。至少要4个字符以上。");
+
+			document.form1.ftpaccount.focus();
+
+			return false;
+
+		}
+
+	 while (ii<document.form1.ftpaccount.value.length)
+
+	 {
+
+
+
+		if (bString.indexOf(document.form1.ftpaccount.value.substring(ii,ii+1))==-1)
+
+		{
+
+			alert("\n\nFTP帐号必须是 a-z A-Z 0-9 之间的字母和数字组合。");
+
+			document.form1.ftpaccount.focus();
+
+			return false;
+
+		}
+
+		ii=ii+1;
+
+     }
+
+
+
+	
+
+		ii=0;
+
+		bString="abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-=<>,./?:|{};\[]";
+
+		var passStr=document.form1.ftppassword.value.toLowerCase();
+
+		if (passStr=="" || document.form1.ftppassword1.value=="" ){
+
+			alert("\n\n请填写密码");
+
+			document.form1.ftppassword.focus();
+
+			return false;		
+
+		}
+
+		while (ii<passStr.length)
+
+		{
+
+		if (bString.indexOf(passStr.substring(ii,ii+1))==-1)
+
+		{
+
+			alert("\n\n密码中含有不可识别的字符，请重新设置。");
+
+			document.form1.ftppassword.focus();
+
+			return false;
+
+		}
+
+		ii=ii+1;
+
+		}
+
+		if ( passStr.length < 6)
+
+		{
+
+			alert("\n\nFTP密码很重要 ，您输入的密码太短了。");
+
+			document.form1.ftppassword.focus();
+
+			return false;
+
+		}
+
+		if ( document.form1.ftppassword.value != document.form1.ftppassword1.value)
+
+		{
+
+			alert ("\n\nFTP密码和确认不一样！");
+
+			document.form1.ftppassword.focus();
+
+			return false;
+
+		}
+
+		
+//
+//		if (document.form1.cdntype.value==""){
+//
+//		alert("\n\n请选择网站类型！");
+//
+//		document.form1.cdntype.focus();
+//
+//		return false;	
+//
+//		}
+
+
+var _appname=document.form1.appname;
+var _appadd=document.form1.appadd;
+var _apptel=document.form1.apptel;
+var _appEmail=document.form1.appEmail;
+
+ 
+ 
+	 	   if(!cnNameReg.test(_appname.value))
+		   {
+			   alert('请输入真实的中文姓名');
+			_appname.focus();
+			return false;
+		  }
+ 
+
+ 
+
+  
+ 
+ 
+//	  if(!cnAddReg.test(_appadd.value))
+//		   {
+//			   alert('请输入真实联系地址');
+//			_appadd.focus();
+//			return false;
+//		  }
+ 
+	   
+ 
+ 
+		   if(!telReg.test(_apptel.value))
+		   {
+			   alert('请输入正确联系电话');
+			_apptel.focus();
+			return false;
+
+		  }
+ 
+
+ 
+ 
+		   if(!emailReg.test(_appEmail.value))
+		   {
+			   alert('请输入正确邮箱地址');
+			_appEmail.focus();
+			return false;
+
+		  }
+ 
+
+
+
+
+
+
+
+		if (!document.form1.agreement.checked)
+
+		{
+
+			alert('您尚未阅读并接受的虚拟主机购买协议.');
+
+			return false;
+
+		}
+
+		return true;
+
+		
+
+	}
+
+function chechftpname(ftpname){
+
+		var url='buy.asp?module=checkftpname';
+
+		var sinfo='ftpname='+escape(ftpname);
+
+		var divID='checkdiv';
+
+		document.getElementById('checkdiv').style.display='';
+
+		makeRequestPost(url,sinfo,divID)
+
+	}
+
+function isMobile(Mno){
+
+	if (!isNum(Mno)) return false;
+
+	if (Mno.length!==11) return false;
+
+	
+
+		if (Mno.substring(0,2)!="13" && Mno.substring(0,2)!="15" ) return false;
+
+	
+
+	return true;
+
+	}
+
+function isEmail(strEmail) {
+
+if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+
+	return true;
+
+else
+
+	return false;
+
+}
+
+function isNum(num)
+
+{
+
+	var nubOk = "0123456789";
+
+	var nubStr = num;
+
+	for(i = 0; i < nubStr.length; i++)
+
+	{
+
+		var un = nubStr.charAt(i);
+
+		if(nubOk.indexOf(un) ==-1) return false;
+
+	}
+
+	return true;
+
+}
+
+function CheckIsBuytest()
+
+{
+
+	//if form1.paytype.value=="1"
+
+	alert(form1.paytype.value)
+
+}
+
+function newwindow(){
+
+  window.open('speedtest.htm','','top=100,left=150,width=355,height=150,titlebar=no,menubar=no,scrollbars=no,location=no,status=no');
+
+}
+
+function pthis(form){
+
+if (form.years.value!=""){
+
+var ismysql=document.getElmentById('ismysql').value;
+
+ syears=parseInt(form.years.value);
+
+ if (syears>2&&!ismysql) {
+
+		form.aaa.disabled=false;
+
+		form.bbb.checked=true;
+
+	}
+
+  else{
+
+		form.aaa.disabled=false;
+
+	}
+
+}
+
+return true;
+
+}
+
+function checkneedprice(username,productid,years,form){
+
+	var url='buy.asp?str=checkprice';
+
+	var sinfo='myyears='+years+'&username='+username+'&productid='+productid;
+
+	var divID='newDiv';
+
+	pthis(form);
+
+	if (!isNaN(years)){
+
+	makeRequestPost(url,sinfo,divID);
+
+	}
+
+}
+
+
+
+	</script>
+<script language="JavaScript" type="text/JavaScript"> 
+
+<!--
+
+try{
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+
+  window.open(theURL,winName,features);
+
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+
+  if (restore) selObj.selectedIndex=0;
+
+}
+
+}catch(e){}
+
+
+
+ 
+
+//-->
+function getneedprice(){
+	var iptype=$("input[name='iptype']:radio:checked").val();
+	var productid=$("input[name='productid']:hidden").val();
+	var info="module=getneedprice&iptype="+ escape(iptype) +"&productid="+escape(productid);
+	$("#pricemsg").html("load..");
+	$.post(window.location.mappath,info,function(data){
+		$("#pricemsg").html(data);
+	});
+}
+function doiptype(){	
+	var isdisab=true;
+	if($("select[name='room'] option:selected").attr("title")=="true")
+	{
+		isdisab=false;
+	}
+	var iptypeObj=$("input[name='iptype']:radio");
+	if(iptypeObj.get(0)){
+		$.each(iptypeObj,function(i,n){
+		if($(n).val()=="1"){
+				$(n).attr("disabled",isdisab);
+				if(isdisab){
+					$(n).parent("label").css("color","#ccc");
+				}else{
+					$(n).parent("label").css("color","#333");
+				}
+			}
+		});	
+		iptypeObj.click(function(){
+			getneedprice();
+		});	
+		$("input[name='paytype']:radio").click(function(){
+			dopaytypemsg();
+		});
+	}
+	
+}
+function dopaytypemsg(){
+	var paytypeObj=$("input[name='paytype']:radio:checked");
+	if(paytypeObj.val()==1 || paytypeObj.val()==2){
+		$("#iptypemsg").slideUp(50,function(){
+			$("input[name='iptype'][value=0]:radio").attr("checked",true);
+			getneedprice();
+		})
+	}else{
+		$("#iptypemsg").slideDown(50,function(){
+			getneedprice();
+		})
+	}
+}
+$(function(){
+	doiptype();
+	dopaytypemsg();
+	$("select[name='room']").change(function(){
+		doiptype();		
+	});
+	
+});
+</script>
+<style type="text/css">
+ul.content_mini { height:auto; border:1px solid #ccc; border-top:none; overflow:hidden; height:42px; padding:10px; clear:both; }
+.up_call { background:url(/Template/Tpl_05/newimages/bubble/up_call_bg.jpg) repeat-x; height:9px; clear:both; }
+.up_call img { display:block; margin-left:90px; }
+ul.content_mini li { height:auto; width:auto; line-height:auto; padding:0; margin:0; }
+.yinbox_out { width:747px; display:block; background-color:#fff; overflow:hidden; position:relative; height:437px; }
+.yinbox_out .yinbox_in { position:absolute; display:block; margin:0px; z-index:3; width:740px; height:430px; top:0; left:0; border:1px #999 solid; background-color:#fff; }
+.yinbox_out .yinbox_yin { position:absolute; display:block; z-index:1; width:740px; height:430px; top:7px; left:7px; background-color:#CCC; }
+.yinbox_msg { display:block; margin:20px; padding:0; }
+.STYLE10 { color: #FF0000 }
+</style>
+<style type="text/css">
+<!--
+.STYLE4 { color: #333333 }
+-->
+</style>
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="/Template/Tpl_05/jscripts/check.js"></script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009"> {#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/webhosting/">虚拟主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV"> {#webhostingleft.html}
+    <div id="MainRight" style="text-align:center;">
+      <div class="buymap clearfix" style="margin-bottom:5px; height:59px;"><img src="/Template/Tpl_05/newimages/vhost_buy_dot.gif" width="200" height="55" class="span_auto" /><img src="/Template/Tpl_05/newimages/order_step_buy.gif" width="312" height="55" class="span_auto floatright" /></div>
+
+<div style="border:dashed 1px #ff0000; padding:7px; background:#ffff99; width:723px; margin-left:4px; margin-bottom:5px;">{alertmessage}</div>
+
+
+    <div class="z_buymsg clearfix" style="padding-top:20px;">
+        <form name="form1" action="buy.asp?module=addshopcart" method="post" onSubmit="return shopcheck()">
+          <dl class="clearfix">
+            
+            <dt class="clearfix">
+              <p class="titlelog"></p>
+              <label>产品名:</label>
+              <p>{productname}</p>
+              <label>产品编号:</label>
+              <p>{productid}</p>
+              <label>空间大小:</label>
+              <p>{p_size}M</p>
+              <label>赠送邮局大小:</label>
+              <p>{p_mailsize}M</p>
+            </dt>
+            <dd class="clearfix">
+              <label>选择数据机房：</label>
+              <h1 style="width:400px;"><div style="background-color:#ffc;margin:0"> {xltinxing}</div><select name="room" ></select> </h1> 
+              <h2>*</h2>
+              <h3 style="width:95px;">
+                <div class="flod" style="margin-left:0; margin-top:0px;"><a href="/services/webhosting/SpeedTest.asp" target="_blank">机房速度测试</a></div>
+              </h3>
+            </dd>
+            <dd class="clearfix">
+              <label>FTP帐号：</label>
+              <h1>
+                <input name="ftpaccount" type="text" class="box" size="15" onBlur="chechftpname(this.value)" onFocus="javascript:document.getElementById('checkdiv').style.display='none';">
+                <input type="hidden" name="ismysql" id="ismysql" value="{ismysql}">
+              </h1>
+              <h2>*</h2>
+              <h3>
+                <div name="checkdiv" id="checkdiv"></div>
+              </h3>
+            </dd>
+            <dd class="clearfix">
+              <label>密码：</label>
+              <h1>
+                <input name="ftppassword" type="text" class="z_inputbox" size="30" value="{rndpass}" />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix">
+              <label>确认密码：</label>
+              <h1>
+                <input name="ftppassword1" type="text" class="z_inputbox" size="30" value="{rndpass}" />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            
+            
+             <dd class="clearfix">
+              <label>联 系 人：</label>
+              <h1>
+                <input name="appname" type="text" class="z_inputbox" id="appname" value="{appname}"  size="30" maxlength="10" />
+              </h1>
+                  <h2>*</h2>
+              <h3></h3>
+            </dd>
+            
+            
+          <dd class="clearfix">
+              <label>联系地址：</label>
+              <h1>
+                <input name="appadd" type="text" class="z_inputbox" id="appadd" value="{appadd}"  size="30" maxlength="30" />
+              </h1>
+                 <h2></h2>
+              <h3></h3>
+            </dd>
+            
+          <dd class="clearfix">
+              <label>联系电话：</label>
+              <h1>
+                <input name="apptel" type="text" class="z_inputbox" id="apptel" value="{apptel}"  size="30" maxlength="11" />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            
+          <dd class="clearfix">
+              <label>联系邮件：</label>
+              <h1>
+                <input name="appEmail" type="text" class="z_inputbox" id="appEmail" value="{appEmail}"  size="30" maxlength="50" />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            
+            
+            <dd  class="clearfix">
+             <label>操作系统：</label>
+            <div name="oslistdiv" id="oslistdiv"><select name="oslist"></select></div> 
+            </dd>
+            <DD CLASS="clearfix" id="iptypemsg">
+              <label>IP地址：</label>
+              <h1>
+                <label style="float:none; display:inline; width:auto; margin-right:20px;">
+                  <input type="radio" value="0" name="iptype" id="iptype" checked="checked"/>
+                  共享IP</label>
+                <label style="float:none; display:inline; width:auto;">
+                  <input type="radio" value="1" name="iptype" id="iptype" disabled="disabled" />
+                  独立IP</label>                 
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </DD>            
+            <dd class="clearfix" style="display:none">
+              <label>网站类型：</label>
+              <h1>
+                <select name="cdntype">
+                  <option value="1">请选择网站类型</option>
+                  <option value="1">企业网站</option>
+                  <option value="2">个人网站</option>
+                  <option value="3">交互式网站(论坛、博客等)</option>
+                </select>
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix"  >
+              <label>Mysql版本：</label>
+              <h1>
+				<div id="mysqllistdiv">
+				 <select name="pmver"></select>
+				</div>               
+              </h1>
+              <h2></h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix" style="display:none;">
+              <label>网址：</label>
+              <h1>http://
+                <input type="hidden" name="producttype" value="1">
+                <input name="domainnametop" type="text" class="box" style="font-size: 9pt" value="www" size=4>
+                .
+                <input name="domainname" type="text" class="box" style="font-size: 9pt" size="17">
+              </h1>
+              <h2></h2>
+              <h3></h3>
+            </dd>
+            
+            
+ 
+            
+            
+            
+            
+            <dd class="clearfix" style="border-bottom:none; height:auto;">
+              <label>金额/年限:</label>
+              <h1 id="pricemsg">{buyHostpriceList}</h1>
+              <h2>*</h2>
+              <h3></h3>
+              <div class="up_call"><img src="/Template/Tpl_05/newimages/bubble/up_call.jpg" /></div>
+              <ul class="content_mini"  id="cmini2" style="height:40px;">
+                <li>为防止主观因素未能及时给网站续费，造成网站被暂停或者关闭的情况，建议您一次购买多年的主机，并且可以享受优惠！</li>
+              </ul>
+            </dd>
+            <dd class="clearfix" style="height:auto;position:relative; text-align:center">
+              <ul class="z_bubblebox" id="bubblebox">
+                <li class="top clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-1.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-3.jpg" class="t_right" /></li>
+                <li class="mid clearfix" style="height:auto;">
+                  <div class="m_content" id="bubbleContent">
+                    <ol>
+                      <li>如果您的帐户资金不足，可以选择只下订单申请，系统将为该业务生成一个订单</li>
+                      <li>然后你需要将相关款项汇至我司；我们收到后将款项加在你的会员帐号下，根据该订单开通业务</li>
+                      <li>您自己也可以在管理中心自行开通。（适合于首次购买的直接客户）<br />
+                    </ol>
+                  </div>
+                </li>
+                <li class="bottom clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-6.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-jj.jpg" id="jiantou" class="t_left" style="position:relative; left:342px; margin:0" /><img src="/Template/Tpl_05/newimages/bubble/bubble-8.jpg" class="t_right" /></li>
+              </ul>
+              <div id="limitdiv" style="border:#FF0000 solid 1px; background:#ffffcc; padding:10px; color:#F00;   font-size:14px; display:none">为防止利用我司试用主机从事非法活动,现开通试用主机需预收{demoprice}元服务费，转正时空间费用可优惠{demoprice}元.<br>
+				为防止试用主机被滥用，所有试用主机必须输入用户名与密码以后才可以访问，用户名:siteadmin，密码:110<br>
+                我司虚拟主机提供7天试用，如果没有转为正式购买，在第7天删除。<br>
+                试用期间可以在管理中心-主机管理-续费处点"正式购买"来转正。<br>
+                试用主机不能绑定域名。 </div>
+              <label style="float:none; display:inline" for="payone">
+                <input type="radio" name="paytype" value="0" {ischecked} id=aaa onClick="javascript:document.getElementById('limitdiv').style.display='none';">
+                正式开通&nbsp;
+                <input type="radio" name="paytype" value="2" {isdisabled} id=bbb onClick="javascript:document.getElementById('limitdiv').style.display='none';">
+                只下订单申请
+                <input type="radio" name="paytype" value="1" {isTestDisabled} onClick="javascript:document.getElementById('limitdiv').style.display='';">
+                试用7天(收费{demoprice}元)</label>
+            </dd>
+            <dd class="agrmeet clearfix">
+              <input name="agreement" id="agreement" type="checkbox"  value="1" />
+              <label style="display:inline; width:auto; float:none;" for="agreement">我已阅读并同意{companyname}</label>
+              <a href="/customercenter/hostxiyi.asp" target="_blank">虚拟主机购买协议</a></dd>
+            <dd class="agrmeet clearfix">
+              <img src="/Template/Tpl_05/images/alertinfo.gif" width="650" height="112" />
+            </dd>
+            <dd class="subbottom clearfix">
+              <input type=submit name="Submit1" value="确定购买" class="z_btn-buy" />
+              <input type="hidden" name="act" />
+              <input type="hidden" value="{productid}" name="productid">
+              <input type="hidden" value="{freeid}" name="freeid">
+            </dd>
+            <dd class="subbottom clearfix" style=" height:430px;">
+              <div style="border:solid 1px #999; width:620px; padding:15px;"> [1] 集群服务器架构，多个机房自主选择:四核至强5405*2 内存:4G FBD Ecc 硬盘:146G SAS+160G sata; <br />
+                [2] 实时文件防病毒保护,黑客入侵检测,IIS 应用防火墙,自动抵抗红色代码,冲击波等病毒;<br />
+                [3] 各个网站以独立进程运行,不会被其他站点负载影响,在自己的空间中可以使用FSO和jmail等其他控件;<br />
+                [4] 功能强大控制面板,可以直接修改FTP密码,自行停止网站,自行绑定域名,修改网站缺省文档;<br />
+                [5] 提供WEB上传文件、恢复备份、RAR压缩、RAR解压、站点重定向、mime设置、目录保护、文件保护、脚本错误设置、ip限制、虚拟目录、错误页面定义等诸多高级管理功能;<br />
+                [6] 无障碍技术支持：24×7×365制技术支持，微笑面对任何用户。 提供全球免费电话、QQ,MSN在线服务，沟通无障碍。 <br />
+                [7] 每3分钟自动访问网站一次，监控网站运行.<br />
+                [8] 自动每3天备份一次数据,用户能在管理中心自助恢复数据;<br />
+                [9] 采用独特的第六代高级虚拟主机系统、数据双重保护、软硬件/透明防火墙三重保障;<br />
+                [10] 在线支付，实时开设,CDN网络加速器可供选购，免费赠送功能强大的网站情报系统,如虎添翼般让您的网上空间发挥最大功效!<br />
+                [11] 为了保证服务器上所有虚拟主机用户站点均能正常稳定的运行，严禁上传及运行以下程序：1）聊天室； 2）江湖游戏； 3）大型软件下载； 
+                
+                4）在线播放,木马病毒等极为占用资源的程序。<br />
+                [12] 新的主机在系统架构上重新布置，有别于业内一般的传统单机系统，服务器群前端加装硬件防火墙，全面提速，稳定、安全、高效。 同时加装千M"黑洞"防火墙,完全效抵御DDOS攻击。<br />
+                [13]业务内最大的主机控制面板，40余项管理功能，可以自行在管理中心恢复备份。 <br />
+                [14]在线提供备案服务,空间开通后，请于7天内进行网站备案。<br />
+                [15] 试用7天.开设方式选择为"试用7天"即可。</div>
+            </dd>
+          </dl>
+        </form>
+      </div>  
+    </div>
+    
+    <!--
+--> 
+    
+    <!--
+--> 
+    
+  </div>
+</div>
+{#bottom.html}
+</body>
+</html>

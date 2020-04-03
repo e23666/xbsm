@@ -1,0 +1,186 @@
+/*
+    本页样式为----成品网站超市--电子商务模板网站
+*/
+
+/*banner*/
+.banner {
+    height: 380px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/******************西数电商产业特色 开始******************/
+.shop-introduce {
+    padding: 30px 0 40px;
+    background: url("/template/Tpl_2016/images/sites/shop/shop-bg.png") no-repeat top center;
+    min-height: 482px;
+    text-align: center;
+    position: relative;
+}
+
+/*公共标题样式重置*/
+.shop-introduce .common-title h3 {
+    background: #f1f4f4;
+}
+
+/*下滑小图标*/
+.shop-introduce .si-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat -254px -363px;
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    margin-left: -22px;
+}
+
+/******************西数电商产业特色 结束******************/
+
+/******************优势介绍 开始******************/
+.shop-advantage {
+    padding: 44px 0;
+}
+
+.sa-list {
+
+}
+
+.sa-list li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+/*图片*/
+.sa-list li .sa-img {
+    height: 213px;
+}
+
+/*小标题*/
+.sa-list li .sa-title {
+    padding-top: 30px;
+    font-size: 20px;
+    color: #2a2a2a;
+}
+
+/*横线*/
+.sa-list li .sa-line {
+    margin-top: 14px;
+    width: 100%;
+    height: 2px;
+    background: #e5e5e5;
+    position: relative;
+}
+
+/*小图标*/
+.sa-list li .sa-line i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("/template/Tpl_2016/images/sites/icon.png") no-repeat -220px -363px;
+    position: absolute;
+    top: -11px;
+    right: 0;
+}
+
+/*文字*/
+.sa-list li .sa-txt {
+    padding-top: 14px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #424242;
+}
+
+/******************优势介绍 结束******************/
+
+/******************精美模板推荐 开始******************/
+.shop-tpl {
+    padding: 30px 0;
+}
+
+.shop-tpl .st-title {
+
+}
+
+.shop-tpl .st-title h3 {
+    font-size: 24px;
+    color: #282828;
+}
+
+.shop-tpl .st-title h3 span {
+    padding-left: 10px;
+    font-size: 16px;
+    color: #6f6f6f;
+}
+/*更多模板*/
+.shop-tpl .st-title .st-title-btn {
+    float: right;
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    background: #2086ee;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*容器*/
+.shop-tpl .st-box {
+    /*padding-top: 30px;*/
+}
+
+/*样式重置*/
+.shop-tpl .st-box .tpl-list-container li{
+    margin-right: 36px;
+}
+.shop-tpl .st-box .tpl-list-container li.row-last{
+    margin-right: 0;
+}
+/*查看更多*/
+.shop-tpl .st-btn {
+    margin-top: 30px;
+    display: inline-block;
+    width: 278px;
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 26px;
+    font-size: 16px;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.shop-tpl .st-btn:hover {
+    border-color: #2086ee;
+    color: #2086ee;
+}
+
+/******************精美模板推荐 结束******************/
+
+/******************全网营销版建站 开始******************/
+.shop-taocan {
+    padding: 40px 0 50px;
+}
+
+.st-list {
+    padding-top: 86px;
+}
+
+/******************全网营销版建站 结束******************/
+
+
+
+
+
+
+
+
+
+
+
+

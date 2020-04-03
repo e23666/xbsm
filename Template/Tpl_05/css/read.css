@@ -1,0 +1,84 @@
+body {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 150%;
+	color: #5B5B5B;
+	text-decoration: none;
+	sSCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #666666; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-SHADOW-COLO: #666666 
+
+}
+td {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 140%;
+	color: #5B5B5B;
+	text-decoration: none;
+}
+.inputbox {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #333366;
+	text-decoration: none;
+	height: 18px;
+	background-image: url(/images/boxback.gif);
+	border-top: 1px solid #545454;
+	border-right: 1px solid #545454;
+	border-bottom: 1px solid #969696;
+	border-left: 1px solid #969696;
+
+
+}
+a:link {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #5B5B5B;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #5B5B5B;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FF6600;
+	text-decoration: underline;
+}
+a:active {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #0099FF;
+	text-decoration: underline;
+}
+.ButtonBox {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FF0066;
+	text-decoration: none;
+	background-color: #efefef;
+	border: 1px solid #CCCCCC;
+	height: 19px;
+}
+.inputbox_2 {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FF0099;
+	text-decoration: none;
+	border: 1px solid #666666;
+	line-height: 140%;
+}
+.hand {
+	cursor: hand;
+}
+.button {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(/images/buttonbg.gif);
+	border: 1px groove #CCCCCC;
+	background-color: #FFFFFF;
+
+}

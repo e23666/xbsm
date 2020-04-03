@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>在线申请-{companyname}-专业虚拟主机域名注册服务商!域名注册虚拟主机租用</title>
+<meta name="description" content="在线申请-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="在线申请-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Agent.css" rel="stylesheet" type="text/css">
+</head>
+
+      <script language=javascript>
+
+ function check(form){
+	if (form.UserName.value==""){
+			alert("请输入您的用户名");
+			form.UserName.focus();
+			return false;
+		}
+	if (form.PWD.value==""){
+			alert("请输入您的密码");
+			form.PWD.focus();
+			return false;
+		}
+    if (!confirm('您确信希望成为{companyname}的代理吗？')) return false;
+	return true;
+	}
+
+
+
+function modelf(ckval){
+	if(ckval=="C") {
+	document.form1.level.disabled=true;
+	text2.innerHTML="<img src=/images/yes.gif width=9 height=10>利润率15%,设置费180元（含一域名)";
+	}else{
+	document.form1.level.disabled=false;
+	levelf(document.form1.level.selectedIndex);
+		}
+
+tx1="代理可以帮助客户购买产品等。不同的代理级别享受不同的<a href=/123.htm>代理价格</a>，免使用费";
+tx2="代理可以有自己独立的虚拟网站,有独立的用户管理系统,进行产品的定义和销售。您只要成为我们代理商，在管理中心里 自己就可以申请属于你的虚拟站点，提供ftp权限，您可以修改你的页面信息，代理商有自己的形象出现。所有业务为实时开通，不需要您再手工提交！它包括下列模块：1.用户管理； 2.产品管理； 3.财务管理； 4.订单管理； 5.业务管理； 6.客户服务；7.代理商管理； <a href=/agent/model.asp>详情...</a>";
+tx3="{companyname}销售联盟，是指共用{companyname}的品牌优势来进行连锁销售的一种模式。你只需要申请一个域名，按要求指向我们的ip,你就成为了{companyname}销售部队的一部分,<a href=vcp.asp>详情..</a>";
+
+switch(ckval){
+	case "A":
+		txt=tx1;
+		break;
+	case "B":
+		txt=tx2;
+		break;
+	case "C":
+		txt=tx3;
+		break;		
+
+		}
+	text1.innerHTML="<img src=/images/yes.gif width=9 height=10>" +txt;
+  return true;
+}
+
+function levelf(ckindex){
+
+txt1="代理预付款1000元";
+txt2="代理预付款3000元";
+txt3="代理预付款5000元";
+txt4="代理预付款15000元";
+
+switch(ckindex){
+	case 0:
+		txt=txt1;
+		break;
+	case 1:
+		txt=txt2;
+		break;
+	case 2:
+		txt=txt3;
+		break;
+	case 3:
+		txt=txt4;
+		break;
+	}
+if (document.form1.model.value=="B") txt=txt+",平台费用200元";
+text2.innerHTML="<img src=/images/yes.gif width=9 height=10>" +txt;
+return true;
+}
+</script>
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+<li><a href="/agent/">代理专区</a></li>
+<li><a href="/agent/apply.asp">加盟代理</a></li>
+    </ul>
+  </div>
+<div id="MainContentDIV">
+{#agentleft.html}
+
+ <div id="MainRight">
+      <div id="DomainFlash">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+    <param name="movie" value="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/agent/FlashList.xml" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <embed src="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/agent/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+  </object>
+</div>
+
+      <div id="AgentList">
+        <div class="apply_style">
+          <form action="apply.asp" method="post" name="form1" id="form1" onSubmit="return check(this);"><div class="Manager_Search_info_right">
+              <div class="Search_Info_Content">
+                <ul>
+                  <li>
+                    <div class="ttl">会员用户名：</div>
+                    <div class="mml">
+                      <input name="UserName" type="text" class="inputbox" size="20" maxlength="50" />
+                    </div>
+                    <div class="ccl"><a href="/reg" target="_blank">注册</a>|<a href="/agent/level.asp">去简易申请</a></div>
+                  </li>
+                  <li>
+                    <div class="ttl">会员密码：</div>
+                    <div class="mml">
+                      <input name="PWD" type="password" class="inputbox" size="20" maxlength="50" />
+                    </div>
+                    <div class="ccl"><a href="/reg/forget.asp" target="_blank">忘记密码</a></div>
+                  </li>
+                  <li style="height:55px;">
+                    <div class="ttl">代理模式：</div>
+                    <div class="mml">
+                      <select name="model" onChange="modelf(this.value);">
+                        <option value="A" selected="selected">A模式</option>
+                        <option value="B">B模式</option>
+                        <option value="C(暂停申请)">C模式(暂停申请)</option>
+                        <option value="API">api模式</option>
+                      </select>
+                    </div>
+                    <div class="ccl"  style="height:55px;"><span id="text1">代理可以帮助客户购买产品等。不同的代理级别享受不同的代理价格，免使用费</span></div>
+                  </li>
+                  <li>
+                    <div class="ttl">代理级别：</div>
+                    <div class="mml">
+                      <select name="level" onChange="levelf(this.selectedIndex);">
+                            <option value="普通代理" selected>普通代理</option>
+                            <option value="一级代理">一级代理</option>
+                            <option value="友好代理">友好代理</option>
+                            <option value="伙伴代理">伙伴代理</option>
+                          </select>
+                    </div>
+                    <div class="ccl"><span id="text2">预付款1000元</span></div>
+                  </li>
+                  <li style="height:60px;">
+                    <div class="ttl">备注：</div>
+                    <div class="mml" style="height:60px;"><textarea name="Memo" cols="24" rows="3" wrap="VIRTUAL" class="inputbox_textarea"></textarea></div>
+                    <div class="ccl"></div>
+                  </li>
+                </ul>
+                <div class="big_Submit_Button RedLink">
+                如果您在线提交代理申请，表示您已经查阅并接受了我司的代理协议。 </div>
+                <div class="big_Submit_Button">
+                  <input name="button" type="submit" class="Long_Submit_Button" id="button" value="立即提交申请" />
+                </div>
+              </div>
+            </div></form>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+</div>
+{#bottom.html}
+</body>
+</html>

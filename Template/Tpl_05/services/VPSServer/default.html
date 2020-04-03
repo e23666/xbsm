@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}VPS主机租用|VPS服务器租用|虚拟服务器租用</title>
+<meta name="description" content="{companyname}专业提供VPS主机租用,VPS服务器租用,虚拟服务器租用:{companyname}在中国电信拥有独立VIP机房，是西部地区最大的主机租用、服务器租用、主机托管服务商，服务器租用800元/月起，支持按月付款！">
+<meta name="keywords" content="VPS主机租用,VPS服务器租用,VPS,VPS虚拟主机,VPS服务器,VPS虚拟服务器">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/VPSServer.css" rel="stylesheet" type="text/css">
+<script src="/Template/Tpl_05/jscripts/common.js"></script>
+<script src="/Template/Tpl_05/jscripts/check.js"></script>
+<script language="javascript" src="/jscripts/jq.js"></script>
+<script language="javascript">
+$(function(){
+	pagestart();
+});
+function pagestart(){
+	$("input[name^='S_radio_']:radio:checked").each(function(i, n) {
+        var proid=$(n).attr("name").replace("S_radio_","");
+		setmsg(proid);
+    });	
+	$("input[name^='S_radio_']:radio").click(function(){
+		var proid=$(this).attr("name").replace("S_radio_","");
+		setmsg(proid);
+	});
+}
+function setmsg(proid){
+	var roomObj=$("input[name^='S_radio_"+ $.trim(proid) +"']:radio:checked");	
+	var roomid=roomObj.val();	
+	$("div[id^='S_price_"+ proid +"']").slideUp(0);
+	$("#S_price_"+ proid +"_"+roomid).slideDown(0);
+	var Memory=$("input[name='memsize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var HardDisk=$("input[name='dissize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var pname=$("input[name='pname_"+ proid +"']:hidden").val();
+	$("#dk_"+proid).html($("input[name='r_vpsband_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#ip_"+proid).html($("input[name='ismodrr_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#mem_"+proid).html(Memory);
+	$("#disk_"+proid).html(HardDisk);
+	$("#"+proid).click(function(){
+		if (proid!="vps000" && proid!="oemvps1")
+	{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("Intel 5645/E5-2620四核处理器&times;4")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}
+		else{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("Intel 5645/E5-2620双核处理器&times;2")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		
+		}
+	});
+}
+</script>
+</head>
+<body id="thrColEls">
+<div class="Style2009"> {#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/VPSServer/">VPS主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV"> {#vpsleft.html}
+    <div id="MainRight">
+      <div id="DomainFlash">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="738" height="173">
+          <param name="movie" value="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/vps/FlashList.xml" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <embed src="/Template/Tpl_05/Flash/FlashViewer.swf?XMLPath=/Template/Tpl_05/config/vps/FlashList.xml" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="738" height="173"></embed>
+        </object>
+      </div>
+      <div id="VPS_Tabel"> </div>
+      <div id="VPS_Label_List_Box">
+        <div id="Server_Top_Info" class="RedLink">
+          <div class="ImgDiv_to_Left"><img src="/Template/Tpl_05/newimages/VPSserver/VPS_Top_PIC.jpg" width="227" height="198" />
+            <div id="speed_test" class="center"><a href="/services/webhosting/SpeedTest.htm"><img src="/Template/Tpl_05/newimages/Server/Room_Speed_test_pic.jpg" width="114" height="27" /></a></div>
+          </div>
+          <br />
+          <h5 class="redColor">{companyname}VPS主机服务优势：</h5>
+          <br />
+          <ul>
+            <li class="ico_num_2">免费安装PHP5、Mysql5、Zend3.3、PhpMyadmin，免除自己配置的麻烦</li>
+            <li class="ico_num_3">免费提供"网站管理助手"</li>
+            <li class="ico_num_4">Linux平台免费赠送webmin主机控制面板</li>
+            <li class="ico_num_5">超强的VPS控制面板，在线重启、重装、切换系统(win2003/Linux)...</li>
+            <li class="ico_num_6">咨询热线：{telphone}</li>
+          </ul>
+        </div>
+        <div id="mail_box_list_1" class="vps_lable_css">
+          <div id="VPS_List_Box_new">
+            <ul>
+              <li>
+                <div class="ListTitle_new title_ico_1">{ServerName(vps001)}－性价比之王</div>
+                <div class="picList_new">
+                  <div class="ListPic_new"><img src="/Template/Tpl_05/newimages/VPSserver/vps_ico_nw.jpg" width="270" height="72" /></div>
+                </div>
+                <div class="ListContent_new"> 处理器: <span id="vps001_cpu">5645/E5-2620四核处理器&times;4</span><br />
+                  系　统: 可选Windows 2003   sp2/CentOS 5.4<br />
+                  网　卡: Intel 1000M自适应以太网卡<br />
+                  内　存: <span id="mem_vps001"></span><br />
+                  硬　盘: <span id="disk_vps001"></span><br />
+                  带　宽: <span id="dk_vps001"></span><br />
+                  IP地址: <span id="ip_vps001"></span><br />
+                  <div class="aal">机　房: </div>
+                  {ServerRoomList(vps001)}
+                  <div class="Listbutton_new"><a href="###" id="vps001"><img src="/Template/Tpl_05/newimages/VPSserver/LongButtonServer_buy_dust.gif" width="84" height="24" /></a></div>
+                </div>
+                <div class="down_box"><img src="/Template/Tpl_05/newimages/VPSserver/new_vps_page_bg_button.gif" width="348" height="13" /></div>
+              </li>
+              <li>
+                <div class="ListTitle_new title_ico_2">{ServerName(vps002)}－性价比之王</div>
+                <div class="picList_new">
+                  <div class="ListPic_new"><img src="/Template/Tpl_05/newimages/VPSserver/vps_ico_nw.jpg" width="270" height="72" /></div>
+                </div>
+                <div class="ListContent_new"> 处理器: <span id="vps002_cpu">Intel 5645/E5-2620四核处理器&times;4</span><br />
+                  系　统: 可选Windows 2003   sp2/CentOS 5.4<br />
+                  网　卡: Intel 1000M自适应以太网卡<br />
+                  内　存: <span id="mem_vps002"></span><br />
+                  硬　盘: <span id="disk_vps002"></span><br />
+                  带　宽: <span id="dk_vps002"></span><br />
+                  IP地址: <span id="ip_vps002"></span><br />
+                  <div class="aal">机　房: </div>
+                  {ServerRoomList(vps002)}
+                  <div class="Listbutton_new"><a href="###" id="vps002"><img src="/Template/Tpl_05/newimages/VPSserver/LongButtonServer_buy_dust.gif" width="84" height="24" /></a></div>
+                </div>
+                <div class="down_box"><img src="/Template/Tpl_05/newimages/VPSserver/new_vps_page_bg_button.gif" width="348" height="13" /></div>
+              </li>
+              <li>
+                <div class="ListTitle_new title_ico_1">{ServerName(vps003)}－性价比之王</div>
+                <div class="picList_new">
+                  <div class="ListPic_new"><img src="/Template/Tpl_05/newimages/VPSserver/vps_ico_nw.jpg" width="270" height="72" /></div>
+                </div>
+                <div class="ListContent_new"> 处理器: <span id="vps003_cpu">Intel 5645/E5-2620四核处理器&times;4</span><br />
+                  系　统: 可选Windows 2003   sp2/CentOS 5.4<br />
+                  网　卡: Intel 1000M自适应以太网卡<br />
+                  内　存: <span id="mem_vps003"></span><br />
+                  硬　盘: <span id="disk_vps003"></span><br />
+                  带　宽: <span id="dk_vps003"></span><br />
+                  IP地址: <span id="ip_vps003"></span><br />
+                  <div class="aal">机　房: </div>
+                  {ServerRoomList(vps003)}
+                  <div class="Listbutton_new"><a href="###" id="vps003"><img src="/Template/Tpl_05/newimages/VPSserver/LongButtonServer_buy_dust.gif" width="84" height="24" /></a></div>
+                </div>
+                <div class="down_box"><img src="/Template/Tpl_05/newimages/VPSserver/new_vps_page_bg_button.gif" width="348" height="13" /></div>
+              </li>
+              <li>
+                <div class="ListTitle_new title_ico_3">{ServerName(vps000)}</div>
+                <div class="picList_new">
+                  <div class="ListPic_new"><img src="/Template/Tpl_05/newimages/VPSserver/vps_ico_nw.jpg" width="270" height="72" /></div>
+                </div>
+                <div class="ListContent_new"> 处理器: <span id="vps000_cpu">Intel 5645/E5-2620双核处理器&times;2</span><br />
+                  系　统: 可选Windows 2003   sp2/CentOS 5.4<br />
+                  网　卡: Intel 1000M自适应以太网卡<br />
+                  内　存: <span id="mem_vps000"></span><br />
+                  硬　盘: <span id="disk_vps000"></span><br />
+                  带　宽: <span id="dk_vps000"></span><br />
+                  IP地址: <span id="ip_vps000"></span><br />
+                  <div class="aal">机　房: </div>
+                  {ServerRoomList(vps000)}
+                  <div class="Listbutton_new"><a href="###" id="vps000"><img src="/Template/Tpl_05/newimages/VPSserver/LongButtonServer_buy_dust.gif" width="84" height="24" /></a></div>
+                </div>
+                <div class="down_box"><img src="/Template/Tpl_05/newimages/VPSserver/new_vps_page_bg_button.gif" width="348" height="13" /></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nofapiao">如果您需要更大的内存和硬盘，请选择<a href="/services/CloudHost/" class="Link_Blue">云主机</a>...</div>
+      </div>
+      <div class="vpsbottom"><img src="/Template/Tpl_05/newimages/VPSserver/cloudhost_64.jpg" /></div>
+    </div>
+  </div>
+</div>
+</div>
+{#bottom.html}
+</body>
+</html>

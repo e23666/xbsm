@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="hd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>网站登录验证码录入</title>
+    <meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+    <meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,网站建设,双线虚拟主机,asp空间">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/login.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+</head>
+<body class="min990">
+
+{#top.html}
+ 
+
+<div class="content" id="content">
+    <div class="wide1190" style="position: relative;">
+        <!--登录表单容器 开始-->
+        <div class="login-box">
+	
+            <form name=formlogin onSubmit="return CheckLogin()" action="/chklogin.asp" method=post autocomplete="off">
+                <INPUT type=hidden value=enterzone name=module>
+                <div class="text-center hide m-login-logo">
+                    <img src="picture/logo-single-1.png">
+                </div>
+                <div class="login-title">
+                    请录入验证码
+                </div>
+			 
+
+                <div class="login-from">
+                  <FORM METHOD=POST ACTION="/chklogin.asp">
+						<div style="line-height:45px;">
+						登录帐号：<font style="font-weight;color:blue">{u_name}</font><INPUT TYPE="hidden" NAME="u_name" value="{u_name}" class="form-input">
+						<INPUT TYPE="hidden" NAME="u_password"  value="{u_password}">
+						</div>
+						<div  style="line-height:45px;">
+						验&nbsp;&nbsp;证&nbsp;&nbsp;码：<INPUT TYPE="text" NAME="caplogin" size=8 style="height: 35px;line-height: 35px;border: 1px solid #e3e3e3;">&nbsp;&nbsp;<img src="/config/getcode.asp?r="+Math.random() onclick="this.src=this.src" id="imgcode" style="vertical-align:middle;height:35px;">
+						</div>
+						<center><INPUT TYPE="submit" value="确认登录" class="g-common-btn common-btn"> <INPUT TYPE="button" value="重新登录" onclick="location.href='/login.asp'"  class="g-common-btn common-btn"></center>
+						</FORM>
+						<script>
+						    var codeobj=document.getElementById('imgcode');
+							codeobj.src="/config/getcode.asp?r="+Math.random();
+						</script>
+						  <h1 class="z_div" style="text-align:center;border-bottom:dotted #ccc 1px;font-size:16px;color:red;line-height:45px;">为了您的帐号安全请录入验证码！</h1>
+                </div>
+               
+            </form>
+        </div>
+        <!--登录表单容器 结束-->
+    </div>
+</div>
+
+{#bottom.html}
+</body>
+</html>

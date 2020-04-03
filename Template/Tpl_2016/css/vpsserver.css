@@ -1,0 +1,326 @@
+.vps-content {
+	_zoom:1;
+	background:#f1f4f4;
+	background-color:#F1F4F4;
+	padding-top:20px;
+	padding-bottom:60px
+}
+.vps-list li.vps-item {
+	width:290px;
+	float:left;
+	margin-left:10px
+}
+.wjf-ui-select {
+	width:230px
+}
+.vps-list li.taocan-item {
+	width:396px;
+	padding:40px 0
+}
+.vps-list li.taocan-item-hover {
+	box-shadow:0 5px 18px #D0CDCD;
+	margin-top:-1px;
+	margin-bottom:1px
+}
+.vps-list .border-bottom {
+	border-bottom:1px solid #ddd
+}
+.vps-list .border-right {
+	border-right:1px solid #ddd
+}
+.vps-list .column {
+	background:#fff;
+	width:240px;
+	padding:0 24px;
+	margin:0 auto;
+	border:1px solid #e0e0e0;
+	border-top-color:#006eff
+}
+.vps-list .column .column-top {
+	text-align:center
+}
+.vps-list .column .column-top .column-title {
+	padding:30px 0 22px;
+	font-size:24px;
+	color:#333;
+	line-height:1;
+	border-bottom:1px solid #e0e0e0
+}
+.vps-list .column .column-top .icon {
+	margin-left:8px;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	font-style:normal;
+	color:#fff;
+	text-align:center;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	font-weight:400
+}
+.vps-list .column .column-top .hot {
+	background:#ff3244
+}
+.vps-list .column .column-top .recommend {
+	background:#26bafd
+}
+.vps-list .column .column-top .tehui {
+	background:#ffa52e
+}
+.vps-list .column .column-config {
+	padding-top:4px;
+	line-height:1.6;
+	text-align:left;
+	height:240px
+}
+.vps-list .column .column-config dt {
+	float:left;
+	padding-top:10px;
+	width:50px;
+	color:#484848;
+	font-weight:700
+}
+.vps-list .column .column-config dd {
+	padding-top:10px;
+	color:#707070;
+	overflow:hidden;
+	word-break:break-all
+}
+.vps-list .column .column-config dd span {
+	color:#a3a3a3
+}
+.vps-list .column .server-room {
+	position:relative;
+	margin-top:10px;
+	zoom:1
+}
+.server-room .wjf-ui-select {
+	background-color:#f7fbff;
+	background-position-x:240px
+}
+.server-room .wjf-ui-select-container {
+	width:229px;
+	left:0;
+	top:0
+}
+.server-room .wjf-ui-select-container .item {
+	float:none
+}
+.server-room .wjf-ui-select-container .first-item {
+	background-image:url(/template/Tpl_2016/images/cloudhost-icon_05.png);
+	background-repeat:no-repeat;
+	background-position:215px 11px
+}
+.server-room .wjf-ui-select span,.server-room .wjf-ui-select-container span {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	float:right;
+	color:#d9d9d9;
+	font-family:'宋体'
+}
+.server-room .wjf-ui-select-container span {
+	margin-right:7px
+}
+.server-room .wjf-ui-select span a,.server-room .wjf-ui-select-container span a {
+	color:#2b85d9;
+	padding-left:0
+}
+.server-room .wjf-ui-select span a:hover,.server-room .wjf-ui-select-container span a:hover {
+	color:#fd741b
+}
+.vps-list .column .column-price {
+	padding:6px 0 0;
+	line-height:1;
+	color:#787878
+}
+.vps-list .column .column-price .ppl {
+	padding-right:10px;
+	word-wrap:break-word;
+	word-break:break-all;
+	line-height:initial
+}
+.vps-list .column .column-price .price {
+	font-size:14px;
+	font-weight:700;
+	color:#fe6733
+}
+.vps-list .column .column-bottom {
+	padding:20px 0 30px;
+	text-align:center
+}
+.vps-list .column .column-btn {
+	display:inline-block;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	border:1px solid #2086ee;
+	font-size:16px;
+	color:#2086ee;
+	text-align:center;
+	background-color:#fff;
+	cursor:pointer
+}
+.vps-list .vps-item-hover .column {
+	box-shadow:-6px 10px 20px -2px rgba(4,0,0,.15);
+	margin-top:-1px
+}
+.vps-list .vps-item-hover .column-btn {
+	background-color:#2086ee;
+	color:#fff
+}
+.vps-advantage {
+}
+.vps-advantage .vps-advantage-list {
+	margin-bottom:70px
+}
+.vps-advantage .vps-advantage-list li {
+	padding:86px 0 0 5px;
+	float:left
+}
+.vps-advantage .vps-advantage-list .pl-110 {
+	padding-left:119px;
+	_padding-left:104px
+}
+.vps-advantage .vps-advantage-list .vps_img {
+	float:left;
+	width:98px;
+	height:98px;
+	background:url(/template/Tpl_2016/images/vpsserver-icon.jpg) no-repeat center center
+}
+.vps-advantage .vps-advantage-list .vps_img_1 {
+	background-position:0 0
+}
+.vps-advantage .vps-advantage-list .vps_img_2 {
+	background-position:-148px 0
+}
+.vps-advantage .vps-advantage-list .vps_img_3 {
+	background-position:-296px 0
+}
+.vps-advantage .vps-advantage-list .vps_img_4 {
+	background-position:-444px 0
+}
+.vps-advantage .vps-advantage-list .vps_img_5 {
+	background-position:-592px 0
+}
+.vps-advantage .vps-advantage-list .vps_img_6 {
+	background-position:-740px 0
+}
+.vps-advantage .vps-advantage-list p {
+	font-size:14px
+}
+.vps-advantage .vps-advantage-list .vps-txt {
+	padding-left:15px;
+	width:420px;
+	overflow:hidden;
+	float:left
+}
+.vps-advantage .vps-advantage-list .vps-title {
+	padding:14px 0;
+	font-size:18px;
+	line-height:1;
+	font-weight:700
+}
+.vps-faq {
+}
+.vps-faq .faq-list {
+	line-height:1
+}
+.vps-faq .faq-list dt {
+	padding:30px 0 8px;
+	font-size:16px;
+	color:#277cdf
+}
+.vps-faq .faq-list dd {
+	padding:10px 0 14px;
+	line-height:1.7;
+	font-size:14px;
+	color:#666;
+	border-bottom:1px dashed #d3d3d3
+}
+.vps-faq .faq-list dt span,.vps-faq .faq-list dd span {
+	float:left;
+	padding-right:10px;
+	font-weight:700
+}
+.vps-faq .faq-list dt span,.vps-faq .faq-list dd p {
+	overflow:hidden
+}
+.vps-faq .faq-list .yd_link {
+	color:#fd741b
+}
+.vps-faq .faq-list .yd_link:hover {
+	text-decoration:underline
+}
+.vps-pingjia {
+	margin-top:38px
+}
+#J_VPSPJListContainer .wjf-page-loading {
+	margin-top:20px
+}
+@media screen and (max-width:1206px) {
+	.vps-list li.vps-item {
+		width:240px;
+		margin-left:5px
+	}
+	.vps-list .column {
+		width:228px;
+		padding:0 5px
+	}
+	.vps-list .column .column-top {
+		padding:0;
+		text-align:center
+	}
+	.vps-list .column .column-top .column-title {
+		padding:30px 0 22px
+	}
+	.vps-list .column .column-config {
+		padding:4px 0 0
+	}
+	.vps-list .column .server-room {
+	}
+	.server-room .wjf-ui-select {
+		width:190px;
+		background-position-x:200px
+	}
+	.vps-advantage .vps-advantage-list .vps-txt {
+		width:369px
+	}
+	.vps-advantage .vps-advantage-list .pl-110 {
+		padding-left:21px;
+		_padding-left:15px
+	}
+}
+.desktop .vps-list li.vps-item {
+	width:240px;
+	margin-left:5px
+}
+.desktop .vps-list .column {
+	width:228px;
+	padding:0 5px
+}
+.desktop .vps-list .column .column-top {
+	padding:0;
+	text-align:center
+}
+.desktop .vps-list .column .column-top .column-title {
+	padding:30px 0 22px
+}
+.desktop .vps-list .column .column-config {
+	padding:4px 0 0
+}
+.desktop .vps-list .column .server-room {
+}
+.desktop .server-room .wjf-ui-select {
+	width:190px;
+	background-position-x:200px
+}
+.desktop .vps-advantage .vps-advantage-list .vps-txt {
+	width:369px
+}
+.desktop .vps-advantage .vps-advantage-list .pl-110 {
+	padding-left:21px;
+	_padding-left:15px
+}

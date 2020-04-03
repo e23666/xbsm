@@ -1,0 +1,621 @@
+.DomainLeftMenu #DomainLeftMenuBottom {
+	padding-top:28px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch {
+	height:auto;
+	width:750px;
+	margin-top:3px;
+	background:url(/Template/Tpl_05/newimages/Domains/Domain_Domain_Search_EN.jpg) no-repeat;
+	height:238px;
+}
+.DomainSearchTitle {
+	width:auto;
+	height:auto;
+	margin:16px 0px 0px 18px;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.TongYongDomain {
+	float:left;
+	width:235px;
+	height:auto;
+	padding-left:10px;
+}
+.TongYongDomain #TongYongDomain_Logo {
+	background: url(/Template/Tpl_05/newimages/Domains/tongyong.gif) no-repeat;
+	height:22px;
+	width:auto;
+	padding-left:50px;
+	padding-top:15px;
+	font-size:14px;
+	font-weight:bold;
+}
+.TongYongDomain #TongYongSearch {
+	padding-top:5px;
+	padding-left:15px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch .DomainSearchNews {
+	float:left;
+	margin-top:16px;
+	background:url(/Template/Tpl_05/newimages/default/qiang.gif) no-repeat 0px 1px;
+	padding-left:18px;
+	margin-left:50px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch #frmsearchInt #DomainSuffix_CN {
+	width:440;
+	height:50px;
+	margin:auto;
+	overflow:hidden;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch #frmsearchInt #DomainSuffix_CN ul {
+	float:left;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch #frmsearchInt #DomainSuffix_CN ul li {
+	float:left;
+	font-weight:bold;
+	width:110px;
+	padding-top:2px;
+}
+.CN_PIC {
+	height:130px;
+	width:245px;
+	margin-left:5px;
+	float:left;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch #CN_Domain_Price_list {
+	width:100%;
+	margin:auto;
+	height:50px;
+	margin-top:5px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainSearch #CN_Domain_Price_list ul li {
+	float:left;
+	width:140px;
+	margin:2px 5px 0px 5px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight #DomainInfo {
+	width:750px;
+	height:290px;
+	background:url(/Template/Tpl_05/newimages/Domains/DomainInfo_bg.gif) no-repeat 0px 50px;
+	margin-top:5px;
+}
+#MainRight #DomainInfo .Info_Box {
+	width:350px;
+	height:100px;
+	float:left;
+	margin-left:15px;
+	margin-top:10px;
+}
+#MainRight #DomainInfo .Info_Box .Info_Box_pic {
+	width:110px;
+	height:100px;
+	float:left;
+	margin-right:15px;
+	text-align:center;
+}
+#MainRight #DomainInfo .Info_Box .link {
+	margin-top:6px;
+}
+#MainLeft .DomainLeftMenu #DomainLeftMenuContent div {
+	width:85%;
+	margin:auto;
+}
+#MainRight #DomainPriceList {
+	margin-top:15px;
+	width:750px;
+	height:auto;
+}
+#MainRight #DomainPriceList ul {
+	margin-left:20px
+}
+#MainRight #DomainPriceList ul li {
+	float:left;
+	width:160px;
+	padding:2px 2px 0px 13px;
+	font-family:Verdana;
+	height:25px;
+	letter-spacing:1px;
+	background:url(/Template/Tpl_05/newimages/default/Activelist_arrow.gif) no-repeat 0px 12px;
+}
+#MainLeft #DomainLeftGuestSay {
+	width:196px;
+	height:85px;
+	margin-left:4px;
+}
+#MainRight #DomainInfo .Info_Box a img {
+	margin-top:6px;
+}
+#MainRight #OurYoushi {
+	width:95%;
+	height:auto;
+	margin:auto;
+}
+#MainRight #DomainInfo #tuijianDomain {
+	height:225px;
+	;
+}
+#MainRight #DomainInfo .Title_Box_Top #DomainPriceList_ico {
+	float:right;
+	width:300px;
+	height:auto;
+	margin:5px 0px 0px 0px;
+}
+#MainRight .The_Table_List_B table {
+	width:90%;
+	margin:auto;
+	border-collapse:collapse;
+	background:#FFF;
+}
+.Whitebg {
+	background-color: #ffffff;
+}
+#MainRight .The_Table_List_B table tr td {
+	vertical-align:top;
+	padding:5px 5px 5px 10px;
+	border:1px #DFE2E5 solid;
+	color:#000;
+}
+.Blue12pxFont {
+	font-family:Verdana;
+	font-size:12px;
+	font-weight:bold;
+	color:#069;
+}
+#MainRight .The_Table_List_B table tr:hover {
+	background:#FEFFCD;
+}
+#MainRight #DomainCN_info {
+	background:url(/Template/Tpl_05/newimages/Domains/Info_Title_bg.gif) no-repeat;
+	height:172px;
+	width:750px;
+	margin-top:3px;
+}
+#MainRight #DomainCN_info #Domain_CN_info {
+	margin-left:19px;
+	margin-top:17px;
+	float:left;
+	width:400px;
+	height:153px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic {
+	height:153px;
+	width:300px;
+	margin-top:17px;
+	margin-left:10px;
+	float:left;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul {
+	padding-left:15px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul li {
+	padding-left:20px;
+	margin-top:10px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul #num_ico_1 {
+	background:url(/Template/Tpl_05/newimages/Domains/num_ico_1.gif) no-repeat 0px 3px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul #num_ico_2 {
+	background:url(/Template/Tpl_05/newimages/Domains/num_ico_2.gif) no-repeat 0px 3px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul #num_ico_3 {
+	background:url(/Template/Tpl_05/newimages/Domains/num_ico_3.gif) no-repeat 0px 3px;
+}
+#MainRight #DomainCN_info #Domain_CN_Info_pic ul #num_ico_4 {
+	background:url(/Template/Tpl_05/newimages/Domains/num_ico_4.gif) no-repeat 0px 3px;
+}
+#MainRight .The_Table_List {
+	margin:30px 0 0 0;
+}
+#MainRight .The_Table_List ul {
+	height:100px;
+	width:640px;
+	margin:auto;
+	background:url(/Template/Tpl_05/newimages/Domains/sild_line_bg.gif) repeat-x;
+}
+#MainRight .The_Table_List ul:hover {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+#MainRight .The_Table_List ul li {
+	float:left;
+	padding:15px 0px 10px 0px;
+	font-family:Verdana;
+}
+#MainRight .The_Table_List ul .dm_hd {
+	width:135px;
+	font-size:12px;
+	font-weight:bold;
+	color:#069;
+	margin-left:20px;
+}
+#MainRight .The_Table_List ul .dm_info {
+	width:340px;
+}
+#MainRight .The_Table_List ul .dm_price {
+	width:90px;
+	margin-left:30px;
+}
+#MainRight .FolrList {
+	width:750px;
+	margin-left:10px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+#MainRight .The_Table_List_B {
+	width:690px;
+}
+#MainRight .The_Table_List_B ul {
+	height:45px;
+	width:620px;
+	margin:auto;
+	background:url(/Template/Tpl_05/newimages/Domains/sild_line_bg.gif) repeat-x;
+}
+#MainRight .The_Table_List_B ul:hover {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+#MainRight .The_Table_List_B ul li {
+	float:left;
+	padding:3px 0px 5px 0px;
+	font-family:Verdana;
+}
+#MainRight .The_Table_List_B ul .dm_hd {
+	width:135px;
+	font-size:12px;
+	font-weight:bold;
+	color:#069;
+	margin-left:20px;
+}
+#MainRight .The_Table_List_B ul .dm_info {
+	width:300px;
+}
+#MainRight .The_Table_List_B ul .dm_price {
+	width:120px;
+	margin-left:30px;
+}
+#MainRight .Other_list #cnDomainADV {
+	height:auto;
+	width:554px;
+	margin-top:15px;
+	margin:auto;
+}
+.ContentBox_A {
+	height:auto;
+	width:auto;
+	margin-top:15px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+.ContentBox_C {
+	height:90px;
+	;
+	width:auto;
+	margin-left:15px;
+	padding-top:30px;
+	padding-left:30px;
+}
+form .formText {
+	float:left;
+	margin-left:15px;
+	width:auto;
+}
+form .formInputbox {
+	float:left;
+	margin-left:15px;
+	width:auto;
+}
+form .formButton {
+	float:left;
+	margin-left:15px;
+	width:auto;
+	margin-top:-3px;
+}
+form #formDownInfo {
+	height:30px;
+	;
+	width:600px;
+	margin-left:15px;
+	float:left;
+	margin-top:15px;
+	background:url(/Template/Tpl_05/newimages/Domains/ico_light.gif) no-repeat;
+	padding-left:30px;
+	color:#F60;
+	font-weight:bold;
+}
+.ContentBox_D {
+	height:auto;
+	width:auto;
+	margin-top:15px;
+}
+.DomainSearchTitleNew {
+	float:left;
+	margin:10px 0px 0px 18px;
+	font-size:14px;
+	font-weight:bold;
+	width:auto;
+}
+#domain_whois_box {
+	float:left;
+	height:40px;
+	width:300px;
+	margin-top:5px;
+}
+#domain_whois_box li {
+	float:left;
+	width:120px;
+	cursor:pointer;
+	height:30px;
+	padding:9px 0px 0px 0px;
+}
+.adstext {
+	display:block;
+	vertical-align:bottom;
+	background:url(/Template/Tpl_05/newimages/ico_qiang.gif) no-repeat;
+	padding-left:18px;
+	height:19px;
+	float:left;
+	margin-top:12px;
+}
+#DomainSearch a {
+	color:#F30;
+	font-weight:bold;
+}
+.DomainSearchNews a:hover {
+	color:#06F;
+	font-weight:bold;
+}
+#domain_whois_box_1, #domain_whois_box_2, #DomainCN {
+	width:455px;
+	height:auto;
+	float:left;
+	margin-left:18px;
+}
+.searchDiv_A {
+	height:26px;
+	background:url(/Template/Tpl_05/newimages/domains/domain_www_2.gif) no-repeat 0px 3px;
+	padding-left:60px;
+}
+.searchDiv_B {
+	height:55px;
+	background:url(/Template/Tpl_05/newimages/domains/domain_www_2.gif) no-repeat 0px 3px;
+	padding-left:60px;
+}
+.searchinput {
+	width:auto;
+	float:left;
+}
+.SearchButton {
+	width:auto;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.DomainSuffix {
+	/*	width:99%;
+	height:127px;
+	margin:auto;
+	overflow:hidden;*/
+	width:450px;
+	overflow:hidden;
+}
+#domain_whois_box_1 ul li {
+	float:left;
+	width:75px;
+	font-family:Verdana, Geneva, sans-serif;
+	padding-top:2px;
+}
+#domain_whois_box_2 ul li {
+	float:left;
+	width:75px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#SearchTXT {
+	width:160px;
+	float:left;
+	margin-left:10px;
+	margin-top:7px;
+}
+#domain_info_box {
+	height:40px;
+	width:200px;
+	margin-top:5px;
+	float:left;
+}
+#domain_info_box li {
+	float:left;
+	width:93px;
+	cursor:pointer;
+	height:30px;
+	padding:9px 0px 0px 0px;
+}
+#movedinForm {
+	margin-top:15px;
+	margin-left:50px;
+}
+#Tableline {
+	width:380px;
+	height:40px;
+}
+.formText_line {
+	float:left;
+	margin-left:15px;
+	width:85px;
+	text-align:right;
+}
+.formInputbox_line {
+	float:left;
+	margin-left:15px;
+	width:auto;
+}
+#loginFir {
+	float:right;
+	width:auto;
+	margin-top:40px;
+	margin-right:40px;
+	font-weight:bold;
+	color:#F60;
+}
+#loginFir_b {
+	float:right;
+	width:auto;
+	margin-right:20px;
+}
+#MainRight .Other_list .Other_contetn_info {
+	width:95%;
+	margin:auto;
+	margin-top:30px;
+	line-height:26px;
+}
+.Other_contetn_info ol {
+	list-style-type:decimal-leading-zero;
+}
+.Other_contetn_info ol li {
+	line-height:30px;
+}
+.input_div form .input_ttl {
+	float:left;
+	width:140px;
+	text-align:right;
+	height:23px;
+	padding-top:2px;
+	margin-top:18px;
+}
+.input_div form .input_mml {
+	float:left;
+	margin-left:20px;
+	width:420px;
+	height:25px;
+	margin-top:18px;
+}
+.input_div form .input_ccl {
+	float:left;
+	margin-left:5px;
+	font-weight:bold;
+	color:#F30;
+}
+.Other_contetn_info .input_div {
+	height:200px;
+}
+.input_mml .in_put {
+	float:left;
+}
+.Other_list #Button_Div {
+	margin:auto;
+	width:95%;
+	height:89px;
+}
+.Other_list #Button_Div div {
+	float:right;
+	height:89px;
+	width:204px;
+	margin-left:30px;
+}
+.Other_list #content_Div {
+	width:660px;
+	margin:40px auto;
+}
+.Other_list #content_Div .contact_inf {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	margin-bottom:20px;
+	padding:10px 20px;
+	line-height:26px;
+}
+.Other_list #content_Div .contact_inf .cc_Title {
+	font-size:14px;
+	font-weight:bold;
+	background:url(/Template/Tpl_05/newimages/AboutUs/045631513.gif) no-repeat 0 -1px;
+	padding-left:22px;
+	color:#000;
+	margin-bottom:15px;
+}
+.img_li {
+	margin-left:25px;
+}
+.img_li li {
+	background:url(/Template/Tpl_05/newimages/ddns/045631876.gif) no-repeat;
+	padding-left:22px;
+	margin-top:5px;
+}
+.img_li_div {
+	margin:30px 0;
+}
+.Other_list #content_Div .contact_inf p {
+	line-height:26px;
+}
+#content_Div .contact_inf .how_img {
+	margin-top:30px;
+	padding-left:22px;
+}
+.Other_list .The_GetCert_Div {
+	width:385px;
+	margin:auto;
+	height:100px;
+	padding:0px 50px;
+	background-color:#ECFAFF;
+	border:1px solid #B5EBFF;
+}
+.The_GetCert_Div form #KeyWord {
+	background:url(/Template/Tpl_05/newimages/Domains/www_cert.gif) no-repeat;
+	height:15px;
+	width:53px;
+	float:left;
+	margin-top:42px;
+}
+.The_GetCert_Div form #InputDIV {
+	margin-left:5px;
+	margin-top:40px;
+	width:210px;
+	float:left;
+}
+.The_GetCert_Div form #InputDIV input {
+	width:210px;
+}
+.The_GetCert_Div form #ButtonDiv {
+	margin-top:35px;
+	margin-left:30px;
+	width:84px;
+	height:24px;
+	float:left;
+}
+.Other_list #GetCertInfoDiv {
+	margin-left:40px;
+	margin-top:40px;
+}
+.Other_list #GetCertInfoDiv ol li {
+	height:24px;
+}
+.contact_inf .Domain_img {
+	padding:1px;
+	border:1px solid #CCC;
+	width:121px;
+	height:69px;
+	margin:auto;
+}
+#Tableline .formPoint_line {
+	float:left;
+	margin-left:5px;
+	font-weight:bold;
+	color:#F30;
+}
+#DomainNeedBuys #DomainNeedBuys_top {
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_top.jpg) no-repeat;
+	height:7px;
+}
+#DomainNeedBuys #DomainNeedBuys_mid {
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_bg.jpg);
+	overflow:hidden;
+	height:auto;
+}
+#DomainNeedBuys #DomainNeedBuys_down {
+	background:url(/Template/Tpl_05/newimages/Domains/Whois_search_box_bottom.jpg) no-repeat;
+	height:8px;
+}
+#DomainNeedBuys #DomainNeedBuys_mid #Domain_reg_pic {
+	background:url(/Template/Tpl_05/newimages/Application/Domain_Registration_pic.jpg);
+	height:177px;
+	width:218px;
+	margin-left:10px;
+	float:left;
+}
+#DomainNeedBuys #DomainNeedBuys_mid #Domain_reg_box {
+	width:490px;
+	margin-left:10px;
+	float:left;
+	padding-top:7px;
+}

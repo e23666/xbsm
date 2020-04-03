@@ -1,0 +1,188 @@
+#thrColEls .Style2009 #MainContentDIV {
+	width:960px;
+	margin:10px auto auto auto;
+	height:auto;
+	overflow:hidden;
+}
+#thrColEls .Style2009 #MainContentDIV #MainLeft {
+	float:left;
+	width:210px;
+	height:auto;
+	overflow:hidden;
+}
+.DomainLeftMenu {
+	background:url(/Template/Tpl_05/newimages/faq/LeftMenu_bg.gif);
+	width:201px;
+	height:auto;
+	margin-bottom:3px;
+}
+.DomainLeftMenu #DoaminLeftHead {
+	background:url(/Template/Tpl_05/newimages/faq/LeftMenu_head.gif) no-repeat;
+	width:186px;
+	height:23px;
+	padding-top:12px;
+	padding-left:15px;
+	font-weight:bold;
+}
+.DomainLeftMenu #DomainLeftMenuContent ul li {
+	background:url(/Template/Tpl_05/newimages/faq/Left_Menu_List_bg.gif) no-repeat 5px 0px;
+	;
+	height:21px;
+	padding-left:30px;
+	padding-top:3px;
+}
+.DomainLeftMenu #DomainLeftMenuBottom {
+	padding-top:28px;
+}
+.DomainLeftMenu #DomainLeftMenuContent ul li:hover {
+	background:url(/Template/Tpl_05/newimages/faq/Left_Menu_List_bg_on.gif) no-repeat 5px 0px;
+	;
+	height:21px;
+	padding-left:50px;
+	padding-top:3px;
+}
+#thrColEls .Style2009 #MainContentDIV #MainRight {
+	float:right;
+	width:190px;
+	overflow:hidden;
+}
+#thrColEls .Style2009 #MainContentDIV #Maincontent {
+	float:left;
+	width:550px;
+	overflow:hidden;
+	margin:15px 0 0 0;
+}
+#thrColEls .Style2009 #MainContentDIV #Mainlist {
+	float:left;
+	width:746px;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+.DomainLeftMenu #DoaminLeftHead_blue {
+	background:url(/Template/Tpl_05/newimages/Domains/LeftMenu_head_blue.gif) no-repeat;
+	width:186px;
+	height:23px;
+	padding-top:12px;
+	padding-left:15px;
+	font-weight:bold;
+}
+#thrColEls .Style2009 #MainContentDIV #MainLeft .DomainLeftMenu #DomainLeftMenuContentList ul li {
+	padding:4px 0px 0px 28px;
+	background:url(/Template/Tpl_05/newimages/default/top_arrow.gif) no-repeat 12px 7px;
+}
+#Maincontent #contentbox {
+	width:540px;
+	height:auto;
+	clear:both;
+}
+#MainRight #contentbox ul {
+	display:block;
+	clear:both;
+	width:550px;
+}
+#MainRight #contentbox ul li {
+	float:left;
+}
+#MainRight #boxBody {
+	width:170px;
+	height:100px;
+}
+#MainRight #contentbox img {
+	margin:0;
+	padding:0;
+}
+.lframe-t-text, .mframe-t-text {
+	display:block;
+	font-size:14px;
+	border-bottom:1px solid #666;
+	font-weight:bold;
+}
+#cocolistline {
+	margin:3px 3px 3px 3px;
+	padding:2px 0px 2px 4px;
+}
+.Faq_Div {
+	float:left;
+	width:550px;
+	overflow:hidden;
+	height:auto;
+	margin:2px 0 0 0;
+}
+.contact_inf {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	margin-bottom:20px;
+	padding:10px 20px;
+}
+.contact_inf .cc_Title {
+	font-size:14px;
+	font-weight:bold;
+	background:url(/Template/Tpl_05/newimages/AboutUs/045631513.gif) no-repeat 0 -1px;
+	padding-left:22px;
+	color:#000;
+	margin-bottom:15px;
+}
+.tui_div {
+	float:left;
+	width:155px;
+	height:auto;
+	overflow:hidden;
+}
+.new_div {
+	float:left;
+	width:340px;
+	height:auto;
+	overflow:hidden;
+	margin-left:15px;
+}
+.auto_hight {
+	overflow:hidden;
+	height:auto;
+	width:auto;
+}
+.PIC_ul_li ul li {
+	margin-bottom:10px;
+	text-align:center;
+}
+.searchBox {
+	margin-top:15px;
+}
+.new_Pic_li ul li {
+	float:left;
+	width:170px;
+	text-align:center;
+	overflow:hidden;
+}
+.Morenewslist li {
+	float:left;
+	width:260px;
+	overflow:hidden;
+	margin:0 5px;
+}
+.NewsClassList ul li {
+	padding-left:14px;
+	background:url(/Template/Tpl_05/newimages/default/top_arrow.gif) no-repeat 0 3px;
+	margin:3px 0px;
+}
+#faq_right {
+	width:193px;
+	height:auto;
+	overflow:hidden;
+	float:right;
+}
+.faq_right_div {
+	margin:3px;
+	padding:6px 0 0 5px;
+}
+.faq_right_div_title {
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+}
+.aTitle {
+	font-size:22px;
+	text-align:center;
+	font-weight:bold;
+	color:#000;
+	margin:25px 0;
+}

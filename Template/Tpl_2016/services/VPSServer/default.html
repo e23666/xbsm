@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}VPS主机租用|VPS服务器租用|虚拟服务器租用</title>
+<meta name="description" content="{companyname}专业提供VPS主机租用,VPS服务器租用,虚拟服务器租用:{companyname}在中国电信拥有独立VIP机房，是西部地区最大的主机租用、服务器租用、主机托管服务商，服务器租用800元/月起，支持按月付款！">
+<meta name="keywords" content="VPS主机租用,VPS服务器租用,VPS,VPS虚拟主机,VPS服务器,VPS虚拟服务器">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/vpsserver.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/wjf-1.0.0.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/vpsserver2016.js"></script>
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+  <style>
+.GreenColor{ padding-left:5px;}
+  </style>
+<script language="javascript">
+$(function(){
+	pagestart();
+});
+function pagestart(){
+	$("input[name^='S_radio_']:radio:checked").each(function(i, n) {
+        var proid=$(n).attr("name").replace("S_radio_","");
+        //console.log(proid);
+		setmsg(proid);
+    });	
+	$("input[name^='S_radio_']:radio").click(function(){
+		var proid=$(this).attr("name").replace("S_radio_","");
+        console.log(proid);
+		setmsg(proid);
+	});
+}
+function setmsg(proid){
+	var roomObj=$("input[name^='S_radio_"+ $.trim(proid) +"']:radio:checked");	
+	var roomid=roomObj.val();	
+	$("div[id^='S_price_"+ proid +"']").slideUp(0);
+	$("#S_price_"+ proid +"_"+roomid).slideDown(0);
+	var Memory=$("input[name='memsize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var HardDisk=$("input[name='dissize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var pname=$("input[name='pname_"+ proid +"']:hidden").val();
+	$("#dk_"+proid).html($("input[name='r_vpsband_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#ip_"+proid).html($("input[name='ismodrr_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#mem_"+proid).html(Memory);
+	$("#disk_"+proid).html(HardDisk);
+	$("#"+proid).click(function(){
+		if (proid!="vps000" && proid!="oemvps1")
+	{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("Intel 5645/E5-2620四核处理器&times;4")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}
+		else{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("Intel 5645/E5-2620双核处理器&times;2")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		
+		}
+	});
+}
+</script>
+</head>
+<body class="min990">
+{#top.html}
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+  <div class="slide-pagination">
+    <ul></ul>
+  </div>
+  <div class="slide-wrapper">
+    <ul>
+      <li>
+        <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/template/Tpl_2016/images/banner/banner-2016sj.jpg');" >免备案香港云虚拟主机 全新升级</a>
+      </li>
+      <li>
+        <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" _bgimg="/template/Tpl_2016/images/banner/banner-2016sj.jpg" >免备案香港云虚拟主机 全新升级</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<!-- banner 结束 -->
+<div id="content">
+  <div class="content  pt-20 pb-30">
+    <div class="wide1190">
+
+        <div class="vps-list mt-15">
+            <div class="vps-title"><span class="list-title">{ServerName(vps000)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tr>
+                        <th align="right">处理器</th>
+                        <td>IntelXeon 5645/E5-2620&times;4(四核)</td>
+                        <th align="right">系统</th>
+                        <td>Windows 2003 sp2/CentOS 6.2</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span id="mem_vps000"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="disk_vps000"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span id="dk_vps000"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="ip_vps000"></span></td>
+                        <th align="right">选择机房</th>
+                        <td >{ServerRoomList(vps000)}</td>
+                        <td colspan="2" align="center"><a href="###" id="vps000" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+      <div class="vps-list ">
+        <div class="vps-title"><span class="list-title">{ServerName(vps001)}</span>
+        <div class="vps-line"></div></div>
+        <div class="vps-table-con cl">
+          <table class="vps-table">
+            <tr>
+                <th align="right">处理器</th>
+                <td>IntelXeon 5645/E5-2620&times;4(四核)</td>
+                <th align="right">系统</th>
+                <td>Windows 2003 sp2/CentOS 6.2</td>
+                <th align="right">网卡</th>
+                <td>Intel 1000M自适应以太网卡</td>
+            </tr>
+              <tr>
+                  <th align="right">内存</th>
+                  <td><span id="mem_vps001"></span></td>
+                  <th align="right">硬盘</th>
+                  <td><span id="disk_vps001"></span></td>
+                  <th align="right">带宽</th>
+                  <td><span id="dk_vps001"></span></td>
+              </tr>
+              <tr>
+                  <th align="right">IP</th>
+                  <td><span id="ip_vps001"></span></td>
+                  <th align="right">选择机房</th>
+                  <td >{ServerRoomList(vps001)}</td>
+                    <td colspan="2" align="center"><a href="###" id="vps001" class="common-btn vps-buy">立即购买</a></td>
+              </tr>
+          </table>
+        </div>
+      </div>
+
+        <div class="vps-list">
+            <div class="vps-title"><span class="list-title">{ServerName(vps002)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tr>
+                        <th align="right">处理器</th>
+                        <td>IntelXeon 5645/E5-2620&times;4(四核)</td>
+                        <th align="right">系统</th>
+                        <td>Windows 2003 sp2/CentOS 6.2</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span id="mem_vps002"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="disk_vps002"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span id="dk_vps002"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="ip_vps002"></span></td>
+                        <th align="right">选择机房</th>
+                        <td >{ServerRoomList(vps002)}</td>
+                        <td colspan="2" align="center"><a href="###" id="vps002" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="vps-list">
+            <div class="vps-title"><span class="list-title">{ServerName(vps003)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tr>
+                        <th align="right">处理器</th>
+                        <td>IntelXeon 5645/E5-2620&times;4(四核)</td>
+                        <th align="right">系统</th>
+                        <td>Windows 2003 sp2/CentOS 6.2</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span id="mem_vps003"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="disk_vps003"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span id="dk_vps003"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="ip_vps003"></span></td>
+                        <th align="right">选择机房</th>
+                        <td >{ServerRoomList(vps003)}</td>
+                        <td colspan="2" align="center"><a href="###" id="vps003" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+
+    <div id="J_anchorNavDom" class="wjf-page-anchor-nav-container">
+        <ul class="wjf-page-anchor-nav  cl">
+            <li><a href="javascript:void(0);" data-target="J_vpsAdvantageDom" class="active">{companyname}VPS优势</a></li>
+            <li><a href="javascript:void(0);" data-target="J_vpsFaqDom">常见问题</a></li>
+        </ul>
+    </div>
+
+    <div class="wide1190">
+        <!-- VPS优势 开始 -->
+        <div class="vps-advantage wjf-ui-tab-content active" id="J_vpsAdvantageDom">
+            <ul class="vps-advantage-list cl horizontal-center">
+                <li>
+                    <div class="vps_img vps_img_1"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">性价比高</p>
+                        <p>
+                            作为国内前三强的<a href="http://www.west.cn/services/vpsserver/" class="g-link">VPS</a>提供商，规模化运营使我们占据成本优势是一线VPS提供商中性价比领先的服务商！
+                        </p>
+                    </div>
+                </li>
+                <li class="pl-110">
+                    <div class="vps_img vps_img_2"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">高速稳定</p>
+                        <p>
+                            SAS磁盘阵列集群，磁盘速度达800M/s,其他主机形式一般在100M/s左右 企业级虚拟化技术和管理平台，高性能、高可用、高安全、高弹性。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="vps_img vps_img_3"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">安全可靠</p>
+                        <p>天然防御ARP攻击及MAC欺骗。</p>
+                        <p>分布式部署可减缓DDOS攻击等。基于庞大的云集群，单点故障率几乎为零，Windows正版授权</p>
+                    </div>
+                </li>
+                <li class="pl-110">
+                    <div class="vps_img vps_img_4"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">简单易用</p>
+                        <p>独创的服务器控制面板，在线更换系统，初始化、监控、重启、远程控制等</p>
+                        <p>提供“网站管理助手”，让您用起来跟虚拟主机一样方便</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="vps_img vps_img_5"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">品牌保证</p>
+                        <p>国内专业的VPS提供商、品牌保证，近万名VPS客户的共同选择</p>
+                        <p>国内性价比高的VPS，10大机房，自由选择，实时开通！</p>
+                    </div>
+                </li>
+                <li class="pl-110">
+                    <div class="vps_img vps_img_6"></div>
+                    <div class="vps-txt">
+                        <p class="vps-title">售后无忧</p>
+                        <p>
+                            所有机房{companyname}专人驻守，支持电话、在线等多种联系方式 24x7x365不间断监控，机房实地应急响应
+                        </p>
+                        <p>独有服务器管理监控平台，随时了解服务器信息，确保无忧畅行</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- VPS优势 结束 -->
+        <!-- vps常见问题 开始 -->
+        <div class="vps-faq wjf-ui-tab-content" id="J_vpsFaqDom">
+            <dl class="faq-list cl">
+                <dt><span class="font18">Q</span>什么是VPS主机？</dt>
+                <dd>
+                    <span class="font18">A</span>
+                    <p>
+                        VPS主机是可按需购买的"服务器"产品，用户可根据基础配置随意升级CPU、内存、硬盘等计算资源。 用户拥有完全的管理权限，可自行在服务器上安装配置软件或程序，部署各种互联网应用。
+                    </p>
+                </dd>
+            </dl>
+            <dl class="faq-list cl">
+                <dt><span class="font18">Q</span>新购VPS主机，如何快速搭建网站环境？</dt>
+                <dd>
+                    <span class="font18">A</span>
+                    <p>
+                        {companyname}VPS主机免费提供
+                       "{companyname}网站管理助手" ，支持一键管理网站、数据库，帮您快速上线业务。
+                    </p>
+                </dd>
+            </dl>
+            <dl class="faq-list cl">
+                <dt><span class="font18">Q</span>VPS主机预装了哪些软件？</dt>
+                <dd>
+                    <span class="font18">A</span>
+                    <p>
+                        {companyname}VPS主机能一键安装PHP5.2.17、Mysql5.1.61、Zend3.3.3、PhpMyadmin3.4.8、FTP Server、Jmail等多种组。
+                    </p>
+                </dd>
+            </dl>
+            <dl class="faq-list cl">
+                <dt><span class="font18">Q</span>网站数据丢失了，还能恢复吗？</dt>
+                <dd>
+                    <span class="font18">A</span>
+                    <p>
+                        现在{companyname}免费赠送数据快照恢复服务，用户可到会员中心-&gt;服务器管理-&gt;备份/恢复中自行恢复上次备份的数据。
+                    </p>
+                </dd>
+            </dl>
+            <dl class="faq-list cl">
+                <dt><span class="font18">Q</span>主机购买成功后怎样进行备案？</dt>
+                <dd>
+                    <span class="font18">A</span>
+                    <p>
+                        根据工信部规定，主机备案后才能正常访问，备案需要大约20个工作日的时间。备案需要访问我司
+                        <a href="http://beian.vhostgo.com/" class="yd_link" target="_blank"> "ICP网站备案系统"</a> 进行备案资料的提交与审核。我司备案系统拥有业界先进的备案系统、专业的备案服务团队、优化的备案流程，助您在短时间内轻松备案！
+                    </p>
+                </dd>
+            </dl>
+            <!--<a class="faq-btn" target="_blank" href="####">更多问题&gt;&gt;</a>-->
+        </div>
+        <!-- vps常见问题 结束 -->
+        <!-- vps客户评价 开始 -->
+        <div class="vps-pingjia wjf-ui-tab-content" id="J_vpsPJDom">
+            <div id="J_VPSPJListContainer">
+                <div class="wjf-page-loading">
+                   
+                </div>
+            </div>
+            <!-- 分页栏 -->
+            <div class="pagination" id="pager">
+            </div>
+        </div>
+        <!-- vps客户评价 结束 -->
+    </div>
+
+
+  </div> 
+{#bottom.html}
+<script>
+  $(function () {
+    $(".sec-banner").slide({
+      mainCell: ".slide-wrapper ul",
+      titCell: '.slide-pagination ul',
+      effect: 'fold',
+      // 背景图片属性
+      switchLoad: '_bgimg',
+      // 背景图片容器
+      switchLoadTag: 'a',
+      autoPage: true,
+      autoPlay: true
+    });
+  })
+</script>
+</body>
+</html>

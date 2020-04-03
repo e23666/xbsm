@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购买,{companyname}｜虚拟主机｜域名注册</title>
+<meta name="description" content="{companyname}专业提供中文域名注册｜中文国际域名｜中文国内域名！最低180元起，买多年还可优惠！20项虚拟主机领先优势，30000用户的共同选择!领先的虚拟主机技术,配合NAS存储设备、ddos防火墙，为您打造性价比最高的虚拟主机!全国领先的双线路虚拟主机，南北畅通无阻！Cn域名58元起！">
+<meta name="keywords" content="中文域名-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/index.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	<script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+<script src="/jscripts/jq.js"></script>
+<style type="text/css">
+#domMessage ul, #domMessage li {
+	list-style-type:none;
+	display:block;
+	margin:0;
+	padding:0;
+	width:400px;
+	text-align:center;
+}
+#domMessage ul {
+	margin:20px;
+}
+#domMessage p {
+	display:block;
+	margin:0;
+	padding:0;
+	float:left;
+}
+#domMessage .loading_title {
+	width:60px;
+	text-align:center;
+	height:50px;
+	line-height:50px;
+}
+#domMessage .loading_msg {
+	width:330px;
+}
+ 
+dl.payshow {
+	display: block;
+	padding: 0;
+	margin: 10px auto;
+	border: 1px solid #ccc;
+}
+ol.bgload {
+	display: block;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+	background: url(/newimages/loader.gif) no-repeat 0 0;
+	height: 26px;
+	width: 370px;
+	line-height: 20px;
+	margin: 0 auto;
+}
+ol.bgload li {
+	display: block;
+	list-style-type: none;
+	padding: 0;
+	line-height: 20px;
+	margin: 0 auto;
+}
+ol.bgload li.bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background: url(/newimages/loader.gif) no-repeat 0 -50px;
+	height: 26px;
+}
+ol.bgload li.barnum {
+	width: 50px;
+	position: absolute;
+	height: 26px;
+	line-height: 26px;
+	left: 362px;
+	top: 0;
+	z-index: 2;
+	color: #06c;
+	font-weight: bold;
+}
+.loadinfo {
+	width: 500px;
+	background-color: #fff;
+	margin:30px auto;
+}
+.loadinfo .loadtitle {
+	text-align: center;
+	margin: 0 0 20px 0;
+	padding: 5px 0;
+	font-size: 14px;
+
+}
+.loadinfo .loadtxt {
+	text-align: center;
+	width: 300px;
+	margin: 0 auto;
+}
+#zhezhaodiv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	opacity: 0.3;
+	filter:alpha(opacity=30);
+	z-index: 30;
+}
+.load_msg {
+	margin: 20px auto 0 auto;
+	padding-top:10px;
+	border-top:1px dotted #999
+}
+.load_success {
+	float: left;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	background: url(/newimages/045631277.gif) left center no-repeat;
+	padding-left: 20px;
+	margin-left: 100px;
+	color:#000
+}
+.load_error {
+	float: left;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	background: url(/newimages/045631331.gif) left center no-repeat;
+	padding-left: 20px;color:#000;
+}
+.load_timeout {
+	float: left;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	background: url(/newimages/045631275.gif) left center no-repeat;
+	padding-left: 20px;color:#000;
+}
+.loaderrmsg {
+	float: none;
+	clear: both;
+	background: url(/newimages/jingao_1.gif) 4px 5px no-repeat #FF6;
+	padding:5px 5px 5px 30px;
+	color:#F00;
+	height:auto;
+	width: 320px;
+	margin: 0 auto;
+	display:none;
+
+}
+</style>
+<script>
+	var orderArray=[{ordersid}];
+	var nowindex=1;
+	var bfb=0;
+	var countorder= orderArray.length;
+	var ywArray=[0,0,0];
+$(function(){
+	$("#pronum").text("("+nowindex+"/"+countorder+")");
+	{runjs}
+})
+
+	
+	
+	function starorder()
+	{
+		if(nowindex<=countorder){
+			$("#pronum").text("("+nowindex+"/"+countorder+")");
+			$("#proword").html("当前正在执行第<font color=red>"+nowindex+"</font>条记录，请稍后...")
+ 
+			$.ajax({
+					 type: "POST",
+					   url: "default.asp",
+					   dataType:"json",
+					   data: "act=buy&id="+orderArray[nowindex-1],
+					   cache:false,
+					   timeout:90000,
+					   success:function(msg){
+							 if(msg.code==200)
+							 {
+								 bfb=Math.round(nowindex/countorder*100)
+								 $(".bar").css("width",bfb+"%");
+								 $(".barnum").text(bfb+"%");
+								 nowindex++;
+								 ywArray[0]=ywArray[0]+1;
+								 showstat()
+								starorder()
+							}else{							
+								$(".loaderrmsg").show(50);
+								$(".loaderrmsg").text(unescape(msg.msg).replace(/\+/gi," "));
+								$("#proword").html("<font color=red>程序已经停止运行!</font>")
+								ywArray[1]=ywArray[1]+1;
+								 showstat()
+							}
+					   },
+					    error:function(request, settings){
+								$(".loaderrmsg").show(50);
+								$(".loaderrmsg").text("出错了请联系管理员！");
+								$("#proword").html("<font color=red>程序已经停止运行!</font>")
+								ywArray[1]=ywArray[1]+1;
+								 showstat()
+						}
+			
+			});
+			
+        }else
+		{$("#proword").html("<font color=green>所有业务执行完成!!</font>"); 
+		location.href='/status';
+		}
+
+	}
+	 
+	function showstat()
+	{
+		$(".load_success span").html(ywArray[0]+"个");
+		$(".load_error span").html(ywArray[1]+"个");
+		$(".load_timeout span").html(ywArray[2]+"个");
+	
+	}
+ 
+	
+</script>
+</head>
+<body id="thrColEls">
+{#top.html}
+<div class="Style2009">
+ <div id="MainContentDIV">
+    <div id="zxwInfo">
+	
+        <dl  class="z_div" style="width:500px; height:300px;margin:0 auto; margin-top:50px; " >
+        <dd class="z_div span_pricenum" {display_nomoney}>
+          <ul class="z_bubblebox" id="z_bubblebox">
+            <li class="top clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-1.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-3.jpg" class="t_right" /></li>
+            <li class="mid clearfix">
+              <div class="m_content">
+                <h1 class="z_div" style="text-align:center;border-bottom:dotted #ccc 1px"> <img src="/Template/Tpl_05/images/unsucc.gif" width="274" height="70"> </h1>
+                <div style="font-size:14px; text-align:center; height:100px; margin-top:20px;"> 发生错误:您的账户余额不足，<a href="/customercenter/howpay.asp" target="_blank">请先入款</a></div>
+              </div>
+            </li>
+            <li class="bottom clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-6.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-8.jpg" class="t_right" /></li>
+          </ul>
+        </dd>
+        
+     
+
+<dt class="z_div" id="domMessage" {display_buy}>
+       
+		 
+
+
+
+
+<div class="loadinfo" style="width:600px;height:255px; border:1px #ccc solid; margin:0 auto;">
+          <div class="loadtitle"><img src="http://update.myhostadmin.net/Template/Tpl_05/images/orderreg.gif">系统正在为您的服务进行初始化设置,整个过程持续时间视业务处理速度而定<br>
+            <font color="red">请耐心等待。。。</font></div><font color="red">
+          <div class="loaderrmsg" style="display: none;">-</div>
+          <ol class="bgload">
+            <li class="bar" style="overflow: hidden; width: 10px;"></li>
+            <li class="barnum" style="width:50px;">0％</li>
+          </ol>
+          <div class="loadtxt"><span style="color:#06c" id="pronum">(-/-)</span>&nbsp;<span id="proword">-</span></div>
+          <div class="load_msg clearfix">
+            <div class="load_success">成功:<span>0个</span></div>
+            <div class="load_error">失败:<span>0个</span></div>
+            <div class="load_timeout">超时:<span>0个</span></div>
+          </div>
+        </font></div>
+
+
+
+
+
+
+
+</dt>
+            
+	
+	 </dl>
+      
+    </div>
+  </div>
+
+
+
+
+</div>
+
+{#bottom.html}
+</body>
+</html>

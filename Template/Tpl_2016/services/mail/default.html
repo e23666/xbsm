@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>企业邮箱企业邮局企业信箱集团邮局-{companyname}！</title>
+<meta name="description" content="{companyname}企业邮局－智能过滤垃圾邮件系统，超强邮件病毒清除引擎 资深、专业的邮件工程师全天侯服务，西部最大域名注册商，全面提供企业邮局、企业邮箱、域名注册、虚拟主机、建站推广等网络应用一站式服">
+<meta name="keywords" content="企业邮局,集团邮局,企业邮箱,虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/mail.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/wjf-1.0.0.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/mail2016.js"></script>
+<script>
+  var mailconfig="{mailconfig}";
+  var myzk={myzk}
+var js=new Array;
+var userNum=10;
+$(function(){
+$("input[name='userNum']").val(userNum);
+  var __temp=""
+   _t=mailconfig.split(",");
+   var _i=0
+   for(var i=0;i<_t.length;i++){
+     __t=_t[i].split(":");
+	 if(__t[0]>=1024){
+  
+     __temp+="<a href=\"javascript:void(0)\">"+getsizeG(__t[0])+"</a>";
+ 
+      }
+   }
+   $(".sel").html(__temp);
+
+
+    $(".sel a").click(function(){
+		  $(".sel a").removeClass("sel_on");
+		  $(this).addClass("sel_on");
+		 
+		   showjg($(this).text())
+		  })
+   
+	showjg("1G");
+	$(".sel a").eq(0).addClass("sel_on");
+
+})
+
+function showjg(t)
+{
+   $("input[name='MailSize']").val();
+   $(".mailsize").text(t);
+    _t=mailconfig.split(",");
+	for(var i=0;i<_t.length;i++){
+     __t=_t[i].split(":");
+	 if(__t[0]>=1024){
+		  if(getsizeG(__t[0])==t)
+		  {
+		  $(".p_mail").html((__t[1]*userNum*myzk)+"元/"+userNum+"用户")
+          $("input[name='MailSize']").val(__t[0]);
+		  if(myzk<1){
+			$(".yzk").html("您享受的折扣:<b><font color=\"blue\">"+(myzk*100)+"％</font></b>&nbsp;");
+		   }
+		  }
+       }
+   }
+
+}
+function getsizeG(s)
+{
+  if(s<1024){
+  return s+"M";
+  }
+  if(s>=1024 && s<1048576){
+  return (s/1024)+"G";
+  }
+   if(s>=1048576){
+  return (s/1048576)+"T";
+  }
+}
+
+</script>
+</head>
+<body class="min990">
+{#top.html}
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+    <div class="slide-pagination">
+        <ul>
+        </ul>
+    </div>
+    <div class="slide-wrapper">
+        <ul>
+            <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/template/Tpl_2016/images/banner/banner-2016sj.jpg');" >免备案香港云虚拟主机 全新升级</a> </li>
+            <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" _bgimg="/template/Tpl_2016/images/banner/banner-2016sj.jpg" >免备案香港云虚拟主机 全新升级</a> </li>
+        </ul>
+    </div>
+</div>
+<!-- banner 结束 -->
+<div id="content">
+    <!-- 选项卡server-tab 开始 -->
+
+    <div class="tab-bg">
+        <div class="wide1190">
+            <ul class="wjf-ui-tab-style3 cl" id="J_mailTabDom">
+                <li><a class="item guide-active active" href="javascript:void(0);" data-target="J_mail_1">自定义邮局<i class="triangle-top"></i></a></li>
+                <li><a class="item" href="javascript:void(0);" data-target="J_mail_2">按套餐购买<i class="triangle-top"></i></a></li>
+                <li><a class="item" href="javascript:void(0);" data-target="J_mail_3">选购指南<i class="triangle-top"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 选项卡server-tab 结束 -->
+    <!-- 邮局内容 开始 -->
+    <div class="mail-content">
+        <div class="wide1190">
+            <div class="mail-section cl">
+                <!-- 右侧邮局常见问题 开始 -->
+                <div class="mail-faq" id="J_mailFaq">
+                    <p>邮局常见问题</p>
+                    <ul class="faq-list cl">
+                       
+                        <li><a href="/faq/list.asp?unid=40" target="_blank">反垃圾邮件设置教程</a></li>
+                        <li><a href="/faq/list.asp?unid=11" target="_blank">如何设置Outlook收发邮件？</a></li>
+                        <li><a href="/faq/list.asp?unid=102" target="_blank">如何设置FoxMail来收发邮件？</a></li>
+                        <li><a href="/faq/list.asp?unid=21" target="_blank">企业邮局新手必读指南！</a></li>
+                        <li><a href="/faq/list.asp?unid=103" target="_blank">如何在首页直接登录企业邮局？</a></li>
+                    </ul>
+                </div>
+                <!-- 右侧邮局常见问题 结束 -->
+                <div class="mail-left" id="J_mailLeft">
+                    <!-- 自定义邮局 开始 -->
+                    <form class="custom-mail wjf-ui-tab-content  guide-active active" id="J_mail_1" name="form_curmail" action="buydiy.asp" method="post" onsubmit="return check()">
+                        <input type="hidden" name="MailSize"  readonly>
+                        <input type="hidden" name="userNum"  readonly>
+                        <div class="mail-title">
+                            <h3>自由定制 灵活购买</h3> 邮箱空间自由分配、自由增减邮件账号、数百中继解决发信困难
+                        </div>
+                        <div class="config-box">
+                            <label>每个邮箱大小：</label>
+                            <span class="sel">邮箱大小加载中，请稍后...</span>
+                        </div>
+                        <div class="config-box">
+                            <label>邮箱容量：</label>
+                            每个邮局用户<span class="mailsize">加载中..</span>空间
+                        </div>
+                        <div class="config-box" >
+                            <label>价格：</label>
+                            <span class="p_mail price">加载中</span><span>（<span class="num_user">5</span>用户起售）</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="yzk"></span>
+                        </div>
+                        <input class="btn-mail" value="立即购买" type="submit">
+
+                        <p>（点立即购买可自定义用户个数，多年更多优惠）</p>
+                    </form>
+                    <script>
+                        $(function () {
+                            $()
+                        })
+                    </script>
+                    <!-- 自定义邮局 结束 -->
+                    <!-- 按套餐购买 开始 -->
+                    <div class="taocan wjf-ui-tab-content" id="J_mail_2">
+                        <div class="mail-title">
+                            <h3>适合个人和中小型企业</h3> 邮箱空间自由分配、自由增减邮件账号、智能反垃圾网关
+                        </div>
+                        <div class="mail-table-container">
+                            <table class="mail-table">
+                                <thead>
+                                <tr>
+                                    <th>邮局总大小</th>
+                                    <th>邮局用户数</th>
+                                    <th>邮局价格</th>
+                                    <th>注册/购买</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>5G</td>
+                                    <td>5用户</td>
+                                    <td class="price">{Price(MS5G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=MS5G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10G</td>
+                                    <td>10用户</td>
+                                    <td class="price">{Price(ms10G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=ms10G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>25G</td>
+                                    <td>25用户</td>
+                                    <td class="price">{Price(ms25G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=ms25G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>50G</td>
+                                    <td>50用户</td>
+                                    <td class="price">{Price(ms50G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=ms50G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>100G</td>
+                                    <td>100用户</td>
+                                    <td class="price">{Price(ms100G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=ms100G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>200G</td>
+                                    <td>200用户</td>
+                                    <td class="price">{Price(ms200G)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=ms200G">立即购买</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>100G</td>
+                                    <td>1000用户</td>
+                                    <td class="price">{Price(gtmail)}元/年</td>
+                                    <td>
+                                        <a href="/services/mail/buy.asp?productid=gtmail">立即购买</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 按套餐购买 结束 -->
+                    <!-- 选购指南 开始 -->
+                    <div class="wjf-ui-tab-content" id="J_mail_3">
+                        <div class="guide cl">
+                            <div class="guide-title guide-title_1">
+                                <h4>更安全、更稳定、更高效</h4>
+                                <p><a href="http://www.west.cn/services/mail/" class="g-link">企业邮箱</a>在可靠性、安全性、稳定性以及防病毒、反垃圾邮件性能方面均远高于同类个人免费邮箱，保障企业数据安全。</p>
+                            </div>
+                            <div class="guide-title guide-title_2">
+                                <h4>企业信息安全管理</h4>
+                                <p>企业邮箱具有数据备份与恢复机制，可对积累邮件统一有序的管理，防止数据丢失。</p>
+                            </div>
+                            <div class="guide-title guide-title_3">
+                                <h4>对外树立企业形象</h4>
+                                <p>员工的信箱都是“姓名@企业域名”这种形式，从而树立统一的企业品牌形象，在对外沟通时更具标识性</p>
+                            </div>
+                            <div class="guide-title guide-title_4">
+                                <h4>对内便于企业管理</h4>
+                                <p>企业拥有自己的电子邮件系统，可对员工邮箱进行统一管理，可自由命名、分配容量、分组、群发、设定功能限制等，可对每位员工的岗位特性设定权限，方便企业的统一管理。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 选购指南 结束 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 邮局内容 结束 -->
+    <div class="mail-advantage wide1190">
+        <h1 class="title">{companyname}优势</h1>
+        <div class="line-color"></div>
+        <ul class="mail-list horizontal-center cl">
+            <li>
+                <a class="mail_img pngFix mail_img_1"></a>
+
+                <div class="mail_right">
+                    <span class="title">传输全球畅通</span>
+
+                    <p>我司企业邮局拥有国际、国内多个专业的数据中心</p>
+                </div>
+            </li>
+            <li class="middle-item">
+                <a class="mail_img pngFix mail_img_2"></a>
+                <div class="mail_right">
+                    <span class="title">技术进步</span>
+                    <p>基于云计算平台搭建，稳定安全，免费提供海外中继传输服务</p>
+                </div>
+            </li>
+            <li>
+                <a class="mail_img pngFix mail_img_3"></a>
+
+                <div class="mail_right">
+                    <span class="title">独有特色功能</span>
+
+                    <p>国内数百个、海外数十个中继节点双向转发保障邮件收发畅通无阻</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="mail-list horizontal-center cl">
+            <li>
+                <a class="mail_img pngFix mail_img_4"></a>
+
+                <div class="mail_right">
+                    <span class="title">安全无处不在</span>
+
+                    <p>专业邮件杀毒引擎：ClamAV，实时杀毒，自动更新病毒库</p>
+                </div>
+            </li>
+            <li class="middle-item">
+                <a class="mail_img pngFix mail_img_5"></a>
+
+                <div class="mail_right">
+                    <span class="title">专业成就未来</span>
+
+                    <p>15年品质服务，超50万用户的选择，7X24小时不间断技术支持</p>
+                </div>
+            </li>
+            <li>
+                <a class="mail_img pngFix mail_img_6"></a>
+
+                <div class="mail_right">
+                    <span class="title">使用、管理更便捷</span>
+
+                    <p>提供邮件发送日志，邮件监控；支持手机收发邮件等功能</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 邮局优势 结束 -->
+</div>
+
+{#bottom.html}
+ 
+</body>
+</html>

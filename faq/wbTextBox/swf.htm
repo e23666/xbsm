@@ -1,0 +1,42 @@
+<HTML><HEAD><TITLE>FLASH</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<Link rel="stylesheet" type="text/css" href="pop.css">
+
+<SCRIPT event=onclick for=Ok language=JavaScript>
+	var s=path.value;
+	if (s.length<10)
+	{
+		alert('Please input file url');
+	}else{
+		window.returnValue = path.value+"*"+selrow.value+"*"+selcol.value
+		window.close();
+	}
+</SCRIPT>
+<script>
+function IsDigit()
+{
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+</script>
+</HEAD>
+<BODY bgcolor="menu">
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=10 align="center" style="padding-left:10px">
+  <TBODY>
+  <TR>
+    <TD align=middle colSpan=2>
+    <font class=title>Insert FLASH</font>
+    <hr width=100% >
+    Url: <INPUT id=path size=20 value="http://">
+    </TD></TR>
+   <TR>
+    <TD align=middle>Width : &nbsp; &nbsp; <INPUT id=selrow size=7 value=480 ONKEYPRESS="event.returnValue=IsDigit();"></TD></TR>
+  <TR>
+    <TD>
+    <p align="center">Height: &nbsp; &nbsp; <INPUT id=selcol size=7 value=360 ONKEYPRESS="event.returnValue=IsDigit();"></TD>
+  <TR>
+    <TD align=middle colSpan=2>
+    <BUTTON id=Ok type=submit>OK</BUTTON>&nbsp; &nbsp;
+    <BUTTON onclick=window.close();>Cancel</BUTTON></TD></TR></TBODY></TABLE>
+</BODY></HTML>

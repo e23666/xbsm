@@ -1,0 +1,238 @@
+/*public*/
+a:hover{color:#ff3600}
+.common-btn {border:0;height:34px;line-height:34px;background-color: #ff6c3a;font-size:14px;margin-right:6px;width:96px;display:inline-block;*display:inline;*zoom:1;text-align:center;	-webkit-transition:all .3s ease;transition:all .3s ease;cursor:pointer}
+.common-btn:hover {background:#e54d19;color:#fff}
+.link{color: #ff6c3a;}
+
+/*public end*/
+
+/*header*/
+#header2016 .header-nav .logo{background:#ff6c3a}
+#header2016 .topnav li .link-menu:hover{color:#ff3600;}
+#header2016 .main-nav-wrapper li a.nav-menu.current,#header2016 .main-nav-wrapper li a.nav-menu.hover,#header2016 .main-nav-wrapper li a.nav-menu:hover {
+	background-color:#ff6c3a;
+	color: #fff;
+	border-bottom:none;
+	-webkit-transition:all .3s;
+	transition:all .3s
+}
+#header2016 .main-nav-wrapper li a.nav-menu:hover {
+	color:#fff;
+}
+
+/*header end*/
+
+.query-container .domain-query-btn{background: #ff6c3a url("/template/Tpl_2016/images/icon.png") no-repeat  22px -76px;}
+.active-hover{ border: 2px solid #ff6c3a;margin: 0; height: 480px;}
+.active-hover .active-title{background-color: #ff6c3a; color: #fff;}
+.active-hover .price{height: 86px; line-height: 86px;}
+.active-hover h6 {
+	padding: 30px 0px;
+}
+.g-default-btn {
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	margin-right: 11px;
+	background-color:#ff6c3a
+}
+.hover .g-default-btn,.g-default-btn:hover {
+	background-color:#e54d19;
+	color:#fff
+}
+.searchDiv .domain-query-btn {
+	background-color:#ff6c3a;
+}
+.searchDiv .domain-query-btn:hover {
+	background-color:#e54d19
+}
+.wjf-ui-tab{background-color: #F7F7F7;}
+.wjf-ui-tab li,.wjf-ui-tab-style3 li{position: relative;}
+.wjf-ui-tab li a{ background: none;}
+.wjf-ui-tab li a.active {
+	background-color: #ff6c3a;
+	color:#fff;
+	margin-left:-2px
+}
+.wjf-ui-tab li span,.webhosting-tab li span{
+	position: absolute;
+	width: 1px;
+	background: #dfdfdf;
+	overflow: hidden;
+	height: 32px;
+	top: 10px;
+	right: 0px;
+	color: #DFDFDF
+}
+.webhosting-tab li span{ height: 42px;}
+.webhosting-tab .active .item{margin-left: -2px;}
+.wjf-ui-tab li a.active span,.webhosting-tab .active span{ display: none}
+.triangle-top{
+	display: none;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -14px;
+	border-top-color: #ff6c3a;
+	position: absolute;
+}
+.wjf-ui-tab li a.active .triangle-top,.wjf-ui-tab-style3 a.active .triangle-top{ display: inline-block;}
+
+.line-color{margin: 5px auto 40px;width: 100px;	border-bottom: 2px solid #ff6c3a;}
+.hotList li a{color: #777575;background-color: #e0e0e0}
+.hotList li a.active {color:#fff;	background-color: #ff6c3a}
+#header2016 .shopping-car-container .shopping-car-box h3 span{border-bottom: 1px solid #ff6c3a;}
+#header2016 .shopping-car-container .shopping-car-bottom .shopping-car-btn{background: #ff6c3a;}
+.domext-select-container .more-domains{border: 1px solid #ff6c3a;color: #ff6c3a;}
+/*reg*/
+.reg-section dt{color: #ff6c3a;}
+.reg-content .reg-title h3 {border-left: 3px solid #ff6c3a;}
+.reg-content .reg-title .login-btn {color: #ff6c3a;}
+.reg-content .reg-title .login-btn:hover {color: #ff3600;}
+.reg-btn {display:inline-block;*display:inline;*zoom:1;width:200px;height:44px;line-height:44px;background:#ff6c3a;font-size:14px;color:#fff;text-align:center;	border:0;cursor: pointer}
+.reg-btn:hover {background:#e54d19;color:#fff}
+/*reg end*/
+
+/*whois*/
+.whois-content .whois-info .whois-btn,.whois-domain .jp-domain-list a{background: #ff6c3a;}
+.whois-content .whois-info .whois-btn:hover{background:#e54d19;}
+.whois-list .column-btn{background: #ff6c3a}
+.webhosting-title .line-color{ margin-bottom: 10px;}
+.webhosting-title h3{ margin: 15px 0}
+/*whois end*/
+
+/*domain reg*/
+.dmbuymore-content .content-title h2{border-left: 3px solid #ff6c3a;}
+.dmbuymore-section dt{color: #ff6c3a;}
+.dmbuymore-info .dmbuymore-info-buy{background: #ff6c3a;}
+.domext-wrapper .more-domains {border: 1px solid #ff6c3a;color: #ff6c3a}
+.domext-wrapper .more-domains:hover {border: 1px solid #e65b2c;color: #e65b2c}
+/*domain reg end*/
+
+/*transfer*/
+.transfer-search-tab {background: #ff6c3a}
+.transfer-search-tab li .active {background: #e65b2c}
+.transfer-search-tab li .active i.triangle-top{ display: inline-block;border-top-color: #e65b2c}
+.transfer-btn{background: #ff6c3a}
+.transfer-middle .tm-title{border-left:4px solid #ff6c3a}
+.transfer-section-tab li .active{border-bottom:2px solid #ff6c3a;color:#ff6c3a}
+/*transfer end*/
+
+/*webhosting*/
+.wjf-page-anchor-nav {border-bottom:1px solid #E4E4E4}
+.wjf-page-anchor-nav .active {border-top:2px solid #ff6c3a; border-left:1px solid #E4E4E4;border-right:1px solid #E4E4E4 }
+.webhosting-faq .faq-list dt{color:#ff6c3a}
+.webhosting-faq .faq-list .yd_link{color: #ff3600}
+/*buy*/
+.common-form dt{color: #ff6c3a; border-left: 2px solid #ff6c3a;padding: 8px 0px 8px 24px; background-color: #f8f8f8;font-size: 16px}
+.config-table .import-info{color: #ff6c3a}
+.product-detail-desc .title span{border-bottom: 2px solid #ff6c3a}
+.common-form .submit-btn{background:#ff6c3a}
+.common-form .submit-btn:hover{background:#e54d19}
+/*buy end*/
+.webhosting-info table tr td .info-btn,.webhosting-tab .active .item{background:#ff6c3a}
+.webhosting-info table.high-light-table tr td .info-btn{background-color:#e54d19}
+.webhosting-info table.high-light-table{border:1px solid #ff6c3a;box-shadow:0 0 3px 1px #e54d19}
+.webhosting-info table.high-light-table th{color:#ff6c3a}
+.webhosting-info table tr th{background:#f4fbf2}
+.webhosting-explain .webhosting-explain-title span{border-bottom:2px solid #ff6c3a}
+.webhosting-explain .webhosting-explain-txt span{color:#ff6c3a}
+.webhosting-tab .webhosting-tab-list li.active a{border-bottom:2px solid #ff6c3a}
+
+.select-webhost{padding: 20px 30px;background: #FFF;font-size: 14px}
+.select-webhost dl dt{font-weight: 700;float: left;height: 32px;line-height: 32px;width: 90px;text-align: right}
+.select-webhost dl dd{float: left;margin: 0 4px}
+.select-webhost a{display: inline-block;  padding: 5px 10px}
+.select-webhost a.select-active{background-color: #ff6c3a; color: #fff}
+/*webhosting end*/
+
+/*vps*/
+.vps-faq .faq-list dt {color:#ff6c3a}
+/*vps end*/
+
+/*cloudhost*/
+.wjf-ui-tab-style2 li a.active {background:#ff6c3a}
+.wjf-ui-tab-style2 {border-bottom:2px solid #ff6c3a}
+.progress {background-color: #ff6c3a}
+.cloud-faq .faq-list dt {color:#ff6c3a}
+.host-config .tx-host .tuijian-config input.btn_page_1 {background: #fff2ed;border: 1px solid #ff6c3a}
+/*cloudhost end*/
+
+/*mail*/
+.sel a.sel_on,.wjf-ui-tab-style3 .active {background: #ff6c3a}
+.btn-mail{background:#ff6c3a}
+.btn-mail:hover{background:#e54d19}
+.wjf-ui-tab-style3 .item{height: 60px;line-height: 60px;margin: 0 20px 0 0}
+.wjf-ui-tab-style3 {text-align: left}
+.taocan .mail-table tr th{background:#fff2ed}
+/*mail end*/
+
+/*agent*/
+.am-column .am-left .am-txt .am-txt-icon {color:#ff6c3a}
+.am-column .am-right .sm-btn1 {background:#ff6c3a}
+.am-column .am-right .sm-btn2 {border:1px solid #ff6c3a;color:#ff6c3a}
+.agent-level .al-title,.aj-bottom .aj-title h4 {border-left:4px solid #ff6c3a;color:#ff6c3a}
+.mode-content h5 {color:#ff6c3a}
+/*agent end*/
+
+/*bagshow*/
+.bagshow-title .bagshow-title-right .bagshow-title-btn,.bagshow-goods .bagshow-count-right .bagshow-title-btn,.bagshow-goods .bagshow-table .bagshow-table-btn{background-color:#ff6c3a}
+.bagshow-goods .bagshow-table{border:1px solid #e5e5e5;border-top:2px solid #ff6c3a}
+.bagshow-goods .bagshow-table tr th,.bagshow-goods .bagshow-count{background:#f8f8f8}
+/*bagshow end*/
+
+/*help center*/
+.navbar-left .nl-title,.cr-search button,.mail_tab_center_on {background: #ff6c3a;}
+.navbar-left .nl-list .active a, .navbar-left .nl-list li:hover a  {
+	background: #fff2ed;
+	color: #ff6c3a;
+	border-bottom: 1px solid #fff2ed;
+}
+.cr-search {border:2px solid #ff6c3a}
+.mail_tab_center_on{color:#fff}
+.navbar-left .nl-list .active i,.navbar-left .nl-list li:hover i{border-left-color: #fff2ed;}
+/*help center end*/
+
+/*footer*/
+#footer2016{background-color: #24292f; color: #898b92;}
+#footer2016 .footer-bottom p a,#footer2016 .footer-bottom p a:hover{ color: #898b92;}
+/*footer end*/
+
+
+/*manager new*/
+.manager-btn, .common-btn{background: #ff6c3a}
+.manager-btn:hover, .common-btn:hover {background: #e65b2c}
+.mt-news .mt-news-title .active,.manager-product .mp-title span  {border-bottom:2px solid #ff6c3a;color:#ff6c3a}
+.leftmenu_main h1:hover .expand-icon {border-left-color: #ff6c3a}
+.manage_left_menu h1.current .expand-icon { border: 5px solid transparent;border-top-color: #ff6c3a}
+.leftmenu_main h1:hover,.leftmenu_main h1.current,.leftmenu_main ul li.hover a,.leftmenu_main ul li a:hover,.leftmenu_main ul li a.linkcur{color:#ff6c3a}
+.manager-tab li.liactive {border-top:2px solid #ff6c3a;}
+/*manager new end*/
+.gray-btn {
+	background:#d5d1d1;
+	color:#686868
+}
+.gray-btn:hover {
+	background:#C9C7C7;
+	color:#686868
+}
+
+/***********/
+input.ddos_bt {
+    margin-right: 8px;
+    display: inline-block;
+    width: 88px;
+    height: 38px;
+    line-height: 38px;
+    background: #f4f4f4;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #f4f4f4;
+    color: #6a6a6a;
+    cursor: pointer;
+    position: relative;
+}
+
+input.ddos_btactivate {background: #fff2ed;border: 1px solid #ff6c3a}

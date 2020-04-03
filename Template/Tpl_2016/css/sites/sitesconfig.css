@@ -1,0 +1,119 @@
+/*
+    本页样式为----成品网站超市--详细功能配置（PC版手机版配置对比）
+*/
+.container{
+    background: #f9f9f9;
+}
+/*banner*/
+.banner{
+    height: 362px;
+    min-width: 1190px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+/*版心*/
+.wide1150 {
+    width: 1150px;
+    margin: 0 auto;
+}
+.fixed-title{
+    position: fixed;
+    top:0;
+    width:100%;
+    left:0;
+    z-index: 2;
+}
+/***************tab 开始***************/
+.sitesconfig-tab{
+}
+/*tab公共样式重置*/
+.site-tab{
+    border: 0;
+}
+.site-tab li{
+    width: 33.33333333%;
+    height: 66px;
+    line-height: 66px;
+    box-sizing: border-box;
+    margin-left: 0;
+    border: 0;
+}
+.site-tab li.active{
+    margin-left: 0;
+}
+/***************tab 结束***************/
+
+/***************配置信息 开始***************/
+.site-tab-content{
+    z-index: 1;
+}
+.sf-info{
+    /*padding: 30px 0;*/
+    background: #f9f9f9;
+}
+.table-info {
+    border: 1px solid #ececec;
+    text-align: center;
+    background: #fff;
+}
+/*表头*/
+.table-info .title {
+    padding: 0;
+    height: 46px;
+    line-height: 46px;
+    background: #f8fbff;
+    font-size: 24px;
+    color: #454545;
+    border-top: 2px solid #7aafff;
+    border-bottom: 1px solid #ececec;
+}
+
+.table-info .td-title {
+    padding: 0;
+    height: 64px;
+    line-height: normal;
+    background: #fffefb;
+    font-size: 16px;
+    color: #3e3e3e;
+    border-right: 0;
+    border-bottom: 1px solid #ececec;
+}
+.table-info .td-title.blue{
+    font-size: 18px;
+    color: #026fe9;
+}
+
+.table-info tr td {
+    padding: 10px;
+    line-height: 20px;
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+}
+/*激活*/
+.table-info tr:hover {
+    background: #fdfdf5;
+}
+/*左侧信息*/
+.table-info tr .left {
+    padding: 0;
+    width: 40px;
+    background: #f8fbff;
+    font-size: 14px;
+    font-weight: 700;
+}
+/*项目*/
+.table-info tr .name {
+    padding-left: 36px;
+    font-size: 12px;
+    color: #4e4e4e;
+    text-align: left;
+}
+/*图标*/
+.table-info tr .icon{
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background: url('/template/Tpl_2016/images/sites/icon.png') -25px -120px;
+    vertical-align: middle;
+}
+/***************配置信息 结束***************/

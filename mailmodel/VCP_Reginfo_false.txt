@@ -1,0 +1,7 @@
+您的申请已获审核通过
+尊敬的{Thisusername},您好
+　　　非常抱歉，您在{companyname}申请的VCP合作伙伴未获批准，请检查帐上是否有足够余额。
+　　　此
+礼
+ 　　　{companyname}
+ 　　　{RegmailSendTime}

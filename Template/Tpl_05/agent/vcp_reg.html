@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}－vcp模式代理申请</title>
+<meta name="description" content="代理模式 D模式详细介绍-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="代理模式 D模式详细介绍-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Agent.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css">
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<script language=javascript>
+function isDate(data,text){
+var reg=/\b(((19|20)\d{2})-((0?[1-9])|(1[012]))-((0?[1-9])|([12]\d)|(3[01])))\b/
+if (reg.exec(data.value)==null) {
+	alert("抱歉，"+text+"的日期格式错误,正确的格式是yyyy-MM-dd");
+	//data.value=dateObj.getUTCFullYear()+"-"+dateObj.getUTCMonth()+"-"+dateObj.getUTCDay();
+	dateObj=new Date();
+	data.value="2003-01-30"
+	data.focus();
+	data.select();
+	return false;
+}
+else{
+	return true;
+	}
+}
+
+function isGreat(number,text){
+		if (parseFloat(number)>9999999||parseFloat(number)<0){
+			alert("报歉！提交失败，["+text+"]数值超过系统表示范围0-9999999");
+			return true;
+			}
+	return false;
+}
+function isNumber(number){
+var i,str1="0123456789.";
+	for(i=0;i<number.value.length;i++){
+	if(str1.indexOf(number.value.charAt(i))==-1){
+		return false;
+		break;
+			}
+		}
+return true;
+}
+function checkNull(data,text){
+	if (data.value==""){
+		alert("抱歉!提交失败，"+text+"不能为空!");
+		data.focus();
+	   return false;
+			}
+	else{ 
+		return true;}
+}
+function isDigital(data,text){
+if (data.value!=""){
+	if (!isNumber(data)) {
+	alert("抱歉!["+text+"]必须是数字,否则无法提交");
+	data.focus();
+	data.select();
+	return false;
+	}
+}
+return true;
+}
+
+function check(form){
+if (!checkNull(form.domain,"域名")) return false;
+return true;
+}
+
+</script>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+<li><a href="/agent/">代理专区</a></li>
+<li><a href="/agent/vcp_reg.asp">代理注册</a></li>
+    </ul>
+  </div>
+<div id="MainContentDIV">
+{#agentleft.html}
+
+<div id="MainRight">
+
+            <form name="form1" method="post" action="vcp_savereg.asp" onSubmit="return check(this);">
+              <table width="98%" border="0" align="center" cellpadding="4" cellspacing="1" bordercolorlight="#000000" bordercolordark="ffffff" class="TableBG">
+                <tr>
+                  <td width="196" class="TableHeard">姓名:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_namecn}</td>
+                </tr>
+                <tr>
+                  <td width="196" height="36" bgcolor="ffffff" class="TableHeard"> 网站域名:<br>
+                  </td>
+                  <td width="337" height="36" bgcolor="#FFFFFF"> http://
+                    <input name="domain" type="text" class="inputbox" size="15" maxlength="53">
+                    <br>
+                    *必须填写(以后不可更改)<br>
+                    为了与我们{companyname}的品牌保持一致
+                    如果你还没有注册域名，请先去<a href="/services/domain" target="_blank">注册一个域名</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196" class="TableHeard">通信地址:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_address}</td>
+                </tr>
+                <tr>
+                  <td width="196" bgcolor="ffffff" class="TableHeard">邮编:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_zipcode}&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="196" class="TableHeard">QQ:</td>
+                  <td width="337" bgcolor="#FFFFFF">{qq_msg}&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="196" bgcolor="ffffff" class="TableHeard">电子邮件:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_email}</td>
+                </tr>
+                <tr>
+                  <td width="196" class="TableHeard">电话:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_telphone}</td>
+                </tr>
+                <tr>
+                  <td width="196" bgcolor="ffffff" class="TableHeard">传真:</td>
+                  <td width="337" bgcolor="#FFFFFF">{u_fax}&nbsp; </td>
+                </tr>
+                <tr bordercolordark="#ffffff">
+                  <td width="196" class="TableHeard">银行帐号:</td>
+                  <td width="337" bgcolor="#FFFFFF"><input name="bankNo" type="text" class="inputbox" size="15" maxlength="50">
+                    <input type="hidden" name="ReferenceID" value="<%=U_id%>">
+                  </td>
+                </tr>
+                <tr bordercolordark="#ffffff">
+                  <td width="196" bgcolor="#ffffff" class="TableHeard">开户姓名:</td>
+                  <td width="337" bgcolor="#FFFFFF"><input name="bank" type="text" class="inputbox" size="15" maxlength="50">
+                  </td>
+                </tr>
+                <tr bordercolordark="#ffffff">
+                  <td width="196" class="TableHeard">打款方式:</td>
+                  <td width="337" bgcolor="#FFFFFF"><input type="radio" name="remitMode" value="工商银行" checked>
+                    工商银行电汇
+                    <input type="radio" name="remitMode" value="招商银行">
+                    招商银行电汇<br>
+                    <input type="radio" name="remitMode" value="建设银行">
+                    建设银行电汇
+                    <input type="radio" name="remitMode" value="农业银行">
+                    农业银行电汇 <br>
+                    <input type="radio" name="remitMode" value="会员冲值">
+                    直接打在我的会员号上</td>
+                </tr>
+                <tr>
+                  <td width="196" bgcolor="ffffff" class="TableHeard">何处得知:</td>
+                  <td width="337" bgcolor="#FFFFFF"><input name="from" type="text" class="inputbox" size="20" maxlength="53">
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td colspan="2" bgcolor="#FFFFFF"><input name="Submit" type="submit" class="ButtonBox" id=save value="提交[S]">
+                    <input name="Submit2" type="reset" class="ButtonBox" id=clear value="清除[C]">
+                  </td>
+                </tr>
+              </table>
+              <label for=save AccessKey=S></label>
+              <label for=clear AccessKey=C></label>
+            </form>
+			</div>
+			</div>
+			</div>
+{#bottom.html}
+</body>
+</html>

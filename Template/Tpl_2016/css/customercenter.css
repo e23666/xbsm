@@ -1,0 +1,225 @@
+/* CSS Document */
+#Customer_PIC_box {
+	width:750px;
+	margin:5px auto auto auto;
+	height:201px;
+}
+#Customer_PIC_box #PIC_a {
+	width:409px;
+	height:201px;
+	float:left;
+}
+#Customer_PIC_box #PIC_b {
+	width:303px;
+	height:156px;
+	float:right;
+	padding:45px 0px 0px 30px;
+	;
+}
+#Cut_line {
+	width:750px;
+	height:30px;
+}
+#MainRight #DiySite_List_Box {
+	height:auto;
+	margin-top:10px;
+}
+#DiySite_List_Box #DiySite_List_Box_top {
+
+	height:29px;
+	padding:11px 0px 0px 15px;
+}
+#DiySite_List_Box .DiySite_List_Box_Contet_1 {
+	width:720px;
+	margin:auto;
+	height:200px;
+}
+#DiySite_List_Box #DiySite_List_Box_bottom {
+	height:8px;
+}
+#DiySite_List_Box #DiySite_List_Box_top ul li {
+	float:left;
+	height:25px;
+	line-height: 25px;
+	width:110px;
+	padding:8px;
+	font-weight:bold;
+}
+
+.mail_tab_center_on {
+	background:#3db514;
+	color:#fff;
+	cursor:pointer;
+	text-align: center;
+}
+.mail_tab_center_off {
+	background:#f8f8f8;
+	color:#666;
+	text-align: center;
+}
+.customer_que_pic_1 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_newhand.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_2 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_domain.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+#Search_box #search_form {
+	margin:5px 0 0 0;
+	float:left;
+	width:490px;
+}
+.customer_que_pic_3 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_mail.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_4 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_webhost.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_5 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_pay.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_6 {
+	background:url(/template/Tpl_2016/images/customer_que_pic_agent.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_cutline {
+	background:url(/template/Tpl_2016/images/customer_que_pic_cutline.gif) no-repeat;
+	float:left;
+	height:164px;
+	width:67px;
+	margin:20px 0 0 20px;
+}
+.customer_que_content {
+	float:left;
+	height:164px;
+	width:400px;
+	margin:20px 0 0 20px;
+}
+#Search_box {
+	width:525px;
+	height:69px;
+	padding:10px 0 0 225px;
+	margin:10px auto auto auto;
+}
+#Customer_PIC_box #PIC_c {
+	width:330px;
+	height:201px;
+	float:right;
+	padding:0px 0px 0px 3px;
+	;
+	line-height:25px;
+}
+#PIC_c #customer_head {
+	width:82px;
+	height:82px;
+	margin:0 20px 10px 0;
+	float:left;
+}
+#Other_List {
+
+	margin:10px 15px auto 15px;
+	height:250px;
+}
+#Other_List ul .other_box_li {
+	width:250px;
+	margin:5px;
+	float:left;
+}
+.head_ {
+	background:url(/template/Tpl_2016/images/20080524152547637.gif) no-repeat 0px 2px;
+	padding-left:18px;
+	color:#000;
+	font-weight:bold;
+	margin:auto;
+}
+.list_head_pic_1 {
+	background:url(/template/Tpl_2016/images/list_head_pic_2.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.hrclass_blue {
+	background:#3db514;
+	margin:5px 0;
+	width:200px;
+}
+.list_head_pic_2 {
+	background:url(/template/Tpl_2016/images/list_head_pic_1.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.list_head_pic_3 {
+	background:url(/template/Tpl_2016/images/list_head_pic_3.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.list_content {
+	width:200px;
+}
+.customer_que_content ul li {
+	display:block;
+	background:url(/template/Tpl_2016/images/top_arrow.gif) no-repeat 0px 7px;
+	padding:5px 0px 0px 15px;
+}
+.customer_que_content ul {
+	float:left;
+	margin-right:20px;
+}
+.list_content ul li {
+	background:url(/template/Tpl_2016/images/note_ico.gif) no-repeat 0px 5px;
+	padding:5px 0px 0px 25px;
+}
+#PIC_c #online_ask {
+	float:right;
+	width:147px;
+	height:48px;
+	margin-right:10px;
+}
+.img_bo {
+	width:111px;
+	height:28px;
+	float:left;
+	margin:-3px 0 0 10px;
+}
+.img_txt {
+	float:left;
+	width:360px;
+	height:28px;
+}
+.table_line {
+	width:100%;
+}
+.table_line tr td {
+	border:1px solid #efefef;
+	padding:4px;
+}
+@media screen and (max-width:1206px) {
+	.cr-search input{width: 59%}
+	.content-right {padding: 40px 20px 10px}
+	#MainRight #DiySite_List_Box {width: 750px}
+	#DiySite_List_Box #DiySite_List_Box_top ul li{width: 100px}
+}

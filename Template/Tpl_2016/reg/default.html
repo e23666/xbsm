@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="hd">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>用户注册-{companyname}-专业虚拟主机域名注册服务商!稳定、安全、高速的虚拟主机！域名注册虚拟主机租用</title>
+    <meta name="description" content="{companyname}是国内著名的虚拟主机和域名注册提供商。独创的第6代虚拟主机管理系统，拥有在线数据恢复、Isapi自定义，木马查杀等30余项领先功能.千M硬件防火墙,为您保驾护航！双线虚拟主机确保南北畅通无阻！">
+    <meta name="keywords" content="虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用,域名,网站空间,主机托管,网站建设,双线虚拟主机,asp空间">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/reg.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	    <link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <!---验证必须引用以下内容不允人工修改-->
+    <link href="/noedit/check/chkcss.css" rel="stylesheet" type="text/css" />
+	<script src="/database/cache/citypost.js"></script>
+    <script language="javascript" src="/noedit/check/Validform.js"></script>
+    <!---验证必须引用-->
+</head>
+
+<body  class="min990">
+{#top.html}
+<div class="content" id="content">
+    <div class="wide1190">
+        <div class="reg-content">
+            <div class="reg-title cl">
+                <h3>用户注册</h3>
+                <p>
+                    已有账户，
+                    <a class="login-btn" href="/login.asp">马上登录</a>
+                </p>
+            </div>
+            <div class="reg-box">
+
+                <div class="pt-70">
+                    <!--账号资料填写 开始-->
+                    <form class="reg-section" name="goform" id="goform" action="regsub.asp" method="post">
+                        <div class="rb_title redColor mb-20">
+                            <ul>
+                                <li>以下带*号的填项为必须填写，请填写您的真实资料，您所填写的资料将受{companyname}保密。</li>
+                                <li>请认真填写各项资料，以便我司能及时为您提供完善的续费通知、紧急事件通知等服务。</li>
+                            </ul>
+                        </div>
+
+
+                        <div id="Reg_Box">
+                            <dl>
+                                {quicklogin}
+                                <dt class="Num_dt_1">请您填写账号资料</dt>
+
+                                <table width="100%">
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span>会员用户名</label></td>
+                                        <td ><input name="u_name" class="common-input" id="u_name" datatype="s4-18" errormsg="昵称至少6个字符,最多18个字符！"  maxlength="20"  ajaxurl="/noedit/chkuser.asp" /></td>
+                                        <td width="47%"><div class="Validform_checktip">帐号由长度4-18个字符组成</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span>选择用户类型</label></td>
+                                        <td >&nbsp;<input name="u_class" type="radio" value="公司用户" checked="checked" datatype="typesxz" errormsg="请选择用户类型！" id="qiyeuser"><label for="qiyeuser">企业用户</label>
+                                                        &nbsp;&nbsp;
+                                            <input type="radio" name="u_class" id="gruser" value="个人用户" datatype="typesxz" errormsg="请选择用户类型！"><label for="gruser">个人用户 *</label></td>
+                                        <td width="47%"><div class="Validform_checktip">会员类型填写</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title" id="u_name_txt"><span class="reg-star">*</span>申请单位中文名称</label></td>
+                                        <td ><input name="u_company" class="common-input" id="u_company" datatype="co" errormsg="字符长度为2-16位"  maxlength="20" /></td>
+                                        <td width="47%"><div class="Validform_checktip">长度为2-16位</div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title"><span class="reg-star">*</span>联系人(真实姓名)</label></td>
+                                        <td><input name="u_namecn" id="u_namecn" type=text class="common-input"  datatype="cn2-18" errormsg="请输入正确中文联系人"  maxlength="20" ></td>
+                                        <td><div class="Validform_checktip">联系人姓名中文 </div></td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title"><span class="reg-star">*</span>用户密码</label></td>
+                                        <td><input name="u_password" id="u_password" type=password class="common-input"  datatype="pwd" errormsg="字符长度为2-16位"  maxlength="20" ></td>
+                                        <td><div class="Validform_checktip">密码长度必大于6位</div></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title"><span class="reg-star">*</span>确认密码</label></td>
+                                        <td><input name="u_password2" id="u_password2" type=password class="common-input"  recheck="u_password"  datatype="*"  nullmsg="请再输入一次密码！" errormsg="您两次输入的账号密码不一致！"></td>
+                                        <td><div class="Validform_checktip">请重新输入一次密码！</div></td>
+                                    </tr>
+                                </table>
+
+
+
+
+
+
+
+
+
+
+                                <dt class="Num_dt_2">填写您的联系方式</dt>
+
+                                <table width="100%">
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">国家</label></td>
+                                        <td > <input name="u_contry" class="common-input" id="u_contry" value="CN"  maxlength="2" ignore="ignore"  datatype="*" errormsg="请输入国家代码,如中国(CN)"  /></td>
+                                        <td width="47%"><div class="Validform_checktip">帐号由长度4-18个字符组成</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">省份</label></td>
+                                        <td colspan=2> <input type="hidden" name="u_contry" id="u_contry" value="CN">
+                                            <select name=u_province size="1" class="common-select reg-area-select">
+												<option value="">--请选择--</option>
+                                            </select>
+											<select name=u_city size="1" class="common-select reg-area-select">
+												<option value="">--请选择--</option>
+                                            </select>
+											<select name=u_district size="1" class="common-select reg-area-select">
+												<option value="">--请选择--</option>
+                                            </select>
+										    <span class="Validform_checktip">请选择你所在省份</span>
+											</td>
+                                       <script>
+											$(function(){
+												setprovince()
+												$("select[name='u_province']").change(function(){
+													 setcity()
+												})
+												$("select[name='u_city']").change(function(){
+													 setdistrict()
+												})
+												$("select[name='u_district']").change(function(){
+													setpostshow();
+												})
+											})
+											function setprovince(){
+												$("select[name='u_province']").empty();
+												for (var i=0;i<citydb.length ;i++ )
+												{
+													    p_=citydb[i].province
+														$("select[name='u_province']").append('<option value="'+p_+'">'+p_+'</option>')
+												}
+												 setcity()
+											}
+											function setcity(){
+												var p_=$("select[name='u_province']").val();
+												var cobj_=$("select[name='u_city']");
+												cobj_.empty();
+												if(p_!="")
+												{	
+
+													for (var i=0;i<citydb.length ;i++ )
+													{
+															if(p_==citydb[i].province)
+															{
+																for (ii=0;ii<citydb[i].city.length ;ii++ )
+																{
+																	c_=citydb[i].city[ii].name
+																	cobj_.append('<option value="'+c_+'">'+c_+'</option>')
+																}
+																 setdistrict()
+																return false;
+															}															
+													}
+												}
+											}
+											function setdistrict()
+											{
+												var p_=$("select[name='u_province']").val();
+												var c_=$("select[name='u_city']").val();
+												var dobj_=$("select[name='u_district']");
+												dobj_.empty();
+												if(p_!="" && c_!="")
+												{
+														for (var i=0;i<citydb.length ;i++ )
+														{
+																if(p_==citydb[i].province)
+																{
+																		for (ii=0;ii<citydb[i].city.length ;ii++ )
+																		{
+																			if(c_==citydb[i].city[ii].name)
+																			{
+																				for(var iii=0;iii<citydb[i].city[ii].district.length;iii++)
+																				{
+																					d_=citydb[i].city[ii].district[iii].name
+																					p_=citydb[i].city[ii].district[iii].post
+																					dobj_.append('<option value="'+d_+'" tag="'+p_+'">'+d_+'</option>')
+																				}
+																				 setpostshow()
+																				return false;
+																			}																			
+																		}
+																		return false;
+																}															
+														}
+												
+												}
+											}
+											function setpostshow()
+											{
+												var v_=$("select[name='u_district']").val();
+												$("input[name='u_zipcode']").val($("select[name='u_district']").find("option[value='"+v_+"']").attr("tag"));
+												$("input[name='u_address']").val(v_);
+											}
+									   </script>
+                                    </tr>
+                              
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title">邮编</label></td>
+                                        <td> <input name="u_zipcode" id="u_zipcode"  type="text" class="common-input"  ignore="ignore"  datatype="zip" errormsg="邮政编号格式错误！"  maxlength="20" ></td>
+                                        <td><div class="Validform_checktip">请输入您的邮政编码！</div></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title">通信地址</label></td>
+                                        <td> <input name="u_address" id="u_address" type="text" class="common-input"   datatype="cnaddress"  ignore="ignore"   errormsg="请输入正确通信地址！"></td>
+                                        <td><div class="Validform_checktip">请输入您现在通信地址！</div></td>
+                                    </tr>
+									<!--
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title"><span class="reg-star">*</span>电话</label></td>
+                                        <td > <input name="u_telphone" class="common-input" id="u_telphone" datatype="tel" errormsg="联系电话格式错误！" nullmsg="联系电话不能为空"  maxlength="20" /></td>
+                                        <td width="47%"><div class="Validform_checktip">您的联系座机</div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title"><span class="reg-star">*</span>移动电话</label></td>
+                                        <td> <input name="msn" id="msn" type="text" class="common-input"  datatype="m" errormsg="请输入正确的手机号码！" nullmsg="手机号码不能为空" maxlength="20" ></td>
+                                        <td><div class="Validform_checktip">您的手机号码！</div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title"><span class="reg-star">*</span>电子邮件</label></td>
+                                        <td> <input name="u_email" id="u_email" type="text" class="common-input"   datatype="e"  nullmsg="电子邮箱为空！" errormsg="电子邮箱格式错误！"></td>
+                                        <td><div class="Validform_checktip">请输入您现在通信地址！</div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="right"><label class="reg-section-title">QQ号码</label></td>
+                                        <td> <input name="qq" id="qq" type="text" class="common-input"    ignore="ignore" maxlength="30"    datatype="qq" errormsg="请输入正确的QQ号码！！"></td>
+                                        <td><div class="Validform_checktip">可以输入您的QQ号</div></td>
+                                    </tr>
+
+
+
+
+
+
+
+
+
+                                </table>
+
+                                <dt class="Num_dt_3">请填写安全设置(建议填写)</dt>
+
+                                <table width="100%">
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">密码保护</label></td>
+                                        <td > <select id="question" name="question" class="common-select" title="密码保护问题" >
+                                            <option value="" selected="selected">==请选择一个问题==</option>
+                                            <option value="我就读的第一所学校的名称？">我就读的第一所学校的名称？</option>
+                                            <option value="我的学号(或工号)是什么?">我的学号(或工号)是什么?</option>
+                                            <option value="我父亲的姓名？">我父亲的姓名？</option>
+                                            <option value="我父亲的职业？">我父亲的职业？</option>
+                                            <option value="我的出生地是？">我的出生地是？</option>
+                                            <option value="我母亲的姓名？">我母亲的姓名？</option>
+                                            <option value="我母亲的职业？">我母亲的职业？</option>
+                                            <option value="我初中班主任的名字是？">我初中班主任的名字是？</option>
+                                            <option value="我最爱的人的名字？">我最爱的人的名字？</option>
+                                            <option value="我爸爸的生日？">我爸爸的生日？</option>
+                                            <option value="我妈妈的生日？">我妈妈的生日？</option>
+                                        </select></td>
+                                        <td width="47%"><div class="Validform_checktip"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">您的答案</label></td>
+                                        <td > <input name="answer" type="text" class="common-input" id="answer" title="您的答案" value="" maxlength="30"   /></td>
+                                        <td width="47%"><div class="Validform_checktip"></div></td>
+                                    </tr>
+                                </table>
+
+
+                                <dt class="Num_dt_4">选填内容</dt>
+
+                                <table width="100%" border="0" align="center" style="margin:0px;">
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">申请单位英文名称</label></td>
+                                        <td > <input name="u_nameen" type="text" id="u_nameen"   class="common-input"  ignore="ignore" maxlength="30"    datatype="enname" errormsg="请输入正确英文名称！！" /></td>
+                                        <td width="47%"><div class="Validform_checktip"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">证件号码</label></td>
+                                        <td > <input name="u_trade" type="text" class="common-input" id="u_trade" maxlength="30"   /></td>
+                                        <td width="47%"><div class="Validform_checktip"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%" align="right"><label class="reg-section-title">传真</label></td>
+                                        <td > <input name="u_fax" type="text" class="common-input" id="u_fax" value="" ignore="ignore" maxlength="30"    datatype="fax" errormsg="请输入正确传真号码！！" /></td>
+                                        <td width="47%"><div class="Validform_checktip"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"> </td>
+                                        <td colspan="2" align="left">
+                                            <label for="agreement">
+                                                <input type=checkbox value="1" name="agreement" id="agreement"   datatype="agree" errormsg=""> <a href="/customercenter/zhongzhang.asp" target="_blank" class="link"><strong>我已经阅读并同意{companyname}服务条款总章</strong></a>
+                                            </label>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="25%"> </td>
+                                        <td colspan="2" align="left">
+                                            <input type="submit" class="reg-btn"  id="J_submitRegForm" value="立即注册" />
+                                            <input type="hidden" name="act" />
+                                            <input type="hidden" name="ads" value="" /></td>
+                                    </tr>
+                                </table>
+
+
+
+
+
+                                </dd>
+                            </dl>
+
+
+
+                        </div>
+                    </form>
+                    <!--账号资料填写 结束-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{#bottom.html}
+<script src="/noedit/chkreg.js?asdf"></script>
+
+</body>
+</html>

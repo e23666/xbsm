@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>购买虚拟主机，虚拟主机在线开通</title>
+<meta name="description" content="{companyname}-大型虚拟主机服务商,专业提供虚拟主机,域名注册,主机租用等服务.200M虚拟主机200元,国际域名80元.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/bagshow.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/step1.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+ <!-- <link href="/Template/Tpl_05/css/bagshow.css" rel="stylesheet" type="text/css">-->
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+  <!--
+
+
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css">
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>-->
+  <style>
+    .ShopBuyStep {
+      overflow:hidden;
+      height:auto;
+    }
+    .orderStep {
+      margin:10px 0 20px 0;
+      display:block;
+      overflow:hidden;
+      height:auto;
+      float:left;
+      margin-left:26px;
+    }
+    .orderStep li {
+      display:block;
+      float:left;
+      background:url(/Template/Tpl_2016/images/Orderstep.gif);
+      height:30px;
+      width:120px;
+      margin-right:7px;
+      padding:8px 0 0 45px;
+    }
+    .shopcar {
+      background:url(/Template/Tpl_2016/images/Shopbox.jpg);
+      width:65px;
+      height:53px;
+      float:left;
+      margin-left:20px;
+    }
+  </style>
+</head>
+
+<body class="min990">
+{#top.html}
+
+<div id="container">
+  <div class="bs-content">
+    <div class="wide1190 pt-40">
+      <div id="SiteMapPath">
+        <ul>
+          <li><a href="/">{companyname}首页</a></li>
+          <li><a href="/bagshow">购物车</a></li>
+          <li><a href="/bagshow/orderlist.asp">我的订单</a></li>
+        </ul>
+      </div>
+      <div id="zxwInfo">
+        <div id="shopecart" class="clearfix bagshow-goods" ><div class="text-l"><img  src="/Template/Tpl_05/newimages/bagshow/info_Title_pic_orders.jpg" width="290" height="61" /></div>
+          <form name="form1" action="/bagshow/orderlist.asp" method="post">
+            <table class="bagshow-table">
+              <tr>
+                <th class="RoomNameBox_">产品名称</th>
+                <th class="RoomNameBox_">产品单价</th>
+                <th class="RoomNameBox_">年限</th>
+                <th class="RoomNameBox_">用户名</th>
+                <th class="RoomNameBox_">用户类别</th>
+              </tr>
+              <!-- BEGIN bagshoworderlist -->
+              <tr>
+                <td class="GreenColor">{productname}</td>
+                <td class="GreenColor">{price}</td>
+                <td class="GreenColor">{vyears}</td>
+                <td class="GreenColor">{user_name}</td>
+                <td class="GreenColor">{u_level}</td>
+              </tr>
+              <!-- END bagshoworderlist -->
+
+              <tr>
+                <td colspan="8">{#orderlisttxt.html}</td>
+              </tr>
+            </table>
+            <div class="ShopBuyStep mt-20">
+              <div class="shopcar"></div>
+              <ul class="orderStep">
+                <li>选择商品</li>
+                <li>添加购物车</li>
+                <li>完成付款</li>
+                <li style="width:95px;">购买成功</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{#bottom.html}
+</body>
+
+
+
+</html>

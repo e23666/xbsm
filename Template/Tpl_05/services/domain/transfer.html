@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>域名转入</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/domain.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/weiyanlover.css" rel="stylesheet" type="text/css" />
+<link href="/Template/Tpl_05/css/buy_msg.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/jscripts/check.js"></script>
+<style>
+#transinfo{
+	padding:20px 0;
+}
+.jingaotxt{
+	padding-left:80px;
+	margin-left:80px;
+	line-height:180%
+}
+</style>
+</head>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+<div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/domain/">域名注册</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+ {#DomainLeft.html}
+ 
+ <div id="MainRight">
+      <div class="buymap clearfix" style="margin-bottom:5px;"><img src="/Template/Tpl_05/newimages/transfer_buy_dot.jpg" class="span_auto" /></div>
+      <div id="zhuanrumain" class="z_buymsg clearfix" style="padding-top:20px;">
+        
+          <dl class="clearfix">
+            <dt class="clearfix">
+              <p class="titlelog"></p>
+              <ul class="title_memo" style="">
+                <li>
+                  <div class="jingaotxt"><b>提醒：</b>域名转入（Domain Transfer）又称域名转移注册商，即将某域名从当前的注册商A转出，转入到{companyname}进行管理；{companyname}是经互联网域名体系最高管理机构ICANN认证的注册商，将您的域名转入{companyname}，您将获取更加优质、方便的服务！ 域名优势：CNNIC认证四星服务商、免费提供500条解析、DNS服务器多达6组、解析生效时间最快、动态解析、泛解析、DNS轮循、空主机名添别名记录等强大功能。<br />
+                  目前我司支持转入的域名有.com/.net/.org结尾的中英文国际域名和国内域名(.cn/.中国/.网络/.公司)。</div>
+                </li>
+              </ul>
+            </dt>
+            <dd class="clearfix">
+<div id="transinfo" style="line-height:35px;">
+<form method="post" action="dotransfer.asp" name="form1" onsubmit="return chkdm(this)">
+	<div>转入域名：
+	  <textarea name="domain" id="domain" cols="35" rows="3" ></textarea>
+	多个域名请按回车分隔</div>
+    <div>转移密码：
+      <textarea name="authcode" cols="35" rows="3"></textarea>
+    转移密码请从原注册商处免费索取</div>
+    <div style="padding-left:65px;"> 
+      <input name="chgdns" type="checkbox" value="1" />转入成功后自动修改为我司的DNS进行域名解析(推荐！)</div>
+
+	<div><input type="submit" id="frmtrans" class="z_btn-buy" value="提交申请" /></div>
+</form>
+
+
+</div>
+            </dd>
+          </dl>
+
+        <div class="z_box_outline clearfix">
+          <ul class="title_memo z_box_inline clearfix" style="padding:10px">
+            <li class="z_box_title" style="height:30px;line-height:30px; padding-left:40px;margin-bottom:10px;width:auto;">域名转入要求</li>
+            <li>1、域名状态正常，域名持有者身份正常，没有任何争议与纠纷，没有费用拖欠问题；</li>
+            <li>2、域名必须距新注册/上次续费/上次转移60天后才能转移，否则可能导致损失最近一次续费。国内中英文域名还要求距域名过期时间有15天以上才能转移；</li>
+            <li>3、域名转移后会自动续一年，如果域名续费年限已经达到最大(一般10年)，则不能转移；</li>
+            <li>4、转入成功后，可以登录会管理中心--域名管理，进行域名联系人信息修改和密码重置操作；</li>
+            <li>5、有多个域名需要批量转入时，请在域名框中填写多个域名（一行一个）</li>
+            <li>6、并在域名转移密码处填写对应的转移密码（一行一个）。</li>
+            <li>7、若&ldquo;使用{companyname}的DNS进行域名解析&rdquo;，转入成功后系统会发邮件通知您，并自动添加上主机名为www的解析记录指向您的服务器IP。转入过程中域名解析不会受到影响。</li>
+            <li>8、如果原注册商擅自限制或拒绝域名转出，域名持有者可以按照以下方式进行投诉（若不清楚流程的，可以联系管理员协助处理）； 国际域名投诉地址：<a href="http://reports.internic.net/cgi/registrars/problem-report.cgi" target="_blank">http://reports.internic.net/cgi/registrars/problem-report.cgi</a><br />
+              国内域名投诉方式： 投诉邮箱为supervise@cnnic.cn，投诉电话为010-58813000</li>
+              
+                         <li class="z_box_title" style="height:30px;line-height:30px; padding-left:40px;margin-bottom:10px;width:auto;">域名转入价格</li>
+                <li>{transferTable}</li>
+          </ul>
+  
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<script language="javascript">
+function chkdm(objfrm)
+ {
+	var domain = objfrm.domain.value;
+	var password = objfrm.authcode.value;
+	objfrm.chgdns.checked?chgdns=1:chgdns=0;
+	if (domain==""||password=="") {alert("请填写域名和密码");return false;}
+ 
+	domain   = formatString(domain);
+	password = formatString(password);
+	objfrm.domain.value = domain;
+	objfrm.authcode.value = password;
+	var arr1 = domain.split('\n');
+	var arr2 = password.split('\n')
+	if (arr1.length>10){
+		alert("每次最多填写10个域名");
+		return false;
+	}else if(arr1.length>arr2.length){
+		alert("如果您填了多个域名，对应也要填写多个密码。");
+		return false;
+	}
+ 	return true;
+ }
+
+function formatString(str){
+	//去掉空格，去掉空白行,首尾行
+	str = str.replace(/\ /g,'').replace(/[\r\n]/g,'\n').replace(/\n{2,}/g,'\n');
+	if (str.substr(str.length-1,1)=='\n') str = str.substr(0,str.length-1)
+	if (str.substr(0,1)=='\n') str = str.substr(1,str.length)
+	return str;
+}
+</script>
+
+{#bottom.html}
+</body>
+</html>

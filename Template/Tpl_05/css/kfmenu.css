@@ -1,0 +1,199 @@
+.kfbox{
+	position:absolute;
+	background:#fff;
+	top:186px;
+	width:25px;
+	overflow:hidden;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	z-index:50;
+	left:0px;
+	text-align:center;
+	}
+.kfmain{
+	clear:both;
+	background:#fff;
+	white-space:normal;
+	overflow:hidden;
+	width:auto;
+	margin:0px;
+	padding:0px;	
+}
+.kfbox img{
+	margin:0;
+	padding:0;
+	float:left;
+}
+.kfbox .kffoot img
+{
+	float:right;
+}
+.QQonline img,.QQoffline img{
+	display:inline;
+	float:none;
+}
+.kfhead{
+	/*background:url(/Template/Tpl_05/newimages/kfmune/index_bot2_head.gif) top repeat-x;*/
+	background:url(/Template/Tpl_05/newimages/kfmune/qq_03.gif) no-repeat right;
+	overflow:hidden;
+	height:40px;
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+.kffoot{
+	background:url(/Template/Tpl_05/newimages/kfmune/index_bot2_foot.gif) bottom repeat-x;
+	background-position:10px 0;
+	height:9px;
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+*html .kfmenu,.kfhead,.kffoot
+{
+	
+	/*margin-right:-3px !important;
+	margin-left:-3px !important;*/
+	margin-right:0px;
+	margin-left:0px;
+}
+.kfmenu {
+	background:url(/Template/Tpl_05/newimages/kfmune/index_bot2_02.gif) right repeat-y;
+	margin:0px;
+	height:460px;/*这儿是ff需要确定值，设置overflow:auto有问题*/
+	overflow:hidden;
+	padding:0;
+	float:right;
+	padding-bottom: 1000px !important;
+	margin-bottom: -1000px !important; 
+	cursor:pointer;
+}
+.kfcontent{
+	margin:0;
+	padding:0;
+	width:120px;
+	display:none;
+	float:left;
+	padding-bottom: 1000px !important;
+	margin-bottom: -1000px !important;
+	text-align:center;
+}
+
+
+*html .kfmenu {
+	margin-left:-3px;!important;
+}
+*html .kfcontent{
+	width:118px;!important;
+}
+.kfitemtitle{
+		background: url(/Template/Tpl_05/newimages/kfmune/bg_cm.jpg) bottom no-repeat;
+		cursor:pointer;
+		width:100%;
+		height:20px;
+		overflow:hidden;
+		line-height:20px;
+		margin:0;
+		padding:0;
+		padding-left:10px;
+}
+.kfbox ul{
+	display:block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	}
+.kfbox .QQonline{
+		/*background:url(/Template/Tpl_05/newimages/kfmune/QQonline.gif) left no-repeat;*/
+		background-position:4px;
+		height:25px;
+		line-height:25px;
+		width:100%;
+		margin:0 auto;
+			
+}
+.QQonline img,.QQoffline img{
+	margin:0;
+	padding:0;
+	border:0;
+}
+.kfbox .QQoffline{
+		/*background:url(/Template/Tpl_05/newimages/kfmune/QQoffline.gif) left no-repeat;*/
+		background-position:4px;
+		height:25px;
+		line-height:25px;
+		width:100%;
+		margin:0 auto;
+			
+}
+.kfbox .kfitem ul li a,.kfbox .kf53button a{
+	position:relative;
+	z-index:1;
+	}
+.kfbox span.title,.kfbox span.titletel,.kfbox .kf53button span.title{
+	display: none;
+	cursor:pointer;
+	padding:0;
+	margin:0;
+}
+.kfbox .kfitem ul li a:hover,.kfbox .kf53button a:hover{
+	background:url(/Template/Tpl_05/newimages/kfmune/QQline.jpg) bottom no-repeat;
+	z-index:2;/*这个为了ie6和ie7*/
+	padding:0px 0px 5px 0px;
+	margin:0;
+}
+.kfbox .kfitem ul li a:hover span.title,.kfbox .kfitem ul li a:hover span.titletel,.kfbox .kf53button a:hover span.title{ /*span 标签仅在 :hover 状态时显示*/
+	display:block;
+	position:absolute;
+	z-index:3;
+	top:21px;
+	left:-5px;
+	width:110px;
+	border:1px solid black;
+	background-color:#FFC;
+	color:#333;
+	padding:0;
+	margin:0;
+	line-height:15px;
+}
+.kfbox .kfitem ul li a:hover span.titletel{
+	left:-80px;
+	width:130px
+}
+.kfbox .kf53button a:hover span.title{
+	left:-140px;
+	top:-30px;
+	width:130px;
+	}
+.kfbox .kfhead img{
+	position:absolute;
+	border:0;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+}
+.kfbox .kfhead img.log{
+	top:10px;
+	right:35px;
+}
+.kfbox .kfhead img.xiao{
+	top:5px;
+	right:25px;
+
+}
+.kfbox .kfhead img.close{
+	top:8px;
+	right:11px;
+
+}
+.kf53button{
+	float:left;
+	margin:0;
+	padding:0;
+	margin-top:-10px;
+	margin-left:4px;
+}
+*html .kf53button{
+	margin-left:1px;!important;
+}
+

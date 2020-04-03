@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>域名服务-{companyname}-专业虚拟主机域名注册服务商!域名注册虚拟主机租用</title>
+<meta name="description" content="域名服务-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="域名服务-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Domain.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Domain_whois.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css">
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript" language="javascript" src="/config/ajax.js"></script>
+<script language="javascript" src="/jscripts/jq.js"></script>
+<script language=javascript1.2>
+
+
+
+
+
+function switchCNdmTab(objTab){
+	if($(objTab).index()==0){
+		$(objTab).attr("class","tab_left_on").children("span").attr("class","round_on");
+		$(objTab).siblings().attr("class","tab_right_off").children("span").attr("class","round_off");
+		$("div[class='cn_domain_search_1']").show();
+		$("div[class='cn_domain_search_2']").hide();
+		}
+	else{
+		$(objTab).attr("class","tab_right_on").children("span").attr("class","round_on");
+		$(objTab).siblings().attr("class","tab_left_off").children("span").attr("class","round_off");
+		$("div[class='cn_domain_search_1']").hide();
+		$("div[class='cn_domain_search_2']").show();
+		}
+	}
+
+
+
+
+function CheckIfEnglish( String )
+{
+    var Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-";
+     var i;
+     var c;
+      if(String.charAt( 0 )=='-')
+	return false;
+      if( String.charAt( String.length - 1 ) == '-' )
+          return false;
+     for( i = 0; i < String.length; i ++ )
+     {
+          c = String.charAt( i );
+	  if (Letters.indexOf( c ) < 0)
+	     return false;
+     }
+     return true;
+}
+
+
+function CheckIfChinese( String )
+{ 
+     var Letters = "`=~!@#$%^&*()_+[]{}\\|/?.>,<;:'\"";
+     var i;
+     var c;
+     for( i = 0; i < String.length; i ++ )
+     {
+         c = String.charAt( i );
+	     if (Letters.indexOf( c ) >= 0)
+	       return false;
+     }
+     return true;
+}
+
+function CheckIfSpace(String)
+{
+	 var i;
+     for( i = 0; i < String.length; i ++ )
+     {
+	 	  if(String.charAt(i) == ' ')
+		   	 return true;
+     }
+     return false;
+}
+
+
+function submitchecken() {
+
+	if (document.frmsearchInt.searchedDomainName.value == "") {
+		alert("请输入您要查询的英文域名。");
+		document.frmsearchInt.searchedDomainName.focus();
+		return false;
+	}
+
+if (!CheckIfEnglish(document.frmsearchInt.searchedDomainName.value )) {
+		alert("在查询英文域名应输入英文不能输入中文及非法字符！");
+		document.frmsearchInt.searchedDomainName.focus();
+		return false;
+	}
+	document.frmsearchInt.searchType.value = "IntDomain";
+	return true;
+}
+
+function submitcheckcn(theform) 
+{
+
+	if (theform.domain_name.value == "") 
+	{
+		alert("请输入您要查询的中文域名。");
+		theform.domain_name.focus();
+		return false;
+	}
+
+	if (! CheckIfChinese(theform.domain_name.value)) 
+	{
+		alert("在查询中文域名应输入中文与英文不能输入非法字符！");
+		theform.domain_name.focus();
+		return false;
+	}
+
+	if (CheckIfSpace(theform.domain_name.value)) 
+	{
+		alert("在查询中文域名应输入中文与英文不能输入空格！");
+		theform.domain_name.focus();
+		return false;
+	}
+	
+//	if (CheckIfEnglish(theform.domain_name.value)) 
+//	{
+//		alert("在查询中文域名应输入中文与英文不能输入全为英文！");
+//		theform.domain_name.focus();
+//		return false;
+//	}
+	
+	var i=0;
+    for (i=0;i<theform.suffix.length;i++){
+		if (theform.suffix[i].checked) break;
+	
+ }
+	if (i==theform.suffix.length){
+		alert('抱歉,请选择域名的类型');
+		return false;
+		}
+	return true;
+}
+function dosubmits(href,j){
+    if (href!=''){
+	     
+		document.getElementById("domain"+j).name="domain";
+		   
+	    document.form1.action=href;
+	    document.form1.submit();
+		return true;
+	}
+	 
+   
+}
+function getTopost(url,domainstr){
+	if(url!="" && domainstr!=""){
+		document.form1.domain.value=domainstr;
+		document.form1.action=url;
+		document.form1.submit();
+	}
+}
+function doallsub(v){
+
+	var itemsset=v.domainsset;
+
+	if(itemsset!=null){
+		
+		if(itemsset.length!=undefined){
+			iendcount=itemsset.length-1
+			
+			for(var ii=iendcount;ii>=0;ii--){
+			
+				if(itemsset[ii].checked==true){
+					pd=true;
+					itemsset[ii].name="domain";
+					
+				}
+			}
+		}else{
+			if(v.domainsset.checked==true){
+				pd=true;
+				v.domainsset.name="domain";
+			}
+			
+		}
+	}
+	if(pd==true){
+		v.action="/services/domain/dmbuymore.asp";
+		v.submit();
+		return true;
+	}else{
+		alert("请选择您要注册的域名");
+		return false;
+	}
+}
+
+</script>
+<body id="thrColEls">
+<div class="Style2009">
+
+{#top.html}
+<div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/domain/newWhois.asp">域名查询</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV">
+ {#DomainLeft.html}
+<div id="MainRight">
+ 
+<link href="/css/Domain_whois1.css" rel="stylesheet" type="text/css" />
+<div id="whois">
+  <div id="whois_top"></div>
+  <div id="whois_mid">
+
+      <div class="whois_top"></div>
+      <dl class="clearfix">
+      	<dt></dt>
+        <dd class="nocheck_content">
+		<span id="contentID" name="contentID"><div style="margin-top:60px; margin-left:150px;"><img border=0 src="/Template/Tpl_05/images/load.gif"><br>系统正在查询中,请稍候...</div></span>
+      </dd>
+      </dl>
+      <div class="whois_bottom"></div>
+
+  </div>
+  <div id="whois_bottom"></div>
+</div>
+
+
+<div id="DomainSearch">
+  <div class="Title_Box_Top">
+    <div class="DomainSearchTitle">中文域名注册查询</div>
+      <ul id="domain_whois_box" >
+    <li class="tab_left_on" onclick="switchCNdmTab(this)"><span class="round_on">&nbsp;</span>多个域名后缀</li>
+    <li class="tab_right_off" onclick="switchCNdmTab(this)"><span class="round_off">&nbsp;</span>单域名后缀</li>
+  </ul>
+    <div class="DomainSearchNews"></div>
+  </div>
+  <div id="DomainCN"  class="cn_domain_search_1">
+    <form name=frmsearchIntcn action="/services/domain/whoisCN.asp" method=post onSubmit="return submitcheckcn(this)">
+	<div class="searchDiv_A">
+        <div class="searchinput">
+          <input name="domain_name"  value="中文域名查询" onclick="javascript:if(this.value=='中文域名查询'){this.value='';}" type="text" class="inputbox" size="25" />
+        </div>
+        <div class="SearchButton">
+          <input name="imageField2" type="image" src="/Template/Tpl_05/newimages/Domains/ico_LongButton_DomainSearch.gif" width="84" height="24"  border="0" />
+        </div>
+      </div>
+      <div id="DomainSuffix_CN">
+        <ul>
+                   <table cellspacing=0 cellpadding=3 border=0 width=100%>
+                <tbody> 
+                <tr> 
+                  <td nowrap> <strong> 
+                    <input type="checkbox" name="suffix" value=".中国" checked>
+                    .中国</strong></td>
+				
+                  <td nowrap> <strong> 
+                    <input type="checkbox" name="suffix" value=".com">
+                    .com</strong></td>
+                    
+           
+                    
+                  
+                  <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".cn" />
+.cn</strong></td>  
+   <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".biz" />
+.biz</strong></td>  
+  <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".wang" />
+.wang</strong></td>
+  <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".公司" />
+.公司</strong></td>
+                
+                  <td nowrap width="53"><strong>
+                    <input type="checkbox" name="suffix" value=".net" />
+.net</strong></td>  </tr>
+					<tr>
+ <td nowrap width="53"><strong>
+                    <input type="checkbox" name="suffix" value=".tv" />
+.tv</strong></td>
+<td>
+                    <input type="checkbox" name="suffix" value=".tm">
+                    <strong>.tm</strong></td>
+              <td>
+            <input type="checkbox" name="suffix" value=".tel">
+            <strong>            .tel</strong></td>
+
+					<td><strong>
+					  <input type="checkbox" name="suffix" value=".cc" />
+.cc
+<input type=hidden value=domainsearch name=module />
+<input type=hidden  value=IntDomain name=searchType />
+<input type=hidden value=check name=action />
+					</strong></td>
+					  <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".网络" />
+.网络</strong></td> <td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".top" />
+.top</strong></td>
+<td nowrap><strong>
+                  <input type="checkbox" name="suffix" value=".ren" />
+.ren</strong></td>
+                </tr>
+				<tr>
+<td nowrap> <strong> 
+                    <input type="checkbox" name="suffix" value=".我爱你" checked>
+                    .我爱你</strong></td>
+					<td nowrap> <strong> 
+                    <input type="checkbox" name="suffix" value=".集团" >
+                    .集团</strong></td>
+				</tr>
+                </tbody> 
+              </table>
+        </ul>
+      </div>
+    </form>
+    <div id="CN_Domain_Price_list" >
+      <ul>
+          <li>中文.com  <span class="price">{Price(domhz)}</span>元/年 </li>
+        <li>中文.中国<span class="price"> {Price(domchina)}</span>元/年 </li>
+         <li>中文.cn<span class="price"> {Price(domhzcn)}</span>元/年 </li>
+        <li>中文.biz域名<span class="price">{Price(bizchina)}</span>元/年</li>
+        <li>中文.tv <span class="price">{Price(chinatv)}</span>元/年</li>
+        <li>中文.cc <span class="price">{Price(chinacc)}</span>元/年</li>
+         <li>中文.tm <span class="price">{Price(chinatm)}</span>元/年</li>
+        <li>中文.tel <span class="price">{Price(chinatel)}</span>元/年</li>
+		<li>中文.top <span class="price">{Price(domtop)}</span>元/年</li> 
+		<li>中文.集团 <span class="price">{Price(domjt)}</span>元/年</li> 
+      </ul>
+    </div>
+  </div>
+  
+   <div id="DomainCN"  class="cn_domain_search_2" style="display:none">
+    <form name=frmsearchIntcn action="/services/domain/whoisCN.asp" method=post onSubmit="return submitcheckcn(this)">
+	<div class="searchDiv_A">
+        <div class="searchinput">
+           <textarea name="domain_name" cols="25" rows="3" onclick="javascript:if(this.value=='中文域名查询'){this.value='';}" style="height:40px;width:200px;">中文域名查询</textarea>
+        </div>
+        <div class="SearchButton">
+          <input name="imageField2" type="image" src="/Template/Tpl_05/newimages/Domains/ico_LongButton_DomainSearch.gif" width="84" height="24"  border="0" />
+        </div>
+      </div>
+      <div id="DomainSuffix_CN"  style="clear:both">
+        <ul>
+                   <table cellspacing=0 cellpadding=3 border=0 width=100%>
+                <tbody> 
+                <tr> 
+                  <td nowrap > <strong> 
+                    <input type="radio" name="suffix" value=".中国" checked>
+                    .中国</strong></td>
+					
+                  <td nowrap><strong> 
+                    <input type="radio" name="suffix" value=".com">
+                    .com</strong></td>
+                    
+                      <td nowrap><strong> 
+                    <input type="radio" name="suffix" value=".biz">
+                    .biz</strong></td>
+				 <td nowrap><strong> 
+                    <input type="radio" name="suffix" value=".wang">
+                    .wang</strong></td>
+                    
+                 
+                  <td nowrap><strong>
+                  <input type="radio" name="suffix" value=".cn" />
+.cn</strong></td>
+                  <td nowrap><strong>
+                    <input type="radio" name="suffix" value=".net" />
+.net</strong></td> </tr>
+					<tr>
+<td nowrap><strong>  
+                    <input type="radio" name="suffix" value=".tv" />
+.tv</strong></td>
+<td nowrap><strong>
+                    <input type="radio" name="suffix" value=".tm" />
+.tm</strong></td>
+<td nowrap><strong>
+                    <input type="radio" name="suffix" value=".tel" />
+.tel</strong></td>
+                  
+					<td><strong>
+					  <input type="radio" name="suffix" value=".cc" />
+.cc
+<input type=hidden value=domainsearch name=module />
+<input type=hidden  value=IntDomain name=searchType />
+<input type=hidden value=check name=action />
+					</strong></td>
+					<Td>
+					<input type="radio" name="suffix" value=".top" /><strong>
+.top</strong></td><Td>
+					<input type="radio" name="suffix" value=".ren" /><strong>
+.ren</strong></td>
+                </tr>
+				<tr>
+<td nowrap > <strong> 
+                 <input type="radio" name="suffix" value=".我爱你"  >
+                    .我爱你</strong></td>
+				</tr>
+                </tbody> 
+              </table>
+        </ul>
+      </div>
+    </form>
+    <div id="CN_Domain_Price_list" >
+      <ul>
+        <li>中文.com  <span class="price">{Price(domhz)}</span>元/年 </li>
+        <li>中文.中国<span class="price"> {Price(domchina)}</span>元/年 </li>
+         <li>中文.cn<span class="price"> {Price(domhzcn)}</span>元/年 </li>
+        <li>中文.biz域名<span class="price">{Price(bizchina)}</span>元/年</li>
+        <li>中文.tv <span class="price">{Price(chinatv)}</span>元/年</li>
+        <li>中文.cc <span class="price">{Price(chinacc)}</span>元/年</li>
+       <!--  <li>中文.tm <span class="price">{Price(chinatm)}</span>元/年</li>
+        <li>中文.tel <span class="price">{Price(chinatel)}</span>元/年</li>
+		<li>中文.top <span class="price">{Price(domtop)}</span>元/年</li>-->
+	     
+      </ul>
+    </div>
+  </div>
+  
+  <div class="CN_PIC"><a href="/services/domain/defaultcn.asp"><img src="/Template/Tpl_05/newimages/Domains/CN_PIC.jpg" width="245" height="130" border="0" /></a></div>
+</div>
+<div id="DomainCN_info">
+        <div id="Domain_CN_info">&nbsp;&nbsp;&nbsp;&nbsp;中文域名是含有中文的新一代域名。同英文域名一样，中文域名全球通用，具有唯一性。<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;微软在其发布的IE7.0正式版可直接支持中文域名访问，标志着中文域名已经成为国际互联网的全新重要标识，中文上网无障碍时代已经来临。<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;中文域名符合中文语言文化习惯，解决了中文域名的繁简体等效互通问题，中文域名注册与管理标准已经获得国际互联网权威组织认可，成为国际标准，并已获得全球互联网行业主流厂商的直接支持。中文域名资源丰富，前景无限！<br />
+        </div>
+        <div id="Domain_CN_Info_pic">
+          <h5>域名特惠活动</h5>
+          <ul>
+            <li id="num_ico_1"><a href="/customercenter/maxprice.asp">中文国内域名:320元/年 中文国际域名:120元</a></li>
+            <li id="num_ico_2"><a href="http://www.west263.com/news/list.asp?newsid=190">微软IE7浏览器支持中文域名! </a></li>
+            <li id="num_ico_3"><a href="/news/list.asp?newsid=329">&ldquo;中国域名全球升级行动&rdquo;！</a></li>
+            <li id="num_ico_4"><a href="/news/list.asp?newsid=382">.cm域名接口正式开放抢注精品域名只需788元</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="FolrList">
+        <div class="Title_Box_Top">
+          <div class="DomainSearchTitle">中文域名服务项目 </div>
+        </div>
+        <div class="The_Table_List_B">
+          <table>
+            <tr>
+              <td><strong>域名独立管理系统</strong></td>
+              <td>www.myhostadmin.net 可以直接进行设置</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>DNS独立修改</strong></td>
+              <td>可以自由修改域名所使用的DNS服务器</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>域名解析</strong></td>
+              <td>A记录 域名指向到服务器ip</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>子域名数量</strong></td>
+              <td>50个 *.yourname.com </td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>MX邮件记录填加修改</strong></td>
+              <td>MX记录 使用域名作为邮局绑定域名</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>URL转发、解析</strong></td>
+              <td>免费使用转发服务器</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>用户资料修改</strong></td>
+              <td>修改用户资料</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>泛域名</strong></td>
+              <td>可以做*记录</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+            <tr>
+              <td><strong>URL隐藏转发</strong></td>
+              <td>转发不显示目标地址域名</td>
+              <td>免费支持 <img src="/Template/Tpl_05/newimages/Domains/Free_ico.gif" width="37" height="9" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+       </div>
+
+</div>
+</div>
+{#bottom.html}
+{searchedJSscript}
+</body>
+</html>

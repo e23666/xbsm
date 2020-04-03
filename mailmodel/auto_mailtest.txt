@@ -1,0 +1,24 @@
+尊敬的{user_name}： 
+       感谢您对{companyname}的关注与支持并欢迎您使用{companyname}的产品与服务。
+	   您于{m_buydate}开通的试用邮局{m_bindname}已经使用了{Days}天。
+	   我们的邮局提供15天试用。
+	   {mtxt}
+	   如果您对我司的服务还算满意，欢迎您购买我司的正式邮局,我们将十分荣幸为您效劳,谢谢!
+	   转正方法：进入到邮局管理页面 点击[转正] 即可！
+
+　　　“双赢”是{companyname}企业文化的重要组成部分，我们希望能与有共同市场追求的企业、个人结成市场伙伴，在合作中实现企业文化与销售业绩的共同提升，并最终实现共同的利润最大化。申请成为{companyname}代理，享受特殊折扣价格和个性化服务，请点击{companynameurl}
+
+　　　如果您有任何问题，请访问我们的客户中心：{companynameurl}　查看“常见问题”或在“有问必答”栏目中提交问题。同时，您也可拨打客户服务热线电话:{telphone}。
+
+
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+-----------------------------------
+
+欢迎参加{companyname}广告联盟，让你的网站流量为您带来收入！
+详情请访问：{companynameurl}

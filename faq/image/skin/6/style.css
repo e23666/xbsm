@@ -1,0 +1,93 @@
+body { background:url("bg.gif"); color:#333333; font-size: 12px; margin-top:0px }
+td {  font-size: 12px}
+input, textarea {  font-size: 12px; border-width:1px}
+select {  font-size: 12px; border-width:1px}
+
+a:link {  color: #333333;text-decoration:none}
+a:visited {  color: #333333;text-decoration:none}
+a:hover {  color: #333333; text-decoration:underline}
+
+a.highlight:link { color:red; text-decoration:none }
+a.highlight:visited { color:red; text-decoration:none }
+a.highlight:hover { color:red; }
+
+a.thisclass:link { font-weight:bold; text-decoration:none }
+a.thisclass:visited { font-weight:bold; text-decoration:none }
+a.thisclass:hover { font-weight:bold; }
+
+a.navlink:link {color: #333333; text-decoration:none}
+a.navlink:visited {color: #333333; text-decoration:none }
+a.navlink:hover {color: #333333; text-decoration:underline }
+
+.twidth { width: 759px }
+.content { font-size: 14px;font-family:Tahoma,宋体; line-height:140%; margin:5px 20px }
+.aTitle { font-size: 15px;font-weight:bold; }
+
+.sitehead { height:85px; background:url("sitehead.gif") }
+.sitehead-left {width:5px; background:url("sitehead_l.gif");}
+.sitehead-right {width:5px; background:url("sitehead_r.gif");}
+.footline {height:1px; background:#CCCCCC }
+
+.navbar { height:35px; background:url("navbar_m.gif"); text-align:center}
+.navbar-left { display:; width:17px; background:url("navbar_l.gif")}
+.navbar-right { display:; width:17px; background:url("navbar_r.gif")}
+
+.navsub { background: #F3F3F3; height:23px; }	/*二级分类*/
+.navsub-left { display:none; width:10px; background:}
+.navsub-right { display:none; width:10px; background:; }
+
+
+.lframe-t-mid { height:30px; background:url("lframe_t.gif"); text-align:left;}
+.lframe-t-left { display:; width:5px; background:url("lframe_t_l.gif");}
+.lframe-t-right { display:; width:5px; background:url("lframe_t_r.gif");}
+.lframe-t-text { color:#333333; font-weight:bold; padding-left:10px;  width:100% }
+.lframe-m-mid { background:#D7D7D7; padding:3px }
+.lframe-m-left { width:2px; background:url("lframe_m_l.gif"); }
+.lframe-m-right { width:2px; background:url("lframe_m_r.gif"); }
+.lframe-b-mid { display:; height:19px; background:url("lframe_b.gif");font-size:1px; }
+.lframe-b-left { display:; width:2px; background:url("lframe_b_l.gif"); }
+.lframe-b-right { display:;  width:2px; background:url("lframe_b_r.gif"); }
+
+.mframe-t-mid { height:30px; background:url("lframe_t.gif"); text-align:left;}
+.mframe-t-left { display:; width:5px; background:url("lframe_t_l.gif");}
+.mframe-t-right { display:; width:5px; background:url("lframe_t_r.gif");}
+.mframe-t-text { color:#333333; font-weight:bold; padding-left:10px; width:100% }
+.mframe-m-mid { background:#E7E7E7; padding:3px }
+.mframe-m-left { width:2px; background:url("lframe_m_l.gif")}
+.mframe-m-right { width:2px; background:url("lframe_m_r.gif")}
+.mframe-b-mid { display:; height:19px; background:url("mframe_b.gif");font-size:1px; }
+.mframe-b-left { display:; width:2px; background:url("lframe_b_l.gif"); }
+.mframe-b-right { display:;  width:2px; background:url("lframe_b_r.gif"); }
+
+.summary-title { background: #E0E0E0;font-weight:bold;height:23px }
+
+.gray { color:gray; text-decoration:none }
+.time { color:red }
+.hit { color:green }
+
+.tdBg { background: #E6E6E6; line-height:120%}
+.tdbg-dark {background: #E0E0E0; line-height:120%}
+
+
+.hr { background:url("hr.gif"); height:2px }
+.inputbg { background:url("inputbg.gif")}
+.quote { margin:10px; margin-left:2em; border:1px solid #CCCCCC; padding:5px;  background: #FFFFFF; font-family:Verdana,Arial,宋体; }
+
+
+.menuskin {
+	BORDER: #666666 1px solid; VISIBILITY: hidden; FONT: 12px Verdana;
+	POSITION: absolute; BACKGROUND-COLOR:#F6F6F6;
+	background-image:url("menubg.gif");
+	}
+.menuskin A {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 25px; COLOR: black; TEXT-DECORATION: none; behavior:url(inc/noline.htc);
+	}
+#mouseoverstyle {
+	BACKGROUND-COLOR: #DDDDDD; margin:2px; padding:0px; border:#666666 1px solid;
+	}
+#mouseoverstyle A {
+	COLOR: black
+}
+.menuitems{
+	margin:2px;padding:1px;word-break:keep-all;
+}

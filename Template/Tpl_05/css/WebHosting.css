@@ -1,0 +1,121 @@
+#MainRight #VHostLstDiv { background:url(/Template/Tpl_05/newimages/webhosting/webhosting_default_bg.jpg) no-repeat; margin-top:10px; height:368px; width:750px; overflow:hidden; }
+#MainRight #WebFlashSub { height:81px; width:750px; background:url(/Template/Tpl_05/newimages/Domains/Flash_Sub_bg.gif) repeat-x; margin-top:3px; overflow:hidden; }
+#MainRight #WebFlashSub #WebFlashSub_left { height:61px; width:7px; background:url(/Template/Tpl_05/newimages/Domains/Flash_Sub_left.gif) no-repeat; float:left; }
+#MainRight #WebFlashSub #WebFlashSub_mid { width:736px; float:left; height:81px; }
+#MainRight #WebFlashSub #WebFlashSub_right { height:61px; width:7px; background:url(/Template/Tpl_05/newimages/Domains/Flash_Sub_right.gif) no-repeat; float:left; }
+#MainRight #WebFlashSub #WebFlashSub_mid ul li { float:left; margin:3px 0px 0px 15px; text-align:center; }
+#VHostLstDiv #VHostListTitle { margin-top:22px; margin-left:19px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:14px; width:152px; background:url(/Template/Tpl_05/newimages/webhosting/20080524145512902.gif) no-repeat; padding-left:20px; }
+#VHostLstDiv #VHostLstDivTop { width:100%; margin:auto; height:45px; }
+#VHostLstDiv #VHostListTitle { margin-top:22px; margin-left:19px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:14px; width:152px; ; float:left; }
+#VHostLstDiv #VHostLstDivTop #VHostListMore { float:left; margin-left:100px; margin-top:6px; background:url(/Template/Tpl_05/newimages/webhosting/LongButton_noneword.gif) no-repeat; text-align:center; color:#666; font-weight:bold; height:31px; width:98px; padding-top:8px; }
+#VHostLstDiv #VHostLstDivTop #VHostListTextWord { float:left; margin-left:30px; margin-top:15px; width:300px; overflow:hidden; }
+.Webhost_list_DIV { width:98%; margin:auto; height:auto; }
+.Webhost_list_DIV ul li { width:170px; background:url(/Template/Tpl_05/newimages/webhosting/webhost_list_li_bg.jpg) no-repeat; float:left; margin:5px 5px 0px 5px; }
+.Webhost_list_DIV ul li:hover { background:#f9f9f9; }
+.Webhost_list_DIV ul li .ListTitle { background: url(/Template/Tpl_05/newimages/webhosting/20080524152552779.gif) no-repeat 0px 1px; font-size:14px; font-weight:bold; color:#C00; padding-left:18px; margin-left:7px; margin-top:12px; width:auto; }
+.Webhost_list_DIV ul li .ListContent { margin-left:3px; margin-top:10px; width:auto; padding-left:5px; }
+.Webhost_list_DIV ul li .ListContent p { margin-left:1px; width:auto; margin-top:3px; margin-bottom:1px; background:url(/Template/Tpl_05/newimages/webhosting/dust_arrow.gif) no-repeat 0px 6px; padding-left:10px; }
+.Webhost_list_DIV ul li .ListContent .vhost_star_ico { width:60px; height:60px; float:right; margin-left:90px; margin-top:40px; position:absolute; }
+#MainRight #VhostAdvantage { border: 1px dashed #CCC; padding:10px; background:#f9f9f9; }
+.VHostLstDivTop_a { width:100%; margin:auto; height:45px; background:url(/Template/Tpl_05/newimages/webhosting/webhosting_default_title_bg.jpg) no-repeat 0px -45px; }
+.VHostLstDivTop_b { width:100%; margin:auto; height:45px; background:url(/Template/Tpl_05/newimages/webhosting/webhosting_default_title_bg.jpg) no-repeat 0px 0px; }
+#VHostLstDiv #VHostListTitle_rollOut_a { margin-top:12px; margin-left:5px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:14px; width:153px; background:url(/Template/Tpl_05/newimages/webhosting/word_ico_bang.gif) no-repeat 14px 10px; padding-left:34px; padding-top:10px; float:left; height:23px; cursor:pointer; }
+#VHostLstDiv #VHostListTitle_rollOut_b { margin-top:12px; margin-left:20px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:14px; width:138px; background:url(/Template/Tpl_05/newimages/webhosting/word_ico_jian.gif) no-repeat 14px 10px; padding-left:34px; padding-top:10px; float:left; height:23px; cursor:pointer; color:#999999; }
+.DomainLeftMenu #DomainLeftMenuContentList .img_small { margin:0px 0px 10px 3px; }
+.VHost_List_Info_contet { background:url(/Template/Tpl_05/newimages/webhosting/right_box_bg.gif) repeat-y; height:auto; width:750px; }
+.VHost_List_Info_contet .VHost_List_info_con_head { width:750px; }
+.VHost_List_Info_contet .VHost_List_info_con_buttom { width:750px; }
+.VHost_List_Info_contet .VHost_List_info { width:714px; height:200px; margin:auto; margin-top:4px; }
+/*.Other_list {
+	background: url(/Template/Tpl_05/newimages/Domains/Other_List_bg.jpg) no-repeat;
+	width:722px;
+	height:auto;
+	padding:23px 0px 26px 26px;
+}
+.Other_list #Ohter_Title {
+	font-size:14px;
+	font-weight:bold;
+	width:696px;
+	color:#1E476A;
+	margin-bottom:15px;
+}
+*/.Vhost_Table_Info_Box { background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x; padding:16px 0px 0px 0px; width:740px; margin:auto; margin-top:5px; overflow:hidden; }
+.Vhost_Table_Info_Box table { width:98%; margin:auto; border-collapse:collapse; background:#FFF; }
+.Vhost_Table_Info_Box table tr td { vertical-align:top; padding:5px 3px 5px 7px; border:1px #eaeaea solid; color:#666; }
+.Vhost_Table_Info_Box table tr:hover { background:#F3FAFC; }
+.Vhost_Table_Info_Box_Td_bg { background:url(/Template/Tpl_05/newimages/webhosting/VHost_Tabke_Tr_Td_bg.gif) no-repeat; font-weight:bold; color:#1E476A; }
+.FFFFFF { color:#FFF; }
+.Font_1E476A { color:#C00; }
+.Vhost_Table_Info_Box div { margin:0px 14px 10px 14px; }
+.VHost_List_info #twolineyoushi { margin:20px 0px; }
+.VHost_List_info #twolineyoushi a { padding-left:15px; background:url(/Template/Tpl_05/newimages/webhosting/20070509090201879.gif) no-repeat 0 4px; margin-left:10px; }
+.kf53div_box { height:40px; }
+.kf53div_box a { color:#F60; font-weight:bold; padding-left:15px; margin-left:10px; float:left; text-decoration:none; background:url(/Template/Tpl_05/newimages/webhosting/20070509090203216.gif) no-repeat 0 4px; width:350px; }
+.kf53div_box a:hover { color:#09C; }
+#MainRight #DataBaseDiv { background:url(/Template/Tpl_05/newimages/webhosting/database_div_bg.gif) repeat-y center; width:750px; margin:5px auto; }
+#DataBaseDiv #Database_top { background:url(/Template/Tpl_05/newimages/webhosting/database_div_top.jpg) no-repeat center; height:85px; padding:13px 0 0 8px; }
+#DataBaseDiv #Database_cont { background:url(/Template/Tpl_05/newimages/webhosting/database_div_bg.gif) repeat-y center; padding:10px 15px; }
+#DataBaseDiv #Database_bottom { background:url(/Template/Tpl_05/newimages/webhosting/database_div_bottom.gif) no-repeat center; height:8px; }
+#Database_top #sql2000Title { float:left; height:78px; width:179px; cursor:pointer; }
+#Database_top #sql2000Title:hover { float:left; height:78px; width:179px; cursor:pointer; }
+#Database_top #sql2005Title { float:left; height:78px; width:179px; cursor:pointer; }
+#Database_top #sql2005Title:hover { float:left; height:78px; width:179px; }
+#Database_top #sql2008Title { float:left; height:78px; width:179px; }
+#Database_top #sql2008Title:hover { float:left; height:78px; width:179px; }
+#Database_top #mysqlTitle { float:left; height:78px; width:179px; }
+#Database_top #mysqlTitle:hover { float:left; height:78px; width:179px; }
+#Database_top #database_title_bottom { float:left; background:url(/Template/Tpl_05/newimages/webhosting/database_title_bottom.gif) no-repeat -10px; width:734px; height:7px; }
+#Database_top .top_bg { background:url(/Template/Tpl_05/newimages/webhosting/Database_Title.jpg) no-repeat; height:85px; padding-left:12px; }
+#Database_top .sql2k { background-position:0px -205px }
+#Database_top .sql2k05 { background-position:0px -102px; }
+#Database_top .sql2k08 { background-position:0px -203px; }
+#Database_top .mysql { background-position:0px -304px; } 
+.databasebody { padding:20px; }
+.databasebody table { width:100%; margin:auto; border-collapse:collapse; background:url(/Template/Tpl_05/newimages/trusteehost/trusteehost_Info_table_bg.gif) repeat-x 0px 1px; }
+.databasebody table tr td { vertical-align:top; padding:3px; border:1px #eaeaea solid; }
+.RoomNameBox { font-weight:bold; height:26px; border-bottom:solid #fff 1px; color:#5A6D7E; }
+#sql2000Body { }
+#sql2005Body { }
+#sql2008Body { }
+#MysqlBody { }
+#MainRight #PicLink { margin:5px auto; text-align:center; height:49px; }
+#MainRight #PicLink ul li { float:left; width:243px; height:47px; margin:0 2px; background:url(/Template/Tpl_05/newimages/webhosting/bg_123.gif); border:solid 1px #BBC8D4; }
+#PicLink ul li .numberPIC { float:left; margin:auto; width:auto; }
+#PicLink ul li .TextPIC { float:left; margin:auto; width:auto; font-size:16px; font-weight:bold; color:#406587; margin:16px 0 0 20px; letter-spacing:5px; }
+.TextOnlyClass { line-height:25px; border: 1px dashed #999; background:#f6f6f6; padding:15px; margin-top:10px; }
+.First_User_Books { background:url(/Template/Tpl_05/newimages/Manager/First_User_books_bg.jpg) repeat-x; margin-top:6px; }
+#First_User_Books_Title { height:49px; background:url(/Template/Tpl_05/newimages/webhosting/First_User_Books_Title_bg.jpg) repeat-x; }
+#First_User_Books_Title_left { height:49px; width:12px; float:left; }
+#First_User_Books_Title_right { height:49px; width:12px; float:right; }
+#First_User_Books_Title_mid { height:30px; float:left; padding:19px 0 0 9px; color:#0E6A80; font-weight:bold; font-size:14px; }
+#First_User_Books_conte { background:url(/Template/Tpl_05/newimages/Manager/First_User_Books_conte_bg.jpg) repeat-x; }
+#First_User_Books_conte_left { float:left; width:13px; }
+#First_User_Books_conte_right { float:left; width:13px; }
+#First_User_Books_conte_mid { float:left; padding:15px; margin-top:20px; width:644px; }
+#First_User_Books_Title_mid_links { float:right; margin-top:19px; }
+#First_User_Books_Title_mid_links a { padding-left:15px; background:url(/Template/Tpl_05/newimages/webhosting/20080101163413114.gif) no-repeat 0 3px; margin-left:8px; }
+.shop_pic { float:left; }
+.shop_Text { float:left; width:440px; margin-left:15px; }
+#First_User_Books_li table { width:100%; margin:auto; border-collapse:collapse; background:url(/Template/Tpl_05/newimages/trusteehost/trusteehost_Info_table_bg.gif) repeat-x 0px 1px; margin-top:10px; }
+#First_User_Books_li table tr td { vertical-align:top; padding:4px 0 4px 8px; border:1px #eaeaea solid; }
+.14PxFont { font-size: 14px; text-decoration: none; font-weight: bolder; }
+.STYLE1 { font-size: 14px; text-decoration: none; font-weight: bolder; color: #3e6176; }
+.box { border: 1px solid #DBDBDB; background-color: efefef; }
+.STYLE2 { color: #666666 }
+.STYLE3 { color: #FF3300; font-weight: bold; }
+.STYLE6 { color: #FF6000 }
+.STYLE7 { color: #5D80A8 }
+.box_2 { border: 1px dashed #FF9933; background-color: #FFFFCC; }
+.STYLE9 { font-size: 16px; text-decoration: none; font-weight: bolder; color: #006600; font-family: Geneva, Arial, Helvetica, sans-serif; }
+.box_3 { border: 1px dashed #cccccc; background-color: FCFAF7; }
+.flod { background-image: url(/Template/Tpl_05/newimages/default/flod_ico.gif); background-repeat: no-repeat; height: 14px; width: 90px; text-align:right; float:left; margin:6px 0 0 30px; }
+.VHost_List_info_shop { width:714px; margin:auto; margin-top:4px; line-height:22px; }
+.VHost_List_info_shop li { margin:5px; border-bottom:solid 1px #efefef; }
+.sitebuild_div { width:725px; margin:auto; margin-top:4px; overflow:hidden; display:block; }
+.sitebuild_div li { width:353px; display:block; float:left; margin:4px 3px; }
+.sitebuild_div li h1 {width:314px; display:block; font-size:16px; font-weight:bold; margin:5px 2px; background:url(/Template/Tpl_05/newimages/webhosting/tu.jpg) no-repeat; padding-left:35px; color:#C00;}
+.sitebuild_div li h2 {width:65px; display:block; font-size:12px; margin:5px 2px; padding-left:34px; font-weight:bold; float:left; color:#060; height:auto; line-height:25px;}
+.sitebuild_div li h3 {width:230px; display:block; font-size:12px; margin:5px 2px; float:left; font-weight:normal; height:auto; line-height:25px;}
+.sitebuild_div li h4 {width:90px; display:block; font-size:12px; margin:5px 2px; float:left; font-weight:normal; background:none; margin-left:104px; font-weight:bold; padding-left:0px;}
+.sitebuild_div li h4 a { color:#069;}
+.sitebuild_div li h4 a:hover { color:#C00;}

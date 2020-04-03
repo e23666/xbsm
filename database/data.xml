@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312"?>
+<ROOT>
+	<bankcount><bankitem id="65099_0" parid="0" title="公司账户" logo="" bankname="" bankcode="" banknum="" account=""/><bankitem id="65185_1" parid="65099_0" title="招商银行" logo="\images\banklogo\bank_1.gif" bankname="招商银行XX支行" bankcode="" banknum="103XXXxxxx" account="成都XX公司"/><bankitem id="65522_3" parid="0" title="个人账户" logo="" bankname="" bankcode="" banknum="" account=""/><bankitem id="65557_4" parid="65522_3" title="建设银行" logo="\images\banklogo\bank_3.gif" bankname="建设银行XX支行" bankcode="" banknum="XXXXXXXXXXXXX" account="未知账户"/><bankitem id="50693_5" parid="65522_3" title="农业银行" logo="\images\banklogo\bank_4.gif" bankname="农业银行XX支行2" bankcode="" banknum="XXXXXXXXXXXXXXXXXXX" account="未知账户"/><bankitem id="36872_7" parid="65522_3" title="工商银行" logo="\images\banklogo\bank_2.gif" bankname="工商银行xx分行" bankcode="" banknum="XXXXXXXXXXXXX" account="未知账户"/><bankitem id="36892_8" parid="65522_3" title="招商银行" logo="\images\banklogo\bank_1.gif" bankname="招商银行xx分行" bankcode="" banknum="XXXXXXXXXXXXX" account="未知账户"/></bankcount>
+	<pageset>
+		<managerRegDate date="10/12/2019"/>
+		<noteset mailset="1" smsset="0"/>
+		<cercoin imgsrc=""/><renewCnPrice/><loastsynid domainid="0" vhostid="0" dbid="0" mailid="0" serverid="0"/></pageset>
+	<adjustPrice/><bankNameCode/></ROOT>

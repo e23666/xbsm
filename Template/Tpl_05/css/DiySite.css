@@ -1,0 +1,228 @@
+.DiySite_Table_Info_Box {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_Table_Info_Box_bg.jpg) repeat-x;
+	width:720px;
+	margin:auto;
+	height:68px;
+	margin-top:5px;
+	overflow:hidden;
+	padding:7px 15px 0px 15px;
+}
+.Div_Buy_Step {
+	height:auto;
+	width:175px;
+	margin:auto;
+	margin-bottom:10px;
+}
+#MainRight #DiySite_Box {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_Box_bg.jpg) no-repeat 0px 0px;
+	;
+	width:733px;
+	height:560px;
+	margin:auto;
+	padding:16px 0px 0px 17px;
+}
+#MainRight #DiySite_Box #Box_Title {
+	height:41px;
+	width:136px;
+}
+#MainRight #DiySite_Box #Box_TextWord {
+	width:630px;
+	margin-top:16px;
+	margin-left:20px;
+}
+#MainRight #DiySite_Box #Box_C_ico {
+	width:700px;
+	margin-top:16px;
+	margin-left:20px;
+	height:200px;
+}
+#MainRight #DiySite_Box #Box_C_ico ul li {
+	width:85px;
+	float:left;
+	margin:0px 15px 10px 0px;
+	text-align:center;
+}
+#MainRight #DiySite_Box #Box_C_ico ul li img {
+	margin:0px 0px 5px 0px;
+}
+#MainRight #DiySite_Box #Box_C_ico_2 {
+	width:650px;
+	margin-top:16px;
+	height:98px;
+}
+#DiySite_Inner_Box {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_Box_bg_2.jpg) no-repeat;
+	width:728px;
+	height:150px;
+	margin:15px 0px 0px 0px;
+	padding:70px 0px 0px 45px;
+}
+#DiySite_Inner_Box #InnerBox_TextWord {
+	width:650px;
+}
+#Box_C_ico_2 ul li {
+	width:75px;
+	float:left;
+	margin:0px 15px 10px 0px;
+	text-align:center;
+}
+#MainRight #DiySite_List_Box {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_bg.gif) repeat-y;
+	width:750px;
+	height:auto;
+}
+#DiySite_List_Box #DiySite_List_Box_top {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_top.jpg) no-repeat;
+	height:29px;
+	padding:11px 0px 0px 15px;
+}
+#DiySite_List_Box .DiySite_List_Box_Contet {
+	width:720px;
+	margin:auto;
+	height:310px;
+}
+#DiySite_List_Box #DiySite_List_Box_bottom {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_bottom.gif) no-repeat;
+	height:8px;
+}
+#DiySite_List_Box #DiySite_List_Box_top ul li {
+	float:left;
+	height:21px;
+	width:102px;
+	padding:8px 0px 0px 28px;
+	font-weight:bold;
+}
+/*#DiySite_List_Box #DiySite_List_Box_top ul li:hover {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_Title_bg_on.gif) no-repeat;
+	color:#1E476A;
+	cursor:pointer;
+}
+*/.mail_tab_center_on {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_Title_bg_on.gif) no-repeat;
+	color:#C00;
+	cursor:pointer;
+}
+.mail_tab_center_off {
+	float:left;
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_Title_bg_off.gif) no-repeat;
+	height:21px;
+	width:102px;
+	padding:8px 0px 0px 28px;
+	font-weight:bold;
+	color:#666;
+}
+.DiySite_List_Box_Contet ul li {
+	width:170px;
+	background:url(/Template/Tpl_05/newimages/webhosting/webhost_list_li_bg.jpg) no-repeat;
+	float:left;
+	margin:10px 0px 0px 5px;
+}
+.DiySite_List_Box_Contet ul li:hover {
+	background:#f9f9f9;
+}
+.DiySite_List_Box_Contet ul li .ListTitle {
+	background: url(/Template/Tpl_05/newimages/webhosting/20080524152552779.gif) no-repeat 0px 1px;
+	;
+	font-size:14px;
+	font-weight:bold;
+	color:#C00;
+	padding-left:18px;
+	margin-left:7px;
+	margin-top:12px;
+	width:auto;
+}
+.DiySite_List_Box_Contet ul li .ListContent {
+	margin-left:3px;
+	margin-top:10px;
+	width:auto;
+	padding-left:5px;
+}
+.DiySite_List_Box_Contet ul li .ListContent p {
+	margin-left:1px;
+	width:auto;
+	margin-top:3px;
+	margin-bottom:1px;
+	background:url(/Template/Tpl_05/newimages/webhosting/dust_arrow.gif) no-repeat 0px 6px;
+	padding-left:10px;
+}
+.Vhost_Table_Info_Box {
+	/*	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	padding:16px 0px 0px 0px;
+	width:740px;
+	margin:auto;
+*/	margin:5px 0 10px 0;
+	overflow:hidden;
+}
+.InnerStr {
+	width:99%;
+	margin:auto;
+}
+.InnerStr ul {
+	height:40px;
+	width:640px;
+	margin:auto;
+	background:url(/Template/Tpl_05/newimages/Domains/sild_line_bg.gif) repeat-x 0px -2px;
+}
+.InnerStr ul:hover {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x 0px -2px;
+}
+.InnerStr ul li {
+	float:left;
+	padding:10px 0px 0px 0px;
+	font-family:Verdana;
+}
+#MainRight .InnerStr ul .dm_hd {
+	width:135px;
+	font-size:12px;
+	font-weight:bold;
+	color:#069;
+	margin-left:20px;
+}
+#MainRight .InnerStr ul .dm_info {
+	width:340px;
+}
+#MainRight .InnerStr ul .dm_price {
+	width:90px;
+	margin-left:30px;
+}
+.VHost_List_Info_contet {
+	background:url(/Template/Tpl_05/newimages/webhosting/right_box_bg.gif) repeat-y;
+	height:auto;
+	width:750px;
+}
+.VHost_List_Info_contet .VHost_List_info_con_head {
+	width:750px;
+}
+.VHost_List_Info_contet .VHost_List_info_con_buttom {
+	width:750px;
+}
+.VHost_List_Info_contet .VHost_List_info {
+	width:714px;
+	margin:auto;
+	margin-top:4px;
+	padding-top:15px;
+}
+.VHost_List_info.RedLink ul {
+	margin-left:35px;
+}
+.VHost_List_info.RedLink ul li {
+	margin:8px 0px 0px 0px;
+	background:url(/Template/Tpl_05/newimages/default/news_arrow.gif) no-repeat 5px;
+	padding-left:15px;
+}
+.InnerStr table {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	background:url(/Template/Tpl_05/newimages/trusteehost/trusteehost_Info_table_bg.gif) repeat-x 0px 1px;
+}
+.InnerStr table tr td {
+	vertical-align:top;
+	padding:4px 8px 4px 15px;
+	border:1px #eaeaea solid;
+}
+.RoomNameBox {
+	font-weight:bold;
+	border-bottom:solid #fff 1px;
+	color:#5A6D7E;
+}

@@ -1,0 +1,228 @@
+/* CSS Document */
+#Customer_PIC_box {
+	width:750px;
+	margin:5px auto auto auto;
+	height:201px;
+}
+#Customer_PIC_box #PIC_a {
+	background:url(/Template/Tpl_05/newimages/Customercenter/Customer_pic.jpg) no-repeat;
+	width:409px;
+	height:201px;
+	float:left;
+}
+#Customer_PIC_box #PIC_b {
+	background:url(/Template/Tpl_05/newimages/Customercenter/Customer_pic_newhand_bg.jpg) no-repeat;
+	width:303px;
+	height:156px;
+	float:right;
+	padding:45px 0px 0px 30px;
+	;
+}
+#Cut_line {
+	background:url(/Template/Tpl_05/newimages/Customercenter/cut_bg.jpg) no-repeat 0px -7px;
+	width:750px;
+	height:30px;
+}
+#MainRight #DiySite_List_Box {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_bg.gif) repeat-y;
+	width:750px;
+	height:auto;
+	margin-top:10px;
+}
+#DiySite_List_Box #DiySite_List_Box_top {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_top.jpg) no-repeat;
+	height:29px;
+	padding:11px 0px 0px 15px;
+}
+#DiySite_List_Box .DiySite_List_Box_Contet_1 {
+	width:720px;
+	margin:auto;
+	height:200px;
+}
+#DiySite_List_Box #DiySite_List_Box_bottom {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_bottom.gif) no-repeat;
+	height:8px;
+}
+#DiySite_List_Box #DiySite_List_Box_top ul li {
+	float:left;
+	height:21px;
+	width:78px;
+	padding:8px 0px 0px 28px;
+	font-weight:bold;
+}
+/*#DiySite_List_Box #DiySite_List_Box_top ul li:hover {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_List_Box_Title_bg_.jpg) no-repeat;
+	color:#1E476A;
+	cursor:pointer;
+}
+*/.mail_tab_center_on {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_List_Box_Title_bg_.jpg) no-repeat;
+	color:#C00;
+	cursor:pointer;
+}
+.mail_tab_center_off {
+	background:url(/Template/Tpl_05/newimages/DiySite/DiySite_List_Box_Title_bg_off.gif) no-repeat;
+	color:#666;
+}
+.customer_que_pic_1 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_newhand.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_2 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_domain.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+#Search_box #search_form {
+	margin:5px 0 0 0;
+	float:left;
+	width:490px;
+}
+.customer_que_pic_3 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_mail.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_4 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_webhost.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_5 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_pay.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_6 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_agent.jpg) no-repeat;
+	float:left;
+	height:125px;
+	width:143px;
+	margin:40px 0 0 20px;
+}
+.customer_que_pic_cutline {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_que_pic_cutline.gif) no-repeat;
+	float:left;
+	height:164px;
+	width:67px;
+	margin:20px 0 0 20px;
+}
+.customer_que_content {
+	float:left;
+	height:164px;
+	width:400px;
+	margin:20px 0 0 20px;
+}
+#Search_box {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_search_bg.jpg) no-repeat;
+	width:525px;
+	height:69px;
+	padding:10px 0 0 225px;
+	margin:10px auto auto auto;
+}
+#Customer_PIC_box #PIC_c {
+	width:330px;
+	height:201px;
+	float:right;
+	padding:0px 0px 0px 3px;
+	;
+	line-height:25px;
+}
+#PIC_c #customer_head {
+	background:url(/Template/Tpl_05/newimages/Customercenter/customer_head.jpg) no-repeat;
+	width:82px;
+	height:82px;
+	margin:0 20px 10px 0;
+	float:left;
+}
+#Other_List {
+	width:740px;
+	margin:10px 15px auto 15px;
+	height:250px;
+}
+#Other_List ul .other_box_li {
+	width:230px;
+	margin:5px;
+	float:left;
+}
+.head_ {
+	background:url(/Template/Tpl_05/newimages/Customercenter/20080524152547637.gif) no-repeat 0px 2px;
+	padding-left:18px;
+	color:#000;
+	font-weight:bold;
+	margin:auto;
+}
+.list_head_pic_1 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/list_head_pic_2.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.hrclass_blue {
+	background:#C00;
+	margin:5px 0;
+	width:200px;
+}
+.list_head_pic_2 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/list_head_pic_1.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.list_head_pic_3 {
+	background:url(/Template/Tpl_05/newimages/Customercenter/list_head_pic_3.jpg) no-repeat;
+	height:35px;
+	width:200px;
+	margin:0 0 8px 0;
+}
+.list_content {
+	width:200px;
+}
+.customer_que_content ul li {
+	display:block;
+	background:url(/Template/Tpl_05/newimages/default/top_arrow.gif) no-repeat 0px 7px;
+	padding:5px 0px 0px 15px;
+}
+.customer_que_content ul {
+	float:left;
+	margin-right:20px;
+}
+.list_content ul li {
+	background:url(/Template/Tpl_05/newimages/Customercenter/note_ico.gif) no-repeat 0px 5px;
+	padding:5px 0px 0px 25px;
+}
+#PIC_c #online_ask {
+	float:right;
+	width:147px;
+	height:48px;
+	margin-right:10px;
+}
+.img_bo {
+	width:111px;
+	height:28px;
+	float:left;
+	margin:-3px 0 0 10px;
+}
+.img_txt {
+	float:left;
+	width:360px;
+	height:28px;
+}
+.table_line {
+	width:100%;
+}
+.table_line tr td {
+	border:1px solid #efefef;
+	padding:4px;
+}

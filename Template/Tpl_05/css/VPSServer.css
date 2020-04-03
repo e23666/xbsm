@@ -1,0 +1,345 @@
+#MainRight #Server_Top_Info {
+	width:730px;
+	height:240px;
+	margin:auto;
+	padding-right:10px;
+	padding-left:0px;
+	margin-top:5px;
+	line-height:20px;
+}
+#Server_Top_Info ul {
+	float:left;
+}
+#Server_Top_Info ul li {
+	padding-left:25px;
+	height:28px;
+}
+.ico_num_1 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_1.gif) no-repeat 0px 2px;
+}
+.ico_num_2 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_2.gif) no-repeat 0px 2px;
+}
+.ico_num_3 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_3.gif) no-repeat 0px 2px;
+}
+.ico_num_4 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_4.gif) no-repeat 0px 2px;
+}
+.ico_num_5 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_5.gif) no-repeat 0px 2px;
+}
+.ico_num_6 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_num_6.gif) no-repeat 0px 2px;
+}
+#MainRight #VPS_ADV_box {
+	width:750px;
+	margin:auto;
+	height:342px;
+}
+#VPS_ADV_box #jian_vps_box {
+	width:325px;
+	height:325px;
+	float:left;
+	padding:14px 0px 0px 0px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/jian_VPS_box_bg.jpg) no-repeat;
+}
+#VPS_ADV_box #jian_vps_box #jian_Title {
+	font-family:Verdana, Geneva, sans-serif;
+	color:#4F5E7B;
+	font-weight:bold;
+	letter-spacing:3px;
+	margin-left:36px;
+	font-size:14px;
+}
+#VPS_ADV_box #jian_vps_box #jian_Info {
+	width:287px;
+	margin:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#06C;
+	font-weight:bold;
+	letter-spacing:3px;
+	font-size:14px;
+	padding-left:23px;
+	margin-top:10px;
+}
+#VPS_ADV_box #jian_vps_box #jian_Content {
+	width:287px;
+	margin:auto;
+	margin-top:10px;
+	padding-left:23px;
+	line-height:23px;
+}
+#VPS_ADV_box #VPS_pic_right {
+	width:414px;
+	float:left;
+	margin:0px 0px 0px 7px;
+}
+#VPS_More_list ul li {
+	margin:6px 0px 0px 5px;
+}
+#VPS_More_list ul li:hover {
+	margin:6px 0px 0px 5px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x 0px -2px;
+}
+#VPS_ADV_box #VPS_More_list {
+	width:414px;
+	float:left;
+	margin:0px 0px 0px 7px;
+}
+.ico_vps_list {
+	padding-right:15px;
+}
+#VPS_List_Box {
+	width:auto;
+	margin-top:10px;
+	overflow:hidden;
+	height:auto;
+}
+#VPS_List_Box ul li {
+	width:330px;
+	height:400px;
+	float:left;
+	margin-left:6px;
+	margin-bottom:10px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/Vps_Server_bg.jpg) no-repeat;
+	padding-top:16px;
+	padding-left:21px;
+	display:block;
+}
+.ListTitle {
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+	width:auto;
+	padding:0px 0px 0px 53px;
+}
+.title_ico_1 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_vps_hot_.gif) no-repeat;
+}
+.title_ico_2 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_vps_tuijian_.gif) no-repeat;
+}
+.title_ico_3 {
+	background:url(/Template/Tpl_05/newimages/VPSserver/ico_vps_tehui_.gif) no-repeat;
+}
+.ListPic {
+	margin-top:15px;
+	float:left;
+	height:72px;
+	width:87px;
+}
+.Listbutton {
+	margin-left:20px;
+	margin-top:35px;
+	width:auto;
+	float:left;
+}
+.picList {
+	height:87px;
+	margin-top:35px;
+}
+.ListContent {
+	line-height:25px;
+	margin-top:15px;
+}
+#MainRight #vps_PIC_a {
+	width:710px;
+	height:156px;
+	margin-top:10px;
+	margin-left:11px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/vps_PIC_a.jpg) no-repeat;
+}
+.RemarkTable {
+	width:97%;
+	margin:20px auto auto auto;
+}
+.vhost_admin_Remark {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	width:94%;
+	margin:auto;
+	padding:20px;
+}
+.clipDiv {
+	height:34px;
+	width:24px;
+	position:absolute;
+	margin:-5px 0 0 -35px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/clipDiv.gif) no-repeat;
+}
+.usavps_Title_list {
+	margin-left:15px;
+	margin-top:15px;
+}
+.usavps_Title_list li {
+	margin:5px 0;
+	padding-left:22px;
+	background:url(/Template/Tpl_05/newimages/Server/045631144.gif) no-repeat;
+}
+.usavps_Title_list_B {
+	margin-left:15px;
+	margin-top:15px;
+}
+.usavps_Title_list_B li {
+	height:22px;
+	margin:5px 0 5px 26px;
+	float:left;
+}
+.tjico {
+	background:url(/Template/Tpl_05/newimages/server/jjj.gif);
+	width:16px;
+	height:19px;
+	float:left;
+}
+.vpsinfotableclass {
+	width:95%;
+	margin:auto;
+	margin-top:40px;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+.vpsinfotableclass {
+	width:95%;
+	margin:auto;
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+}
+.vpsinfotableclass td {
+	line-height:25px;
+	padding:0 40px 30px 40px;
+}
+.vpsinfotableclass td p {
+	line-height:25px;
+}
+.ListTable {
+	background:url(/Template/Tpl_05/newimages/Domains/domain_info_list_on_bg.gif) repeat-x;
+	width:100%;
+}
+.ListTable td {
+	line-height:20px;
+	padding:5px 3px 3px 6px;
+	border:solid 1px #efefef;
+}
+#VPS_Tabel {
+	width: 750px;
+margin: auto;
+margin-top: 5px;
+line-height: 20px;
+background: url(/Template/Tpl_05/newimages/VPSserver/vpstopbgred.jpg) no-repeat;
+height: 72px;
+}
+#VPS_Tabel ul li {
+	float:left;
+	width:128px;
+	height:30px;
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	margin-left:13px;
+	margin-top:11px;
+	letter-spacing:3px;
+	text-align:center;
+	line-height:28px;
+	cursor:pointer;
+}
+.mail_tab_center_on {
+	background:url(/Template/Tpl_05/newimages/VPSserver/vps_menu_on.gif);
+	color:#C00;
+}
+.mail_tab_center_off {
+	background:url(/Template/Tpl_05/newimages/VPSserver/vps_menu_off.gif);
+	color:#666;
+}
+#VPS_Label_List_Box {
+	background: url(/Template/Tpl_05/newimages/VPSserver/box_bg.jpg) repeat-y;
+margin: auto;
+overflow: hidden;
+height: auto;
+width: 742px;
+padding: 0px 4px 4px 4px;
+}
+.vps_lable_css {
+	overflow:hidden;
+	height:auto;
+	background:#FFF;
+	
+	padding:30px 3px 3px 15px;
+}
+.aal {
+	float:left;
+	width:45px;
+}
+.ccl {
+	float:left;
+	width:260px;
+	margin-bottom:5px;
+	margin-left:10px;
+}
+#VPS_List_Box_new {
+	width:auto;
+	margin-top:10px;
+	overflow:hidden;
+	height:auto;
+}
+#VPS_List_Box_new ul li {
+	width:351px;
+	height:auto;
+	float:left;
+	overflow:hidden;
+	margin-left:6px;
+	margin-bottom:10px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/Vps_Server_bg.jpg) no-repeat;
+	padding-top:16px;
+	display:block;
+}
+.ListContent_new {
+	line-height:25px;
+	margin-top:15px;
+	padding-left:21px;
+	padding-bottom:15px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/new_vps_page_bg_re.gif) repeat-y;
+}
+.ListTitle_new {
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+	width:auto;
+	padding:0px 0px 0px 53px;
+	margin-left:21px;
+}
+.picList_new {
+	height:87px;
+	margin-top:35px;
+	margin-left:21px;
+}
+.ListPic_new
+{
+	margin-top:15px;
+	float:left;
+	height:72px;
+	width:270px;
+}
+.Listbutton_new
+{
+	margin-top:15px;
+	margin-left:200px;
+}
+
+
+
+
+#VPS_List_Box_dis {
+	width:auto;
+	margin-top:10px;
+	overflow:hidden;
+	height:auto;
+}
+#VPS_List_Box_dis ul li {
+	width:330px;
+	height:585px;
+	float:left;
+	margin-left:6px;
+	margin-bottom:10px;
+	background:url(/Template/Tpl_05/newimages/VPSserver/vps_bg_dis.jpg) no-repeat;
+	padding-top:16px;
+	padding-left:21px;
+	display:block;
+}

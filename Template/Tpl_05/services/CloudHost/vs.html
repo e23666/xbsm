@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/template/Tpl_05/css/vs.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="thrColEls">
+<div class="Style2009"> 
+ {#top.html}
+  
+  <div id="MainContentDIV">
+    <div class="vstop"><a href="/services/CloudHost/"><img src="/images/CloudHost/ebscloud/tanbanner.jpg"></a></div>
+    <div class="vstable">
+      <h1 class="vsfont">云主机与传统主机性能对比表</h1>
+      <table>
+        <tbody><tr class="vstitle"> 
+          <th></th>
+          <th class="vscloud">{companyname}第三代弹性云主机</th>
+          <th>{companyname}第二代套餐云主机</th>
+          <th>国内其他厂商云主机</th>
+          <th>VPS主机</th>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>存储模式</strong></p>
+            <p>真正的云计算必须使用集中云存储，才能实现动态扩容、热迁移、故障转移等功能</p>
+          </td>
+          <td class="vsyun">支持分布式存储和磁盘阵列柜raid5二种存储模式，自由选择。<br>
+            <br>
+            分布式存储:每个云主机的数据保留4份，实时存储于集群中的若干台服务器上，即使同时损坏3份数据，也不影响云主机的正常使用。集群节点之间采用万M网络连接。</td>
+          <td>SAS硬盘，raid5，存储阵列柜。</td>
+          <td>亚马逊/X里云：分布式存储，数据实时保留3份<br>
+            国内一线云主机厂商：存储阵列柜等集中存储方式<br>
+            国内中小型云厂商：每个服务器单独使用本机存储，一般是sata或sas硬盘做Raid5阵列。</td>
+          <td>每个服务器单独使用本机存储，一般是sata或sas硬盘做Raid5阵列。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>磁盘IO</strong></p>
+            <p>磁盘IO决定了文件读写的快慢，特别是sqlserver这样的应用需要极强的IO来支撑</p>
+          </td>
+          <td class="vsyun">分布式存储：随机读200M/s, 随机写70M/s<br>
+            磁盘阵列柜：平均400M/s，峰值800M/s<br>
+          </td>
+          <td>随机读写平均400M/s,峰值800M/s</td>
+          <td>国内其他厂商/X里云:随机读写约20~30M/s。<br>
+            其他二线厂商：50~200M/s。</td>
+          <td>50~150M/s</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>虚拟化架构</strong></td>
+          <td class="vsyun"><a href="http://baike.baidu.com/view/3474915.htm" target="_blank">KVM</a>+<a href="http://baike.baidu.com/view/908354.htm" target="_blank">Hadoop</a></td>
+          <td>win2012+hyper-V</td>
+          <td>xen/kvm/hyper-v/vmware等</td>
+          <td>xen/kvm/hyper-v/vmware等</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>热迁移</strong></p>
+            <p> 在"计算服务器"出现可预见性维护时（升级、检修等操作），"热迁移"能保障此节点上的云主机能在不停机情况下实时迁移至其他备用服务器。</p>
+          </td>
+          <td class="vsyun">使用分布式存储时支持，系统不用重启、关机，不断网，业务不会中断，10秒左右完成。</td>
+          <td>不支持</td>
+          <td>X里云:支持，但迁移过程中需要关机，3~15分钟完成<br>
+            国内其他厂商：基本上不支持</td>
+          <td>不支持</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>故障迁移</strong></p>
+            <p>在"计算节点"异常死机、损坏等情况下将此节点上面的云主机迁移到其他健康节点</p>
+          </td>
+          <td class="vsyun">使用分布式存储时支持，可以在3分钟左右将业务切换至其他健康节点</td>
+          <td>不支持，简单故障重启后可恢复; 复杂故障如系统损坏、硬件故障等通过更换备机来恢复，一般需要20~60分钟。</td>
+          <td>亚马逊/X里云:支持动态迁移<br>
+            国内其他厂商：基本上不支持</td>
+          <td>不支持，主服务器损坏的情况下中断时间较长。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>交付时间</strong></td>
+          <td class="vsyun">约3分钟</td>
+          <td>约5分钟</td>
+          <td>几分钟至几小时</td>
+          <td>{companyname}VPS数分钟内开通，其他服务商有的数分钟，有的数小时。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>购买、升级灵活度</strong></td>
+          <td class="vsyun">按需购买，可单独扩容CPU、磁盘、带宽等</td>
+          <td>提供6个套餐供选择，套餐之间可以相互升级</td>
+          <td>目前绝大多数为套餐模式</td>
+          <td>一般为套餐形式</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>升级拓展</strong></td>
+          <td class="vsyun">便捷的硬件配置升级及带宽增加。 可在线扩容硬盘、内存、带宽等资源。扩容的磁盘大小是直接在原数据盘上增加大小，不用新建一个磁盘分区。</td>
+          <td>便捷的硬件配置升级及带宽增加。 可在线扩容硬盘、内存、带宽等资源。扩容的磁盘大小是直接在原数据盘上增加大小，不用新建一个磁盘分区。</td>
+          <td>部分服务商扩展磁盘大小是新增一个磁盘驱动器，会导致迁移、合并数据的麻烦。</td>
+          <td>扩展局限性大，一般最大支持100G以内的磁盘大小。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>控制面板</strong></td>
+          <td class="vsyun">国内最易用的云主机！免费提供功能强大的控制面板平台，一站式自助服务。可自助重装系统、更换操作系统、更换机房、自助恢复备份数据 
+            ，自助软/硬重启，一键配置FTP、IIS等。</td>
+          <td>免费提供功能强大的控制面板平台，一站式自助服务。可自助重装系统、更换操作系统、更换机房、自助恢复备份数据 ，自助软/硬重启，一键配置FTP、IIS等。</td>
+          <td>大部分服务商没有提供完善的网站管理平台，对技术不熟的用户要手工管理IIS\apache\Mysql等，会比较困难。</td>
+          <td>视服务商情况而定。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>数据备份</strong></td>
+          <td class="vsyun">每7天左右一次云备份。可自主还原选择还原系统盘、数据盘。或直接挂载备份盘恢复部分数据。</td>
+          <td>每3天左右一次完整备份，可自主恢复备份全部备份或挂载备份盘恢复部分数据。</td>
+          <td>一般只提供一个备份副本。</td>
+          <td>一般只提供一个备份副本。</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>防御ARP攻击及MAC欺骗</strong></td>
+          <td class="vsyun">虚拟化软件默认并不支持arp攻击防护功能，我司通过修改底层架构，已完美实现arp绑定，一切伪造mac等arp攻击数据包将被彻底阻断！</td>
+          <td>网关绑定+操作系统内部arp防火墙，能有效防护arp攻击，但对于部分特殊变种的arp攻击不能100%防护。</td>
+          <td>国内大多数服务商未彻底解决arp攻击问题。</td>
+          <td>不支持</td>
+        </tr>
+        <tr>
+          <td class="vscen2"><strong>攻击防护</strong></td>
+          <td class="vsyun">免费提供金盾2G硬防，跟360战略合作、主机内置“<a href="http://wangzhan.360.cn/" target="_blank">360网站卫士</a>”，可以一键开启360防护，享受360之200G流量清洗及CC防护等多项功能。</td>
+          <td>国内机房免费提供金盾2G硬防，跟360战略合作、主机内置“<a href="http://wangzhan.360.cn/" target="_blank">360网站卫士</a>”，可以一键开启360防护，享受360之200G流量清洗及CC防护等多项功能。</td>
+          <td>部分提供</td>
+          <td>部分提供</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>云镜像</strong></p>
+            <p>云镜像就是将您已有的云主机做成镜像,以便购买新的云主机的时候使用，免去重复配置主机环境的麻烦。</p>
+          </td>
+          <td class="vsyun">即将支持</td>
+          <td>不支持</td>
+          <td>仅少数一两家服务商支持</td>
+          <td>不支持</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"> 
+            <p><strong>内网</strong></p>
+            <p>有多台云主机需要内部高速通信，数据库连接，负载均衡等情况下使用</p>
+          </td>
+          <td class="vsyun">支持,每个用户独立内网vlan,形成私有网络，更加安全.</td>
+          <td>支持</td>
+          <td>部分支持</td>
+          <td>不支持</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>负载均衡服务</strong></td>
+          <td class="vsyun">支持</td>
+          <td>支持</td>
+          <td>很少支持</td>
+          <td>不支持</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>增加独立IP地址</strong></td>
+          <td class="vsyun">支持，200元/个/年</td>
+          <td>支持，200元/个/年</td>
+          <td>一般不支持</td>
+          <td>一般不支持</td>
+        </tr>
+        <tr> 
+          <td class="vscen2"><strong>SLA</strong></td>
+          <td class="vsyun">99.95%</td>
+          <td>99.9%</td>
+          <td>视服务商情况而定</td>
+          <td>99%</td>
+        </tr>
+      </tbody></table>
+      <div style="text-align:center" style="padding-top:10px;;">
+	  <BR>
+      <a href="/services/CloudHost/"><img src="/images/CloudHost/btn.jpg" border=0></a>
+    </div>
+
+    </div> <div style="clear:both"></div>
+    
+    <div class="vslist"><h1 class="vsfont">云主机采用的存储方式对比</h1>
+    <div class="vs_left float">
+  <img src="/images/CloudHost/ebscloud/vsimg9.jpg">
+  <p>分布式存储,实时存储于集群中的若干台服务器<br>集群节点之间采用万M网络连接<br>数据实时保存4份，永不丢失！</p>
+    </div>
+        <div class="vs_center float"><strong class="vs">vs</strong></div>
+            <div class="vs_right float"><img src="/images/CloudHost/ebscloud/vsimg10.jpg">
+            <p>
+            一般是sata或sas硬盘做Raid5阵列<br>性能和稳定性参差不齐，有硬盘损坏的风险
+            </p></div>
+    
+    </div>
+    
+    
+    <div class="vslist"><h1 class="vsfont marginbottom">云主机采用的服务器对比</h1>
+     <div class="vs_left float">
+  <img src="/images/CloudHost/ebscloud/vsimg1.jpg">
+  <p>高性能专业服务器平台<br>1000台服务器大型集群</p>
+    </div>
+        <div class="vs_center float"><strong class="vs">vs</strong></div>
+            <div class="vs_right float"><img src="/images/CloudHost/ebscloud/vsimg2.jpg">
+            <p>
+           一般公司采用DIY服务器<br>大多是单机虚拟化，并不是真云，不支持热迁移、故障迁移
+            </p></div>
+    
+    </div>
+    
+    
+    <div class="vslist"><h1 class="vsfont marginbottom">云主机采用的CPU对比</h1>
+    <div class="vs_left float">
+  <img src="/images/CloudHost/ebscloud/vsimg7.jpg">
+  <p>我们采用服务器至强系列CPU<br>专为服务器架构和设计</p>
+    </div>
+        <div class="vs_center float"><strong class="vs">vs</strong></div>
+            <div class="vs_right float"><img src="/images/CloudHost/ebscloud/vsimg8.jpg">
+            <p>
+           一般公司采用普通家用电脑CPU<br>虽然价格便宜，但性能不足
+            </p></div>
+    
+    </div>
+    
+    
+    <div class="vslist"><h1 class="vsfont marginbottom">云主机接入带宽对比</h1>
+    <div class="vs_left float">
+  <img src="/images/CloudHost/ebscloud/vsimg5.jpg">
+  <p>提供灵活扩容的独享带宽，且价格便宜<br>每组云存储节点均万兆网络接入</p>
+    </div>
+        <div class="vs_center float"><strong class="vs">vs</strong></div>
+            <div class="vs_right float"><img src="/images/CloudHost/ebscloud/vsimg6.jpg">
+            <p>
+          一般公司采用共享带宽<br>速度和稳定性无法保证
+            </p></div>
+    
+    </div>
+    
+    
+    <div class="vslist"> 
+    
+   
+    <div class="whytd">
+      <div class="whyone">
+        <p>国内最早提供云主机应用的服务商之一，成本控制良好，性价比全国最高！同等配置产品，价格远低于行业均价！</p>
+      </div>
+      <div class="whytwo">
+        <p>32核至强CPU，分布式存储平台，<a href="/services/CloudHost/io.asp" class="Link_Orange">磁盘速度达800M/s</a>,其他主机形式一般在100M/s左右。</p>
+      </div>
+      <div class="whythree">
+        <p>国内五大顶级数据中心可选，最高带宽可达100M；完全满足用户的多种互联网应用需求。</p>
+      </div>
+      <div class="whyfour">
+        <p>领先的控制面板、自助软/硬重启，自助系统重装，免费赠送网站管理助手，管理更加轻松，7X24小时无忧服务！</p>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+  </div>
+{#bottom.html} 
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* CSS Document */
+
+/*
+*************************************************
+
+HAPPY COG
+Print Styles
+
+Created by the shoemaker's kids
+http://www.happycog.com
+
+*************************************************
+*/
+
+/*-------------------------------------------    
+    General Selectors
+-------------------------------------------*/
+* { margin: 0; padding: 0; line-height: 1.4; }
+body {
+	color: #333;
+	background-color: #efefef;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 9pt;
+}
+
+h2 { clear: left; font-size: 14pt; margin-bottom: 1em; font-weight: normal; color: #40550d; }
+h3 { clear: left; font-size: 12pt; margin-bottom: 0.5em; font-weight: normal; color: #40550d; }
+h4 { font-style: italic; font-size: 13px; font-weight: normal; /*color: #4e3114;*/ }
+
+p { font-size: 10pt; margin-bottom: 1em; }
+
+a { color: #0066cc; text-decoration: underline; }
+
+img { display: block; }
+a img { border: none; }
+
+#sub, #subnav, .rss { display: none; }
+
+abbr, acronym { border: none; }
+
+/*-------------------------------------------    
+    Structure
+-------------------------------------------*/
+#container, #header { width: 6in; margin: 0 auto; }
+#logo { text-align: center; margin: 0.5in 0 0 1in; }
+
+#branding { font-size: 12pt; font-weight: normal; text-align: center; font-style: italic; width: 5in; margin-left: 1.65in; }
+	#branding a { display: none; }
+	
+#nav { border-top: 1px dotted #333; border-bottom: 1px dotted #333; font-size: 15pt; font-weight: normal; margin: 0.25in 0; padding: 0.25in; line-height: 1.4; background-color: #fffdee; color: #492909; }
+#nav a { text-decoration: none; color: #492909; }
+
+h1 { border-top: 1px dotted #333; border-bottom: 1px dotted #333; font-size: 15pt; font-weight: normal; margin: 0.49in 0 0.25in; padding: 0.25in; line-height: 1.4; background-color: #fffdee; color: #492909; position: relative; }
+	h1 strong { font-weight: normal; }
+	h1 strong a, h1 strong span.connect { display: none; }
+	h1 strong span { position: absolute; font-style: italic; top: -0.5in; left: 2.85in; font-size: 12pt; }	
+
+h1 a { text-decoration: none; color: #492909; }
+
+.home #sub { display: block; }
+	.home #sub h2 { border-top: 1px dotted #333; padding: 0.75em 0 0; width: 6in; }
+
+#main img, #featured img { border-bottom: 4px solid #1e0a02; }
+
+#main ul { list-style: none; margin: 0 0 1.5em;}
+	#main ul li { background: transparent url(/i/presentation/bullet.gif) no-repeat 0 0.5em; padding: 0 0 0 10px; margin: 0 0 0.5em 10px; }
+#main ol { margin: 0 0 1.5em 20px; }
+
+.half, .third, #main img { float: left; margin-right: 1em; }
+#main .full img, #main .half img, #main .third img { float: none; margin-right: 0; margin-bottom: 0.35em; }
+.full p, .half p, .third p { font-style: italic; font-size: 9pt; color: #963; }
+.half { width: 200px; }
+.third { width: 100px; }
+
+.reference { border-bottom: 1px dotted #333; float: left; margin-bottom: 2em; }
+.following { border: none; }
+.entry { clear: left; float: left; /*margin-bottom: 1em;*/ border-top: 1px dotted #333; padding: 0.75em 0; width: 6in; }
+	.entry h3, .entry h3 a { margin-bottom: 0; }
+	h3.title { clear: none; font-style: italic; }
+
+#featured { float: left; } 	
+	#featured p { font-size: 12pt; }
+	#featured img { float: left; margin-right: 1em; }
+	
+.row div { clear: left; float: left; border-top: 1px dotted #333; margin-bottom: 1em; padding: 1em 0 0.25em; width: 6in; }
+.row div p { margin-left: 220px; }
+#featured div { clear: left; float: left; border-bottom: 1px dotted #333; margin-bottom: 0.55em; padding: 0.25em 0 0.75em; width: 6in; }
+	#featured div h2 { margin-bottom: 0.5em; }
+	
+.publish .row div p { margin-left: 215px; }
+
+dl.dated { margin-bottom: 1em; }
+	dl.dated dd.date { font-style: italic; }
+
+#footer { clear: left; border-top: 1px dotted #333; padding-top: 1em; }
+	#footer a { color: #333; text-decoration: none; font-size: 9pt; }
+	hr {
+	size:1px;
+	color:#333333;
+	border-top-style: dotted;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+}

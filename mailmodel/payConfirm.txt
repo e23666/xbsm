@@ -1,0 +1,16 @@
+尊敬的{user_name}您好
+
+   您于{dateTime}通过{paytype}汇的{incount}元预付款已经加到您的会员帐上，您现在即可登录我司管理中心直接开通您所需要的业务。
+   感谢您对我司的支持与信赖。
+
+   致
+礼
+ 
+------------------------
+{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}

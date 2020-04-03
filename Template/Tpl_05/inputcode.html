@@ -1,0 +1,67 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>网站登陆验证码录入</title>
+<meta name="description" content="网站登陆验证码录入-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="发生错误-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+ <META   HTTP-EQUIV="Pragma"   CONTENT="no-cache">    
+  <META   HTTP-EQUIV="Cache-Control"   CONTENT="no-cache">    
+  <META   HTTP-EQUIV="Expires"   CONTENT="0">    
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/Default.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/weiyanlover.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 14}
+-->
+</style>
+</head>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+
+
+<div id="MainContentDIV">
+    <div id="zxwInfo">
+	
+        <dl  class="z_div" style="width:500px; height:300px; margin-top:50px;" >
+        <dd class="z_div span_pricenum">
+          <ul class="z_bubblebox" id="z_bubblebox">
+            <li class="top clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-1.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-3.jpg" class="t_right" /></li>
+            <li class="mid clearfix">
+              <div class="m_content">
+                <h1 class="z_div" style="text-align:center;border-bottom:dotted #ccc 1px;font-size:16px;color:red;line-height:45px;">为了您的帐号安全请录入验证码！</h1>
+                <div style="font-size:14px; text-align:center; height:100px; margin-top:20px;"> 
+					<FORM METHOD=POST ACTION="/chklogin.asp">
+						<div style="text-align:left;margin:0 auto;font-weight:none;width:260px; ">
+						登陆帐号:<font style="font-weight;color:red">{u_name}</font><INPUT TYPE="hidden" NAME="u_name" value="{u_name}"><BR>
+						<INPUT TYPE="hidden" NAME="u_password"  value="{u_password}">
+						验&nbsp;&nbsp;证&nbsp;&nbsp;码:<INPUT TYPE="text" NAME="caplogin" size=8>&nbsp;&nbsp;<img src="/config/getcode.asp?r="+Math.random() onclick="this.src=this.src" id="imgcode" style="vertical-align:middle;height:23px;"><BR><BR>
+						<center><INPUT TYPE="submit" value="确认登陆"> <INPUT TYPE="button" value="重新登陆" onclick="location.href='/login.asp'"></center>
+						</FORM>
+						<script>
+						    var codeobj=document.getElementById('imgcode');
+							codeobj.src="/config/getcode.asp?r="+Math.random();
+						</script>
+				   </div>
+				</div>
+              </div>
+            </li>
+            <li class="bottom clearfix"><img src="/Template/Tpl_05/newimages/bubble/bubble-6.jpg" class="t_left" /><img src="/Template/Tpl_05/newimages/bubble/bubble-8.jpg" class="t_right" /></li>
+          </ul>
+        </dd>
+        
+     
+          
+	
+	 </dl>
+      
+    </div>
+  </div>
+
+
+{#bottom.html}
+</div></body></html>

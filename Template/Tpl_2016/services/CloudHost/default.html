@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+  <meta name="description" content="{companyname}-云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！">
+  <meta name="keywords" content="云主机租用,云服务器租用,云计算">
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/pjList.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/cloudhostly.css?v2">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/commonForm.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+  <link href="/images/CloudHost/jqtransform.css" rel="stylesheet" type="text/css" />
+  <script language="javascript" src="/jscripts/check.js"></script>
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery.superslide.2.1.1.x.js"></script>
+  <script language="javascript" src="/template/Tpl_2016/jscripts/diyserver.js"></script>
+  <script language="javascript" src="/template/Tpl_2016/jscripts/inputrange.js"></script>
+  <script language="javascript" src="/template/Tpl_2016/jscripts/jquery.jqtransform.js"></script>
+  <script src="getuserinfo.asp"></script>
+  <script language="javascript">
+    var cpucount={cpucount};
+    var ramcount={ramcount};
+    var paytestprice={paytestprice};
+    var diyconfig={diyjson};
+    var useripmsg="{useripmsg}"
+	var snapadvprice={Price(snapadv01)}
+	var ccprice={Price(ccfh)}
+
+
+    function pagestart(){
+      $("input[name^='S_radio_']:radio:checked").each(function(i, n) {
+        var proid=$(n).attr("name").replace("S_radio_","");
+        setmsg(proid);
+      });
+      $("input[name^='S_radio_']:radio").click(function(){
+        var proid=$(this).attr("name").replace("S_radio_","");
+        setmsg(proid);
+      });
+    }
+    function setmsg(proid){
+      var roomObj=$("input[name^='S_radio_"+ $.trim(proid) +"']:radio:checked");
+      var roomid=roomObj.val();
+      $("div[id^='S_price_"+ proid +"']").slideUp(0);
+      $("#S_price_"+ proid +"_"+roomid).slideDown(0);
+      var Memory=$("input[name='memsize_"+ proid +"_"+ roomid +"']:hidden").val();
+      var HardDisk=$("input[name='dissize_"+ proid +"_"+ roomid +"']:hidden").val();
+      var pname=$("input[name='pname_"+ proid +"']:hidden").val();
+      $("#"+proid+"_flux").html($("input[name='r_vpsband_"+ proid +"_"+ roomid +"']:hidden").val());
+      $("#"+proid+"_ip").html($("input[name='ismodrr_"+ proid +"_"+ roomid +"']:hidden").val());
+      $("#"+proid+"_mem").html(Memory);
+      $("#"+proid+"_disk").html(HardDisk);
+      $("#"+proid).click(function(){
+        if (proid!="xcloudF" && proid!="oemyun1")
+        {
+          window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*4 (四核心)")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+        }else{
+          window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*2")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+        }
+      });
+    }
+    $(function(){
+      pagestart();
+
+    });
+
+    $(function(){
+      $(".sec-banner").slide({
+        mainCell: ".slide-wrapper ul",
+        titCell: '.slide-pagination ul',
+        effect: 'fold',
+        // 背景图片属性
+        switchLoad: '_bgimg',
+        // 背景图片容器
+        switchLoadTag: 'a',
+        autoPage: true,
+        autoPlay: true
+      });
+      $(".tabs a").click(function(){
+        var objp=$(this).parent().parent();
+        objp.find("a").removeClass("active");
+        $(this).addClass("active");
+        objp.find("a").each(function(index,e){
+          if($(this).attr("class")=="active")
+          {
+            $('#'+$(this).attr("data-target")).show()
+          }
+          else{
+            $('#'+$(this).attr("data-target")).hide()
+          }
+        })
+      })
+
+    })
+
+
+  </script>
+      <style>
+          .host-config input[type="radio"]{margin-right: 5px;	margin-top:-2px; margin-bottom:1px}
+      </style>
+  </head>
+
+  <body class="min990">
+{#top.html} 
+
+<!-- banner 开始 -->
+<div class="sec-banner slide-container auto-size-fold">
+    <div class="slide-pagination">
+      <ul>
+      </ul>
+  </div>
+    <div class="slide-wrapper">
+    <ul>
+        <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" style="background-image: url('/template/Tpl_2016/images/banner/banner-2016sj.jpg');" >免备案香港云虚拟主机 全新升级</a> </li>
+        <li> <a href="/services/webhosting/" target="_blank" class="slide" title="免备案香港云虚拟主机 全新升级" _bgimg="/template/Tpl_2016/images/banner/banner-2016sj.jpg" >免备案香港云虚拟主机 全新升级</a> </li>
+      </ul>
+  </div>
+  </div>
+<!-- banner 结束 -->
+
+<div class="wide1190">
+    <ul class="banner-bottom cl horizontal-center">
+    <li>
+        <div class="bb_right"> <i class="pngFix bb-img_1" style="margin-left: inherit;"></i>
+        <p> <b class="font18" style="color: #484848;"><a href="/services/CloudHost/io.asp">超快IO</a></b> <br>
+            分布式文件存储+万M传输网络+优化的算法 </p>
+      </div>
+      </li>
+    <li>
+        <div class="bb_right"> <i class="pngFix bb-img_2"></i>
+        <p> <b class="font18" style="color: #484848;">强劲稳定</b> <br>
+            超过1000台<a href="https://www.west.cn/cloudhost/" class="g-link">云服务器</a>的资源池，完美支持热迁移 </p>
+      </div>
+      </li>
+    <li>
+        <div class="bb_right"> <i class="pngFix bb-img_3"></i>
+        <p> <b class="font18" style="color: #484848;">安全可靠</b> <br>
+            每个云服务器的数据保留4份，外加异机备份，数据安全高枕无忧！ </p>
+      </div>
+      </li>
+    <li>
+        <div class="bb_right"> <i class="pngFix bb-img_4"></i>
+        <p> <b class="font18" style="color: #484848;">100倍赔偿</b> <br>
+            因我们导致您服务器无法使用，按故障时间的百倍进行赔偿 </p>
+      </div>
+      </li>
+  </ul>
+  </div>
+<div id="content">
+<!-- 弹性云主机+套餐云主机 开始 -->
+<div class="host-content">
+    <div class="wide1190">
+    <!-- 选项卡 -->
+    <div class="CloudRightMainSelectMenu">
+        <ul class="wjf-ui-tab-style2 cl tabs">
+        <li class="Tab_tx_b"><a id="Tab_tx_a" class="active" href="javascript:void(0);" data-target="J_txHostDom">弹性云主机</a></li>
+        <li class="Tab_tc_b"><a id="Tab_tx_b" href="javascript:void(0);"  data-target="J_tcHostDom">套餐云主机</a></li>
+      </ul>
+      </div>
+    <div class="host-config cl">
+        <div id="J_txHostDom">
+        <div class="z_buymsg clearfix" style="padding-top:20px; padding-left:20px; padding-right:20px;">
+            <form name="buyform" class="common-form" action="/services/CloudHost/default.asp" method="post">
+            <div class="qrmain">
+                <dl  id="rebox"></dl>
+              </div>
+            <div id="putbox">
+                <dl class="linebox1 clearfix" >
+				 <div class="tx-host"  >
+                    <div style=" text-align:left;text-align:left;width: 1000px;margin: 0 auto; "> <span style="font-size:14px; height:30px; line-height:30px; padding-left:23px; color:#000;margin: 0 20px 0 20px;"> 产品分类:</span>
+                    <div class="tuijian-config"  id="prodtype_msg">
+                        <input type="button" name="prodtype" data-value="0" value="通用型" class="btn_page_ btn_page_1" >
+                        <input type="button" name="prodtype" data-value="1"  value="高频CPU型" class="btn_page_ " > 
+                      </div>
+                  </div>
+                  </div>
+                <div class="tx-host"  >
+                    <div style=" text-align:left;text-align:left;width: 1000px;margin: 0 auto; "> <span style="font-size:14px; height:30px; line-height:30px; padding-left:23px; color:#000;margin: 0 20px 0 20px;"> 推荐配置:</span>
+                    <div class="tuijian-config"  id="tuijian_msg">
+                        <input type="button" name="tuijian_btn_0" value="入门型" class="btn_page_" >
+                        <input type="button" name="tuijian_btn_1" value="标准型" class="btn_page_ btn_page_1" >
+                        <input type="button" name="tuijian_btn_2" value="商务型" class="btn_page_" >
+                        <input type="button" name="tuijian_btn_3" value="舒适型" class="btn_page_" >
+                        <input type="button" name="tuijian_btn_4" value="企业型" class="btn_page_" >
+                        <input type="button" name="tuijian_btn_5" value="豪华型" class="btn_page_" >
+                      </div>
+                  </div>
+                  </div>
+                <dd class=" ddline clearfix" ></dd>
+                <dd class="dd-list clearfix" id="cpumsg">
+                    <div id="cpu_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none">建议至少用双核，单核在很多情况下容易发生CPU100%占用影响性能</div>
+                    <label class="cpu_label">CPU</label>
+                    <div class="cpu_icon"></div>
+                    <label class="msg" >
+                    <div class="clearfix " id="cpu_range"> </div>
+                    <div  class="clearfix " id="cpuvalue" style="margin:15px 0 0 5px">
+                    <div style="float: left; margin: 0px 0px 0px 15px; text-align: left; width: 125px; padding: 0px; font-weight: normal; color: #3db514;">1核</div>
+                    <div style="float: left; margin: 0px; text-align: left; width: 125px; padding: 0px; font-weight: normal; color: #3db514;">2核</div>
+                    <div style="float: left; margin: 0px; text-align: left; width: 125px; padding: 0px; font-weight: normal; color: #3db514;">4核</div>
+                    <div style="float: left; margin: 0px; text-align: left; width: 125px; padding: 0px; font-weight: normal; color: #3db514;">8核</div>
+                    <div style="float: left; margin: 0px; text-align: left; width: 125px; padding: 0px; font-weight: bold; color: rgb(0, 102, 153);">12核</div>
+                    <div style="float: left; margin: 0px; text-align: left; width: 125px; padding: 0px; font-weight: normal; color: #3db514;">16核</div>
+					 <div style="float: left; margin: 0px; text-align: left; width: 45px; padding: 0px; font-weight: normal; color: #3db514;">32核</div>
+                  </div>
+                    </label>
+                  </dd>
+                <dd class="dd-list clearfix" id="rammsg">
+                    <div id="ram_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center;display:none ">建议选择1G以上内存以获得更好的服务体验！</div>
+                    <label class="ram_label">内存</label>
+                    <div class="ram_icon"></div>
+                    <label class="msg" >
+                    <div class="clearfix " id="ram_range"> </div>
+                    <div class="clearfix width540" id="ramvalue" style="margin:15px 0 0 5px">
+                    <div style="float: left; margin: 0px 0px 0px 1px; text-align: left; width: 40px; padding: 0px; font-weight: bold; color: rgb(0, 102, 153);">0.5G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">1G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">2G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">3G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">4G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">6G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">8G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">12G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">16G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">32G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: center; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">64G</div>
+                    <div style="float: left; margin: 0px 0px 0px 29px; text-align: right; width: 40px; padding: 0px; font-weight: normal; color: rgb(51, 51, 51);">128G</div>
+                  </div>
+                    </label>
+                  </dd>
+				
+				 <dd class="dd-list clearfix" id="datamsg" >
+                    <label class="data_label">系统盘</label>
+                    <div class="data_icon"></div>
+                    <label class="msg" >
+                    <div class="clearfix " id="osdata_range"></div>
+                    <div style="width:820px;clear:both;margin:15px 0 0 5px" class="clearfix">
+                    <div style="float:left; display:inline;margin:0;margin-left:30px; text-align:left">30G(系统盘分配大小为30G-200G)</div>
+                    <div style=" float:left;margin:0;display:inline; width:40px; margin-left:422px; text-align:right">200G</div>
+                    <div style="float:left; width:80px; margin-left:25px;display:inline;">(10GB递增)</div>
+                  </div>
+                    </label>
+                  </dd>
+
+                <dd class="dd-list clearfix" id="datamsg" >
+                    <label class="data_label">数据盘</label>
+                    <div class="data_icon"></div>
+                    <label class="msg" >
+                    <div class="clearfix " id="data_range"><a class="slider-leftbutton"></a>
+                    <div class="slider">
+                        <div class="progress" style="width: 38.3px;"></div>
+                        <a href="#" class="handle" style="left: 21.8px;"></a></div>
+                    <a class="slider-rightbutton"></a>
+                    <input type="text" data-orig-type="range" name="data" min="50" max="500" step="10" class="range">
+                    <div style="float:left;display:inline;margin-top:7px">GB</div>
+                  </div>
+                    <div style="width:820px;clear:both;margin:15px 0 0 5px" class="clearfix">
+                    <div style="float:left; display:inline;margin:0;margin-left:30px; text-align:left">20G(数据盘最小20G)</div>
+                    <div style=" float:left;margin:0;display:inline; width:40px; margin-left:482px; text-align:right">1000G</div>
+                    <div style="float:left; width:80px; margin-left:25px;display:inline;">(10GB递增)</div>
+                  </div>
+                    </label>
+                  </dd>
+                <dd class="dd-list clearfix" id="fluxmsg">
+                    <div id="flux_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none ">选择0M带宽不能访问公网（不分配公网IP），且后期亦不能升级带宽！</div>
+                    <label class="flux_label">带宽</label>
+                    <div class="flux_icon"></div>
+                    <label class="msg" >
+                    <div  class="clearfix " id="flux_range"></div>
+                    <div  class="clearfix " style="margin:15px 0 0 5px">
+                    <div style="float:left;margin:0;display:inline; width:40px;margin-left:30px; text-align:left">1M</div>
+                    <div  style=" float:left;margin:0;display:inline; width:40px; margin-left:600px; text-align:right;">200M</div>
+                    <div style="float:left; width:80px;display:inline; margin-left:24px ">(1Mbps递增)</div>
+                  </div>
+                    </label>
+                  </dd>
+                <dd class="dd-list clearfix " style="margin-bottom:20px;">
+                    <label>操作系统</label>
+                    <label class="msg"  > {getCHOICE_OS} </label>
+                    <script>
+                          $(function () {
+                            $("#msdrpdd21_msdd").css("width","838px");
+                          })
+                          </script>
+                  </dd>
+                <dd class="clearfix mindd notop">
+                    <label style=" margin:40px 0 0 0px;">线路</label>
+                    <label class="msg" for=" ">
+                    <div class="otherbox">
+                    <div class="divhengzhelai"> {getserverRoom} </div>
+                    <div class="clearfix"></div>
+                  </div>
+                    </label>
+                  </dd>
+                <dd CLASS="dd-list clearfix  notop" >
+                    <label>存储模式</label>
+                    <label class="msg" for=" ">
+                    <div class="otherbox"> {getdisktype} </div>
+                    </label>
+                  </dd>
+				 <dd CLASS="dd-list clearfix  notop" id="J_ddosbpsDom" style="display: none;" >
+                    <label>防护值<input type="hidden" name="ddos" value="0"><div class="flux_icon"></div></label>
+                    <label class="msg" for=" ">
+                    <div class="otherbox config-ddos tuijian-config">  </div>
+                    </label>
+                  </dd>
+
+                <dd class="dd-list clearfix  notop">
+                    <label><a href="/services/server/vip.asp" target="_blank"   title="查看服务标准">服务标准</a></label>
+                    <label class="msg" for=" ">
+                    <div class="otherbox"> {servicetype} </div>
+                  </dd>
+				 <dd class="dd-list clearfix ">
+                    <label>云快照:</label>
+					<div class="divlaiinput">
+                     <label class="msg"  ><input type="radio" name="snapadv" value="0" checked >基础云快照（免费）</label>
+					 <label class="msg"  ><input type="radio" name="snapadv" value="1">高级云快照（{Price(snapadv01)}元/月）</label>
+					</div>
+                  </dd>
+				
+
+				 <dd class="dd-list clearfix "  id="J_ccDom">
+                    <label>安全服务:</label>
+					<div class="divlaiinput">
+                     <label class="msg"  ><input type="radio" name="cc" value="0" checked >不使用CC防护</label>
+					 <label class="msg"  ><input type="radio" name="cc" value="1">CC防护（<span id="buyccprice">{Price(ccfh)}</span>元/月）</label>
+					</div>
+                  </dd>
+
+                <dd class="dd-list clearfix ">
+                    <label>付费方式:</label>
+                    <div class="divlaiinput">{getVpsPayMethod} </div>
+                  </dd>
+                <dd class="dd-list clearfix ">
+                    <label>购买时长:</label>
+                    <label class="msg" id="renewtime_msg" ></label>
+                  </dd>
+
+
+                <dd class="dd-list clearfix ">
+                    <label>购买数量:</label>
+                    <label class="msg" >
+                    <select name="buycount" style="width:200px;">
+                        <option value="1">1台</option>
+                        <option value="2">2台</option>
+                        <option value="3">3台</option>
+                        <option value="4">4台</option>
+                        <option value="5">5台</option>
+                        <option value="6">6台</option>
+                        <option value="7">7台</option>
+                        <option value="8">8台</option>
+                        <option value="9">9台</option>
+                        <option value="10">10台</option>
+                      </select>
+                  </label>
+                  </dd>
+                <dd class="dd-list clearfix ">
+                    <label>价格:</label>
+                    <label class="msg clearfix" >
+                    <div class="price_red" id="pricelist" style="font-size:24px; height:30px; line-height:30px; float:left; "></div>
+                    <div style="font-size:16px; height:30px; line-height:30px; float:left"></div>
+                    </label>
+                  </dd>
+                <dd class="dd-list text-c no-top  mb-15 clearfix" >
+                    <label style="display:inline; width:auto; float:none; line-height:25px; height:25px" for="agreement">
+                    <input name="agreement" id="agreement" type="checkbox" value="1">
+                    我已阅读并同意</label>
+                    <a href="/customercenter/yunxiyi.asp" target="_blank" style="color:#06c">{companyname}云主机租用协议</a> </dd>
+                <dd class="dd-list text-c no-top mb-50 " >
+                    <input type="button" class="common-btn cloud-btn" value="立即购买" name="subbtton">
+                    <input type="button" class="g-common-btn g-dark-btn cloud-btn" value="试用配置" name="testbtton">
+                    <div id="loadsubinfo"></div>
+                    <input type="hidden" name="act">
+                    <input type="hidden" name="paytype" value="0">
+                  </dd>
+              </dl>
+              </div>
+          </form>
+          </div>
+      </div>
+
+        <!--end ebs-->
+
+        <div id="J_tcHostDom" style="display: none;">
+
+        <div class="vps-list">
+            <div class="vps-title mt-20"><span class="list-title">{ServerName(xcloudA)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tbody><tr>
+                        <th align="right" >处理器</th>
+                        <td id="xcloudA_cpu">IntelXeon E5-2620/5645*4 (四核心) </td>
+                        <th align="right" >系统</th>
+                        <td>Windwos/Linux</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span  id="xcloudA_mem"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="xcloudA_disk"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span  id="xcloudA_flux"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="xcloudA_ip"></span></td>
+                        <th align="right">选择机房</th>
+                        <td>{ServerRoomList(xcloudA)}</td>
+                        <td colspan="2" align="center"><a href="###" id="xcloudA" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+
+
+      <div class="vps-list ">
+       <div class="vps-title"><span class="list-title">{ServerName(xcloudB)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tbody><tr>
+                        <th align="right" >处理器</th>
+                        <td id="xcloudB_cpu">IntelXeon E5-2620/5645*4 (四核心) </td>
+                        <th align="right" >系统</th>
+                        <td>Windwos/Linux</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span  id="xcloudB_mem"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="xcloudB_disk"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span  id="xcloudB_flux"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="xcloudB_ip"></span></td>
+                        <th align="right">选择机房</th>
+                        <td>{ServerRoomList(xcloudB)}</td>
+                        <td colspan="2" align="center"><a href="###" id="xcloudB" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </tbody></table>
+            </div>
+      </div>
+
+        <div class="vps-list">
+           <div class="vps-title"><span class="list-title">{ServerName(xcloudC)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tbody><tr>
+                        <th align="right" >处理器</th>
+                        <td id="xcloudC_cpu">IntelXeon E5-2620/5645*4 (四核心) </td>
+                        <th align="right" >系统</th>
+                        <td>Windwos/Linux</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span  id="xcloudC_mem"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="xcloudC_disk"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span  id="xcloudC_flux"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="xcloudC_ip"></span></td>
+                        <th align="right">选择机房</th>
+                        <td>{ServerRoomList(xcloudC)}</td>
+                        <td colspan="2" align="center"><a href="###" id="xcloudC" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+
+
+
+        <div class="vps-list">
+            <div class="vps-title"><span class="list-title">{ServerName(xcloudD)}</span>
+                <div class="vps-line"></div></div>
+            <div class="vps-table-con cl">
+                <table class="vps-table">
+                    <tbody><tr>
+                        <th align="right" >处理器</th>
+                        <td id="xcloudD_cpu">IntelXeon E5-2620/5645*4 (四核心) </td>
+                        <th align="right" >系统</th>
+                        <td>Windwos/Linux</td>
+                        <th align="right">网卡</th>
+                        <td>Intel 1000M自适应以太网卡</td>
+                    </tr>
+                    <tr>
+                        <th align="right">内存</th>
+                        <td><span  id="xcloudD_mem"></span></td>
+                        <th align="right">硬盘</th>
+                        <td><span id="xcloudD_disk"></span></td>
+                        <th align="right">带宽</th>
+                        <td><span  id="xcloudD_flux"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="right">IP</th>
+                        <td><span id="xcloudD_ip"></span></td>
+                        <th align="right">选择机房</th>
+                        <td>{ServerRoomList(xcloudD)}</td>
+                        <td colspan="2" align="center"><a href="###" id="xcloudD" class="common-btn vps-buy">立即购买</a></td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+
+
+     <div class="vps-list">
+                <div class="vps-title"><span class="list-title">{ServerName(xcloudE)}</span>
+                    <div class="vps-line"></div></div>
+                <div class="vps-table-con cl">
+                    <table class="vps-table">
+                        <tbody><tr>
+                            <th align="right" >处理器</th>
+                            <td id="xcloudE_cpu">IntelXeon E5-2620/5645*4 (四核心) </td>
+                            <th align="right" >系统</th>
+                            <td>Windwos/Linux</td>
+                            <th align="right">网卡</th>
+                            <td>Intel 1000M自适应以太网卡</td>
+                        </tr>
+                        <tr>
+                            <th align="right">内存</th>
+                            <td><span  id="xcloudE_mem"></span></td>
+                            <th align="right">硬盘</th>
+                            <td><span id="xcloudE_disk"></span></td>
+                            <th align="right">带宽</th>
+                            <td><span  id="xcloudE_flux"></span></td>
+                        </tr>
+                        <tr>
+                            <th align="right">IP</th>
+                            <td><span id="xcloudE_ip"></span></td>
+                            <th align="right">选择机房</th>
+                            <td>{ServerRoomList(xcloudE)}</td>
+                            <td colspan="2" align="center"><a href="###" id="xcloudE" class="common-btn vps-buy">立即购买</a></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+        </div>
+
+             <div class="vps-list">
+                <div class="vps-title"><span class="list-title">{ServerName(xcloudF)}</span>
+                    <div class="vps-line"></div></div>
+                <div class="vps-table-con cl">
+                    <table class="vps-table">
+                        <tbody><tr>
+                            <th align="right" >处理器</th>
+                            <td id="xcloudF_cpu">IntelXeon E5-2620/5645*4 (双核心) </td>
+                            <th align="right" >系统</th>
+                            <td>Windwos/Linux</td>
+                            <th align="right">网卡</th>
+                            <td>Intel 1000M自适应以太网卡</td>
+                        </tr>
+                        <tr>
+                            <th align="right">内存</th>
+                            <td><span  id="xcloudF_mem"></span></td>
+                            <th align="right">硬盘</th>
+                            <td><span id="xcloudF_disk"></span></td>
+                            <th align="right">带宽</th>
+                            <td><span  id="xcloudF_flux"></span></td>
+                        </tr>
+                        <tr>
+                            <th align="right">IP</th>
+                            <td><span id="xcloudF_ip"></span></td>
+                            <th align="right">选择机房</th>
+                            <td>{ServerRoomList(xcloudF)}</td>
+                            <td colspan="2" align="center"><a href="###" id="xcloudF" class="common-btn vps-buy">立即购买</a></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+        </div>
+
+
+        </div>
+      </div>
+    <div > </div>
+  </div>
+  </div>
+
+    <div class="product-append-info">
+    <div id="J_anchorNavDom" class="wjf-page-anchor-nav-container">
+        <ul class="wjf-page-anchor-nav cl tabs">
+        <li><a href="javascript:void(0);" data-target="J_cloudIntroduceDom" id="J_cloudIntroduceDomF" class="active">云服务器介绍</a></li>
+        <li><a href="javascript:void(0);" data-target="J_cloudAdvantageDom" id="J_cloudAdvantageDomF" >云服务器优势</a></li>
+        <li><a href="javascript:void(0);" data-target="J_cloudFaqDom" id="J_cloudFaqDomF" >常见问题</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  <div class="wide1190">
+
+      <div class="cloud-introduce  active" id="J_cloudIntroduceDom">
+        <div class="cloud-introduce-top">
+          <p>云服务器（Elastic Compute Service，简称ECS）是一种简单高效、处理能力可弹性伸缩的计算服务， 帮助您快速构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。
+          </p>
+          <p>
+            用户可根据不同需求，自由选择CPU、内存、数据盘、带宽等配置，还可随时不停机升级带宽，1分钟内停机升级CPU和内存， 支撑业务的持续发展。99.95%的高可用性，为业务的稳定运行提供保障。{companyname}云服务器目前提供华南、华北、西南、华中及香港、 美国等个地域，充分满足电信、联通、移动等不同网络、不同地域的用户的业务需求。
+          </p>
+        </div>
+        <div class="cloud-introduce-middle mb-40">
+          <img src="/template/Tpl_2016/images/introduce-img1.jpg"  alt="概念树状图">
+          <img src="/template/Tpl_2016/images/introduce-img2.jpg"  alt="分布式云储存">
+        </div>
+
+      </div>
+
+    <div id="J_cloudAdvantageDom" class="cloud-advantage "  style="display: none;">
+      <ul class="cloud-advantage-list cl horizontal-center">
+        <li>
+          <a class="cloud_img cloud_img_1 dis-ib"></a>
+          <p class="cloud-title">稳定可靠</p>
+          <p>
+            全国五星级机房架设，分布式存储系统,
+            每份数据保留4个副本,数据可靠性不低于99.999%
+          </p>
+        </li>
+        <li>
+          <a class="cloud_img cloud_img_2 dis-ib"></a>
+          <p class="cloud-title">灵活弹性</p>
+          <p>
+            云计算资源弹性伸缩,可随时调整资源
+            月付、季付、年付均可提供,满足不断变化的用户需求。
+          </p>
+        </li>
+        <li style="padding-right: 0;">
+          <a class="cloud_img cloud_img_3 dis-ib"></a>
+          <p class="cloud-title">品牌&amp;规模</p>
+          <p>
+            15年行业经验,云计算平台
+            拥有良好的品牌形象和服务口碑,管理着超过50万个网站。
+          </p>
+        </li>
+        <li>
+          <a class="cloud_img cloud_img_4 dis-ib"></a>
+          <p class="cloud-title">备案方便</p>
+          <p>
+            免费快速备案,专业的备案团队为您提供全程协助,
+            完善的备案系,让您快速安心通过网站备案。
+          </p>
+        </li>
+        <li>
+          <a class="cloud_img cloud_img_5 dis-ib"></a>
+          <p class="cloud-title">高性能</p>
+          <p>
+            主机CPU、内存各项性能指标高于业界,超高I/O速度
+            SSD固态硬盘,优异的云架构和计算能力满足各种业务要求。
+          </p>
+        </li>
+        <li style="padding-right: 0;">
+          <a class="cloud_img cloud_img_6 dis-ib"></a>
+          <p class="cloud-title">简单易用的控制面板</p>
+          <p>
+            可自助重装系统、更换线路、恢复备份、重启，一键配
+            置FTP、IIS等，支持虚拟机导入、存储模式切换。
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="J_cloudFaqDom" class="cloud-faq "  style="display: none;">
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>什么是弹性云服务器？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>弹性云服务器是基于若干台服务器或集群通过相关技术进行资源整合，通过云端控制平台按需生成相关主机资源， 每台云服务器都有完全的控制权限，可根据用户需要配置环境，操作与独立主机没有区别。 云服务采用分布式存储，免费备份服务， 按需购买，可实现平滑升级，具有高性价比、高安全性、高灵活性。
+          </p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>弹性云服务器可以灵活扩容，按需购买吗？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>可以。{companyname}弹性云服务器按需购买，可单独扩容CPU、磁盘、带宽等。</p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>弹性云服务器可以增加独立IP地址吗？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>可以。{companyname}弹性云服务器部分机房（智能多线/电信机房/亚洲双线机房）支持增加独立IP地址，380元/个/年。</p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>网站数据丢失了，还能恢复吗？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>{companyname}弹性云服务器数据实时保存4份，即使同时损坏3份也不会导致数据丢失。同时系统每7天左右进行一次云备份。 对于误删除的数据，用户可以在控制面板自行恢复系统数据至上次的备份，同时可以单独挂载备份盘恢复部分数据。
+          </p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>弹性云服务器与套餐云服务器有何区别？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>弹性云服务器是我司研发的第三代云服务器系统，比第二代套餐云服务器的优势主要有：购买更灵活(可随时自由升级、降级)、 可靠性更高（故障率更低）、支持热迁移、arp防护、内网、多重备份等更多新功能，适合对稳定性要求更高，对价格不是特别敏感的中高端客户。 第二代套餐云服务器的IO更快(不需要同时写4份数据)，在同等高配置的情况下价格比弹性云要便宜，适合于对稳定性要求不是特别高但是要求价格便宜的客户群, 同时套餐云服务器也适合于对磁盘使用量特别大和对免备案机房有需求的客户。
+          </p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>我不懂技术可以购买你们的云服务器吗？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>可以的，我们提供“网站管理助手”和强大的控制面板，可以如虚拟主机一样简单地使用我们的云服务器。但如果您不太懂技术， 建议使用我们推荐的带sqlserver+网站管理助手的操作系统模板，不要使用纯净版和linux系统，否则可能操作起来比较困难。
+          </p>
+        </dd>
+      </dl>
+      <dl class="faq-list">
+        <dt><span class="font18">Q</span>市场上有很多提供云计算的服务商，如何辨别真伪？</dt>
+        <dd>
+          <span class="font18">A</span>
+          <p>目前国内有很多提供“云服务器”的公司，但绝大多数是将一台大硬盘、大内存的物理服务器通过虚拟化技术分割后卖给客户，实际上就是VPS。 VPS跟云服务器在使用方面基本完全一致，所以很多时候客户感知不到。但VPS跟真正的云服务器比起来，在容灾、故障迁移、弹性扩展方面有明显差距。 国内目前只有阿里云、{companyname}、华为云等少数几家公司是提供真正的云计算，客户在购买前可以问服务商以下问题即可判断是否是真的云计算：
+          </p>
+          <p class="mt-20 ml-20">A.存储方面你们是使用本机存储还是分布式存储？ 当我的云服务器(VM)所在的物理服务器发生硬件故障（如主板损坏）的时候， 能不能在5分钟之内将我的云服务器切换到其他备用节点并恢复服务？ </p>
+          <p class="ml-20">B.是否支持热迁移？ 因原集群的负载过高，需要迁移到新集群的时候，是否可以不停机热迁移，IP是否不变？ 物理计算服务器日后肯定有升级换代的情况，在物理服务器维护的时候是否会导致我的云服务器中断？ </p>
+          <p class="ml-20">C.我需要10台云服务器，这10台主机之间是否有内网相联？是否是私有内网？ </p>
+          <p class="ml-20">D.能随时扩容内容、扩容硬盘、增减带宽吗？扩容的时候是否需要迁移服务器、中断多长时间？</p>
+          <p class="mt-20 ml-20">{companyname}的云服务器使用分布式存储，支持故障快速切换，支持热迁移，集群热迁移不需要停机，IP不变。 物理服务器升级维护不会导致云服务器中断，默认支持私有内网互联，更加快速、安全。可以随时对内存、带宽、CPU进行升级或降级， 硬盘可以随时升级扩容（硬盘不能减小容量）。扩容的时候不用迁移服务器集群，只需要重启一次，中断1分钟左右。
+          </p>
+        </dd>
+      </dl>
+      <a class="faq-btn" target="_blank" href="/services/cloudhost/dingwei.asp">更多问题&gt;&gt;</a>
+    </div>
+
+  </div>
+</div>
+
+{#bottom.html}
+</body>
+</html>

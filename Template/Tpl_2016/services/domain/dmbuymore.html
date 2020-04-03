@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>域名注册域名申请国际域名国内域名cn域名注册-{companyname}</title>
+    <meta name="description" content="国际域名注册-{companyname}是西南地区最大的虚拟主机、域名注册、服务器租用服务商！领先的虚拟主机技术,配合NAS存储设备、ddos防火墙，为您打造性价比最高的虚拟主机!全国领先的双线路虚拟主机，南北畅通无阻！">
+    <meta name="keywords" content="国际域名注册-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/dmbuymore.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	  <link rel="stylesheet" href="/jscripts/layui/css/layui.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/jscripts/template.js"></script>
+    <script type="text/javascript" src="/jscripts/audit/data.js"></script>
+    <script type="text/javascript" src="/jscripts/audit/pinyin.js"></script>
+    <script type="text/javascript" src="/jscripts/audit/config.js"></script>
+    <script type="text/javascript" src="/jscripts/audit/domainbox.js?r=37145.31"></script>
+    <script type="text/javascript" src="/jscripts/audit/domainaudit.js"></script>
+<style  type="text/css">
+  .layui-form dd{
+	  margin:0
+  }
+  .layui-form-label{
+    width:200px
+  }
+  .layui-input-block{
+    margin-left:230px;
+  }
+  .seachitem{ margin-right:0!important}
+  .imgerror{
+    border-color:  #FF5722!important;   
+  }
+  .layui-form-checked.layui-checkbox-disbaled span {
+    background-color: #5FB878!important;
+  }
+.f-l{float: left}
+.f-r{float: right}
+    .dmbuymore-info-txt{
+        margin: 15px 0;
+        padding: 16px 18px;
+        background: #fbfeff;
+        border: 1px solid #caecff;
+        text-indent: 26px;
+        color: #313131;
+    }
+    .dmbuymore-info-txt p{padding: 5px 0}
+  .dmbuymore-info-txt .blue-link{color: #0b6eca;}
+    .tipsdm{color: #f60000;}
+</style>
+</head>
+
+<body class="min990">
+    {#top.html}
+    <div id="content">
+        <form name="form1" id="form1" action="dmbuymore.asp" method="post" class="layui-form" >
+            <div class="content">
+                <div class="wide1190 pt-40">
+                    <div class="dmbuymore-content">
+                        <div class="content-title">
+                            <h2>请选择注册年限</h2>
+                        </div>
+                        <!--newcontent-->
+                        <div id="regdomain">
+                            <div class="dmbuymore-info">
+                                <div id="Domain_reg_box">
+                                    <ul id="regdomainmsg">
+                                        <!-- BEGIN domaintable -->
+                                        <li class="cl">
+                                            <div class="f-l"><span class="domaintitle">{domain}</span></div>
+                                            <div class="f-r">
+                                                <span class="govdiv" id="govDiv_0"></span>
+                                                <span class="domainmsg"> &nbsp;
+    <span id="contentDiv_0"><select name="regdomain" lay-ignore class="oldbg c-select" onChange="donodmbuy(this.value,'{domain}')">
+                <!-- BEGIN domainselect -->
+                    <option value="{domainselectvalue}" >{domainselecttext}</option>
+                <!-- END domainselect -->
+ 
+                </select>{govcnstr}</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <!-- END domaintable -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-title mt-35">
+                                <h2>请填写域名注册相关资料</h2>
+                            </div>
+                            <div class="dmbuymore-section" style="margin:15px 0">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">域名管理密码:</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="strdomainpwd" value="{strdomainpwd}" lay-verify="required" autocomplete="off" placeholder="请录入域名密码" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">域名服务器(DNS)</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="dns_host1" value="{dns_host1}" lay-verify="required" placeholder="请输入正确DNS服务器域名" autocomplete="off" class="layui-input">
+                                        </div>
+										<div class="layui-form-mid layui-word-aux">一般默认即可，非专业人员请勿修改，否则域名注册不成功！</div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                            <label class="layui-form-label">域名服务器(DNS)</label>
+                                            <div class="layui-input-inline">
+                                                <input type="tel" name="dns_host2" value="{dns_host2}" lay-verify="required" autocomplete="off" class="layui-input" placeholder="请输入正确DNS服务器域名" >
+                                            </div>
+											<div class="layui-form-mid layui-word-aux">一般默认即可，非专业人员请勿修改，否则域名注册不成功！</div>
+                                        </div>
+										
+                                    </div>
+								<div id="ghlbminbox"><i class="layui-icon layui-icon-loading" style="font-size: 30px; color: #1E9FFF;"></i>  												
+											</div>                        
+											<div class="pt-10">	
+											 <input type="hidden" name="ajaxFree" value="{freeid}">
+												<input name="agreement" lay-verify="agreement" title="我已经阅读、理解并接受" lay-skin="primary" type="checkbox" value="1"  checked  />
+											我已经阅读、理解并接受<a href="/customercenter/domainagreement.asp" target="_blank">{companyname}的域名注册协议</a>,<a href="http://www.icann.org/zh/registrars/registrant-rights-responsibilities-zh.htm" target="_blank">域名注册人权利与责任</a>										
+											</div>
+
+										<div class="pt-30">	
+											&nbsp;<button name="regagentdomainbtn"  class="layui-btn layui-btn-normal" lay-submit lay-filter="regagentdomainbtn">进入下一步</button>
+											&nbsp;<input type="button" name="regdomainresetbtn" value="清空表单" class="layui-btn layui-btn-danger" />
+
+										
+											<input type="hidden" value="False" name="isRegtry" />
+											<input type="hidden" value="" name="t_childproid">
+											<input type="hidden" value="" name="t_sysid">
+											<input type="hidden" value="" name="freetype">
+											<input type="hidden" value="" name="freepro">                                
+										</div>
+										<div class="dmbuymore-info-txt">
+											<div class="tipsdm "><i></i>郑重提示：</div>
+											<div style="overflow: hidden;text-align: left;">
+												<p>1. 在我司申请的域名不得用于赌博、博彩、钓鱼网站、私服、外挂、色情、左旋肉碱等非法网站，我司有完善的监控措施，一经发现，立即永久停止该域名，不予退款！</p>
+												<p>2. 需实名认证的域名只是预注册成功，最终以相关部门命名审核和实名审核结果为准。</p>
+												<p>3. 接注册局通知，.xyz/.wang/.ltd/.group 注册成功后默认为暂停解析（serverhold）状态，通过实名认证后才能解除，请注册后立即进行实名认证。 </p>
+												
+											</div>
+										</div>
+      
+                 </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+        {#bottom.html}
+</body>
+
+ <script src="/jscripts/layui/layui.js"></script>
+ <script type="text/javascript">
+ var formtrans=$("form[name='form1']"); 
+ var opt_mbid
+   $(function(){
+        layui.use(['form','laydate','laypage','layer','table','upload'], function(){			
+          layform = layui.form;
+          laypage = layui.laypage;
+          laydate = layui.laydate;
+          layer=layui.layer;
+          laytable = layui.table;    
+          layupload=layui.upload;  
+			
+		  var domainlist="{strdomain}".split(",").join("\r\n");						
+		  domainaudit.auto_init(formtrans,domainlist,function(){											
+				formtrans.find("#ghlbminbox").html(this);
+				layform.on("submit(regagentdomainbtn)",function(obj){
+					buysub.call(obj,domainlist); 
+					return false;
+				});
+			});
+
+        });    
+    });
+
+	var buysub=function(obj,domainlist){
+			var subbtn=$(obj.elem);
+			if(!/[\w\.]+/ig.test(domainlist)){
+				layer.error("域名格式不正确");
+				return false;
+			}
+
+			 
+			domainaudit.getdomaintype.call(formtrans);
+			if(!domainaudit.chkregsub.call(formtrans)) return false;
+			layer.sure("您确定要将域名放入购物车",function(index_){
+				subbtn.prop("disabled",false);
+				layer.close(index_);
+				 
+				subbtn.prop("disabled",true);					
+				domainaudit.getauditmould.call(formtrans,function(jsondata){
+					 formtrans.find("button[name='regagentdomainbtn']").prop("disabled", false);
+				     opt_mbid=jsondata.c_sysid; 
+					 dosubmit()
+				});
+			});	
+		} 
+	function dosubmit()
+	{
+		 var lbox = layer.loading(3);
+		 var formdata = $.ConvertArray(formtrans.serializeArray());
+		 console.log(formdata)
+		 if (typeof(formdata.c_sysid)=="undefined")
+		 {
+			formdata.c_sysid=opt_mbid;
+		 }
+		 var datakeyval = domainaudit.getpostkeyval(formtrans);
+		  var putdata = $.extend(true, { act: "auditregsub" }, formdata, datakeyval);
+			domainaudit.dosubmit(putdata, function (jsondata) {
+				if (jsondata.result == "200") {
+					layer.msg("放入购物车成功,正在跳转到购物车...");
+					window.location.href = "/bagshow/";
+				} else {
+					layer.error(jsondata.msg);
+				}
+			}, function () {
+				layer.close(lbox);
+			});
+	}
+</script>
+</html>

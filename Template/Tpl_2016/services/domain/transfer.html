@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>域名转入{companyname}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta name="description" content="{companyname}拥有13年域名注册服务经验，累计注册域名超过100万个。域名转入{companyname}续费价格更便宜，更可享受优质的服务和稳定的解析。">
+    <meta name="keywords" content="域名续费,域名续费价格,域名转入价格,域名转移注册商">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/transfer.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/common.js"></script>	
+ 
+	<script type="text/javascript">
+	<!--
+		$(function(){
+			$(".transfer-btn").click(function(){
+				var val_=formatString($("#domainlist").val());
+				if($("#domainlist").val()=="")
+				{
+					$.dialog.alert("请录入要转入的域名");
+					return false;
+				}
+				if (val_.split("\n").length>10)
+				{
+					$.dialog.alert("一次最多转入10个域名");
+					return false;
+				}
+				$("form[name='transferform']").submit();
+			})
+			$(".section-item").click(function(){
+				$(".section-item").removeClass("active");
+				$(".wjf-ui-tab-content").removeClass("active");
+				$(this).addClass("active");
+				$("#"+$(this).attr("data-target")).addClass("active");
+				 
+			
+			})
+		})
+		function formatString(str){
+			//去掉空格，去掉空白行,首尾行
+			str = str.replace(/\ /g,'').replace(/[\r\n]/g,'\n').replace(/\n{2,}/g,'\n');
+			if (str.substr(str.length-1,1)=='\n') str = str.substr(0,str.length-1)
+			if (str.substr(0,1)=='\n') str = str.substr(1,str.length)
+			return str;
+		}
+	//-->
+	</script>
+</head>
+<body class="min990">
+{#top.html}
+<div class="content" id="content">
+    <div class="transfer-content">
+        <div class="wide1190">
+            <div class="transfer-title">
+                <h2>域名轻松转入,享受品质服务</h2>
+                <div class="tt-txt">
+                    国内快速、稳定、安全的域名服务商
+                </div>
+            </div>
+            <!--第一模块 开始-->
+            <div class="transfer-search">
+                <ul class="transfer-search-tab cl" id="J_tabs">
+                    <li>
+                        <a class="transfer-item item-radius active" href="javascript:void(0);" data-target="J_domainTransfer">域名转入<i class="triangle-top"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="transfer-item no-change" href="/manager/domainmanager/zhuanru.asp">转入列表<i></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--域名转入 开始-->
+                <div class="wjf-ui-tab-content active" id="J_domainTransfer">
+                    <div class="ts-form">
+                        <form action="dotransfer.asp" method="post"  name="transferform">
+                            <textarea class="search-text " name="domainlist" id="domainlist" cols="25" rows="1" placeholder="请输入域名+空格+转移密码，比如：abc.cn password1
+多个域名用回车符隔开"></textarea>
+                        </form>
+
+                        <a class="transfer-btn" href="javascript:void(0);" data-target="J_domainForm">立即转入</a>
+                    </div>
+                </div>
+                <!--域名转入 结束-->
+
+            </div>
+            <!--第一模块 结束-->
+            <!--第二模块 开始-->
+            <div class="transfer-middle">
+                <div class="tm-title">
+                    如何完成一个域名的转移工作
+                    <span>/按照下列流程，通过完成您的转移</span>
+                </div>
+                <ul class="tm-list cl">
+                    <li>
+                        <div class="column">
+                            <div class="column-arrow"></div>
+                            <div class="column-icon column-icon1"></div>
+                            <div>1、转移准备</div>
+                            <div class="column-txt">
+                                <i></i>
+                                <p><em></em>向原注册商申请转出</p>
+                                <p><em></em>解除域名转移锁定状态</p>
+                                <p><em></em>获得转移密码</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="column-arrow"></div>
+                            <div class="column-icon column-icon2"></div>
+                            <div>2、提交转入</div>
+                            <div class="column-txt">
+                                <i></i>
+                                <p><em></em>输入转入域名和转移密码</p>
+                                <p><em></em>域名和转移密码以空格隔开</p>
+                                <p><em></em>多个域名用回车符隔开</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="column-arrow"></div>
+                            <div class="column-icon column-icon3"></div>
+                            <div>3、转入验证</div>
+                            <div class="column-txt">
+                                <i></i>
+                                <p><em></em>验证转移密码</p>
+                                <p><em></em>验证域名状态是否是可转移状态</p>
+                                <p><em></em>验证通过，确认转入并支付订单</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="column-icon column-icon4"></div>
+                            <div>4、转入成功</div>
+                            <div class="column-txt">
+                                <i></i>
+                                <p><em></em>转入验证通过，域名开始转入{companyname}</p>
+                                <p><em></em>转入成功大概需要5-7天的处理时间</p>
+                                <p><em></em>可在“转入列表”中关注转入状态，部分后缀注意通过所有者邮箱收取域名转移确认邮件</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--第三模块 开始-->
+            <div class="transfer-section">
+                <ul class="transfer-section-tab cl" id="J_transferSectionTabs">
+                    <li>
+                        <a class="section-item active" href="javascript:void(0);" data-target="J_zysx">注意事项</a>
+                    </li>
+                    <li>
+                        <a class="section-item" href="javascript:void(0);" data-target="J_zrjg">转入价格</a>
+                    </li>
+                    
+                </ul>
+                <!--注意事项 开始-->
+                <div class="wjf-ui-tab-content active" id="J_zysx">
+                    <div class="transfer-attention ">
+                        <ul>
+                            <li>
+                                <i class="ta-img ta-img1"></i>
+                                <p>
+                                    域名转入条件：域名状态正常，域名持有者身份证正常，没有任何争议与纠纷，没有费用拖欠问题； 涉及被盗或对买卖域名有争议的，禁止转入我司，否则我司会依据原注册商的申诉申请将域名转回； 为防止黑米流入，从Godaddy和ENOM 转入的.com/.net域名，转入成功30天内需要交易、PUSh、转出的， 需要提供实名材料、在原服务商的交易凭证等进行人工审核；
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img2"></i>
+                                <p>
+                                    域名转移后会自动续一年（.la/.cn.com/.cm/.gs/.cx/.hk除外），但域名必须距新注册/上次续费/上次转移60天后才能转移， 否则会导致损失最近一次续费。国内中英文域名,wang/top域名还要求距域名过期时间有15天以上才能转移；
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img3"></i>
+                                <p>
+                                    如果域名续费年限已经达到上限(一般10年)，则不能转移；
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img4"></i>
+                                <p>
+                                    转入成功后，可以登录会管理中心--域名管理，进行域名联系人信息修改和密码重置操作；
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img5"></i>
+                                <p>
+                                    若“使用{companyname}的DNS进行域名解析”，转入成功后系统会发邮件通知您， 并自动添加上主机名为www的解析记录指向您的服务器IP。转入过程中域名解析不会受到影响。
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img6"></i>
+                                <p>
+                                    如果原注册商擅自限制或拒绝域名转出，域名持有者可以按照以下方式进行投诉； 国际域名投诉地址：http://www.icann.org/en/resources/compliance/complaints/transfer/form 国内域名投诉方式： 投诉邮箱为supervise@cnnic.cn，投诉电话为010-58813000
+                                </p>
+                            </li>
+                            <li>
+                                <i class="ta-img ta-img7"></i>
+                                <p>
+                                    免费转入的域名至少需要60天后才可以转出。
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--注意事项 结束-->
+                <!--转入价格 开始-->
+                <div class="wjf-ui-tab-content" id="J_zrjg">
+                    <div class="transfer-price">
+                       
+                        <!--表格-->
+                        <div class="transfer-price">{transferTable}</div>
+                        <div class="pagination mt-30" id="pager"></div>
+                    </div>
+                </div>
+                <!--转入价格 结束-->
+				
+                <!--转入规则 开始-->
+                <div class="wjf-ui-tab-content" id="J_zrgz">
+                    <div class="transfer-rule">
+                        <p>
+                            域名转入（Domain Transfer）又称域名转移注册商，即将某域名从当前的注册商A转出，转入到{companyname}进行管理；
+                        </p>
+                        <p>
+                            {companyname}作为ICANN和CNNIC双重授权的顶级域名注册服务商，经过10年发展，已为30万家客户管理着超过100万的域名， {companyname}凭借优质的服务和稳定的解析、低廉的续费价格赢得了千万用户的信任，每天都有很多信赖{companyname}品牌的客户将域名转入{companyname}管理。 按照域名相关管理机构的规定（ICANN域名转移政策），原注册商不能擅自拒绝或限制域名的转出，也不能以任何名义对域名转出额外收取费用； 同样，成都西维数码科技有限公司也严格遵守以上原则，支持自由、免费的域名转出操作；
+                        </p>
+                        <p>
+                            如果原注册商擅自限制或拒绝域名转出，域名持有者可以按照以下方式进行投诉；
+                            <a href="/faq/list.asp?unid=692" target="_blank" class="link_blue">查看帮助</a><br>
+                            国际域名投诉地址：http://www.icann.org/en/resources/compliance/complaints/transfer/form<br>
+                            国内域名投诉方式： 投诉邮箱为supervise@cnnic.cn，投诉电话为010-58813000
+                        </p>
+                        <p>
+                            但根据上游的域名注册管理机构的政策规定，以下情况的域名无法转移注册商<br>
+                            &gt;域名注册后不足60天的；<br>
+                            &gt;域名刚完成转移60天内的；<br>
+                            &gt;域名处在纠纷、仲裁中或法院限制转出的；<br>
+                            &gt;距最后一次域名续费日小于60天的；
+                        </p>
+                    </div>
+                </div>
+                <!--转入规则 结束-->
+                <!--常见问题 开始-->
+                <div class="wjf-ui-tab-content" id="J_cjwt">
+                    <div class="transfer-faq">
+                        <dl class="faq-list cl">
+                            <dt>
+                                <span class="font16">Q</span>
+                                能否转入后办理过户？
+                            </dt>
+                            <dd>
+                                <span class="font16">A</span>
+                                <p>
+                                    可以的，只要您有域名转移密码，可以在转入过程中或转入成功后直接修改域名的所有人信息或相关联系信息，不需要提交原来的所有人的相关材料。
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl class="faq-list cl">
+                            <dt>
+                                <span class="font16">Q</span>
+                                域名转移过程中还可以正常解析吗？
+                            </dt>
+                            <dd>
+                                <span class="font16">A</span>
+                                <p>
+                                    转移过程中，DNS解析不会受到影响。如果您选择的是“转入成功后自动修改为{companyname}的DNS进行域名解析(推荐！)”， 则推荐您提交完域名转入后，立即到{companyname}管理中心添加好这个域名的解析记录。
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--常见问题 结束-->
+            </div>
+            <!--第三模块 结束-->
+        </div>
+    </div>
+</div>
+ 
+{#bottom.html}
+</body>
+</html>

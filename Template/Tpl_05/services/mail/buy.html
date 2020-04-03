@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}企业邮局在线购买</title>
+<meta name="description" content="{companyname}企业邮局简介-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="{companyname}企业邮局简介-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/buy_msg.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/weiyanlover.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/WebHosting.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #000000;
+	font-weight: bold;
+}
+.STYLE4 {color: #000000}
+-->
+</style>
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<script language="javascript" src="/config/ajax.js"></script>
+<script language=javascript>
+function chechftpname(mailname){
+		var url='buy.asp?module=checkmailname';
+		var sinfo='mailname='+mailname;
+		var divID='checkdiv';
+		document.getElementById('checkdiv').style.display='';
+		makeRequestPost1(url,sinfo,divID);
+	}
+function shopcheck(){
+		
+		if (typeof(document.getElementById('isftppd')!='undefined') && document.getElementById('isftppd')!=null){
+				var myv=document.getElementById('isftppd').value;
+				if (myv!=''){
+					
+					if (myv=='0'){
+								if(typeof(document.getElementById('okvalue')!='undefined') && document.getElementById('okvalue')!=null){
+									var vv=document.getElementById('okvalue').innerHTML;
+								}else{
+									var vv="输入格式有错误,请修正后重试";
+								}
+						alert(vv);
+						document.form1.m_bindname.focus();
+						return false;
+					}
+				}
+		}
+		var m_password=document.form1.m_password.value;
+		if (m_password.length>15 || m_password.lenght<5){
+			alert('域名密码长度应在5-15之间');
+			document.form1.m_password.focus();
+			return false;
+		}else{
+			var regxv=/^[\w\-\.]{5,15}$/;
+			var regreturn = regxv.test(m_password);
+			if (!regreturn){
+				alert('邮局密码格式错误,不能含有特殊字符');
+				return false;
+					
+			}
+			
+		}
+		return true;
+}
+</script>
+<body id="thrColEls">
+<div class="Style2009">
+{#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+<li><a href="/services/mail/">企业邮局</a></li>
+
+    </ul>
+  </div>
+<div id="MainContentDIV">
+{#mailleft.html}
+
+ <div id="MainRight" style="text-align:center;">
+      <div class="buymap clearfix" style="margin-bottom:5px;"><img src="/Template/Tpl_05/newimages/mail_buy_dot.gif" class="span_auto" /><img src="/Template/Tpl_05/newimages/order_step_buy.gif" class="span_auto floatright" /></div>
+      <div class="z_buymsg clearfix" style="padding-top:20px;">
+
+	 
+              <form name="form1" method="post" action="buy.asp" onSubmit="return shopcheck()">
+			    <dl class="clearfix"> 
+            <dt class="clearfix"> 
+              <p class="titlelog"></p>
+              <label>产品名:</label> 
+              <p>{productName}</p>
+              <label>产品编号:</label> 
+              <p>{productid}</p>
+              <label>邮局大小:</label> 
+              <p>{p_size}M</p>
+              <label>邮局特点:</label> 
+              <p>独立域名后缀,提高企业形象</p>
+              <label>单价:</label> 
+              <p>{price}元</p>
+              <label>用户数:</label> 
+              <p>{p_maxmen}个</p>
+            </dt>
+            <dd class="clearfix"> <label>选择机房：</label> 
+              <h1>{setroomlist}</h1>
+              <h2>*</h2>
+              <h3><div class="flod"><a href="/services/webhosting/SpeedTest.htm" target=a_blank>机房速度测试</a></div></h3>
+            </dd>
+            <dd class="clearfix"> <label>邮局域名：</label> 
+              <h1><input name="m_bindname" type="text" class="inputbox" onFocus="javascript:document.getElementById('checkdiv').style.display='none';" onBlur="chechftpname(this.value)" size="20">
+                    <div name="checkdiv" id="checkdiv"></div>
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix"> <label>密码：</label> 
+              <h1><input name="m_password" type="text" class="z_inputbox" size="30" value="{rndpass}" />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix"> <label>确认密码:</label> 
+              <h1><input name="m_password2" type="text" class="z_inputbox" size="30" value="{rndpass}"  />
+              </h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="clearfix"> <label>购买年限:</label> 
+              <h1>{buyHostpriceList}</h1>
+              <h2>*</h2>
+              <h3></h3>
+            </dd>
+            <dd class="agrmeet clearfix"> <label style="display:inline; width:auto; float:none;">
+              <input name="agreement" type="checkbox"  value="1" >
+              我同意不用此邮局发垃圾邮件或群发广告邮件</label></dd>
+            <dd class="agrmeet clearfix"> <label style="display:none; width:auto; float:none;">
+              <input type="radio" name="paytype" value="0" checked />
+              正式购买</label>  </dd>
+            <dd class="subbottom clearfix"> 
+			                      <input type="hidden" name="productid" value="{productid}">
+                      <input type="hidden" name="module" value="addshopcart">
+              <input type="submit" name="Submit1" value="确定购买" class="z_btn-buy" />
+              <input type="hidden" name="act" />
+            </dd>
+            <dt>&nbsp;       <div class="z_box_outline">
+        <div class="z_box_inline">
+          <div class="z_box_title"></div>
+                  <div>特别说明 ：我司企业邮局禁止发送垃圾邮件，禁止大量群发邮件。为防止垃圾邮件，系统对每用户每天发件数量有所限制，若有群发需求，请购买我司的专用群发邮局产品，普通邮局若发现群发行为将被立即停止发送功能，情节严重的永久关闭服务。</div>
+        </div>
+      </div></dt>
+          </dl>
+			  
+ 
+			  
+
+              </form>
+
+</div>
+</div>
+</div>
+</div>
+{#bottom.html}
+</body>
+</html>

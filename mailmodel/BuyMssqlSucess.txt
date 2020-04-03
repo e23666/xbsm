@@ -1,0 +1,22 @@
+尊敬的客户{user_name}：您好！
+　　您的mssql数据库:{dbname},型号:{productid},管理密码:{Password}已开通成功。
+	--注册时间:{now}
+
+
+　　
+　　登陆管理中心>业务管理，可以对数据库进行各类管理功能。
+
+　　　如果您有任何问题，请访问我们的客户中心：{companynameurl}　查看“常见问题”或在“有问必答”栏目中提交问题。同时，您也可拨打客户服务热线电话:{telphone}。
+
+
+										{companyname} 
+										{companynameurl}
+										地址：{companyaddress}
+										电子邮件：{supportmail}
+										邮编：{postcode}
+										电话：{telphone}
+										QQ: {oicq}
+-----------------------------------
+
+欢迎参加{companyname}广告联盟，让你的网站流量为您带来收入！
+详情请访问：{companynameurl}

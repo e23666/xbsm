@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{companyname}云主机|云服务器租用|云主机租用|云计算服务器</title>
+<meta name="description" content="{companyname}-全国领先的云主机服务商！{companyname}云主机：省钱、省力、省心。云主机比独立主机更便宜、云主机比VPS更稳定、管理易如虚拟主机！">
+<meta name="keywords" content="云主机租用,云服务器租用,云计算">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css" />
+<link href="/images/CloudHost/jqtransform.css" rel="stylesheet" type="text/css" />
+<link href="/images/CloudHost/cloud.css" rel="stylesheet" type="text/css" />
+<link href="/images/CloudHost/diyservernew.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" src="/jscripts/check.js"></script>
+<script language="javascript" src="/jscripts/diyserver.js"></script>
+<script language="javascript" src="/jscripts/inputrange.js"></script>
+<script language="javascript" src="/jscripts/jquery.jqtransform.js"></script>
+ <script src="getuserinfo.asp"></script>
+<script language="javascript">
+var cpucount={cpucount};
+var ramcount={ramcount};
+var paytestprice={paytestprice}; 
+var diyconfig={diyjson}; 
+var useripmsg="{useripmsg}"
+
+function pagestart(){
+	$("input[name^='S_radio_']:radio:checked").each(function(i, n) {
+        var proid=$(n).attr("name").replace("S_radio_","");
+		setmsg(proid);
+    });	
+	$("input[name^='S_radio_']:radio").click(function(){
+		var proid=$(this).attr("name").replace("S_radio_","");
+		setmsg(proid);
+	});
+}
+function setmsg(proid){
+	var roomObj=$("input[name^='S_radio_"+ $.trim(proid) +"']:radio:checked");	
+	var roomid=roomObj.val();	
+	$("div[id^='S_price_"+ proid +"']").slideUp(0);
+	$("#S_price_"+ proid +"_"+roomid).slideDown(0);
+	var Memory=$("input[name='memsize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var HardDisk=$("input[name='dissize_"+ proid +"_"+ roomid +"']:hidden").val();
+	var pname=$("input[name='pname_"+ proid +"']:hidden").val();
+	$("#"+proid+"_flux").html($("input[name='r_vpsband_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#"+proid+"_ip").html($("input[name='ismodrr_"+ proid +"_"+ roomid +"']:hidden").val());
+	$("#"+proid+"_mem").html(Memory);
+	$("#"+proid+"_disk").html(HardDisk);
+	$("#"+proid).click(function(){
+		if (proid!="xcloudF" && proid!="oemyun1")
+	{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*4 (四核心)")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}else{
+		window.location.href="/services/server/Order.asp?productid="+ escape(proid) +"&CPU="+escape("IntelXeon 5620*2")+"&Memory="+ escape(Memory) +"&HardDisk="+ escape(HardDisk) +"&HostID="+ escape(pname) +"&vps=okay&vr_room="+roomid;
+		}
+	});
+}
+$(function(){
+	pagestart();
+	$(".CloudRightMainSelectMenu>ul>li").click(function(){
+		var clk=$(this).index();
+		if (clk==0){
+			$(this).removeClass("Tab_xing_b").addClass("Tab_xing_a");
+			$(".CloudRightMainSelectMenu>ul>li:eq(1)").removeClass("Tab_teng_b").addClass("Tab_teng_a");
+			$("#CloudList001").show();
+			$("#CloudList002").hide();
+			}
+		else{
+			$(this).removeClass("Tab_teng_a").addClass("Tab_teng_b");
+			$(".CloudRightMainSelectMenu>ul>li:eq(0)").removeClass("Tab_xing_a").addClass("Tab_xing_b");
+			$("#CloudList001").hide();
+			$("#CloudList002").show();
+			}
+		});
+	});    	
+</script>
+</head>
+
+<body id="thrColEls">
+<div class="Style2009"> {#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/CloudHost/">云主机</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV"> {#cloudhostleft.html}
+    <div id="MainRight"> 
+      <!-- adv -->
+      <div id="DomainFlash"> <a href="/services/CloudHost/vs.asp"><img src="/template/Tpl_05/newimages/CloudHost/new_cloudpic_738x173.jpg" width="738" height="173"></a> </div>
+      <!-- adv -->
+        <div class="CloudRighticos">
+        <ul>
+          <li> <a href="javascript:void(null)" class="cloudiconh0">超快IO</a> </li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon2">强劲稳定</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon3">性价比高</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon4">安全可靠</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon5">灵活扩容</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon6">超强功能</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon7">正版系统</a></li>
+          <li class="pa"><a href="javascript:void(null)" class="cloudicon8">专业服务</a></li>
+        </ul>
+        <div class="cloud_description">
+          <div class="descriptionall des0 show">
+            <div class="description_arrow"></div>
+            <span>领先的分布式文件存储+万M传输网络+优化的算法，使得我们的平均IO可达200M/s，峰值800M/s.  &nbsp;&nbsp; </span></div>
+          <div class="descriptionall  des1">
+            <div class="description_arrow description_arrow1"></div>
+            <span>超过1000台服务器的资源池，完美支持热迁移，系统可靠性达99.95%以上.</span></div>
+          <div class="descriptionall  des2">
+            <div class="description_arrow description_arrow2"></div>
+            <span>性价比在国内一线服务商中极具竞争力，灵活方便的付款方式，中高端产品同行价格最低！</span></div>
+          <div class="descriptionall  des3">
+            <div class="description_arrow description_arrow3"> </div>
+            <span>每个云主机的数据保留4份于不同的存储节点，外加异机备份，让您的数据安全高枕无忧！</span></div>
+          <div class="descriptionall  des4">
+            <div class="description_arrow description_arrow4"></div>
+            <span>可在线扩容硬盘、内存、带宽等资源。扩容的磁盘大小是直接在原数据盘上增加大小，不用新建一个磁盘分区。</span> </div>
+          <div class="descriptionall  des5">
+            <div class="description_arrow description_arrow5"></div>
+            <span>可自助重装系统、更换操作系统、更换线路、自助恢复备份数据 ，自助重启，一键配置FTP、IIS等。</span></div>
+          <div class="descriptionall  des6">
+            <div class="description_arrow description_arrow6"></div>
+            <span>微软SPLA正版授权，不另收操作系统费用</span> 
+          </div>
+          <div class="descriptionall  des7">
+            <div class="description_arrow description_arrow7"></div>
+            <span>10年专业主机运营经验，7x24小时技术支持。</span></div>
+        </div>
+      </div>
+
+
+      <div class="CloudRightMain">
+       <div class="CloudRightMainSelectMenu">
+          <ul>
+            <li class="Tab_tx_a hand"></li>
+            <li class="Tab_tc_a hand"></li>
+          </ul>
+        </div>
+
+
+        <div id="CloudList001">
+          <form name="buyform" action="/services/CloudHost/default.asp" method="post">
+          <div class="CloudinfoBox RedLink widthnormal">
+            <p class="noA iconbg"> {companyname}弹性云主机参照亚马逊弹性云开发，真正的云计算架构，国内屈指可数。采用分布式存储，每个云主机的数据保留4份，实时存储于集群中的若干台服务器上，即使同时损坏3份数据，也不影响云主机的正常使用！支持热迁移，系统可靠性达99.95%以上。结合10年主机产品运营经验，倾力打造高可靠性、高IO、适中的价格、最易于使用的云主机！ </p>
+            <div class="line_b_b"><img src="/images/spacer.gif" width="1" height="1"></div>
+             
+          </div>
+          <div id="titlemsg" style="width: 210px; top: 706px; left: 1021px; display: none;">
+            <div id="titletext" style="width: 180px; height: 60px;"><span style="color:#000"></span></div>
+            <div id="top_left" style="width: 200px;"></div>
+            <div id="top_right"></div>
+            <div id="bottom_left" style="width: 200px; height: 50px;"></div>
+            <div id="bottom_right" style="height: 50px;"></div>
+            <div class="clearbottom"></div>
+          </div>
+          <div class="qrlayout selectformqr">
+          <div class="qrtop"><img src="/images/CloudHost/ebscloud/qrtop.gif" width="700" height="24"></div>
+          <div class="qrmain">
+          <dl class="linebox " id="rebox"></dl></div>
+          <div class="qrbottom"><img src="/images/CloudHost/ebscloud/qrbottom.gif" width="700" height="27"></div></div>
+          <div class="selectform" id="putbox">
+          
+            
+            
+            
+              <div style=" text-align:left; "><span style="font-size:14px; height:30px; line-height:30px; padding-left:23px; color:#000"> 推荐配置:</span><span id="tuijian_msg"><input type="button" name="tuijian_btn_0" value="入门型" class="btn_page_" style="margin-top:3px;">&nbsp;&nbsp;<input type="button" name="tuijian_btn_1" value="标准型" class="btn_page_ btn_page_1" style="margin-top:3px;">&nbsp;&nbsp;<input type="button" name="tuijian_btn_2" value="商务型" class="btn_page_" style="margin-top:3px;">&nbsp;&nbsp;<input type="button" name="tuijian_btn_3" value="舒适型" class="btn_page_" style="margin-top:3px;">&nbsp;&nbsp;<input type="button" name="tuijian_btn_4" value="企业型" class="btn_page_" style="margin-top:3px;">&nbsp;&nbsp;<input type="button" name="tuijian_btn_5" value="豪华型" class="btn_page_" style="margin-top:3px;">&nbsp;&nbsp;</span></div>
+              <div class="fit">
+                <div class="fitall fit0">
+                  <div class="description_arrow"></div>
+                  <span>适用于中小企业展示型网站</span> </div>
+                <div class="fitall fit1">
+                  <div class="description_arrow"></div>
+                  <span>适用于企业官方网站、个人站长</span> </div>
+                <div class="fitall fit2">
+                  <div class="description_arrow"></div>
+                  <span>适用于地方/行业门户网站</span> </div>
+                <div class="fitall fit3">
+                  <div class="description_arrow"></div>
+                  <span>适用于网上商城、团购网站等</span> </div>
+                <div class="fitall fit4">
+                  <div class="description_arrow"></div>
+                  <span>适用于社区SNS/论坛/ERP/OACRM等</span> </div>
+                <div class="fitall fit5">
+                  <div class="description_arrow"></div>
+                  <span>适用于网络游戏，其它高端应用等</span> </div>
+              </div>
+              <div class="z_buymsg clearfix" style="padding-top:20px; padding-left:20px; padding-right:20px;">
+              	
+                <dl class="linebox1">
+                  <dd class=" ddline clearfix" style="margin-bottom:0; height:15px;width:667px;"></dd>
+                  <dd class="clearfix" id="cpumsg">
+                  <div id="cpu_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none">建议至少用双核，单核在很多情况下容易发生CPU100%占用影响性能</div>
+                    <label class="cpu_label">CPU<span><img src="/images/CloudHost/ebscloud/help.jpg" onmouseover="javascript:seetitle(this,'CPU越多，计算速度越快。&lt;br /&gt;对网站访问量较大的网站，推荐使用4核或8核CPU！',320,32)" onmouseout="javascript:closetitlebox()" style="cursor:pointer; margin-left:3px;"></span></label>
+                    <div class="cpu_icon"></div>
+                    <label class="msg" for=" ">
+                   <div class="clearfix width540" id="cpu_range"> </div>
+                    <div  class="clearfix width540" id="cpuvalue">{cpulist}</div>
+                    </label>
+                  </dd>
+                  <dd class="clearfix" id="rammsg">
+                  <div id="ram_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center;display:none ">建议选择1G以上内存以获得更好的服务体验！</div>
+
+                    <label class="ram_label">内存<span><img src="/images/CloudHost/ebscloud/help.jpg" onmouseover="javascript:seetitle(this,'内存越大，速度越快；&lt;br /&gt;为保证良好的体验，512M内存不提供windows操作系统。',350,32)" onmouseout="javascript:closetitlebox()" style="cursor:pointer; margin-left:3px;"></span></label>
+                    <div class="ram_icon"></div>
+                    <label class="msg" for=" ">
+                    <div class="clearfix width540" id="ram_range"> </div>
+                    <div  class="clearfix width540" id="ramvalue">{ramlist}</div>
+                    </label>
+                  </dd>
+                  <dd class="clearfix" id="datamsg" style="margin-bottom:30px;">
+                    <label class="data_label">硬盘<span ><img src="/images/CloudHost/ebscloud/help.jpg" onMouseOver="javascript:seetitle(this,'最低50G硬盘，其中系统盘分配大小为30GB；<br />数据盘默认为20GB，数据盘以10G递增。',300,32)" onMouseOut="javascript:closetitlebox()"  style="cursor:pointer; margin-left:3px;" /></span></label>
+                    <div class="data_icon"></div>
+                    <label class="msg" for=" ">
+                    <div style="width:520px;" id="data_range"><a class="slider-leftbutton"></a><div class="slider"><div class="progress" style="width: 38.3px;"></div><a href="#" class="handle" style="left: 21.8px;"></a></div><a class="slider-rightbutton"></a><input type="text" data-orig-type="range" name="data" min="50" max="500" step="10" class="range"><div style="float:left;display:inline;margin-top:7px">GB</div></div>
+                    <div style="width:520px;clear:both" class="clearfix">
+                      <div style="float:left; display:inline;margin:0;margin-left:30px; width:40px; text-align:left">50G</div>
+                      <div style=" float:left;margin:0;display:inline; width:40px; margin-left:280px; text-align:right">1000G</div>
+                      <div style="float:left; width:80px; margin-left:25px;display:inline;">(10GB递增)</div>
+                    </div>
+                    <div style="clear:both; padding-left:150px;" class="clearfix"> 系统盘分配大小为30GB </div>
+                    </label>
+                  </dd>
+             
+                  <dd class="clearfix" id="fluxmsg">
+				     <div id="flux_datatishi" style="background-color:#FFC; clear:both; border:1px solid #FC3; width:465px; margin-left:155px; text-align:center; display:none ">选择0M带宽不能访问公网（不分配公网IP），且后期亦不能升级带宽！</div>
+
+                    <label class="flux_label">带宽<span><img src="/images/CloudHost/ebscloud/help.jpg" onmouseover="javascript:seetitle(this,'带宽越大，速度越快、支持的同时访问人数更多。&lt;br /&gt;1M带宽仅适合于测试、挂机等应用，网站应用至少2M，推荐3M以上带宽！',440,32)" onmouseout="javascript:closetitlebox()" style="cursor:pointer; margin-left:3px;"></span></label>
+                    <div class="flux_icon"></div>
+                    <label class="msg" for=" ">
+                    <div  class="clearfix width540" id="flux_range"></div>
+                    <div  class="clearfix width540">
+                      <div style="float:left;margin:0;display:inline; width:40px;margin-left:30px; text-align:left">0M</div>
+                      <div  style=" float:left;margin:0;display:inline; width:40px; margin-left:282px; text-align:right;">100M</div>
+                      <div style="float:left; width:80px;display:inline; margin-left:24px ">(1Mbps递增)</div>
+                    </div>
+                    </label>
+                  </dd>
+                  <dd class="clearfix mindd" style="margin-bottom:20px;">
+       <label>操作系统<span ><img src="/images/CloudHost/ebscloud/help.jpg" onMouseOver="javascript:seetitle(this,'为了保证良好的性能体验，512M内存不提供windows操作系统<br />Sqlserver2000至少需要1G内存<br />Sqlserver2005至少需要2G内存<br />Sqlserver2008至少需要3G内存<br />Windows Server 2008 至少需要2G内存<br />Windows server2012至少需要3G内存',400,96)" onMouseOut="javascript:closetitlebox()"  style="cursor:pointer; margin-left:3px;" /></span></label>
+                    <label class="msg"  for=" ">
+                      {getCHOICE_OS}
+                    </label>
+                  </dd>
+                  <dd class="clearfix mindd notop">
+                    <label>线路<span><img src="/images/CloudHost/ebscloud/help.jpg"  onMouseOver="javascript:seetitle(this,'电信线路适合主要客户群分布在电信网络的客户<br />如果需要互联互通，联通用户也要求访问较快请选择智能多线。<br>若需要北京、香港等机房，请选择套餐云主机',360,45)" onmouseout="javascript:closetitlebox()" style="cursor:pointer; margin-left:3px;"></span></label>
+                    <div class="msg" for=" ">
+                      <ul class="z_bubblebox clearfix" style="width:550px; margin:0;">
+                        <li class="top clearfix"><img src="/images/CloudHost/ebscloud/left_top_rad.jpg" class="t_left"><img src="/images/CloudHost/ebscloud/right_top_rad.jpg" class="t_right"></li>
+                        <li class="mid clearfix">
+                          <div class="m_content clearfix" id="bubbleContent" style="color:#06c;">
+                            <div>
+                               {getserverRoom}
+                                <div id="agentroom_datatishi" style="background-color:#FFC; clear:both; margin-top:5px; text-align:center; display:none">请根据客户上网的方式推荐合适的机房线路，联通用户推荐北京BGP线路，否则远程登录会卡。</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="bottom clearfix " style="margin:0; padding:0; clear:both; "><img src="/images/CloudHost/ebscloud/left_bottom_rad.jpg" class="t_left"><img src="/images/CloudHost/ebscloud/right_bottom_rad.jpg" class="t_right"></li>
+                      </ul>
+                    </div>
+                  </dd>
+                  
+               <dd CLASS="clearfix mindd notop" >
+                    <label>存储模式<span ><img src="/images/CloudHost/ebscloud/help.jpg" onMouseOver="javascript:seetitle(this,'<strong>分布式存储:</strong><br />每份数据保留4份，安全性和稳定性更高，支持热迁移。适合对稳定性、安全性要求很高的应用。<br /><strong>磁盘阵列柜存储：</strong><br />高端磁盘阵列柜，SAS硬盘做Raid阵列，IO速度很高，但不支持热迁移。适合对IO要求特别高的应用。',420,110)"  onMouseOut="javascript:closetitlebox()"  style="cursor:pointer; margin-left:3px;" /></span></label>
+                    <div class="msg" for=" " >
+                      <ul class="z_bubblebox clearfix"  style="width:550px; margin:0;">
+                        <li class="top clearfix"><img src="/images/CloudHost/ebscloud/left_top_rad.jpg" class="t_left" /><img src="/images/CloudHost/ebscloud/right_top_rad.jpg" class="t_right" /></li>
+                        <li class="mid clearfix"  >
+                          <div class="m_content clearfix"  style="color:#06c;">
+                            <div>
+                            {getdisktype}
+                             
+                            </div>
+                          </div>
+                        </li>
+                        <li class="bottom clearfix " style="margin:0; padding:0; clear:both; "><img src="/images/CloudHost/ebscloud/left_bottom_rad.jpg" class="t_left" /><img src="/images/CloudHost/ebscloud/right_bottom_rad.jpg" class="t_right" /></li>
+                      </ul>
+                    </div>
+                  </dd>   
+                 <dd CLASS="clearfix clearfix  notop" id="J_ddosbpsDom" style="display: none;" >
+                    <label>防护值<input type="hidden" name="ddos" value="0"></label>
+                    <label class="msg" for=" ">
+                    <div class="otherbox config-ddos tuijian-config">  </div>
+                    </label>
+                  </dd>  
+                  
+                  <dd class="clearfix mindd notop">
+                    <label><a href="/services/server/vip.asp" target="_blank"   title="查看服务标准">服务标准</a><span><img src="/images/CloudHost/ebscloud/help.jpg" onmouseover="javascript:seetitle(this,'请根据您自己的技术能力选择合适的服务标准，&lt;br /&gt;可以包月也可以按单项服务内容单独收费。',300,32)" onmouseout="javascript:closetitlebox()" style="cursor:pointer; margin-left:3px;"></span></label>
+                    <div class="msg" for=" ">
+                      <ul class="z_bubblebox clearfix" id="bubblebox_" style="width:550px; margin:0;">
+                        <li class="top clearfix"><img src="/images/CloudHost/ebscloud/left_top_rad.jpg" class="t_left"><img src="/images/CloudHost/ebscloud/right_top_rad.jpg" class="t_right"></li>
+                        <li class="mid clearfix">
+                          <div class="m_content clearfix" id="bubbleContent" style="color:#06c;">
+                          {servicetype}
+                          </div>
+                          
+                          
+                          
+                        </li>
+                        <li class="bottom clearfix" style="margin:0; padding:0"><img src="/images/CloudHost/ebscloud/left_bottom_rad.jpg" class="t_left"><img src="/images/CloudHost/ebscloud/right_bottom_rad.jpg" class="t_right"></li>
+                      </ul>
+                    </div>
+                  </dd>
+                  <dd class="clearfix mindd">
+                    <label>付费方式:</label>
+                    {getVpsPayMethod} 
+                   </dd>
+                  <dd class="clearfix mindd">
+                    <label>购买时长:</label>
+                    <label class="msg" id="renewtime_msg" for=" "></label>
+                  </dd>
+                  <dd class="clearfix mindd">
+                  <label>购买数量:</label>
+                    <label class="msg" for=" ">
+                    <select name="buycount" style="width:200px;">
+                    <option value="1">1台</option>
+                    
+                    <option value="2">2台</option>
+                    
+                    <option value="3">3台</option>
+                    
+                    <option value="4">4台</option>
+                    
+                    <option value="5">5台</option>
+                    
+                    <option value="6">6台</option>
+                    
+                    <option value="7">7台</option>
+                    
+                    <option value="8">8台</option>
+                    
+                    <option value="9">9台</option>
+                    
+                    <option value="10">10台</option>
+                    </select>
+                    </label>
+                    
+                    
+                  </dd>
+                  <dd class="clearfix mindd">
+                    <label>价格:</label>
+                    
+                       <label class="msg clearfix" for=" ">
+                    <div class="price_red" id="pricelist" style="font-size:24px; height:30px; line-height:30px; float:left; "></div>
+                    <div style="font-size:16px; height:30px; line-height:30px; float:left">元</div>
+                    </label>
+   
+                  </dd>
+                  <dd class="mindd clearfix" style="border-bottom:none; text-align:center; width:667px; border-top:1px solid #dddddd">
+                    <label style="display:inline; width:auto; float:none; line-height:25px; height:25px" for="agreement">
+                      <input name="agreement" id="agreement" type="checkbox" value="1">
+                      我已阅读并同意</label>
+                    <a href="/customercenter/yunxiyi.asp" target="_blank" style="color:#06c">{companyname}云主机租用协议</a> </dd>
+                  <dd class="mindd" style="border-bottom:none; width:667px; text-align:center;">
+                    <input type="button" class="z_btn-submit-diy" name="subbtton">
+                    <input type="button" class="z_btn-submit-buytest-diy" name="testbtton">
+                    <div id="loadsubinfo">数据正在处理中.请勿刷新或关闭浏览器...</div>
+                    <input type="hidden" name="act"><input type="hidden" name="paytype" value="0">
+                  </dd>
+                </dl>
+              </div>
+          
+          </div>
+          <div class="CloudRightMainbuttom"><img src="/template/Tpl_05/newimages/CloudHost/cloudhost_64.jpg" width="750" height="10"></div>  </form>
+         </div>
+    
+	
+
+
+
+        
+       
+        
+       
+     
+      
+      <!--弹头性样式-->
+      
+      
+      
+      
+      
+      
+       <div id="CloudList002" style="display:none1">
+          <div class="CloudinfoBox RedLink">
+            <p class="noA">买一台云主机=拥有海量服务器!千兆光纤、骨干节点、BGP智能多线机房，智能免费备份，数据随时恢复，按需购买，平滑升级，无需停机 
+              ，免费提供正版系统！{companyname}云主机比独立主机更便宜 ,比VPS更强更稳, 管理易如虚拟主机！ </p>
+            <div class="line_b_b"><img src="/template/Tpl_05/newimages/CloudHost/spacer.gif" width="1" height="1"></div>
+            <p class="noB"> 结合多年主机经验，免费配置好PHP、Mysql、Asp.net等主机环境。让您享受"精装修"、"拎包入住"的感觉!　 </p>
+          </div>
+          <div class="CloudinfoBox">
+            <div class="CloudProBox3">
+              <div class="CloudProBox_title">{ServerName(oemyun1)}</div>
+              <div class="ProListinfoList">
+                <div class="aal">处理器</div>
+                <div class="ccl" id="oemyun1_cpu">IntelXeon 5620*2 (双核) </div>
+                <div class="aal">内存</div>
+                <div class="ccl" id="oemyun1_mem"></div>
+                <div class="aal">硬盘</div>
+                <div class="ccl" id="oemyun1_disk"></div>
+                <div class="aal">带宽</div>
+                <div class="ccl" id="oemyun1_flux"></div>
+                <div class="aal">IP</div>
+                <div class="ccl" id="oemyun1_ip"></div>
+                <div>
+                  <div class="aal">机房</div>
+                  {ServerRoomList(oemyun1)} </div>
+              </div>
+              <div class="ppl2"><a id="oemyun1" href="###"><img src="/template/Tpl_05/newimages/CloudHost/cloudbutton.jpg" width="144" height="35"></a></div>
+            </div>
+            <div class="CloudProBox">
+              <div class="CloudProBox_title">{ServerName(oemyun2)}</div>
+              <div class="ProListinfoList">
+                <div class="aal">处理器</div>
+                <div class="ccl" id="oemyun2_cpu">IntelXeon 5620*4 (四核心) </div>
+                <div class="aal">内存</div>
+                <div class="ccl" id="oemyun2_mem"></div>
+                <div class="aal">硬盘</div>
+                <div class="ccl" id="oemyun2_disk"></div>
+                <div class="aal">带宽</div>
+                <div class="ccl" id="oemyun2_flux"></div>
+                <div class="aal">IP</div>
+                <div class="ccl" id="oemyun2_ip"></div>
+                <div>
+                  <div class="aal">机房</div>
+                  {ServerRoomList(oemyun2)} </div>
+              </div>
+              <div class="ppl3"><a id="oemyun2" href="###"><img src="/template/Tpl_05/newimages/CloudHost/cloudbutton.jpg" width="144" height="35"></a></div>
+            </div>
+            <div class="CloudProBox4">
+              <div class="CloudProBox_title">{ServerName(oemyun3)}</div>
+              <div class="ProListinfoList">
+                <div class="aal">处理器</div>
+                <div class="ccl" id="oemyun3_cpu">IntelXeon 5620*4 (四核心) </div>
+                <div class="aal">内存</div>
+                <div class="ccl" id="oemyun3_mem"></div>
+                <div class="aal">硬盘</div>
+                <div class="ccl" id="oemyun3_disk"></div>
+                <div class="aal">带宽</div>
+                <div class="ccl" id="oemyun3_flux"></div>
+                <div class="aal">IP</div>
+                <div class="ccl" id="oemyun3_ip"></div>
+                <div>
+                  <div class="aal">机房</div>
+                  {ServerRoomList(oemyun3)} </div>
+              </div>
+              <div class="ppl4"><a id="oemyun3" href="###"><img src="/template/Tpl_05/newimages/CloudHost/cloudbutton.jpg" width="144" height="35"></a></div>
+            </div>
+            <div class="CloudProBox">
+              <div class="CloudProBox_title">{ServerName(oemyun4)}</div>
+              <div class="ProListinfoList">
+                <div class="aal">处理器</div>
+                <div class="ccl" id="oemyun4_cpu">IntelXeon 5620*4 (四核心) </div>
+                <div class="aal">内存</div>
+                <div class="ccl" id="oemyun4_mem"></div>
+                <div class="aal">硬盘</div>
+                <div class="ccl" id="oemyun4_disk"></div>
+                <div class="aal">带宽</div>
+                <div class="ccl" id="oemyun4_flux"></div>
+                <div class="aal">IP</div>
+                <div class="ccl" id="oemyun4_ip"></div>
+                <div>
+                  <div class="aal">机房</div>
+                  {ServerRoomList(oemyun4)} </div>
+              </div>
+              <div class="ppl3"><a id="oemyun4" href="###"><img src="/template/Tpl_05/newimages/CloudHost/cloudbutton.jpg" width="144" height="35"></a></div>
+            </div>
+          </div>
+      
+        <div class="CloudRightMainbuttom"><img src="/template/Tpl_05/newimages/CloudHost/cloudhost_64.jpg" width="750" height="10"></div>
+      </div>
+        </div>
+
+
+
+     
+<div class="CloudRightMain">
+        <div class="CloudRightMainbuttom"><img src="/images/CloudHost/CloudRightMainbuttom_top.jpg" width="750" height="11"></div>
+        <div class="CloudRightMainMid">
+          <div class="nav_unitive">
+            <ul>
+              <li class="normal active">云主机介绍</li>
+              <li class="normal">选择理由</li>
+              <li class="normal">常见问题</li>
+             
+            </ul>
+          </div>
+          <div id="chy_box_0" class="cloud_border RedLink">
+            <div class="jieshao pa15"> <a href="/services/cloudhost/what.asp" target="_blank"><img src="/images/CloudHost/ebscloud/jiagouimg.jpg" width="666" height="887" alt="" border="0"></a> </div>
+           
+          </div>
+          <div id="chy_box_1" class="cloud_border RedLink disable">
+            <div class="sel_youshi pa15">
+              <ul>
+                <li>
+                  <div class="leftimg ys_icon1"></div>
+                  <div class="rightword">
+                    <h1>稳定！！！</h1>
+                    <span>{companyname}“弹性云主机”的首要目标是打造国内最稳定的云计算平台，并不一味追求最低的价格。我们在国外成熟的分布式计算系统平台上不断改进优化，解决了IO速度慢、不停机热迁移等一系列问题，每份数据保留4个副本,彻底避免单点故障。 </span></div>
+                </li>
+                <li>
+                  <div class="leftimg ys_icon2"></div>
+                  <div class="rightword">
+                    <h1>弹性云计算，灵活扩容</h1>
+                    <span>计算资源可弹性伸缩；可以按需购买、变更云主机的配置。可随时升级、降级资源，月付、季付、年付均可提供，灵活满足不断变化的应用需求。</span></div>
+                </li>
+                <li>
+                  <div class="leftimg ys_icon3"></div>
+                  <div class="rightword">
+                    <h1>品牌&amp;规模</h1>
+                    <span>{companyname}始创于2002年，注册资本1000万元，目前团队规模数百人，是国内一线知名品牌服务商，全国3强！管理着50万个域名、30万个网站，拥有优质的产品和良好的服务口碑！相同的价格，选择大品牌的更有保障！</span></div>
+                </li>
+                <li>
+                  <div class="leftimg ys_icon4"></div>
+                  <div class="rightword">
+                    <h1>备案方便</h1>
+                    <span>10年主机行业服务经验，备案网站总量全国3强。遍布全国的备案核点、人性化的备案流程、专业的备案团队、完善的备案系统，让您轻松通过网站备案！</span></div>
+                </li>
+                <li>
+                  <div class="leftimg ys_icon5"></div>
+                  <div class="rightword">
+                    <h1>10年行业经验，更懂网站托管</h1>
+              10年来我们不做游戏客户、不做视频客户，只专注于中小网站的托管，管理着近30万个网站。丰富的运维经验，让我们可以为客户提供更多关于网站备案、服务器配置、性能优化、数据库维护、数据备份恢复等方面的服务。还能深入到应用级别，如discuz、shopex的伪静态，域名301跳转，搜索引擎优化建议等，而其他刚进入云计算行业的服务商一般只能提供“祼机”，无法提供更多关于网站方面的服务。高效的运维与客服系统，工单回复速度业内领先。
+			        <span>
+
+</span></div>
+                </li>
+                <li>
+                  <div class="leftimg ys_icon6"></div>
+                  <div class="rightword">
+                    <h1>高效的运维与客服</h1>
+                    <span>免费7X24小时客服支持；部署和备份/恢复更快捷，节省宝贵时间；数据和服务更可靠、更安全，轻松帮您
+                    节省20%-70%人力运维成本。</span></div>
+                </li>
+              </ul>
+              <a href="/services/cloudhost/vs.asp" target="_blank" title="查看更多性能对比" class="amore"></a> </div>
+          </div>
+          <div id="chy_box_2" class="cloud_border cloudFAQ RedLink disable">
+            <dl>
+              <dt>什么是弹性云主机？</dt>
+              <dd>弹性云主机是基于若干台服务器或集群通过相关技术进行资源整合，通过云端控制平台按需生成相关主机资源，每台云服务器都有完全的控制权限，可根据用户需要配置环境，操作与独立主机没有区别。
+                云服务采用分布式存储，免费备份服务，按需购买，可实现平滑升级，具有高性价比、高安全性、高灵活性。</dd>
+            </dl>
+            <dl>
+              <dt>弹性云主机可以灵活扩容，按需购买吗？</dt>
+              <dd>可以。{companyname}弹性云主机按需购买，可单独扩容CPU、磁盘、带宽等。</dd>
+            </dl>
+            <dl>
+              <dt>弹性云主机可以增加独立IP地址吗？</dt>
+              <dd>可以。{companyname}弹性云主机支持增加独立IP地址，200元/个/年。</dd>
+            </dl>
+            <dl>
+              <dt>网站数据丢失了，还能恢复吗？</dt>
+              <dd>{companyname}弹性云主机数据实时保存4份，即使同时损坏3份也不会导致数据丢失。同时系统每2天左右进行一次云备份。对于误删除的数据，用户可以在控制面板自行恢复系统数据至上次的备份，同时可以单独挂载备份盘恢复部分数据。</dd>
+            </dl>
+            <dl> 
+              <dt>弹性云主机与套餐云主机有何区别？</dt>
+              <dd>弹性云主机是我司研发的第三代云主机系统，比第二代套餐云主机的优势主要有：购买更灵活(可随时自由升级、降级)、可靠性更高（故障率更低）、支持<a href="http://baike.baidu.com/view/4413972.htm" target="_blank"><font color="#0000FF">热迁移</font></a>、arp防护、内网、多重备份等更多新功能，适合对稳定性要求更高，对价格不是特别敏感的中高端客户。第二代套餐云主机的IO更快(不需要同时写4份数据)，在同等高配置的情况下价格比弹性云要便宜，适合于对稳定性要求不是特别高但是要求价格便宜的客户群,同时套餐云主机也适合于对磁盘使用量特别大和对免备案机房有需求的客户。</dd>
+            </dl>
+            <dl>
+              <dt>我不懂技术可以购买你们的云主机吗？</dt>
+              <dd>可以的，我们提供“网站管理助手”和强大的控制面板，可以如虚拟主机一样简单地使用我们的云主机。但如果您不太懂技术，建议使用我们推荐的带sqlserver+网站管理助手的操作系统模板，不要使用纯净版和linux系统，否则可能操作起来比较困难。</dd>
+            </dl>
+			   
+            <dl> 
+              <dt>市场上有很多提供云计算的服务商，如何辨别真伪？</dt>
+              <dd>目前国内有很多提供“云主机”的公司，但绝大多数是将一台大硬盘、大内存的物理服务器通过虚拟化技术分割后卖给客户，实际上就是VPS。VPS跟云主机在使用方面基本完全一致，所以很多时候客户感知不到。但VPS跟真正的云主机比起来，在容灾、故障迁移、弹性扩展方面有明显差距。国内目前只有阿里云、{companyname}、华为云等少数几家公司是提供真正的云计算，客户在购买前可以问服务商以下问题即可判断是否是真的云计算： 
+                <br>
+                <br>
+                A.存储方面你们是使用本机存储还是分布式存储？ 当我的云主机(VM)所在的物理服务器发生硬件故障（如主板损坏）的时候，能不能在5分钟之内将我的<a href="https://www.west.cn/cloudhost/" target="_blank">云主机</a>切换到其他备用节点并恢复服务？ 
+                <br>
+                B.是否支持热迁移？ 因原集群的负载过高，需要迁移到新集群的时候，是否可以不停机热迁移，IP是否不变？ 物理计算服务器日后肯定有升级换代的情况，在物理服务器维护的时候是否会导致我的云主机中断？ 
+                <br>
+                C.我需要10台云主机，这10台主机之间是否有内网相联？是否是私有内网？ <br>
+                D.能随时扩容内容、扩容硬盘、增减带宽吗？扩容的时候是否需要迁移服务器、中断多长时间？<br>
+                <br>
+                {companyname}的云主机使用分布式存储，支持故障快速切换，支持热迁移，集群热迁移不需要停机，IP不变。物理服务器升级维护不会导致云主机中断，默认支持私有内网互联，更加快速、安全。可以随时对内存、带宽、CPU进行升级或降级，硬盘可以随时升级扩容（硬盘不能减小容量）。扩容的时候不用迁移服务器集群，只需要重启一次，中断1分钟左右。 
+              </dd>
+            </dl>
+          </div>
+          <div id="chy_box_3" class="cloud_border RedLink disable">
+            <div class="waitingDiv" style="height:700px"><img src="/images/waiting.gif"></div>
+          </div>
+        </div>
+        <div class="CloudRightMainbuttom"><img src="/images/CloudHost/cloudhost_64.jpg" width="750" height="10"></div>
+      </div>
+ 
+
+</div>
+</div>
+
+
+ 
+{#bottom.html} 
+<!-- Google Code for &#20877;&#33829;&#38144;&#21015;&#34920; Remarketing List --> 
+
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+var google_conversion_id = 1045757556;
+
+var google_conversion_language = "en";
+
+var google_conversion_format = "3";
+
+var google_conversion_color = "666666";
+
+var google_conversion_label = "saYyCNScjQIQ9PzT8gM";
+
+var google_conversion_value = 0;
+
+/* ]]> */
+
+</script> 
+<script type="text/javascript" src="/template/Tpl_05/jscripts/conversion.js">
+
+</script>
+<noscript>
+</noscript>
+</body>
+</html>

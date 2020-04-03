@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>国际国内cn域名注册申请-{companyname}-专业虚拟主机域名注册服务商!域名注册虚拟主机租用</title>
+<meta name="description" content="域名服务-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="域名服务-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/whois.css">
+	<link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+	<script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+	<script language="javascript" src="/template/Tpl_2016/jscripts/jquery.cookie.js"></script>
+	<script language="javascript" src="/template/Tpl_2016/jscripts/common.js"></script><script type="text/javascript">
+	<!--
+		var freeid="{freeid}";
+	//-->
+	</script>
+	<script>
+	function submitchecken2(domain,suffix){
+		esym=domain
+ 
+		var ajaxurlstr="newAjax2016.asp?action=2";
+		var info="searchedDomainName="+escape($.trim(domain)) +"&suffix="+ escape($.trim(suffix)) +"&module=domainsearch&t=1";
+		document.getElementById("hrefimg0").disabled=true;
+		$.post(ajaxurlstr,info,function(data){
+				$("#contentID").html(data)		
+				document.getElementById("hrefimg0").disabled=false;
+			})
+	 
+	}
+
+function getTopost(url,domainstr){
+	if(url!="" && domainstr!=""){
+	
+		document.form1.domain.value=domainstr;
+	
+		document.form1.ajaxFree.value=freeid;
+		document.form1.action=url;
+		
+		document.form1.submit();
+	}
+}
+function doallsub(v){ 
+	 
+	var pd=false;
+	alert(1111)
+	var domainstr=""
+	var itemsset=$("input[name='domainsset']:checked");
+
+ 	if (itemsset.length<1)
+	{
+ 
+		$.dialog.alert("请选择您要注册的域名");
+		return false;
+	}
+	if(freeid!="")
+	{
+		$.dialog.alert("赠品域名只能选择单个域名注册")
+		return false;
+	}
+ 
+
+	//document.form1.domain.value=domainstr;
+   
+	$("input[name='domainsset']").attr("name","domain")
+	$("input[name='ajaxFree']").val(freeid);
+	$("form[name='form1']").attr("action","/services/domain/dmbuymore.asp") 
+	//document.form1.submit();
+ 
+	
+}
+
+
+
+</script>
+</head>
+<body class="min990">
+{#top.html}
+
+
+<div id="content">
+	<!--查询框 开始-->
+	<div class="whois-search">
+		<div class="wide1190 cl pos-r">
+			<div class="searchTxt">超过<span class="searchNum">10,000,000</span>域名在{companyname}注册</div>
+			<div class="searchDiv">
+				<form class="query-input-container" action="/services/domain/newwhois.asp" method="post" id="J_queryDomainForm" onsubmit="return whois2016.submitchecken(this);">
+					<p class="input-wrapper">
+						<textarea type="text" name="searchedDomainName" class="common-input" value="" placeholder="请输入您要注册的域名，如:west" id="J_searchedDomainName"></textarea>
+						<input name="du" value="" type="hidden">
+						<input value="domainsearch" name="module" type="hidden">
+						<input value="IntDomain" name="searchType" type="hidden">
+						<input value="check" name="action" type="hidden">
+						<input value="one" name="zxwpds" type="hidden">
+						<input value="" name="suffix" type="hidden">
+                        <input value="2" name="str" type="hidden">
+						<span class="clear-domain-input"></span>
+					</p>
+					<input class="domain-query-btn pngFix" value="查域名" type="submit" id="hrefimg0" >
+				</form>
+			</div>
+			<div class="cl">
+				<div class="whois-search-more" id="J_expandDomainExt">点击展开更多域名查询</div>
+			</div>
+			<div class="domain-ext-cate-container" id="J_domainExtContainer">
+				<span class="close-icon"></span>
+				<ul class="wjf-ui-tab-small cl" id="domainsTab">
+					<li>
+						<a class="active" href="javascript:void(0);" data-target="hotDomain">热销域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="newTopDomain">新顶级域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="chineseDomain">中文域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="nationDomain">国别域名</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" data-target="provinceDomain">CN域名</a>
+					</li>
+				</ul>
+				<!-- 热销域名 -->
+				<div id="hotDomain" class="wjf-ui-tab-content active">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="hot_select_op_1">
+								<input class="select-op" id="hot_select_op_1" name="select-op-1" value="0" type="radio">全选</label>
+							<label for="hot_select_op_2">
+								<input class="select-op" id="hot_select_op_2" name="select-op-1" value="1" type="radio">全不选</label>
+							<label for="hot_select_op_3">
+								<input class="select-op" id="hot_select_op_3" name="select-op-1" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix" id="rxhz">
+					</div>
+				</div>
+				<!-- 热销域名 结束 -->
+				<!-- 新顶级域名  -->
+				<div id="newTopDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="new_select_op_1">
+								<input class="select-op" id="new_select_op_1" name="select-op-2" value="0" type="radio">全选</label>
+							<label for="new_select_op_2">
+								<input class="select-op" id="new_select_op_2" name="select-op-2" value="1" type="radio">全不选</label>
+							<label for="new_select_op_3">
+								<input class="select-op" id="new_select_op_3" name="select-op-2" value="2" checked="checked" type="radio">常用</label>
+						</div>
+
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix" id="newhz"> 
+					</div>
+				</div>
+				<!-- 新顶级域名 结束 -->
+				<!-- 中文域名  -->
+				<div id="chineseDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label id="cn_select_op_1">
+								<input class="select-op" id="cn_select_op_1" name="select-op-3" value="0" type="radio">全选</label>
+							<label id="cn_select_op_2">
+								<input class="select-op" id="cn_select_op_2" name="select-op-3" value="1" type="radio">全不选</label>
+							<label id="cn_select_op_3">
+								<input class="select-op" id="cn_select_op_3" name="select-op-3" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix" id="chinahz"> 
+					</div>
+				</div>
+				<!-- 中文域名 结束 -->
+				<!-- 国别域名  -->
+				<div id="nationDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="nation_select_op_1">
+								<input class="select-op" id="nation_select_op_1" name="select-op-4" value="0" type="radio">全选</label>
+							<label for="nation_select_op_2">
+								<input class="select-op" id="nation_select_op_2" name="select-op-4" value="1" type="radio">全不选</label>
+							<label for="nation_select_op_3">
+								<input class="select-op" id="nation_select_op_3" name="select-op-4" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix" id="cohz">
+					</div>
+				</div>
+				<!-- 国别域名 结束 -->
+				<!-- 省级域名  -->
+				<div id="provinceDomain" class="wjf-ui-tab-content">
+					<div class="domext-select-container">
+						<div class="left-radio f-l">
+							<label for="province_select_op_1">
+								<input class="select-op" id="province_select_op_1" name="select-op-5" value="0" type="radio">全选</label>
+							<label for="province_select_op_2">
+								<input class="select-op" id="province_select_op_2" name="select-op-5" value="1" type="radio">全不选</label>
+							<label for="province_select_op_3">
+								<input class="select-op" id="province_select_op_3" name="select-op-5" value="2" checked="checked" type="radio">常用</label>
+						</div>
+					</div>
+					<!-- 域名列表 -->
+					<div class="domext-wrapper clearfix" id="cnhz"> 
+					</div>
+				</div>
+				<!-- 省级域名 结束 -->
+			</div>
+		</div>
+	</div>
+	<!--查询框 结束-->
+</div>
+
+<div class="whois-content pt-20">
+	<div class="wide1190 horizontal-center">
+		<div class="whois-content-title">域名查询结果<div class="hide reg-tip" id="J_whTips">提示：.com/.net/.cc接口正在维护中((9:00-9:45)，暂停查询、注册、续费，请稍后再试...</div></div>
+		<!--查询结果显示 开始-->
+		<div class="whois-info whois-list">
+			<div id="MainContentDIV">
+ 
+				<div id="contentID" name="contentID"><br>
+				<center><img src="/Template/Tpl_2016/images/loading.gif" >请稍后,正在查询您选择的域名 ...</center> 
+
+			</div>
+		</div>
+		<!--查询结果显示 结束-->
+
+
+
+	</div>
+</div>
+
+ 
+ {searchedJSscript}
+ <script type="text/javascript" src="/database/cache/domainconfig.js"></script>  
+ <script src="/Template/Tpl_2016/jscripts/whois.js"></script>
+</div>
+{#bottom.html}
+ 
+</body>
+</html>
+

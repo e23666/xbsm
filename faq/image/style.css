@@ -1,0 +1,31 @@
+BODY{background:#799AE1;font-size:9pt;}
+TD{font-size:9pt;line-height:120%;}
+a  { font:normal 12px ËÎÌו; color:#000000; text-decoration:none; }
+a:hover  { color:#428EFF;text-decoration:underline;}
+.menu_title  { }
+.menu_title span  { position:relative; top:2px; left:8px; color:#215DC6; font-weight:bold; }
+.menu_title2  { }
+.menu_title2 span  { position:relative; top:2px; left:8px; color:#428EFF; font-weight:bold; }
+.sec_menu  { border-left:1px solid white; border-right:1px solid white; border-bottom:1px solid white; overflow:hidden; background:#D6DFF7; }
+.sec_table  { border-left:1px solid #D8D2BD; border-right:1px solid #D8D2BD; border-bottom:1px solid #D8D2BD; border-top:1px solid #D8D2BD; overflow:hidden; background:#F4EEE4; }
+input,select,Textarea{
+font-family:Tahoma,Verdana,ËÎÌו; font-size: 12px; line-height: 15px;}
+}
+
+.tableBorder
+{
+    border: 1px #6595D6 solid; 
+    background-color: #FFFFFF;
+}
+.Dtu {
+	background-image: url(01.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-color: #F4EEE4;
+}
+.Utu {
+	background-color: #F4EEE4;
+}
+.14p{font-size:14px}
+.tbutton {text-align:center;line-height:18px;}
+.fbutton {text-align: center; border-left: solid 2px #FFFFFF; border-top: solid 2px #FFFFFF; border-right: solid 2px #7694C8; border-bottom: solid 2px #7694C8;font-size:14px; line-height: 130%;cursor: hand; background-color: #EEF3FB; text-align: center;}

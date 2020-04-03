@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<system>
+<File type="img" path="/images/flash/hkhost_738x173.jpg" time="10.3" link="/services/webhosting/hkhost.asp" />
+<File type="img" path="/Template/Tpl_05/flash/xuniwin8-738x173.jpg" time="10.3" link="/services/webhosting/" />
+<File type="img" path="/Template/Tpl_05/flash/new_tw_738x173.jpg" time="10.3" link="/services/webhosting/twhost.asp" />
+	<File type="img" path="/Template/Tpl_05/flash/autosite_738x173.jpg" time="10.3" link="/services/webhosting/sites.asp" />	
+	<File type="img" path="/Template/Tpl_05/flash/VPS_738x173.jpg" time="10.3" link="/services/vpsserver/" />
+</system>

@@ -1,0 +1,64 @@
+.whois-search{padding: 70px 0 40px 0px;background:url(/template/Tpl_2016/images/whois-bg.jpg) no-repeat center 0;_position:relative;_z-index:999;_zoom:1}.whois-search .searchTxt{font-size:18px;font-weight:700;color:#fff;padding-left:10px}.whois-search .searchTxt .searchNum{font-size:28px;font-weight:700;color:#ff6000}.whois-search .searchDiv{padding:11px 10px;background:rgba(255, 255, 255, 0.1)}.whois-search .query-input-container{background:#fff;padding:13px 10px;position:relative;_zoom:1}.input-wrapper{_zoom:1}.whois-search .query-input-container .common-input{width:98%;height:52px;padding-left:6px;border:1px solid #ddd;font-size:14px;resize:none;vertical-align:bottom;overflow:auto;position:relative;line-height:26px}.query-input-container .input-wrapper .clear-domain-input{width:18px;height:18px;background:url(/template/Tpl_2016/images/ie6-icon.jpg) no-repeat center right #FFF;background-position:0 -348px;position:absolute;top:24px;right:193px;cursor:pointer;display:none}.common-input{color:#000}.placeholder{color:#c9c9c9}.whois-search .domain-query-btn{padding-left:30px;position:absolute;right:13px;top:13px;width:160px;background:url(/template/Tpl_2016/images/icon.png) no-repeat 36px -75px #1e87ed;height:54px;text-align:center;line-height:54px;font-size:20px;color:#fff;font-weight:700;font-style:italic;border:0;cursor:pointer}.whois-search .domain-query-btn:hover{background-color:#0581F8}.whois-search .whois-search-more{color:#fff;margin-top:5px;float:right;padding-right:22px;background:url(/template/Tpl_2016/images/icon.jpg) no-repeat 123px -1377px;text-align:right;cursor:pointer}.whois-search .whois-search-more.expanded{background:url(/template/Tpl_2016/images/icon.jpg) no-repeat 123px -1463px}.domain-ext-cate-container{position:absolute;top:120px;background-color:#fff;left:10px;padding:10px 25px;border:1px solid #dee3e1;width:935px;display:none;margin-left:10px;z-index:999}.wjf-ui-tab-small li a{display:inline-block;*display:inline;*zoom:1}.domext-select-container{margin:10px 0;font-size:12px;clear:both;overflow:hidden;zoom:1}.domext-select-container .left-radio label{padding-right:10px}.domext-select-container label input{margin-right:3px}.domext-wrapper label{padding:8px 0 8px 22px;line-height:20px;height:20px;font-size:14px;background:url(/template/Tpl_2016/images/icon.png) no-repeat 0 -325px;_background:url(/template/Tpl_2016/images/unselected.jpg) no-repeat left center;width:92px;display:inline-block;*display:inline;*zoom:1;float:left;color:#4A4A4A}.domext-wrapper label a{color:#4A4A4A}.domext-wrapper label input{display:none}.domext-wrapper label.checked{background:url(/template/Tpl_2016/images/icon.png) no-repeat 0 -288px;_background:url(/template/Tpl_2016/images/selected.jpg) no-repeat left center}.domext-wrapper .promotion{background-position:-74px -498px}.domext-wrapper .new{background-position:0 -498px}.domext-wrapper .hot{background-position:-36px -498px}.domext-wrapper .icon{width:17px;height:17px;display:inline-block;*display:inline;*zoom:1;vertical-align:top;background-image:url(/template/Tpl_2016/images/icon.png);background-repeat:no-repeat;margin-left:3px;margin-top:1px}.whois-content{padding-bottom:20px;background:#f8f8f8}.whois-content .whois-content-title{padding:10px 0;font-size:18px;color:#4a4a4a}.whois-content .whois-content-title .reg-tip{padding-left:22px;margin-left:10px;background:url(/template/Tpl_2016/images/icon.png) no-repeat 0 -1102px;color:#ff5e5e;vertical-align:middle;font-size:14px}.whois-content .whois-info{background:#fff;border:1px solid #e1e1e1}.whois-info .whois-info-title{height:54px;line-height:54px;background:#f3fbfe;border-bottom:1px solid #e1e1e1;color:#414141;text-align:center;font-size:0}.whois-info-domain,.whois-info-state,.whois-info-about,.whois-info-time,.whois-info-price,.whois-info-button{display:inline-block;*display:inline;*zoom:1;font-size:15px}.whois-info-domain{width:310px}.whois-info-state{width:100px}.whois-info-about{width:410px;_width:400px}.whois-info-time{width:140px}.whois-info-time select{width:90px;height:22px;line-height:22px;border:1px solid #cecece;font-size:15px}.whois-info-price{width:100px}.whois-info-button{width:98px;padding-right:30px}.whois-list{padding:0 30px}.whois-list li{border-bottom:1px dashed #e1e1e1}.whois-list .column{vertical-align:middle;height:58px}.column-domain,.column-state,.column-about,.column-time,.column-price,.column-button{display:inline-block;*display:inline;*zoom:1;vertical-align:middle}.whois-list .column-domain{padding-left:30px;width:250px;background:url(/template/Tpl_2016/images/icon.png) no-repeat 4px -294px;font-size:16px;font-weight:700;color:#4b4b4b}.whois-list .unchecked-item .column-domain{background:url(/template/Tpl_2016/images/icon.png) no-repeat 4px -330px}.whois-list .column-domain input{display:none}.whois-list .canot-be-checked .column-domain{background:0 0}.whois-list .column-state{padding-left:30px;width:70px;background:url(/template/Tpl_2016/images/reg-icon.jpg) no-repeat 20px -535px;color:#00931c;text-align:center}.whois-list .column-about{width:410px;color:#898989;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whois-list .column-time{width:130px;text-align:center}.whois-list .column-time select{width:56px;height:20px;line-height:20px;color:#6d6d6d;border:1px solid #e0e0e0}.whois-list .column-price{width:100px;color:#4a4a4a;text-align:center}.whois-list .column-price span{font-size:14px;color:#ff7800}.whois-list .column-button{width:84px;text-align:center}.whois-list .column-button .column-btn{display:inline-block;*display:inline;*zoom:1;width:66px;height:22px;line-height:22px;background:#3db514;color:#fff;text-align:center}.unregister-whois-list .column-domain{background:0 0;color:#b2b2b2}.unregister-whois-list .column-state{background-position:20px -438px;color:#ff5e5e}.unregister-whois-list .column-time,.unregister-whois-list .column-price{visibility:hidden}.unregister-whois-list .column-button .column-link{color:#5a5a5a}.unregister-whois-list .column-button .column-link:hover{color:#fe612b}.wait-whois-list .column-about,.wait-whois-list .column-time,.wait-whois-list .column-price{visibility:hidden}.wait-whois-list .column-domain{height:58px;line-height:58px;background:url(/template/Tpl_2016/images/loading.gif) no-repeat -5px center}.wait-whois-list .column-state{background:0 0}.wait-whois-list .query-fail .column-domain{background:0 0}.whois-content .whois-info .whois-btn{margin-top:26px;margin-right:16px;display:inline-block;*display:inline;*zoom:1;padding:10px 20px;background:#3db514;font-size:14px;color:#fff}#J_opsContainer .hide{display:none}.whois-content .whois-info .whois-txt{margin:30px 110px 0;*margin-bottom:50px;height:50px;line-height:50px;background:#f8fdff;border:1px solid #caebfe;text-align:center}.whois-content .whois-info .whois-txt a{display:inline-block;padding-left:46px;color:#0063be;background:url(/template/Tpl_2016/images/icon.png) no-repeat 0 -878px}.paimai-info{font-size:12px;font-weight:400;color:#545454}.paimai-info a{color:#06c}.enable-paimai-info .column-time,.enable-paimai-info .column-price{display:none}.enable-paimai-info .paimai-info{display:inline-block;*display:inline;*zoom:1;width:230px;text-align:right}.whois-domain{margin-top:20px;padding:20px 90px 30px;border:1px solid #e1e1e1;background:#fff}.whois-domain .whois-domain-title{border-bottom:1px solid #e2e2e2;margin-bottom:40px}.whois-domain .whois-domain-title h3{font-size:24px;color:#616161;position:relative;top:13px;background-color:#fff;margin:0 auto;width:200px;text-align:center}.whois-domain .jp-domain-list li{padding:0 36px;background-color:#fbfdff;border:1px solid #efefef;margin-bottom:-1px;height:44px;line-height:44px}.whois-domain .jp-domain-list i{display:inline-block;*display:inline;*zoom:1;background:url(/template/Tpl_2016/images/main/whois-btn-bg.jpg) no-repeat left center;width:64px;font-style:normal;text-align:left;color:#fff;font-size:12px;padding-left:8px}.whois-domain .jp-domain-list h3{color:#565656;font-size:16px;font-weight:700;display:inline-block;*display:inline;*zoom:1;line-height:44px;vertical-align:top;padding-left:10px}.whois-domain .jp-domain-list .price,.whois-domain .jp-domain-list a{float:right}.whois-domain .jp-domain-list .price{padding-right:10px;display:inline-block;*display:inline;*zoom:1;line-height:44px;color:#ff5b13;width:100px;font-size:14px}.whois-domain .jp-domain-list .unit{color:#7a7a7a;padding-left:3px}.whois-domain .jp-domain-list a{display:inline-block;*display:inline;*zoom:1;margin-top:12px;width:66px;height:22px;line-height:22px;background:#3db514;text-align:center;color:#fff}@media screen and (max-width:1206px){.domain-ext-cate-container{width:736px}.whois-info-domain{width:250px}.whois-info-state{width:80px}.whois-info-about{width:300px}.whois-info-time{width:130px}.whois-list{padding:0 10px}.whois-list .column-domain{width:220px}.whois-list .column-state{width:60px}.whois-list .column-about{width:280px}.whois-list .column-time{width:120px}.whois-list .column-button{width:98px}.whois-domain{padding:40px 30px 30px}.whois-list .column-state{background-position:0 -535px;text-align:left}.unregister-whois-list .column-state{background-position:0 -438px;text-align:left}}.desktop .domain-ext-cate-container{width:736px}.desktop .whois-info-domain{width:250px}.desktop .whois-info-state{width:80px}.desktop .whois-info-about{width:300px}.desktop .whois-info-time{width:130px}.desktop .whois-list{padding:0 10px}.desktop .whois-list .column-domain{width:220px}.desktop .whois-list .column-state{width:60px}.desktop .whois-list .column-about{width:280px}.desktop .whois-list .column-time{width:120px}.desktop .whois-list .column-button{width:98px}.desktop .whois-domain{padding:40px 30px 30px}.desktop .whois-list .column-state{background-position:0 -535px;text-align:left}.desktop .unregister-whois-list .column-state{background-position:0 -438px;text-align:left}
+.whois-list  .column-btn {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 66px;
+	height: 22px;
+	line-height: 22px;
+	background: #3db514;
+	color: #fff;
+	text-align: center;
+}
+.allowreg ul li,.denialreg ul li,.query ul li,.errreg ul li{padding: 14px 0;}
+.allowreg .price-color{font-size: 14px;color: #FF7800;}
+.allowreg .domain-name,.query .domain-name,.errreg .domain-name{font-size: 16px;font-weight: bold;color: #4B4B4B; margin-left: 5px;}
+.allowreg .noborder{ border: none;}
+.denialreg .domain-name{font-size: 16px;font-weight: bold;color: #777676; margin-left: 5px;}
+.denialreg .domain-name h1{
+	color: #777676;
+	height: 22px;
+	line-height: 22px;
+}
+.denialreg .domain-name h2{
+	height: 22px;
+	line-height: 22px;
+}
+.denialreg .domain-name .ljyd-wrapper{
+	float: right;
+	font-weight: normal;
+	font-size: 14px;
+}
+.denialreg .domain-name .btn-ljyd{
+	display: inline-block;
+	width: 66px;
+	height: 22px;
+	line-height: 22px;
+	background: #3db514;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	margin-right: 15px;
+	margin-left:10px;
+}
+#whois_mid{padding: 0px 30px 0px 30px;}
+.allowreg ul li,
+.denialreg ul li{
+	padding-left:10px;
+	padding-right: 10px;
+}
+.allowreg ul li:hover,
+.denialreg ul li:hover{
+	background-color: #f7f7f7;
+}
+#MainContentDIV {
+	margin:0 auto 20px;
+	min-width:950px;
+	max-width:1150px;
+	width:auto;
+	_width:1150px;
+	zoom:1;
+	padding:0 20px 20px;
+	border-top:1px solid #F1F4F4
+}

@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>数据库租用|mssql数据库|mysql数据库|{companyname}</title>
+<meta name="description" content="{companyname}-提供数据库租用|mssql数据库|mysql数据库|.在线支付,实时开通,自主管理.领先的虚拟主机技术,配合NAS存储设备,将虚拟主机可靠性提升至99.99％的高品质！">
+<meta name="keywords" content="数据库,虚拟主机,域名注册,主机,服务器租用，主页空间,个人主页,{companyname},主机托管,主机租用,域名,asp空间,网页制作">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/webhosting-common.css">
+  <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+  <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+<script>
+          	function ChangeLabel(LableName)
+			{
+		 
+				switch(LableName)
+				{
+					case "sql2000Title":
+					  
+				 		database_top_bg.className="top_bg sql2k";
+						sql2000Body.className="databasebody";
+					 
+						MysqlBody.className="disable";
+						break;
+					 
+					case "mysqlTitle":
+				     	database_top_bg.className="top_bg mysql";
+						sql2000Body.className="disable"; 
+						MysqlBody.className="databasebody";
+						break;
+				}
+			}
+          </script>
+</head>
+<body class="min990">
+{#top.html}
+
+<div id="content">
+  <div class="content">
+    <div class="wide1190 pt-40">
+      <!--选择主机-->
+      <div class="select-webhost">
+        <dl class="cl">
+          <dt>主机类型：</dt>
+          <dd><a href="/services/webhosting/basic.asp" >基本型主机</a></dd>
+          <dd><a href="/services/webhosting/twolinevhost.asp">双线主机</a></dd>
+          <dd><a href="/services/webhosting/morelinevhost.asp">多线主机</a></dd>
+          <dd><a href="/services/webhosting/hostlist.asp">集群主机</a></dd>
+          <dd><a href="/services/webhosting/twhost.asp">香港主机</a></dd>
+          <dd><a href="/services/webhosting/hkhost.asp" >香港云虚拟主机</a></dd>
+          <dd><a href="/services/webhosting/usa.asp">美国主机</a></dd>
+          <dd><a href="/services/webhosting/asp_net.asp">ASP.NET主机</a></dd>
+          <dd><a href="/services/webhosting/linux_host.asp">Linux主机</a></dd>
+          <dd><a href="/services/webhosting/superg.asp">超G型主机</a></dd>
+          <dd><a href="/services/webhosting/java.asp">Java主机</a></dd>
+        </dl>
+        <dl class="mt-10 cl">
+          <dt>数据库产品：</dt>
+          <dd><a href="/services/webhosting/database.asp" class="select-active">Mysql数据库/MSSQL数据库</a></dd>
+        </dl>
+      </div>
+      <!--选择主机end-->
+
+      <!--主机介绍 开始-->
+      <div class="content-title database-title mt-20">
+        <h1>数据库</h1>
+        <p class="pt-20">Mssql全称是Microsoft SQL Sever，推荐企业级商务网站使用。
+                         Mssql和Asp、Asp.net都是微软的产品，互相兼容性最好，Asp、Asp.net 网站建议应用Mssql数据库进行搭配！</p>
+        <p>MySQL数据库专用于PHP网站，适合中、小型网站，Mysql和PHP属于黄金搭配，对于不是特别大流量的网站，应用效率最高。</p>
+        <p style="color: #ff0000;">
+          特别说明：我司所有<a class="seo-link" href="/">虚拟主机</a>都有赠送Mysql数据库，如果赠送的数据库大小不足，可以在主机购买成功后升级Mysql大小。
+          强烈推荐使用虚拟主机赠送的数据库(跟网站处于同一服务器），单独购买的数据库可能跟网站处于不同服务器，且单独购买价格较贵。
+        </p>
+      </div>
+
+      <!--主机介绍 结束-->
+      <!--tab切换 开始-->
+      <div class="webhosting-tab">
+        <ul class="webhosting-tab-list cl" id="J_webhostingTabContainer">
+          <li data-index="mssql" class="active">
+            <a href="javascript:void(0);" class="active" data-target="J_tab_1">SQL Server</a>
+          </li>
+          <li class="" data-index="mysql">
+            <a class="" href="javascript:void(0);" data-target="J_tab_2">MYSQL</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--tab切换 结束-->
+      <!--表格 开始-->
+      <!--SQL SERVER  开始-->
+      <div class="wjf-ui-tab-content webhosting-server active" id="J_tab_1">
+        <div class="webhosting-info">
+          <!-- data-tableindex 用于区分表格  直接使用table对象作为key存在bug -->
+          <table class="webhosting-table" data-tableindex="1">
+            <thead>
+            <tr>
+              <th class="left">产品名称</th>
+              <th>MSSQL 50M</th>
+              <th>MSSQL 100M</th>
+              <th>MSSQL 150M</th>
+              <th>MSSQL 200M</th>
+              <th>MSSQL 250M</th>
+              <th>MSSQL 300M</th>
+              <th>MSSQL 500M</th>
+              <th>MSSQL 1G</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="left">价格</td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL50)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL50" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL100)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL100" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL150)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL150" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL200)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL200" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL250)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL250" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSsql300)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSsql300" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL500)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL500" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(MSSQL1000)}</span>元/年</p>
+                <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL1000" target="_blank">立即购买</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">版本：<br>Server2000/2005/<br>2008/2012</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线实时开通</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">修改密码</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线备份</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线恢复数据</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">导入备份数据</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">自动清理日志</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">数据定期备份</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">数据自动恢复</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">千M防火墙系统</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">QQ、全球<br>免费电话支持</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">24x7x365<br>在线有问必答</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table style="left: 141px; width: 132px;" class="high-light-table"><tbody><tr><th>MSSQL 50M</th></tr><tr><td>
+            <p class="info-price">
+              <span>{Price(MSSQL50)}</span>元/年</p>
+            <a class="info-btn" href="/services/mssql/buy.asp?productid=MSSQL50" target="_blank">立即购买</a>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr class="last-row"><td>
+            <i class="info-icon right"></i>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <!--SQL SERVER 结束-->
+      <!--MYSQL 开始-->
+      <div class="wjf-ui-tab-content webhosting-hj" id="J_tab_2">
+        <div class="webhosting-info">
+          <table class="webhosting-table" data-tableindex="2">
+            <thead>
+            <tr>
+              <th class="left">产品名称</th>
+              <th>MYSQL 50M</th>
+              <th>MYSQL 100M</th>
+              <th>MYSQL 200M</th>
+              <th>MYSQL 300M</th>
+              <th>MYSQL 500M</th>
+              <th>MYSQL 1G</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="left">价格</td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(b022)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=b022" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(m025)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=m025" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(m035)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=m035" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(m041)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=m041" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(m026)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=m026" target="_blank">立即购买</a>
+              </td>
+              <td>
+                <p class="info-price">
+                  <span>{Price(m040)}</span>元/年</p>
+                <a class="info-btn" href="/services/webhosting/buy.asp?productid=m040" target="_blank">立即购买</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">版本：Mysql5.x</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">机房线路：电信、网通、双线、多线</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线实时开通</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">修改密码</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线备份</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">下载备份数据</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">在线恢复数据</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">导入备份数据</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">自动清理日志</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">数据定期备份</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">数据自动恢复</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">千M防火墙系统</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">QQ、全球<br>免费电话支持</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">24x7x365<br>在线有问必答</td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+              <td>
+                <i class="info-icon right"></i>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table style="left: 141px; width: 175px;" class="high-light-table"><tbody><tr><th>MYSQL 50M</th></tr><tr><td>
+            <p class="info-price">
+              <span>{Price(b022)}</span>元/年</p>
+            <a class="info-btn" href="/services/webhosting/buy.asp?productid=b022" target="_blank">立即购买</a>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr><td>
+            <i class="info-icon right"></i>
+          </td></tr><tr class="last-row"><td>
+            <i class="info-icon right"></i>
+          </td></tr></tbody></table>
+        </div>
+      </div>
+      <!--MYSQL 结束-->
+
+      <!--表格 结束-->
+      <!--说明 开始-->
+      <div class="webhosting-explain">
+        <div class="webhosting-explain-title">
+          <span>图标说明：</span>
+        </div>
+        <h6>
+          <i class="info-icon right"></i>表示支持、
+          <i class="info-icon no"></i>表示不支持、
+          <i class="info-icon add"></i>表示需要单独购买、/表示可选、推荐全能型主机，基于云技术，更稳定、更快速。
+        </h6>
+        <div class="webhosting-explain-txt">
+          <span>特别提示：</span>
+
+          <p>1、赠送产品如数据库、邮局、网站统计等不需要的，则表示放弃。</p>
+          <p>2、域名赠品仅送首年，主机一次性购买多年，域名赠送时间为1年。</p>
+          <p>3、linux虚拟主机的mysql数据库是跟WEB空间共享大小。</p>
+
+          <p style="text-indent: 20px;">
+            比如：LinuxA型主机，WEB空间+mysql数据库一共=300M，所有虚拟主机均免费赠送跟WEB空间同等大小的备份空间，用来自动备份和恢复数据。</p>
+
+          <p>4、任何虚拟主机用户都严禁发送垃圾邮件。</p>
+        </div>
+      </div>
+      <!--说明 结束-->
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/template/Tpl_2016/jscripts/common.js"></script>
+<script type="text/javascript" src="/template/Tpl_2016/jscripts/webhostingDetail2016.js"></script>
+{#bottom.html}
+</body>
+</html>

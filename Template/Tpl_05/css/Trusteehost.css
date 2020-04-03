@@ -1,0 +1,260 @@
+#MainRight #SrerRoom_list_pic {
+	width:523px;
+	height:182px;
+	margin:5px 10px;
+	float:left;
+}
+#MainRight #SrerRoom_Div {
+	height:192px;
+	width:750px;
+}
+#SrerRoom_Div #Room_pics {
+	width:194px;
+	float:left;
+	margin:5px 0px;
+	overflow:hidden;
+	height:182px;
+}
+#Room_pics ul li {
+	width:90px;
+	height:80px;
+	float:left;
+	margin:2px 2px;
+	padding:1px;
+	text-align:center;
+}
+#Room_pics ul li div {
+	border:1px solid #CCC;
+	margin:2px 1px;
+	background:#CCC;
+	padding:1px;
+}
+#Room_pics ul li div:hover {
+	border:1px solid #09C;
+	background:#fff;
+}
+#MainRight #Info_Content {
+	line-height:25px;
+	padding:0px 20px;
+	margin:10px 0px;
+}
+#Info_Content ul li table {
+	width:100%;
+	border-collapse:collapse;
+	background:url(/Template/Tpl_05/newimages/trusteehost/trusteehost_Info_table_bg.gif) repeat-x 0px 1px;
+}
+.Table_Title td {
+}
+#Info_Content ul li {
+	margin:20px 0px;
+}
+#Info_Content ul li .RoomNameBox {
+	background:url(/Template/Tpl_05/newimages/trusteehost/trusteehost_Info_table_bg.gif) repeat-x 0px 0px;
+	padding-left:10px;
+	border-top:1px #DFE2E5 solid;
+	border-left:1px #DFE2E5 solid;
+	border-right:1px #DFE2E5 solid;
+	height:21px;
+	padding-top:7px;
+}
+#Info_Content ul li .RoomNameBox h5 {
+	background:url(/Template/Tpl_05/newimages/trusteehost/045631213.gif) no-repeat;
+	font-weight:bold;
+	font-size:14px;
+	color:#1E476A;
+	padding-left:30px;
+	text-align:left;
+}
+.trutee_button {
+	width:100%;
+	margin-bottom:20px;
+	overflow:hidden;
+	height:auto;
+}
+.BuyBox {
+	height:28px;
+	width:151px;
+	margin:10px 0px;
+	float:left;
+}
+#Info_Content ul li .RoomBottomBox {
+	height:50px;
+}
+.Table_price_td {
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	color:#F30;
+}
+#Info_Content ul li table tr td {
+	padding:5px;
+	text-align:center;
+	border:1px #DFE2E5 solid;
+}
+#Trustee_Content {
+	line-height:25px;
+	padding:0px 10px;
+	margin:10px 0px;
+}
+.trustee_li {
+	background:url(/Template/Tpl_05/newimages/trusteehost/trutee_list_bg.gif) top no-repeat;
+	padding:10px;
+	display:block;
+	border-top:solid #ebebeb 1px;
+}
+.trustee_li .info_ div {
+	float:left;
+}
+.ttl {
+	background:url(/Template/Tpl_05/newimages/trusteehost/045631213.gif) no-repeat;
+	font-weight:bold;
+	color:#C00;
+	padding-left:25px;
+	width:144px;
+}
+.ccl {
+	margin-left:15px;
+	width:70px;
+}
+.icol {
+	margin-left:15px;
+	width:16px;
+	height:16px;
+}
+.info_ {
+	overflow:hidden;
+	height:28px;
+	cursor:pointer;
+}
+.trustee_list_table {
+	width:95%;
+	border-collapse:collapse;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.trustee_list_table tr td {
+	border-bottom:solid #ebebeb 1px;
+	padding:5px 2px;
+}
+.SpeedTest {
+	background:url(/Template/Tpl_05/newimages/trusteehost/045631199.gif) no-repeat 0 1px;
+	height:23px;
+	float:right;
+	padding-left:20px;
+	margin-top:10px;
+}
+
+
+
+.Room_info_list {
+	margin-top:20px;
+	overflow:hidden;
+	height:auto;
+}
+.Room_info_list ul li {
+	height:296px;
+	width:171px;
+	margin:0 3px;
+	float:left;
+	display:block;
+	background:url(/Template/Tpl_05/newimages/Server/server_room_info_bg.gif);
+	margin-bottom:15px;
+	padding:11px 0 0 9px;
+}
+.sr_room_name {
+	height:20px;
+	width:164px;
+}
+.sr_room_pic {
+	margin-top:10px;
+	width:162px;
+	height:36px;
+}
+.sr_room_info
+{
+	width:162px;
+	margin-top:30px;
+}
+.sr_room_info_b
+{
+	margin-top:6px;
+}
+.ico_1
+{
+	background:url(/Template/Tpl_05/newimages/Server/045631239.gif) no-repeat;
+	padding-left:20px;
+}
+.ico_2
+{
+	background:url(/Template/Tpl_05/newimages/Server/045631983.gif) no-repeat;
+	padding-left:20px;
+}
+.ico_3
+{
+	background:url(/Template/Tpl_05/newimages/Server/045631959.gif) no-repeat;
+	padding-left:20px;
+}
+.ico_4
+{
+	background:url(/Template/Tpl_05/newimages/Server/045631459.gif) no-repeat;
+	padding-left:20px;
+}
+.ser_room_pic_li
+{
+	margin:30px 0 0 0;
+	display:block;
+	overflow:hidden;
+	height:auto;
+}
+
+.ser_room_pic_li li
+{
+	float:left;
+	width:160px;
+	display:block;
+	height:95px;
+	padding:1px;
+	border:solid 1px #CCC;
+	margin:0 5px;
+}
+.ser_room_pic_li li:hover
+{
+	float:left;
+	width:160px;
+	display:block;
+	height:95px;
+	padding:1px;
+	border:solid 1px #06C;
+	margin:0 5px;
+}
+.Room_info_con
+{
+	width:95%;;
+	margin:0 auto;
+}
+.Room_info_con p
+{
+	padding:0 18px;
+	line-height:24px;
+}
+.big_room_info_list
+{
+	display:block;
+	overflow:hidden;
+	height:auto;
+}
+.big_room_info_list li
+{
+	float:left;
+	display:block;
+	width:315px;
+	height:255px;
+	padding:1px;
+	border:solid 1px #06C;
+	margin:5px 5px;
+}
+.big_room_info_list li img
+{
+	width:315px;
+	height:255px;
+}

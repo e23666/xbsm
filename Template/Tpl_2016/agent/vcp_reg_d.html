@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{companyname}广告联盟－vcpD模式代理申请</title>
+<meta name="description" content="代理模式 D模式详细介绍-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="代理模式 D模式详细介绍-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+    <link rel="stylesheet" href="/template/Tpl_2016/css/global.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/common.css">
+    <link rel="stylesheet" href="/template/Tpl_2016/css/tp2016.css">
+    <script type="text/javascript" src="/template/Tpl_2016/jscripts/jquery-1.11.3.min.js"></script>
+    <style>
+        #AgentList {
+            padding:20px 0 0 0;
+            overflow:hidden;
+            height:auto;
+        }
+
+        .Agent_Content ul li {
+            float:left;
+            margin-bottom:20px;
+        }
+        .dm_co ul li {
+            float:left;
+            margin-bottom:10px;
+            width:83px;
+            text-align:center;
+            font-weight:bold;
+            color:#116F83;
+        }
+        .dm_co ul li img {
+            margin-bottom:10px;
+        }
+        .Model_div {
+            width:124px;
+            height:101px;
+            float:left;
+            margin-left:20px;
+            margin-top:40px;
+        }
+
+        .Model_d_class {
+            background:url(/template/Tpl_2016/images/Agent_PIC_4.jpg) no-repeat;
+        }
+
+        #AgentList #Model_info {
+            width:550px;
+            margin-left:30px;
+            float:left;
+        }
+        #Model_info h4 {
+            color:#09C;
+        }
+        #Model_info .Model_info_content {
+            width:90%;
+            margin:15px auto;
+            text-indent: 2em;
+            line-height:30px;
+        }
+        #Model_info .Model_info_content p {
+            line-height:30px;
+        }
+        #Model_info .Model_info_content ul {
+            list-style-type:disc;
+        }
+        #Model_info .Model_info_content li {
+            line-height:30px;
+            border-bottom:1px dashed #efefef;
+            width:95%;
+            margin:10px auto;
+        }
+
+        .MailListTable_a {
+            width:95%;
+            margin:auto;
+            margin-top:15px;
+
+        }
+        .MailListTable_a tr td {
+            padding:5px 5px 3px 9px;
+            border:solid 1px #efefef;
+            text-indent:0px;
+        }
+
+        .pding_left h4 {
+            color:#09C;
+        }
+
+        .pding_left ul {
+            list-style-type:disc;
+            margin-left:26px;
+        }
+        .pding_left ul li {
+            margin:6px auto;
+        }
+
+
+
+    </style>
+<script language=javascript>
+function isDate(data,text){
+var reg=/\b(((19|20)\d{2})-((0?[1-9])|(1[012]))-((0?[1-9])|([12]\d)|(3[01])))\b/
+if (reg.exec(data.value)==null) {
+	alert("抱歉，"+text+"的日期格式错误,正确的格式是yyyy-MM-dd");
+	//data.value=dateObj.getUTCFullYear()+"-"+dateObj.getUTCMonth()+"-"+dateObj.getUTCDay();
+	dateObj=new Date();
+	data.value="2003-01-30"
+	data.focus();
+	data.select();
+	return false;
+}
+else{
+	return true;
+	}
+}
+
+function isGreat(number,text){
+		if (parseFloat(number)>9999999||parseFloat(number)<0){
+			alert("报歉！提交失败，["+text+"]数值超过系统表示范围0-9999999");
+			return true;
+			}
+	return false;
+}
+function isNumber(number){
+var i,str1="0123456789.";
+	for(i=0;i<number.value.length;i++){
+	if(str1.indexOf(number.value.charAt(i))==-1){
+		return false;
+		break;
+			}
+		}
+return true;
+}
+function checkNull(data,text){
+	if (data.value==""){
+		alert("抱歉!提交失败，"+text+"不能为空!");
+		data.focus();
+	   return false;
+			}
+	else{ 
+		return true;}
+}
+function isDigital(data,text){
+if (data.value!=""){
+	if (!isNumber(data)) {
+	alert("抱歉!["+text+"]必须是数字,否则无法提交");
+	data.focus();
+	data.select();
+	return false;
+	}
+}
+return true;
+}
+
+function check(form){
+if (form.bankNo.value==""){
+		alert("错误，请重新输入银行账号!");
+		return false;
+	}
+return true;
+}
+
+</script>
+</head>
+<body class="min990">
+{#top.html}
+<div class="news-container" id="content">
+    <div class="wide1190 ">
+        <div id="SiteMapPath">
+            <ul>
+                <li><a href="/">{companyname}首页</a></li>
+                <li><a href="/agent/">代理专区</a></li>
+                <li><a href="/agent/vcp_reg_d.asp">D模式在线申请</a></li>
+            </ul>
+        </div>
+        <div class="news-box cl">
+            <div id="AgentList">
+                <div class="Model_div Model_d_class"></div>
+                <div id="Model_info">
+                    <div class="Model_info_content RedLink"></div>
+                    <div class="Model_info_content RedLink"><form name="form1" method="post" action="modeD_save.asp">
+                        <table class="MailListTable_a">
+                            <tr>
+                                <td nowrap="nowrap">姓名:</td>
+                                <td>{u_namecn}</td>
+                            </tr>
+                            <tr>
+                                <td>通信地址：</td>
+                                <td>{u_address} &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>邮编：</td>
+                                <td>{u_zipcode} &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>QQ：</td>
+                                <td>{qq_msg} &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>电子邮件：</td>
+                                <td>{u_email}&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>电话：</td>
+                                <td>{u_telphone}&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>传真：</td>
+                                <td>{u_fax}&nbsp; </td>
+                            </tr>
+                            <tr>
+                                <td>银行帐号：</td>
+                                <td>
+                                    <input type="text" name="bankNo" maxlength="50" class="inputbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>开户姓名：</td>
+                                <td>
+                                    <input type="text" name="bank" maxlength="50" class="inputbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>打款方式：</td>
+                                <td>
+                                    <input type="radio" name="remitMode" value="工商银行">
+                                    工商银行电汇
+                                    <input type="radio" name="remitMode" value="招商银行">
+                                    招商银行电汇<br>
+                                    <input type="radio" name="remitMode" value="建设银行">
+                                    建设银行电汇
+                                    <input type="radio" name="remitMode" value="农业银行">
+                                    农业银行电汇 <br>
+                                    <input type="radio" name="remitMode" value="会员冲值" checked>
+                                    直接打在我的会员号上
+                                    <input type="radio" name="remitMode" value="支付宝">
+                                    支付宝 </td>
+                            </tr>
+                            <tr>
+                                <td>备注：</td>
+                                <td>
+                                    <input type="text" name="from" maxlength="53" class="inputbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input name="Button" type="submit" class="common-btn"  id=save onClick="check(this.form);" value="提交[S]">
+                                    <input name="Submit2" type="reset" class="common-btn gray-btn" id=clear value="清除[C]">
+                                    <input type="hidden" value="{u_id}" name="ReferenceID">
+                                </td>
+                            </tr>
+                        </table>
+                        <label for=save AccessKey=S></label><label for=clear AccessKey=C></label>
+                    </form></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#bottom.html}
+</body>
+
+</html>

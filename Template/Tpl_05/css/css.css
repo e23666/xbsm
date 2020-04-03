@@ -1,0 +1,219 @@
+body {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 150%;
+	color: #FFFFFF;
+	text-decoration: none;
+	sSCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-3DLIGHT-COLOR: #666666;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #ffffff;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLO: #666666;
+	background-color: #ffffff;
+	
+}
+td {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 140%;
+	color: #5F666F;
+	text-decoration: none;
+}
+
+a:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #737F8D;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	color: #737F8D;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #559100;
+	text-decoration: none;
+}
+
+.inputbox {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #09C;
+	border: 1px solid #CCCCCC;
+	height:19px;
+}
+.ButtonBox {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFF;
+	background-image: url(/Template/Tpl_04/images/default_37.jpg);
+	background-repeat: no-repeat;
+	border:none;
+	width:89px;
+	height:23px;
+	cursor:hand;
+}
+.Font_Orange {
+	color: #F90;
+}
+.Tabla_Bg {
+	background-color: #F4FBFD;
+	border: 1px solid #DAE9EE;
+}
+.Tabla_Bg li{
+padding:3px 0;
+}
+
+.DownLine {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #EFF4F8;
+	border-right-color: #EFF4F8;
+	border-bottom-color: #EFF4F8;
+	border-left-color: #EFF4F8;
+}
+.VHostbg {
+	background-image: url(/Template/Tpl_04/images/default_49.jpg);
+	background-repeat: repeat-x;
+}
+
+
+
+
+
+.Main_Title {
+	color: #113F6D;
+	font-weight: bold;
+}
+
+
+
+
+
+
+a.Orange:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #F60;
+	text-decoration: none;
+}
+a.Orange:visited {
+	font-size: 12px;
+	color: #F60;
+	text-decoration: none;
+}
+a.Orange:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #648FBA;
+	text-decoration: none;
+}
+
+
+
+a.Menu_Title:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #48719A;
+	text-decoration: none;
+}
+a.Menu_Title:visited {
+	font-size: 14px;
+	font-weight: bold;
+	color: #48719A;
+	text-decoration: none;
+}
+a.Menu_Title:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #113F6D;
+	text-decoration: none;
+}
+.price {
+	FONT-FAMILY: Georgia, "Times New Roman", Times, serif; COLOR:#F30; FONT-SIZE: 18px
+}
+.WebHostMenu {
+	background-image: url(/Template/Tpl_04/images/default_67.jpg);
+	background-repeat: repeat-x;
+}
+.OnMenuRollOver {
+	background-image: url(/Template/Tpl_04/images/default_83.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 29px;
+}
+.OnMenuRollOut {
+	background-image: url(/Template/Tpl_04/images/default_80.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 29px;
+}
+.TableTitle {
+	background-image: url(/Template/Tpl_04/images/default_86.jpg);
+	background-repeat: repeat-x;
+	color:#48719A;
+	height: 29px;
+	font-size: 13px;
+	font-weight: bold;
+	top: 20px;
+}
+.TableBG {
+	background-color: #D0DDED;
+}
+.TableHeard {
+	background-color: #F6FBFF;
+	color: #245693;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+.ButtonBox_1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFF;
+	background-image: url(/Template/Tpl_04/images/default_89.jpg);
+	background-repeat: no-repeat;
+	border:none;
+	width:59px;
+	height:23px;
+	cursor:hand;
+}
+.ButtonBox_2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFF;
+	background-image: url(/Template/Tpl_04/images/default_91.jpg);
+	background-repeat: no-repeat;
+	border:none;
+	width:59px;
+	height:23px;
+	cursor:hand;
+}
+.hangju3 {
+	line-height: 4px;
+}
+.MailInfo {
+	background-image: url(/Template/Tpl_04/images/default_30.jpg);
+	background-repeat: repeat-x;
+}
+.blueWord {
+	color: #7798B9;
+}
+.BoxBg {
+	background-image: url(/Template/Tpl_04/images/default_30.jpg);
+	background-repeat: repeat-x;
+}

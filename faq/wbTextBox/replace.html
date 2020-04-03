@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>replace</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<Link rel="stylesheet" type="text/css" href="pop.css">
+<SCRIPT LANGUAGE=JavaScript FOR=Ok EVENT=onclick>
+  window.returnValue = a.value+"*"+b.value+"*"+(c.checked?"1":"0")+"*";
+  window.close();
+</SCRIPT>
+<script>
+function IsDigit()
+{
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+</script>
+</HEAD>
+
+<BODY bgcolor="menu">
+
+<table border="0" cellspacing="10" cellpadding="0" align=center style="padding-left:10px">
+<tr>
+	<td colspan=2 align=center>
+	<font class=title>Replace</font>
+	<hr width=100% >
+	Find What: &nbsp; &nbsp; &nbsp; <INPUT TYPE=TEXT SIZE=15 ID=a  >
+	</td>
+</tr>
+<tr>
+	<td>
+	Replace With: <INPUT TYPE=TEXT SIZE=15 ID=b >
+	</td>
+</tr>
+<tr>
+	<td colspan=2>
+	<input type=checkbox id=c >
+	Match Case 
+	</td>
+</tr>
+<tr>
+	<td colspan=2 align=center>
+	<BUTTON ID=Ok TYPE=SUBMIT>Start</BUTTON>&nbsp; &nbsp;<BUTTON ONCLICK="window.close();">Cancel</BUTTON>
+	</td>
+</tr>
+</table>
+
+</BODY>   
+</HTML>

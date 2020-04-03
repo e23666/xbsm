@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>服务器租用|托管－提交订单</title>
+<meta name="description" content="服务器租用-{companyname}是专业的虚拟主机域名注册服务商，提供南北互通的双线单IP虚拟主机、域名注册服务，买虚拟主机送顶级域名。全力打造国内顶级高速、稳定的虚拟主机产品.6年成功服务经验，数万家成功企业案例.免费支持wap手机上网,可免费试用7天，赠送企业邮局.">
+<meta name="keywords" content="服务器租用-虚拟主机,{companyname},域名注册,主机租用,主机,服务器租用，主页空间,网站空间,主机托管,域名,asp空间">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/Template/Tpl_05/css/Global.css" rel="stylesheet" type="text/css">
+<link href="/Template/Tpl_05/css/buy_msg.css" rel="stylesheet" type="text/css">
+<script src="/Template/Tpl_05/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="/jscripts/jq.js" type="text/javascript"></script>
+<script src="/jscripts/buyserver.js" type="text/javascript"></script>
+<style type="text/css">
+.z_buymsg dt {
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #666;
+}
+.z_buymsg dd h1.long {
+	width:530px;
+}
+.z_buymsg dd h1 p {
+	float:none;
+	width:100%;
+}
+ul.content_mini {
+	height:auto;
+	border:1px solid #ccc;
+	border-top:none;
+	overflow:hidden;
+	padding:10px;
+	clear:both;
+}
+.up_call {
+	background:url(/Template/Tpl_05/newimages/bubble/up_call_bg.jpg) repeat-x;
+	height:9px;
+	clear:both;
+}
+.up_call img {
+	display:block;
+	margin-left:90px;
+}
+ul.content_mini li {
+	height:auto;
+	width:auto;
+	line-height:auto;
+	padding:0;
+	margin:0;
+	color:#F00;
+}
+dl dd.jingaotxt {
+	border:2px dotted #F00;
+	background-color:#FF9;
+	padding:10px;
+	color:#069;
+}
+</style>
+</head>
+<body id="thrColEls">
+<div class="Style2009"> {#top.html}
+  <div id="SiteMapPath">
+    <ul>
+      <li><a href="/">{companyname}首页</a></li>
+      <li><a href="/services/server/">服务器租用</a></li>
+    </ul>
+  </div>
+  <div id="MainContentDIV"> {#ServerLeft.html}{#vpsleft.html}
+    <div id="MainRight">
+      <div class="buymap clearfix" style="margin-bottom:5px;"><img src="/Template/Tpl_05/newimages/order_step_order.gif" class="span_auto floatright" /></div>
+      <div class="z_buymsg clearfix" style="padding-top:20px;">
+        <form method="post" action="SaveHost.asp" onSubmit="return checkForm(this);">
+          <dl class="clearfix">
+            <dd class="subbottom clearfix" style="height:130px;">
+              <div class="redColor"><img src="/Template/Tpl_05/newimages/jingzhi.gif"  /></div>
+            </dd>
+            <dt>联系人信息</dt>
+            <dd class="clearfix">
+              <label>公司名称:</label>
+              <h1>&nbsp;
+                <input name="Company" type="text" class="z_inputbox" value="{u_company}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>联系人:</label>
+              <h1>&nbsp;
+                <input name="Name" type="text" class="z_inputbox" value="{u_contract}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>证件号:</label>
+              <h1>&nbsp;
+                <input name="u_trade" type="text" class="z_inputbox" value="" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>联系电话:</label>
+              <h1>&nbsp;
+                <input name="Telephone" type="text" class="z_inputbox" value="{u_telphone}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>Email:</label>
+              <h1>&nbsp;
+                <input name="Email" type="text" class="z_inputbox" value="{u_email}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>QQ:</label>
+              <h1>&nbsp;
+                <input name="QQ" type="text" class="z_inputbox"  value="{qq_msg}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>手机:</label>
+              <h1>&nbsp;
+                <input name="Fax" type="text" class="z_inputbox" value="{msn_msg}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>邮编:</label>
+              <h1>&nbsp;
+                <input name="Zip" type="text" class="z_inputbox" value="{u_zipcode}" />
+              </h1>
+            </dd>
+            <dd class="clearfix" style="border-bottom:none;">
+              <label>地址:</label>
+              <h1>&nbsp;
+                <input name="Address" type="text" class="z_inputbox" value="{u_address}" />
+              </h1>
+            </dd>
+            <dd style="border-bottom:none;">
+              <div class="up_call" ><img src="/Template/Tpl_05/newimages/bubble/up_call.jpg" /></div>
+              <ul class="content_mini" id="cmini1">
+                <li><img src="/Template/Tpl_05/newimages/Domains/ico_light.gif" />&nbsp;我司VPS禁止做低俗内容、私服、外挂等非法应用，需要提供手机、QQ等真实联系资料以便回访，否则可能会被断网。注意：美国机房不提供备份盘，请自行做好备份。 </li>
+              </ul>
+            </dd>
+            <dt>服务器配置</dt>
+            <dd class="clearfix">
+              <label>主机类型:</label>
+              <h1>&nbsp;
+                <input name="HostID" type="text" class="z_inputbox" value="{hostid}" readonly="readonly" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>操作系统:</label>
+              <h1 class="long">
+              	{CHOICE_OS}
+               </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>主机用途:</label>
+              <h1 class="long">
+                <input type="radio" name="Apply" value="企业经营网站">
+                企业经营网站
+                <input type="radio" name="Apply" value="游戏" checked>
+                游戏
+                <input type="radio" name="Apply" value="软件下载">
+                软件下载
+                <input type="radio" name="Apply" value="电影下载">
+                电影下载
+                <input type="radio" name="Apply" value="个人网站">
+                个人网站
+                <input type="radio" name="Apply" value="其它应用">
+                其它应用</h1>
+            </dd>
+            <dd class="clearfix">
+              <label>CPU:</label>
+              <h1>&nbsp;
+                <input name="CPU" type="text" class="z_inputbox" value="{cpu}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>硬盘:</label>
+              <h1>&nbsp;
+                <input name="HardDisk" type="text" class="z_inputbox" value="{harddisk}" />
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>内存:</label>
+              <h1>&nbsp;
+                <input name="Memory" type="text" class="z_inputbox" value="{memory}" />
+              </h1>
+            </dd>
+            <dt>其他信息</dt>
+            <dd class="clearfix">
+              <label>年限:</label>
+              <h1>&nbsp;
+                <select name="Years" class="selectbox" >
+                  <option value="1" selected>1年</option>
+                  <option value="2">2年</option>
+                  <option value="3">3年</option>
+                  <option value="4">4年</option>
+                </select>
+              </h1>
+            </dd>
+            <dd class="clearfix">
+              <label>选择机房:</label>
+              <h1>{setroomlist} </h1>
+            </dd>
+            <DD CLASS="clearfix">
+              <label>CDN出口:</label>
+              <h1>&nbsp;
+                <select name="cdntype" class="selectbox">
+                  <option value="0" selected="selected">不使用CDN</option>
+                  <option value="1">国内双线CDN:&nbsp;&nbsp;+50元/月</option>
+                </select>
+              </h1>
+            </DD>
+            
+            <dd class="clearfix" style="height:120px;">
+              <label>请选择服务标准:
+              <div style="text-align:right"><a href="/services/server/vip.asp" target="_blank" class="Link_Blue">(查看服务标准)</a></div>
+              </label>
+              <h1 class="long clearfix">
+               {servicetype}
+              </h1>
+            </dd>
+            
+            <dd class="clearfix">
+              <label>付费方式:</label>
+             <h1 class="long" id="PayMethod"><input type="radio" name="PayMethod" value="0">按月付&nbsp;&nbsp;<input type="radio" name="PayMethod" value="2">按季付&nbsp;&nbsp;<input type="radio" name="PayMethod" value="3">按半年付&nbsp;&nbsp;<input type="radio" name="PayMethod" value="1" checked="checked">按年付&nbsp;&nbsp;</h1>
+            </dd>
+            <dd class="clearfix">
+              <label>购买时间:</label>
+              <h1 class="long" id="renewtime_msg"></h1>
+         
+
+            </dd>
+            <dd class="clearfix">
+              <label>所需费用:</label>
+              <h1 class="long" id="needprice" style="font-size:16px; color:#FF0000; font-weight:bold; height:25px; line-height:25px;"></h1>
+            </dd>
+            <dd class="clearfix" style="height:70px">
+              <label>备注:</label>
+              <h1>
+                <textarea name="Memo" cols="70" rows="4" wrap="VIRTUAL" class="inputbox_2">请简要说明主机用途，域名数量等：{vr_room}</textarea>
+                <br />
+              </h1>
+            </dd>
+            <DD CLASS="agrmeet clearfix">
+              <label style="float:none; display:inline" for="payone">
+                <input name="VPSOpen" id="payone" type="radio" value="open" checked>
+                立即开通 </label>
+              <label style="float:none; display:inline" for="paytwo">
+                <input type="radio" name="VPSOpen" id="paytwo" value="order">
+                只下订单</label>
+            </DD>
+            <dd class="subbottom clearfix">
+              <input type="submit" class="z_btn-buy" src="" name="Submit" value="确定提交">
+              <input type="hidden" name="vps" value="{vps}">
+              <input type="hidden" name="p_proid" value="{p_proid}" />
+              <input type="hidden" name="act" />
+            </dd>
+          </dl>
+        </form>
+      </div>
+      <div class="z_box_outline" style="width:740px;">
+        <div class="z_box_inline">
+          <div class="z_box_title">新服务器系统安装标准</div>
+          <div><font color="#FF0000">特别提示：我司VPS禁止做低俗内容、私服、外挂、色情等内容，我司有完善的监控手段，一经发现，立即关闭并不退款。</font><br />
+           我司云主机采用模板技术自动开设，操作系统支持Win2003、Linux(centOs5.4) ，其中win2003分纯净版、sql2000、sql2005三个版本，推荐使用经过我司特殊安全配置的系统，这样可以大大减少被黑客入侵的风险。
+
+
+            <p>linux预装wdcp服务器管理系统</p>
+            <p>若有特殊需求需要定制安装系统的，需要收取安装费用200元/次。<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{#bottom.html}
+</body>
+</html>
